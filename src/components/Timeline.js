@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import sortBy from 'lodash/fp/sortBy'
-import groupBy from 'lodash/fp/groupBy'
-import compose from 'lodash/flowRight'
+// import sortBy from 'lodash/fp/sortBy'
+// import groupBy from 'lodash/fp/groupBy'
+// import compose from 'lodash/flowRight'
 import { formatDate } from '../helpers'
 import parseDate from 'date-fns/parse'
 import getHours from 'date-fns/get_hours'
 import getMinutes from 'date-fns/get_minutes'
-import { LeftBorderedBox } from '../components/Box'
-import Link from '../components/Link'
 import { lighten } from 'polished'
 
 const LINE_WIDTH = 4
@@ -155,15 +153,15 @@ TimelineItem.defaultProps = {
   position: 'left'
 }
 
-function formatItemDate(item) {
-  return formatDate(item.date, 'YYYY-MM-DD')
-}
+// function formatItemDate(item) {
+//   return formatDate(item.date, 'YYYY-MM-DD')
+// }
 
 function Timeline(props) {
-  const items = compose(
-    groupBy(formatItemDate),
-    sortBy(formatItemDate)
-  )(props.items)
+  // const items = compose(
+  //   groupBy(formatItemDate),
+  //   sortBy(formatItemDate)
+  // )(props.items)
 
   return (
     <StyledTimeline>
