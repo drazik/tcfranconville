@@ -12,6 +12,7 @@ import Footer from '../components/Footer'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
+import { NewsList } from '../components/News'
 
 const TranslatedWrapper = styled(Wrapper)`
   transform: translateY(-100px);
@@ -138,7 +139,7 @@ const IndexPage = () => {
           <Timeline />
         </Wrapper>
       </Section>
-      <PrimarySection padded skewedBottom>
+      <PrimarySection padded>
         <Wrapper>
           <TitlePrimary>
             Venir au club
@@ -163,6 +164,12 @@ const IndexPage = () => {
           </MapContainer>
         </Wrapper>
       </PrimarySection>
+      <Section padded skewed>
+        <Wrapper>
+          <Title>Dernières actualités</Title>
+          <NewsList />
+        </Wrapper>
+      </Section>
       <Footer />
     </Layout>
   )

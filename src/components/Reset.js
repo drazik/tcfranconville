@@ -9,7 +9,7 @@ const Reset = createGlobalStyle`
   }
 
   body {
-    background-color: #fcf7f8;
+    background-color: ${props => props.theme.background};
     font-family: sans-serif;
     color: #0d1321;
   }

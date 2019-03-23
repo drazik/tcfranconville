@@ -1,24 +1,28 @@
 import styled, { css } from 'styled-components'
 
+function isSkewedTop(props) {
+  return props.skewed || props.skewedTop
+}
+
+function isSkewedBottom(props) {
+  return props.skewed || props.skewedBottom
+}
+
+function isSkewed(props) {
+  return isSkewedTop(props) || isSkewedBottom(props)
+}
+
 export const Section = styled.section`
   padding: ${props => props.padded ? '3rem 0' : '0'};
   position: relative;
   z-index: 0;
-`
+  background-color: ${props => props.theme.background};
 
-export const PrimarySection = styled(Section)`
-  background-color: ${props => props.theme.main};
-  color: white;
-
-  a {
-    color: inherit;
-  }
-
-  ${props => (props.skewed || props.skewedTop || props.skewedBottom) && `
+  ${props => isSkewed(props) && `
     z-index: 1;
   `}
 
-  ${props => (props.skewed || props.skewedTop) && `
+  ${props => isSkewedTop(props) && `
     &::before {
       content: '';
       position: absolute;
@@ -33,7 +37,8 @@ export const PrimarySection = styled(Section)`
     }
   `}
 
-  ${props => (props.skewed || props.skewedBottom) && `
+  ${props => isSkewedBottom(props) && `
+
     &::after {
       content: '';
       position: absolute;
@@ -47,4 +52,13 @@ export const PrimarySection = styled(Section)`
       z-index: -1;
     }
   `}
+`
+
+export const PrimarySection = styled(Section)`
+  background-color: ${props => props.theme.main};
+  color: white;
+
+  a {
+    color: inherit;
+  }
 `
