@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Reset from './Reset'
+import Footer from './Footer'
 import { ThemeProvider } from 'styled-components'
 import theme from '../theme'
 
@@ -11,6 +12,7 @@ const Layout = (props) => {
         <Reset />
         <Header />
         {props.children}
+        <Footer />
       </React.Fragment>
     </ThemeProvider>
   )

@@ -6,7 +6,6 @@ import Link from '../components/Link'
 import Timeline from '../components/Timeline'
 import Wrapper from '../components/Wrapper'
 import { Section, PrimarySection } from '../components/Section'
-import Footer from '../components/Footer'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
@@ -168,7 +167,6 @@ const IndexPage = () => {
           <NewsList />
         </Wrapper>
       </Section>
-      <Footer />
     </Layout>
   )
 }
