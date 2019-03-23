@@ -13,7 +13,7 @@ function isSkewed(props) {
 }
 
 export const Section = styled.section`
-  padding: ${props => props.padded ? '3rem 0' : '0'};
+  padding: ${props => props.padded ? '5rem 0' : '0'};
   position: relative;
   z-index: 0;
   background-color: ${props => props.theme.background};
