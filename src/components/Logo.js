@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import logo from '../images/logo-tcf.png'
 
 const Logo = styled.span`

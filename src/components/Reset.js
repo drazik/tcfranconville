@@ -1,24 +1,32 @@
-import { createGlobalStyle } from 'styled-components'
+import React from 'react'
+import { Global, css } from '@emotion/core'
+import { withTheme } from 'emotion-theming'
 
-const Reset = createGlobalStyle`
-  html,
-  body {
-    height: 100%;
-    margin: 0;
-    box-sizing: border-box;
-  }
+function Reset(props) {
+  return (
+    <Global
+      styles={css`
+        html,
+        body {
+          height: 100%;
+          margin: 0;
+          box-sizing: border-box;
+        }
 
-  body {
-    background-color: ${props => props.theme.background};
-    font-family: sans-serif;
-    color: #0d1321;
-  }
+        body {
+          background-color: ${props => props.theme.background};
+          font-family: sans-serif;
+          color: #0d1321;
+        }
 
-  *,
-  *::before,
-  *::after {
-    box-sizing: inherit;
-  }
-`
+        *,
+        *::before,
+        *::after {
+          box-sizing: inherit;
+        }
+      `}
+    />
+  )
+}
 
-export default Reset
+export default withTheme(Reset)

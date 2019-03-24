@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
 import { formatDate } from '../helpers'

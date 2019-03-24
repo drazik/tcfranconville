@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from '@emotion/styled'
 // import sortBy from 'lodash/fp/sortBy'
 // import groupBy from 'lodash/fp/groupBy'
 // import compose from 'lodash/flowRight'
@@ -101,11 +101,15 @@ const TimelineDay = styled.span`
   font-weight: bold;
 `
 
-const TimelineDateSeparator = styled.span.attrs({ children: ' / ' })`
+const StyledTimelineDateSeparator = styled.span`
   color: ${props => props.theme.main};
   font-size: 1.25rem;
   font-weight: bold;
 `
+
+function TimelineDateSeparator(props) {
+  return <StyledTimelineDateSeparator {...props}>{' / '}</StyledTimelineDateSeparator>
+}
 
 function RawTimelineDate(props) {
   const { date } = props
