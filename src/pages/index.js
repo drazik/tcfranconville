@@ -1,4 +1,5 @@
 import React from 'react'
+import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import SplashImage from '../components/SplashImage'
@@ -11,18 +12,23 @@ import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
 import { NewsList } from '../components/News'
 
-const TranslatedWrapper = styled(Wrapper)`
-  transform: translateY(-100px);
-`
-
-const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 2rem;
-`
-
-const Card = styled.article`
+const overlay = css`
   position: relative;
+  z-index: 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: -1;
+  }
+`
+
+const card = css`
   height: 400px;
   background-size: cover;
   background-position: center;
@@ -40,24 +46,18 @@ const Card = styled.article`
   border-radius: 0.5rem;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
   overflow: hidden;
-  z-index: 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.15);
-    z-index: -1;
-  }
 
   &:hover,
   &:focus {
     transform: translateY(-0.5rem);
   }
 `
+
+function Card(props) {
+  return (
+    <Link css={[card, overlay]} {...props} />
+  )
+}
 
 const Title = styled.h2`
   margin-top: 0;
@@ -72,23 +72,12 @@ const Title = styled.h2`
   }
 `
 
-const EventsTitle = styled(Title)`
-  position: absolute;
-  top: 3rem;
-`
-
 const TitlePrimary = styled(Title)`
   color: white;
 
   &::after {
     background-color: currentColor;
   }
-`
-
-const MapContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2rem;
 `
 
 const MapIframe = styled.iframe`
@@ -102,37 +91,40 @@ const IndexPage = () => {
     <Layout>
       <SplashImage height="400px" />
       <PrimarySection skewed>
-        <TranslatedWrapper>
-          <CardsContainer>
+        <Wrapper css={{ transform: 'translateY(-100px)' }}>
+          <div
+            css={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(3, 1fr)',
+              gridColumnGap: '2rem'
+            }}
+          >
             <Card
-              as={Link}
               to="/enseignement"
-              style={{ backgroundImage: `url(${teachingCardBackground})` }}
+              css={{ backgroundImage: `url(${teachingCardBackground})` }}
             >
               Enseignement
             </Card>
             <Card
-              as={Link}
               to="/competition"
-              style={{ backgroundImage: `url(${competitionCardBackground})` }}
+              css={{ backgroundImage: `url(${competitionCardBackground})` }}
             >
               Compétition
             </Card>
             <Card
-              as={Link}
               to="/animations"
-              style={{ backgroundImage: `url(${animationCardBackground})` }}
+              css={{ backgroundImage: `url(${animationCardBackground})` }}
             >
               Animations
             </Card>
-          </CardsContainer>
-        </TranslatedWrapper>
+          </div>
+        </Wrapper>
       </PrimarySection>
       <Section>
         <Wrapper>
-          <EventsTitle>
+          <Title css={{ position: 'absolute', top: '3rem' }}>
             Prochains événements
-          </EventsTitle>
+          </Title>
           <Timeline />
         </Wrapper>
       </Section>
@@ -141,7 +133,13 @@ const IndexPage = () => {
           <TitlePrimary>
             Venir au club
           </TitlePrimary>
-          <MapContainer>
+          <div
+            css={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gridColumnGap: '2rem'
+            }}
+          >
             <div>
               <p>
                 Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
@@ -153,12 +151,10 @@ const IndexPage = () => {
                 Email : <a href="mailto:tennis.club.franconville@cegetel.net">tennis.club.franconville@cegetel.net</a>
               </p>
             </div>
-            <div>
-              <MapIframe
-                src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
-              />
-            </div>
-          </MapContainer>
+            <MapIframe
+              src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
+            />
+          </div>
         </Wrapper>
       </PrimarySection>
       <Section padded skewed>
