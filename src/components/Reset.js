@@ -14,7 +14,7 @@ function Reset(props) {
         }
 
         body {
-          background-color: ${props => props.theme.background};
+          background-color: ${props.theme.background};
           font-family: sans-serif;
           color: #0d1321;
         }

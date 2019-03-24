@@ -1,14 +1,15 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import { withTheme } from 'emotion-theming'
 import { Link } from 'gatsby'
 import FacebookIcon from '../images/icons/facebook.svg'
 
-const StyledNav = styled.nav`
+const nav = css`
   display: flex;
   align-items: center;
 `
 
-const StyledLink = styled(Link)`
+const link = props => css`
   font-weight: bold;
   text-decoration: none;
   color: white;
@@ -26,36 +27,41 @@ const StyledLink = styled(Link)`
     right: 0;
     height: 4px;
     width: 100%;
-    background-color: ${props => props.theme.main};
+    background-color: ${props.theme.main};
     margin-top: 0.25rem;
   }
 `
 
-const StyledFBIcon = styled(FacebookIcon)`
+const fbIcon = css`
   width: 1.5rem;
   height: 1.5rem;
   fill: white;
   vertical-align: bottom;
 `
 
-function Nav(props) {
+function _Nav(props) {
+  const linkStyle = link(props)
+
   return (
-    <StyledNav {...props}>
-      <StyledLink to="/">Accueil</StyledLink>
-      <StyledLink to="/contact">Contact</StyledLink>
-      <StyledLink to="/enseignement">Enseignement</StyledLink>
-      <StyledLink to="/competition">Compétition</StyledLink>
-      <StyledLink to="/animations">Animations</StyledLink>
-      <StyledLink to="/reservation">Réservation</StyledLink>
-      <StyledLink
-        as="a"
+    <nav css={nav} {...props}>
+      <Link css={linkStyle} to="/">Accueil</Link>
+      <Link css={linkStyle} to="/contact">Contact</Link>
+      <Link css={linkStyle} to="/enseignement">Enseignement</Link>
+      <Link css={linkStyle} to="/competition">Compétition</Link>
+      <Link css={linkStyle} to="/animations">Animations</Link>
+      <Link css={linkStyle} to="/reservation">Réservation</Link>
+      <a
+        css={linkStyle}
         href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
         target="_blank"
+        rel="noopener noreferrer"
       >
-        <StyledFBIcon />
-      </StyledLink>
-    </StyledNav>
+        <FacebookIcon css={fbIcon} />
+      </a>
+    </nav>
   )
 }
+
+const Nav = withTheme(_Nav)
 
 export default Nav

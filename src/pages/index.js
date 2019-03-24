@@ -6,7 +6,7 @@ import SplashImage from '../components/SplashImage'
 import Link from '../components/Link'
 import Timeline from '../components/Timeline'
 import Wrapper from '../components/Wrapper'
-import { Section, PrimarySection } from '../components/Section'
+import { Section, SectionTitle } from '../components/Section'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
@@ -59,27 +59,6 @@ function Card(props) {
   )
 }
 
-const Title = styled.h2`
-  margin-top: 0;
-
-  &::after {
-    content: '';
-    display: block;
-    margin-top: 0.5rem;
-    height: 3px;
-    width: 3rem;
-    background-color: ${props => props.theme.main};
-  }
-`
-
-const TitlePrimary = styled(Title)`
-  color: white;
-
-  &::after {
-    background-color: currentColor;
-  }
-`
-
 const MapIframe = styled.iframe`
   width: 100%;
   height: 400px;
@@ -90,7 +69,7 @@ const IndexPage = () => {
   return (
     <Layout>
       <SplashImage height="400px" />
-      <PrimarySection skewed>
+      <Section skewed variant="primary">
         <Wrapper css={{ transform: 'translateY(-100px)' }}>
           <div
             css={{
@@ -119,20 +98,20 @@ const IndexPage = () => {
             </Card>
           </div>
         </Wrapper>
-      </PrimarySection>
+      </Section>
       <Section>
         <Wrapper>
-          <Title css={{ position: 'absolute', top: '3rem' }}>
+          <SectionTitle css={{ position: 'absolute', top: '3rem' }}>
             Prochains événements
-          </Title>
+          </SectionTitle>
           <Timeline />
         </Wrapper>
       </Section>
-      <PrimarySection padded>
+      <Section padded variant="primary">
         <Wrapper>
-          <TitlePrimary>
+          <SectionTitle variant="primary">
             Venir au club
-          </TitlePrimary>
+          </SectionTitle>
           <div
             css={{
               display: 'grid',
@@ -156,10 +135,10 @@ const IndexPage = () => {
             />
           </div>
         </Wrapper>
-      </PrimarySection>
+      </Section>
       <Section padded skewed>
         <Wrapper>
-          <Title>Dernières actualités</Title>
+          <SectionTitle>Dernières actualités</SectionTitle>
           <NewsList />
         </Wrapper>
       </Section>
