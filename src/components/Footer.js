@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
-import { formatDate } from '../helpers'
+import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 
