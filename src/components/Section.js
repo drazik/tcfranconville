@@ -58,6 +58,10 @@ const sectionSkewedTop = css`
   }
 `
 
+const sectionSkewedTopPadded = css`
+  padding-top: 2rem;
+`
+
 const sectionSkewedBottom = css`
   &::after {
     content: '';
@@ -73,6 +77,10 @@ const sectionSkewedBottom = css`
   }
 `
 
+const sectionSkewedBottomPadded = css`
+  padding-bottom: 2rem;
+`
+
 function _Section(props) {
   const { variant, skewed, skewedTop, skewedBottom, padded, ...rest } = props
   return <section
@@ -83,7 +91,9 @@ function _Section(props) {
       props.padded && sectionPadded,
       isSkewed(props) && sectionSkewed,
       isSkewedTop(props) && sectionSkewedTop,
-      isSkewedBottom(props) && sectionSkewedBottom
+      isSkewedBottom(props) && sectionSkewedBottom,
+      props.padded && isSkewedTop(props) && sectionSkewedTopPadded,
+      props.padded && isSkewedBottom(props) && sectionSkewedBottomPadded
     ].filter(Boolean)}
     {...rest}
   />

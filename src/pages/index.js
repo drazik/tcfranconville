@@ -101,10 +101,10 @@ const IndexPage = () => {
       </Section>
       <Section>
         <Wrapper>
-          <SectionTitle css={{ position: 'absolute', top: '3rem' }}>
+          <SectionTitle css={{ position: 'absolute', top: '5rem' }}>
             Prochains événements
           </SectionTitle>
-          <Timeline />
+          <Timeline css={{ paddingTop: '12rem' }} />
         </Wrapper>
       </Section>
       <Section padded variant="primary">

@@ -17,7 +17,7 @@ export const StyledTimeline = styled.ol`
   position: relative;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 10rem;
+  padding-top: 2rem;
   padding-bottom: 2rem;
 
   &::before {
@@ -168,7 +168,7 @@ function Timeline(props) {
   // )(props.items)
 
   return (
-    <StyledTimeline>
+    <StyledTimeline {...props}>
       <TimelineItem position="left" date={parseDate('2019-03-23T15:00:00')}>
         <p>Réunion du comité</p>
       </TimelineItem>
