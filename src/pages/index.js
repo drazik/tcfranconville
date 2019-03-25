@@ -11,6 +11,7 @@ import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
 import { NewsList } from '../components/News'
+import mq from '../helpers/media-queries'
 
 const overlay = css`
   position: relative;
@@ -28,30 +29,28 @@ const overlay = css`
   }
 `
 
-const card = css`
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 0px 40px 30px -30px rgba(0, 0, 0, 0.5);
-  transition: transform 0.35s ease-in-out;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 1.5rem;
-  padding-left: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-radius: 0.5rem;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.35);
-  overflow: hidden;
-
-  &:hover,
-  &:focus {
-    transform: translateY(-0.5rem);
+const card = mq({
+  height: ['200px', '400px'],
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  boxShadow: '0 40px 30px -30px rgba(0, 0, 0, 0.5)',
+  transition: ['none', 'transform 0.35s ease-in-out'],
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'flex-end',
+  color: 'white',
+  textDecoration: 'none',
+  fontWeight: 'bold',
+  fontSize: '1.5rem',
+  paddingLeft: '1.5rem',
+  paddingBottom: '1.5rem',
+  borderRadius: '0.5rem',
+  textShadow: '1px 1px 2px rgba(0, 0, 0, 0.35)',
+  overflow: 'hidden',
+  '&:hover,&:focus': {
+    transform: ['none', 'translateY(-0.5rem)']
   }
-`
+})
 
 function Card(props) {
   return (
@@ -72,11 +71,12 @@ const IndexPage = () => {
       <Section skewed variant="primary">
         <Wrapper css={{ transform: 'translateY(-100px)' }}>
           <div
-            css={{
+            css={mq({
               display: 'grid',
-              gridTemplateColumns: 'repeat(3, 1fr)',
-              gridColumnGap: '2rem'
-            }}
+              gridTemplateColumns: ['1fr', 'repeat(3, 1fr)'],
+              gridColumnGap: '2rem',
+              gridRowGap: '2rem'
+            })}
           >
             <Card
               to="/enseignement"
@@ -113,11 +113,12 @@ const IndexPage = () => {
             Venir au club
           </SectionTitle>
           <div
-            css={{
+            css={mq({
               display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gridColumnGap: '2rem'
-            }}
+              gridTemplateColumns: ['1fr', 'repeat(2, 1fr)'],
+              gridColumnGap: '2rem',
+              gridRowGap: '2rem'
+            })}
           >
             <div>
               <p>

@@ -3,11 +3,12 @@ import { css } from '@emotion/core'
 import { withTheme } from 'emotion-theming'
 import { Link } from 'gatsby'
 import FacebookIcon from '../images/icons/facebook.svg'
+import mq from '../helpers/media-queries'
 
-const nav = css`
-  display: flex;
-  align-items: center;
-`
+const nav = mq({
+  display: ['none', 'flex'],
+  alignItems: 'center'
+})
 
 const link = props => css`
   font-weight: bold;
