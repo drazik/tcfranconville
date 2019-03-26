@@ -1,41 +1,39 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
 import Logo from './Logo'
 import Wrapper from './Wrapper'
 import Nav from './Nav'
 
-const Container = styled.header`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  z-index: 1;
-`
+const container = css({
+  position: 'absolute',
+  top: 0,
+  left: 0,
+  right: 0,
+  paddingTop: '0.5rem',
+  paddingBottom: '0.5rem',
+  zIndex: 1
+})
 
-const Content = styled.div`
-  display: flex;
-  align-items: center;
-`
+const wrapper = css({
+  display: 'flex',
+  alignItems: 'center'
+})
 
-const StyledNav = styled(Nav)`
-  margin-left: 3rem;
-`
+const nav = css({
+  marginLeft: '3rem'
+})
 
 const Header = () => {
   return (
-    <Container>
-      <Wrapper>
-        <Content>
-          <Link to="/" title="Revenir à l'accueil">
-            <Logo />
-          </Link>
-          <StyledNav />
-        </Content>
+    <header css={container}>
+      <Wrapper css={wrapper}>
+        <Link to="/" title="Revenir à l'accueil">
+          <Logo />
+        </Link>
+        <Nav css={nav} />
       </Wrapper>
-    </Container>
+    </header>
   )
 }
 
