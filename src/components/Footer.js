@@ -1,12 +1,13 @@
 import React from 'react'
-import styled from '@emotion/styled'
+import { css } from '@emotion/core'
+import mq from '../helpers/media-queries'
 import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
 import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 
-const StyledFooter = styled.footer`
+const footer = css`
   position: relative;
   z-index: 0;
   background-image: url(${footerBackground});
@@ -29,19 +30,20 @@ const StyledFooter = styled.footer`
   }
 `
 
-const FooterInner = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
+const footerInner = mq({
+  display: 'flex',
+  flexDirection: ['column', 'row'],
+  alignItems: 'center',
+  justifyContent: ['center', 'space-between']
+})
 
-const FooterNav = styled.nav`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`
+const footerNav = mq({
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: ['center', 'flex-end']
+})
 
-const FooterLink = styled(Link)`
+const footerLink = css`
   color: inherit;
 
   & + & {
@@ -49,7 +51,7 @@ const FooterLink = styled(Link)`
   }
 `
 
-const Paragraph = styled.p`
+const paragraph = css`
   margin-top: 3rem;
   font-size: 1.25rem;
   text-align: center;
@@ -57,24 +59,24 @@ const Paragraph = styled.p`
 
 function Footer() {
   return (
-    <StyledFooter>
+    <footer css={footer}>
       <Wrapper>
-        <FooterInner>
+        <div css={footerInner}>
           <Logo size={100} />
-          <Paragraph>
+          <p css={paragraph}>
             &copy; Tennis Club Franconville {formatDate(new Date(), 'YYYY')}
-          </Paragraph>
-          <FooterNav>
-            <FooterLink to="/">Accueil</FooterLink>
-            <FooterLink to="/contact">Contact</FooterLink>
-            <FooterLink to="/enseignement">Enseignement</FooterLink>
-            <FooterLink to="/competition">Compétition</FooterLink>
-            <FooterLink to="/animations">Animations</FooterLink>
-            <FooterLink to="/reservations">Réservation</FooterLink>
-          </FooterNav>
-        </FooterInner>
+          </p>
+          <nav css={footerNav}>
+            <Link css={footerLink} to="/">Accueil</Link>
+            <Link css={footerLink} to="/contact">Contact</Link>
+            <Link css={footerLink} to="/enseignement">Enseignement</Link>
+            <Link css={footerLink} to="/competition">Compétition</Link>
+            <Link css={footerLink} to="/animations">Animations</Link>
+            <Link css={footerLink} to="/reservations">Réservation</Link>
+          </nav>
+        </div>
       </Wrapper>
-    </StyledFooter>
+    </footer>
   )
 }
 
