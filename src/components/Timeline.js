@@ -1,8 +1,5 @@
 import React from 'react'
 import styled from '@emotion/styled'
-// import sortBy from 'lodash/fp/sortBy'
-// import groupBy from 'lodash/fp/groupBy'
-// import compose from 'lodash/flowRight'
 import { formatDate } from '../helpers/date'
 import parseDate from 'date-fns/parse'
 import getHours from 'date-fns/get_hours'
@@ -157,16 +154,7 @@ TimelineItem.defaultProps = {
   position: 'left'
 }
 
-// function formatItemDate(item) {
-//   return formatDate(item.date, 'YYYY-MM-DD')
-// }
-
 function Timeline(props) {
-  // const items = compose(
-  //   groupBy(formatItemDate),
-  //   sortBy(formatItemDate)
-  // )(props.items)
-
   return (
     <StyledTimeline {...props}>
       <TimelineItem position="left" date={parseDate('2019-03-23T15:00:00')}>
@@ -181,12 +169,6 @@ function Timeline(props) {
       <TimelineItem position="right" date={parseDate('2019-03-25')}>
         <p>Début du tournoi Open Seniors Plus. Fin le 12 avril</p>
       </TimelineItem>
-      {/*Object.entries(items).map(([date, items]) => (
-        <TimelineItem key={date}>
-          <TimelineDate date={date} />
-          <TimelineItems items={items} />
-        </TimelineItem>
-      ))*/}
     </StyledTimeline>
   )
 }
