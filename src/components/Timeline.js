@@ -1,114 +1,143 @@
 import React from 'react'
-import styled from '@emotion/styled'
 import { formatDate } from '../helpers/date'
 import parseDate from 'date-fns/parse'
 import getHours from 'date-fns/get_hours'
 import getMinutes from 'date-fns/get_minutes'
 import { lighten } from 'polished'
+import capitalize from 'lodash/capitalize'
 
 const LINE_WIDTH = 4
 
-export const StyledTimeline = styled.ol`
-  list-style: none;
-  padding-left: 0;
-  position: relative;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+const timeline = theme => ({
+  listStyle: 'none',
+  paddingLeft: 0,
+  position: 'relative',
+  marginTop: 0,
+  marginBottom: 0,
+  paddingTop: '2rem',
+  paddingBottom: '2rem',
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: ${LINE_WIDTH}px;
-    background-color: ${props => props.theme.main};
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: '50%',
+    width: `${LINE_WIDTH}px`,
+    backgroundColor: theme.main
   }
-`
+})
 
-const StyledTimelineItem = styled.li`
-  position: relative;
-  z-index: 0;
-  display: flex;
+const timelineItem = theme => ({
+  position: 'relative',
+  zIndex: 0,
+  display: 'flex',
 
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border-radius: 50%;
+  '&::before, &::after': {
+    content: '""',
+    position: 'absolute',
+    top: 0,
+    left: '50%',
+    borderRadius: '50%'
+  },
+
+  '&::before': {
+    height: '0.5rem',
+    width: '0.5rem',
+    backgroundColor: lighten(0.5, theme.main),
+    transform: `translateX(-50%) translateX(${LINE_WIDTH / 2}px)`,
+    zIndex: -1
+  },
+
+  '&::after': {
+    height: '1rem',
+    width: '1rem',
+    backgroundColor: theme.main,
+    borderRadius: '50%',
+    transform: `translateX(-50%) translateX(${LINE_WIDTH / 2}px) translateY(-${LINE_WIDTH}px)`,
+    zIndex: -2
+  },
+
+  '& + &': {
+    marginTop: '2rem'
   }
+})
 
-  &::before {
-    height: 0.5rem;
-    width: 0.5rem;
-    background-color: ${props => lighten(0.5, props.theme.main)};
-    transform: translateX(-50%) translateX(${LINE_WIDTH / 2}px);
-    z-index: -1;
-  }
+const timelineContent = {
+  flexBasis: 'calc(50% - 2rem)',
+  flexShrink: 0,
+  flexGrow: 0,
+  backgroundColor: 'white',
+  padding: '2rem 1rem 1rem',
+  boxShadow: '0 20px 25px -15px rgba(0, 0, 0, 0.2)',
+  transform: 'translateY(-1rem)',
+  position: 'relative',
+  borderRadius: '0.25rem',
+  display: 'flex',
+  flexDirection: 'column',
 
-  &::after {
-    height: 1rem;
-    width: 1rem;
-    background-color: ${props => props.theme.main};
-    border-radius: 50%;
-    transform: translateX(-50%) translateX(${LINE_WIDTH / 2}px) translateY(-${LINE_WIDTH}px);
-    z-index: -2;
+  '&::before': {
+    content: '""',
+    position: 'absolute',
+    top: '0.5rem',
+    border: '0.75rem solid transparent'
   }
-
-  & + & {
-    margin-top: 2rem;
-  }
-`
+}
 
 function invertPosition(position) {
   return position === 'right' ? 'left' : 'right'
 }
 
-const TimelineContent = styled.div`
-  flex-basis: calc(50% - 2rem);
-  flex-shrink: 0;
-  flex-grow: 0;
-  margin-${props => invertPosition(props.position)}: auto;
-  background-color: white;
-  padding: 2rem 1rem 1rem;
-  box-shadow: 0 20px 25px -15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-1rem);
-  position: relative;
-  border-radius: 0.25rem;
-  display: flex;
-  flex-direction: column;
+const timelineContentPosition = position => {
+  const capitalizedPosition = capitalize(position)
+  const invertedPosition = capitalize(invertPosition(position))
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0.5rem;
-    ${props => props.position}: 100%;
-    border: 0.75rem solid transparent;
-    border-${props => invertPosition(props.position)}-width: 0;
-    border-${props => props.position}-color: white;
+  return {
+    [`margin${invertedPosition}`]: 'auto',
+
+    '&::before': {
+      [position]: '100%',
+      [`border${invertedPosition}Width`]: 0,
+      [`border${capitalizedPosition}Color`]: 'white'
+    }
   }
-`
-
-const TimelineDay = styled.span`
-  font-size: 1.25rem;
-  font-weight: bold;
-`
-
-const StyledTimelineDateSeparator = styled.span`
-  color: ${props => props.theme.main};
-  font-size: 1.25rem;
-  font-weight: bold;
-`
-
-function TimelineDateSeparator(props) {
-  return <StyledTimelineDateSeparator {...props}>{' / '}</StyledTimelineDateSeparator>
 }
 
-function RawTimelineDate(props) {
+const TimelineContent = props => {
+  const { position, ...rest } = props
+
+  return (
+    <div css={[timelineContent, timelineContentPosition(position)]} {...rest} />
+  )
+}
+
+const timelineDay = {
+  fontSize: '1.25rem',
+  fontWeight: 'bold'
+}
+
+const timelineDateSeparator = theme => ({
+  color: theme.main,
+  fontSize: '1.25rem',
+  fontWeight: 'bold'
+})
+
+function TimelineDateSeparator(props) {
+  return <span {...props} css={timelineDateSeparator}>{' / '}</span>
+}
+
+const timelineDate = theme => ({
+  '&::after': {
+    content: '""',
+    display: 'block',
+    height: 2,
+    width: 28,
+    marginTop: '0.5rem',
+    backgroundColor: theme.main
+  }
+})
+
+function TimelineDate(props) {
   const { date } = props
   const hours = getHours(date)
   const minutes = getMinutes(date)
@@ -117,36 +146,27 @@ function RawTimelineDate(props) {
   const hourFormatStr = `HH[h]${minutes > 0 ? 'mm' : ''}`
 
   return (
-    <time className={props.className} dateTime={date.toISOString()}>
-      <TimelineDay>{formatDate(date, dayFormatStr)}</TimelineDay>
+    <time css={timelineDate} dateTime={date.toISOString()} {...props}>
+      <span css={timelineDay}>{formatDate(date, dayFormatStr)}</span>
       {hours > 0 && <TimelineDateSeparator />}
       {hours > 0 && <span>{formatDate(date, hourFormatStr)}</span>}
     </time>
   )
 }
 
-const TimelineDate = styled(RawTimelineDate)`
-  &::after {
-    content: '';
-    display: block;
-    height: 2px;
-    width: 28px;
-    margin-top: 0.5rem;
-    background-color: ${props => props.theme.main};
-  }
-`
-
 export function TimelineItem(props) {
+  const { position, date, children, ...rest } = props
+
   return (
-    <StyledTimelineItem>
-      <TimelineContent position={props.position}>
+    <li css={timelineItem} {...rest}>
+      <TimelineContent position={position}>
         <TimelineDate
-          date={props.date}
-          position={props.position}
+          date={date}
+          position={position}
         />
-        {props.children}
+        {children}
       </TimelineContent>
-    </StyledTimelineItem>
+    </li>
   )
 }
 
@@ -156,7 +176,7 @@ TimelineItem.defaultProps = {
 
 function Timeline(props) {
   return (
-    <StyledTimeline {...props}>
+    <ol {...props} css={timeline}>
       <TimelineItem position="left" date={parseDate('2019-03-23T15:00:00')}>
         <p>Réunion du comité</p>
       </TimelineItem>
@@ -169,7 +189,7 @@ function Timeline(props) {
       <TimelineItem position="right" date={parseDate('2019-03-25')}>
         <p>Début du tournoi Open Seniors Plus. Fin le 12 avril</p>
       </TimelineItem>
-    </StyledTimeline>
+    </ol>
   )
 }
 
