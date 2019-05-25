@@ -57,6 +57,8 @@ const paragraph = css`
   text-align: center;
 `
 
+const FooterLink = props => <Link {...props} css={footerLink} />
+
 function Footer() {
   return (
     <footer css={footer}>
@@ -67,12 +69,12 @@ function Footer() {
             &copy; Tennis Club Franconville {formatDate(new Date(), 'YYYY')}
           </p>
           <nav css={footerNav}>
-            <Link css={footerLink} to="/">Accueil</Link>
-            <Link css={footerLink} to="/contact">Contact</Link>
-            <Link css={footerLink} to="/enseignement">Enseignement</Link>
-            <Link css={footerLink} to="/competition">Compétition</Link>
-            <Link css={footerLink} to="/animations">Animations</Link>
-            <Link css={footerLink} to="/reservations">Réservation</Link>
+            <FooterLink to="/">Accueil</FooterLink>
+            <FooterLink to="/contact">Contact</FooterLink>
+            <FooterLink to="/enseignement">Enseignement</FooterLink>
+            <FooterLink to="/competition">Compétition</FooterLink>
+            <FooterLink to="/animations">Animations</FooterLink>
+            <FooterLink to="/reservations">Réservation</FooterLink>
           </nav>
         </div>
       </Wrapper>
