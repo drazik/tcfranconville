@@ -25,7 +25,7 @@ const Logo = styled.span`
 `
 
 Logo.defaultProps = {
-  size: 62
+  size: 100
 }
 
 export default Logo
