@@ -4,11 +4,11 @@ import parseDate from 'date-fns/parse'
 import getHours from 'date-fns/get_hours'
 import getMinutes from 'date-fns/get_minutes'
 import { lighten } from 'polished'
-import capitalize from 'lodash/capitalize'
+import mq from '../helpers/media-queries'
 
 const LINE_WIDTH = 4
 
-const timeline = theme => ({
+const timeline = theme => mq({
   listStyle: 'none',
   paddingLeft: 0,
   position: 'relative',
@@ -22,13 +22,13 @@ const timeline = theme => ({
     position: 'absolute',
     top: 0,
     bottom: 0,
-    left: '50%',
+    left: ['calc(100% - 2rem)', '50%'],
     width: `${LINE_WIDTH}px`,
     backgroundColor: theme.main
   }
 })
 
-const timelineItem = theme => ({
+const timelineItem = theme => mq({
   position: 'relative',
   zIndex: 0,
   display: 'flex',
@@ -37,7 +37,7 @@ const timelineItem = theme => ({
     content: '""',
     position: 'absolute',
     top: 0,
-    left: '50%',
+    left: ['calc(100% - 2rem)', '50%'],
     borderRadius: '50%'
   },
 
@@ -63,8 +63,8 @@ const timelineItem = theme => ({
   }
 })
 
-const timelineContent = {
-  flexBasis: 'calc(50% - 2rem)',
+const timelineContent = mq({
+  flexBasis: ['calc(100% - 4rem)', 'calc(50% - 2rem)'],
   flexShrink: 0,
   flexGrow: 0,
   backgroundColor: 'white',
@@ -82,32 +82,42 @@ const timelineContent = {
     top: '0.5rem',
     border: '0.75rem solid transparent'
   }
-}
+})
 
-function invertPosition(position) {
-  return position === 'right' ? 'left' : 'right'
-}
+const timelineContentLeft = {
+  marginRight: 'auto',
 
-const timelineContentPosition = position => {
-  const capitalizedPosition = capitalize(position)
-  const invertedPosition = capitalize(invertPosition(position))
-
-  return {
-    [`margin${invertedPosition}`]: 'auto',
-
-    '&::before': {
-      [position]: '100%',
-      [`border${invertedPosition}Width`]: 0,
-      [`border${capitalizedPosition}Color`]: 'white'
-    }
+  '&::before': {
+    left: '100%',
+    borderRightWidth: 0,
+    borderLeftColor: 'white'
   }
 }
+
+const timelineContentRight = mq({
+  marginLeft: ['0', 'auto'],
+
+  '&::before': {
+    right: ['auto', '100%'],
+    left: ['100%', 'auto'],
+    borderLeftWidth: ['0.75rem', 0],
+    borderRightWidth: [0, '0.75rem'],
+    borderRightColor: 'white',
+    borderLeftColor: 'white'
+  }
+})
 
 const TimelineContent = props => {
   const { position, ...rest } = props
 
   return (
-    <div css={[timelineContent, timelineContentPosition(position)]} {...rest} />
+    <div
+      css={[
+        timelineContent,
+        position === 'left' ? timelineContentLeft : timelineContentRight
+      ]}
+      {...rest}
+    />
   )
 }
 
