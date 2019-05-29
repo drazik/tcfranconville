@@ -1,11 +1,10 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css } from '@emotion/core'
 import Logo from './Logo'
 import Wrapper from './Wrapper'
 import Nav from './Nav'
 
-const container = css({
+const container = {
   position: 'absolute',
   top: 0,
   left: 0,
@@ -13,16 +12,16 @@ const container = css({
   paddingTop: '0.5rem',
   paddingBottom: '0.5rem',
   zIndex: 1
-})
+}
 
-const wrapper = css({
+const wrapper = {
   display: 'flex',
   alignItems: 'center'
-})
+}
 
-const nav = css({
+const nav = {
   marginLeft: '3rem'
-})
+}
 
 const Header = () => {
   return (
