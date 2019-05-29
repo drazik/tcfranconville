@@ -102,7 +102,7 @@ const IndexPage = () => {
       <Section>
         <Wrapper>
           <SectionTitle css={{ position: 'absolute', top: '5rem' }}>
-            Prochains événements
+            Prochains<br css={mq({ display: ['block', 'none'] })} /> événements
           </SectionTitle>
           <Timeline css={{ paddingTop: '12rem' }} />
         </Wrapper>
