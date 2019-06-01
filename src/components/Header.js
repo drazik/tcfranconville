@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import Logo from './Logo'
 import Wrapper from './Wrapper'
 import Nav from './Nav'
+import mq from '../helpers/media-queries'
 
 const container = {
   position: 'absolute',
@@ -14,10 +15,11 @@ const container = {
   zIndex: 1
 }
 
-const wrapper = {
+const wrapper = mq({
   display: 'flex',
-  alignItems: 'center'
-}
+  alignItems: 'center',
+  justifyContent: ['center', 'flex-start']
+})
 
 const nav = {
   marginLeft: '3rem'
