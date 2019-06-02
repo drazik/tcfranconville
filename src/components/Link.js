@@ -1,8 +1,9 @@
-import styled from '@emotion/styled'
-import { Link } from 'gatsby'
+import React from 'react'
+import { Link as BaseLink } from 'gatsby'
 
-const StyledLink = styled(Link)`
-  color: ${props => props.theme.main};
-`
+const style = theme => ({
+  color: theme.main
+})
+const Link = props => <BaseLink {...props} css={style} />
 
-export default StyledLink
+export default Link
