@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from '@emotion/core'
 import mq from '../helpers/media-queries'
 import Wrapper from './Wrapper'
 import { Link } from 'gatsby'
@@ -7,28 +6,28 @@ import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 
-const footer = css`
-  position: relative;
-  z-index: 0;
-  background-image: url(${footerBackground});
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  padding-top: 6rem;
-  padding-bottom: 3rem;
-  color: white;
+const footer = {
+  position: 'relative',
+  zIndex: 0,
+  backgroundImage: `url(${footerBackground})`,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  backgroundAttachment: 'fixed',
+  paddingTop: '6rem',
+  paddingBottom: '3rem',
+  color: 'white',
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.35);
-    z-index: -1;
+  '&::before': {
+    content: "''",
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    left: 0,
+    right: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+    zIndex: -1
   }
-`
+}
 
 const footerInner = mq({
   display: 'flex',
@@ -43,19 +42,19 @@ const footerNav = mq({
   alignItems: ['center', 'flex-end']
 })
 
-const footerLink = css`
-  color: inherit;
+const footerLink = {
+  color: 'inherit',
 
-  & + & {
-    margin-top: 0.5rem;
+  '& + &': {
+    marginTop: '0.5rem'
   }
-`
+}
 
-const paragraph = css`
-  margin-top: 3rem;
-  font-size: 1.25rem;
-  text-align: center;
-`
+const paragraph = {
+  marginTop: '3rem',
+  fontSize: '1.25rem',
+  textAlign: 'center'
+}
 
 const FooterLink = props => <Link {...props} css={footerLink} />
 
