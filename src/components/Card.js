@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '../components/Link'
+import PropTypes from 'prop-types'
 import mq from '../helpers/media-queries'
 
 const card = mq({
@@ -26,9 +26,18 @@ const card = mq({
 })
 
 function Card(props) {
+  const { component: Component, ...rest } = props
   return (
-    <Link css={card} {...props} />
+    <Component css={card} {...rest} />
   )
+}
+
+Card.propTypes = {
+  component: PropTypes.node
+}
+
+Card.defaultProps = {
+  component: 'div'
 }
 
 export default Card

@@ -34,6 +34,11 @@ const sectionPrimary = props => css`
   }
 `
 
+const sectionLight = css`
+  background-color: white;
+  color: inherit;
+`
+
 const sectionPadded = css`
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -88,6 +93,7 @@ function _Section(props) {
       sectionBase,
       props.variant === 'normal' && sectionNormal(props),
       props.variant === 'primary' && sectionPrimary(props),
+      props.variant === 'light' && sectionLight,
       props.padded && sectionPadded,
       isSkewed(props) && sectionSkewed,
       isSkewedTop(props) && sectionSkewedTop,
@@ -100,7 +106,7 @@ function _Section(props) {
 }
 
 _Section.propTypes = {
-  variant: PropTypes.oneOf(['normal', 'primary'])
+  variant: PropTypes.oneOf(['normal', 'primary', 'light'])
 }
 
 _Section.defaultProps = {
@@ -145,3 +151,13 @@ function _SectionTitle(props) {
 }
 
 export const SectionTitle = withTheme(_SectionTitle)
+
+export const SectionSeparator = () => {
+  return (
+    <hr
+      css={{
+        width: '80%'
+      }}
+    />
+  )
+}

@@ -11,6 +11,7 @@ import animationCardBackground from '../images/animation-card.jpg'
 import { NewsList } from '../components/News'
 import mq from '../helpers/media-queries'
 import Card from '../components/Card'
+import { Link } from 'gatsby'
 
 const MapIframe = styled.iframe`
   width: 100%;
@@ -33,18 +34,21 @@ const IndexPage = () => {
             })}
           >
             <Card
+              component={Link}
               to="/enseignement"
               css={{ backgroundImage: `url(${teachingCardBackground})` }}
             >
               Enseignement
             </Card>
             <Card
+              component={Link}
               to="/competition"
               css={{ backgroundImage: `url(${competitionCardBackground})` }}
             >
               Compétition
             </Card>
             <Card
+              component={Link}
               to="/animations"
               css={{ backgroundImage: `url(${animationCardBackground})` }}
             >
