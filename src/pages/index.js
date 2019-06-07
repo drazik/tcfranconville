@@ -1,5 +1,4 @@
 import React from 'react'
-import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
 import SplashImage from '../components/SplashImage'
@@ -12,22 +11,6 @@ import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
 import { NewsList } from '../components/News'
 import mq from '../helpers/media-queries'
-
-const overlay = css`
-  position: relative;
-  z-index: 0;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.15);
-    z-index: -1;
-  }
-`
 
 const card = mq({
   height: ['200px', '400px'],
@@ -54,7 +37,7 @@ const card = mq({
 
 function Card(props) {
   return (
-    <Link css={[card, overlay]} {...props} />
+    <Link css={card} {...props} />
   )
 }
 
