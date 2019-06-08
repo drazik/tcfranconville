@@ -1,9 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import FacebookIcon from '../images/icons/facebook.svg'
+import { rgba } from 'polished'
 
 const BurgerButton = props => {
   const { active, ...rest } = props
+  const [scrollY, setScrollY] = useState(window.scrollY)
+
+  useEffect(() => {
+    const updateScrollValue = () => {
+      setScrollY(window.scrollY)
+    }
+
+    window.addEventListener('scroll', updateScrollValue)
+
+    return () => {
+      window.removeEventListener('scroll', updateScrollValue)
+    }
+  })
+
+  const MAX_SCROLL = 400
+  const normalizedScrollY = Math.min(scrollY / MAX_SCROLL, 1)
 
   return (
     <button
@@ -13,7 +30,7 @@ const BurgerButton = props => {
         left: '1rem',
         height: 48,
         width: 48,
-        backgroundColor: theme.main,
+        backgroundColor: rgba(theme.main, normalizedScrollY),
         padding: 0,
         border: 0,
         transform: 'translateY(-50%)',
