@@ -151,9 +151,21 @@ const Overlay = props => {
 function Nav() {
   const [isOpen, setOpen] = useState(false)
 
+  const handleOpen = () => {
+    setOpen(true)
+    document.body.style.overflow = 'hidden'
+  }
+
+  const handleClose = () => {
+    setOpen(false)
+    document.body.style.overflow = 'auto'
+  }
+
+  const handler = isOpen ? handleClose : handleOpen
+
   return (
     <>
-      <BurgerButton onClick={() => setOpen(!isOpen)} active={isOpen} />
+      <BurgerButton onClick={handler} active={isOpen} />
       <Menu isOpen={isOpen}>
         <MenuItem to="/">
           Accueil
@@ -174,7 +186,7 @@ function Nav() {
           <FacebookIcon width="32" height="32" css={{ fill: 'white' }} />
         </MenuItem>
       </Menu>
-      <Overlay isOpen={isOpen} onClick={() => setOpen(!isOpen)} />
+      <Overlay isOpen={isOpen} onClick={handler} />
     </>
   )
 }
