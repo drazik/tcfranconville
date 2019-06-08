@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Logo from './Logo'
 import Wrapper from './Wrapper'
-import Nav from './Nav'
 import mq from '../helpers/media-queries'
 
 const container = {
@@ -21,10 +20,6 @@ const wrapper = mq({
   justifyContent: ['center', 'flex-start']
 })
 
-const nav = {
-  marginLeft: '3rem'
-}
-
 const Header = () => {
   return (
     <header css={container}>
@@ -32,7 +27,6 @@ const Header = () => {
         <Link to="/" title="Revenir à l'accueil">
           <Logo />
         </Link>
-        <Nav css={nav} />
       </Wrapper>
     </header>
   )
