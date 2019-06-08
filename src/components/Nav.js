@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { Link } from 'gatsby'
 import FacebookIcon from '../images/icons/facebook.svg'
 import { rgba } from 'polished'
+import isWindowDefined from '../helpers/isWindowDefined'
 
 const BurgerButton = props => {
   const { active, ...rest } = props
-  const [scrollY, setScrollY] = useState(window.scrollY)
+  const [scrollY, setScrollY] = useState(isWindowDefined() ? window.scrollY : 0)
 
   useEffect(() => {
+    if (!isWindowDefined()) {
+      return
+    }
+
     const updateScrollValue = () => {
       setScrollY(window.scrollY)
     }
