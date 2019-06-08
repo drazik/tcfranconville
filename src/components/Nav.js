@@ -4,12 +4,11 @@ import FacebookIcon from '../images/icons/facebook.svg'
 import { rgba } from 'polished'
 import isWindowDefined from '../helpers/isWindowDefined'
 
-const BurgerButton = props => {
-  const { active, ...rest } = props
-  const [scrollY, setScrollY] = useState(isWindowDefined() ? window.scrollY : 0)
+const useScrollY = () => {
+  const [scrollY, setScrollY] = useState(isWindowDefined ? window.scrollY : 0)
 
   useEffect(() => {
-    if (!isWindowDefined()) {
+    if (!isWindowDefined) {
       return
     }
 
@@ -24,8 +23,15 @@ const BurgerButton = props => {
     }
   })
 
-  const MAX_SCROLL = 400
-  const normalizedScrollY = Math.min(scrollY / MAX_SCROLL, 1)
+  return scrollY
+}
+
+const BurgerButton = props => {
+  const { active, ...rest } = props
+  const scrollY = useScrollY()
+
+  const SCROLL_THRESHOLD = 400
+  const opacity = Math.min(scrollY / SCROLL_THRESHOLD, 1)
 
   return (
     <button
@@ -35,7 +41,7 @@ const BurgerButton = props => {
         left: '1rem',
         height: 48,
         width: 48,
-        backgroundColor: rgba(theme.main, normalizedScrollY),
+        backgroundColor: rgba(theme.main, opacity),
         padding: 0,
         border: 0,
         transform: 'translateY(-50%)',
