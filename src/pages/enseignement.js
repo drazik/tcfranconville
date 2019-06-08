@@ -18,7 +18,9 @@ import carinePhoto from '../images/teachers/carine.jpg'
 const EnseignementPage = () => {
   return (
     <Layout>
-      <SplashImage height="400px" />
+      <SplashImage height="400px">
+        L'enseignement
+      </SplashImage>
       <Section padded skewed variant="primary">
         <Wrapper>
           <SectionTitle variant="primary">

@@ -15,6 +15,10 @@ const SplashImage = styled.div`
   position: relative;
   z-index: 0;
   background-attachment: fixed;
+  color: white;
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
 `
 
 SplashImage.defaultProps = {
