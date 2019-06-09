@@ -7,6 +7,7 @@ import Card from '../components/Card'
 import Teacher from '../components/Teacher'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import teachingKidsBackground from '../images/teaching-kids.jpg'
+import teachingAdultBackground from '../images/teaching-adult.jpg'
 import philippePhoto from '../images/teachers/philippe.jpg'
 import benjaminPhoto from '../images/teachers/benjamin.jpg'
 import jeanClaudePhoto from '../images/teachers/jean-claude.jpg'
@@ -78,12 +79,20 @@ const EnseignementPage = () => {
           <SectionTitle>
             Cours adultes
           </SectionTitle>
-          <p>
-            Les parents aussi...
-          </p>
+          <Text>
+            Leo. Ut feugiat. Vivamus urna quam, congue vulputate, convallis
+            non, cursus cursus, risus. Quisque aliquet. Donec vulputate egestas
+            elit. Morbi dictum, sem sit amet aliquam euismod, odio tortor
+            pellentesque odio, ac ultrices enim nibh sed quam. Integer tortor
+            velit, condimentum a, vestibulum eget, sagittis nec, neque. Aenean
+            est urna, bibendum et, imperdiet at, rhoncus in, arcu. In hac
+            habitasse platea dictumst. Vestibulum blandit dignissim dui.
+            Maecenas vitae magna non felis ornare consectetuer. Sed lorem. Nam
+            leo.
+          </Text>
           <Card
             css={{
-              backgroundImage: `url(${teachingCardBackground})`,
+              backgroundImage: `url(${teachingAdultBackground})`,
               marginBottom: -70
             }}
           />
