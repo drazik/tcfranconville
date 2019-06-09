@@ -27,10 +27,6 @@ const sectionNormal = props => css`
 const sectionPrimary = props => css`
   background-color: ${props.theme.main};
   color: white;
-
-  a {
-    color: inherit;
-  }
 `
 
 const sectionLight = css`
