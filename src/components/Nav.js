@@ -38,7 +38,7 @@ const BurgerButton = props => {
       css={theme => ({
         position: 'fixed',
         top: 'calc(0.5rem + 50px)',
-        left: '1rem',
+        left: '5%',
         height: 48,
         width: 48,
         backgroundColor: rgba(theme.main, opacity),

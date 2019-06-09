@@ -6,6 +6,7 @@ import Wrapper from '../components/Wrapper'
 import Card from '../components/Card'
 import Teacher from '../components/Teacher'
 import teachingCardBackground from '../images/teaching-card.jpg'
+import teachingKidsBackground from '../images/teaching-kids.jpg'
 import philippePhoto from '../images/teachers/philippe.jpg'
 import benjaminPhoto from '../images/teachers/benjamin.jpg'
 import jeanClaudePhoto from '../images/teachers/jean-claude.jpg'
@@ -14,6 +15,7 @@ import maxencePhoto from '../images/teachers/maxence.jpg'
 import rodryckPhoto from '../images/teachers/rodryck.jpg'
 import davidPhoto from '../images/teachers/david.jpg'
 import carinePhoto from '../images/teachers/carine.jpg'
+import { Text } from '../components/Text'
 
 const EnseignementPage = () => {
   return (
@@ -21,33 +23,57 @@ const EnseignementPage = () => {
       <SplashImage height="400px">
         L'enseignement
       </SplashImage>
-      <Section padded skewed variant="primary">
+      <Section padded skewed variant="primary" css={{ zIndex: 4 }}>
         <Wrapper>
           <SectionTitle variant="primary">
             Cours enfants
           </SectionTitle>
-          <p>
-            Dès 3 ans...
-          </p>
+          <Text>
+            Turpis. Quisque sem. Quisque elementum sapien iaculis augue. In
+            dui sem, congue sit amet, feugiat quis, lobortis at, eros.
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin interdum
+            vehicula purus. Cum.
+          </Text>
+          <Text>
+            Id turpis. Nam posuere lectus vitae nibh. Etiam tortor orci,
+            sagittis malesuada, rhoncus quis, hendrerit eget, libero. Quisque
+            commodo nulla at nunc. Mauris consequat, enim vitae venenatis
+            sollicitudin, dolor orci bibendum enim, a sagittis nulla nunc quis
+            elit. Phasellus augue. Nunc suscipit, magna tincidunt lacinia
+            faucibus, lacus tellus ornare purus, a.
+          </Text>
           <Card
-            css={{ backgroundImage: `url(${teachingCardBackground})` }}
+            css={{
+              backgroundImage: `url(${teachingKidsBackground})`,
+              marginBottom: -70
+            }}
           />
         </Wrapper>
       </Section>
-      <Section padded variant="light">
+      <Section padded skewed variant="light" css={{ zIndex: 3, paddingTop: '6rem' }}>
         <Wrapper>
           <SectionTitle>
             Cours ados
           </SectionTitle>
-          <p>
-            Dès 10 ans...
-          </p>
+          <Text>
+            Nunc mi tortor, tristique sit amet, rhoncus porta, malesuada
+            elementum, nisi. Integer vitae enim quis risus aliquet gravida.
+            Curabitur vel lorem vel erat dapibus lobortis. Donec dignissim
+            tellus at arcu. Quisque molestie pulvinar sem.
+            Nulla magna neque, ullamcorper tempus, luctus eget, malesuada ut, velit. Morbi
+            felis. Praesent in purus at ipsum cursus posuere. Morbi bibendum facilisis
+            eros. Phasellus aliquam sapien in erat. Praesent venenatis diam dignissim dui.
+            Praesent risus erat, iaculis ac.
+          </Text>
           <Card
-            css={{ backgroundImage: `url(${teachingCardBackground})` }}
+            css={{
+              backgroundImage: `url(${teachingCardBackground})`,
+              marginBottom: -70
+            }}
           />
         </Wrapper>
       </Section>
-      <Section padded skewed>
+      <Section padded skewed css={{ zIndex: 2, paddingTop: '6rem' }}>
         <Wrapper>
           <SectionTitle>
             Cours adultes
@@ -56,11 +82,14 @@ const EnseignementPage = () => {
             Les parents aussi...
           </p>
           <Card
-            css={{ backgroundImage: `url(${teachingCardBackground})` }}
+            css={{
+              backgroundImage: `url(${teachingCardBackground})`,
+              marginBottom: -70
+            }}
           />
         </Wrapper>
       </Section>
-      <Section padded variant="light">
+      <Section padded skewed variant="light" css={{ zIndex: 1, paddingTop: '6rem' }}>
         <Wrapper>
           <SectionTitle>
             Les enseignants

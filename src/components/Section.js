@@ -17,7 +17,6 @@ function isSkewed(props) {
 
 const sectionBase = css`
   position: relative;
-  z-index: 0;
 `
 
 const sectionNormal = props => css`
