@@ -30,12 +30,14 @@ const PricesLink = props => {
         alignItems: 'center',
         justifyContent: 'center',
         color: variant === 'primary' ? 'white' : theme.main,
-        height: '3rem',
+        minHeight: '3rem',
         fontSize: '1.25rem',
         zIndex: 5,
         textDecoration: 'none',
         margin: '2rem 0',
-        borderRadius: '0.75rem'
+        padding: '0.5rem',
+        borderRadius: '0.75rem',
+        textAlign: 'center'
       })}
       to="/tarifs"
       {...rest}
