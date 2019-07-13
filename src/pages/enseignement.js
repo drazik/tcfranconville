@@ -71,7 +71,9 @@ const EnseignementPage = () => {
               elit. Phasellus augue. Nunc suscipit, magna tincidunt lacinia
               faucibus, lacus tellus ornare purus, a.
             </Text>
-            <PricesLink>Voir les tarifs 2019&nbsp;/&nbsp;2020 enfants</PricesLink>
+            <PricesLink to="/tarifs">
+              Voir les tarifs 2019&nbsp;/&nbsp;2020 enfants
+            </PricesLink>
             <Card
               css={{
                 backgroundImage: `url(${teachingKidsBackground})`,
@@ -95,7 +97,7 @@ const EnseignementPage = () => {
               eros. Phasellus aliquam sapien in erat. Praesent venenatis diam dignissim dui.
               Praesent risus erat, iaculis ac.
             </Text>
-            <PricesLink variant="primary">
+            <PricesLink variant="primary" to="/tarif">
               Voir les tarifs 2019&nbsp;/&nbsp;2020 jeunes
             </PricesLink>
             <Card
@@ -122,7 +124,7 @@ const EnseignementPage = () => {
               Maecenas vitae magna non felis ornare consectetuer. Sed lorem. Nam
               leo.
             </Text>
-            <PricesLink variant="primary">
+            <PricesLink variant="primary" to="/tarifs">
               Voir les tarifs 2019&nbsp;/&nbsp;2020 adultes
             </PricesLink>
             <Card
