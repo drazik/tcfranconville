@@ -12,6 +12,11 @@ import { NewsList } from '../components/News'
 import mq from '../helpers/media-queries'
 import Card from '../components/Card'
 import { Link } from 'gatsby'
+import { Text } from '../components/Text'
+import { Slider, Slide } from '../components/Slider'
+import sliderTournament from '../images/slider.jpg'
+import sliderKid from '../images/slider-kid.jpg'
+import slider50ans from '../images/slider-50-ans.jpg'
 
 const MapIframe = styled.iframe`
   width: 100%;
@@ -22,9 +27,47 @@ const MapIframe = styled.iframe`
 const IndexPage = () => {
   return (
     <Layout>
-      <SplashImage height="400px" />
+      <Slider
+        arrows={false}
+        autoplay
+        autoplaySpeed={5000}
+        css={{
+          height: '400px'
+        }}
+      >
+        <Slide
+          backgroundImage={sliderTournament}
+          text="37ème tournoi Open"
+          as={Link}
+          to="/"
+        />
+        <Slide
+          backgroundImage={sliderKid}
+          text="Inscriptions ouvertes !"
+          as={Link}
+          to="/"
+        />
+        <Slide
+          backgroundImage={slider50ans}
+          text="Les 50 ans du club"
+          as={Link}
+          to="/"
+        />
+      </Slider>
+
       <Section skewed variant="primary">
-        <Wrapper css={{ transform: 'translateY(-100px)' }}>
+        <Wrapper>
+          <Text>
+            Depuis 1980, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
+          </Text>
+          <Text>
+            Le TCF est un club vivant et convivial dont la vie s'articule autour de 3 grands axes :
+          </Text>
+        </Wrapper>
+      </Section>
+
+      <Section>
+        <Wrapper css={{ marginTop: -130 }}>
           <div
             css={mq({
               display: 'grid',
@@ -57,15 +100,8 @@ const IndexPage = () => {
           </div>
         </Wrapper>
       </Section>
-      <Section>
-        <Wrapper>
-          <SectionTitle css={{ position: 'absolute', top: '5rem' }}>
-            Prochains<br css={mq({ display: ['block', 'none'] })} /> événements
-          </SectionTitle>
-          <Timeline css={{ paddingTop: '12rem' }} />
-        </Wrapper>
-      </Section>
-      <Section padded variant="primary">
+
+      <Section padded skewed variant="primary">
         <Wrapper>
           <SectionTitle variant="primary">
             Venir au club
@@ -95,12 +131,21 @@ const IndexPage = () => {
           </div>
         </Wrapper>
       </Section>
-      <Section padded skewed>
+
+      <Section>
         <Wrapper>
-          <SectionTitle>Dernières actualités</SectionTitle>
-          <NewsList />
+          <SectionTitle css={{ position: 'absolute', top: '5rem' }}>
+            Prochains<br css={mq({ display: ['block', 'none'] })} /> événements
+          </SectionTitle>
+          <Timeline css={{ paddingTop: '12rem' }} />
         </Wrapper>
       </Section>
+      {/* <Section padded skewed> */}
+      {/*   <Wrapper> */}
+      {/*     <SectionTitle>Dernières actualités</SectionTitle> */}
+      {/*     <NewsList /> */}
+      {/*   </Wrapper> */}
+      {/* </Section> */}
     </Layout>
   )
 }
