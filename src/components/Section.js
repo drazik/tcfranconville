@@ -9,14 +9,15 @@ export const SectionTitle = styled.h1(
     '&::after': {
       content: '""',
       display: 'block',
-      marginTop: '0.5rem',
+      marginTop: '0.75rem',
       height: 3,
       width: '3rem',
     }
   },
   props => ({
     '&::after': {
-      backgroundColor: props.theme.main
+      backgroundColor:
+        props.variant === 'primary' ? 'white' : props.theme.main
     }
   })
 )
