@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
-import SplashImage from '../components/SplashImage'
 import Timeline from '../components/Timeline'
 import Wrapper from '../components/Wrapper'
 import { Section, SectionTitle } from '../components/Section'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
-import { NewsList } from '../components/News'
 import mq from '../helpers/media-queries'
 import Card from '../components/Card'
 import { Link } from 'gatsby'
@@ -138,12 +136,6 @@ const IndexPage = () => {
           <Timeline css={{ paddingTop: '12rem' }} />
         </Wrapper>
       </Section>
-      {/* <Section padded skewed> */}
-      {/*   <Wrapper> */}
-      {/*     <SectionTitle>Dernières actualités</SectionTitle> */}
-      {/*     <NewsList /> */}
-      {/*   </Wrapper> */}
-      {/* </Section> */}
     </Layout>
   )
 }
