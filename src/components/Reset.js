@@ -24,6 +24,10 @@ function Reset(props) {
         *::after {
           box-sizing: inherit;
         }
+
+        a {
+          color: inherit;
+        }
       `}
     />
   )
