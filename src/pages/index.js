@@ -17,6 +17,7 @@ import { Slider, Slide } from '../components/Slider'
 import sliderTournament from '../images/slider.jpg'
 import sliderKid from '../images/slider-kid.jpg'
 import slider50ans from '../images/slider-50-ans.jpg'
+import { Button } from '../components/Button'
 
 const MapIframe = styled.iframe`
   width: 100%;
@@ -31,9 +32,6 @@ const IndexPage = () => {
         arrows={false}
         autoplay
         autoplaySpeed={5000}
-        css={{
-          height: '400px'
-        }}
       >
         <Slide
           backgroundImage={sliderTournament}
@@ -104,31 +102,31 @@ const IndexPage = () => {
       <Section padded skewed variant="primary">
         <Wrapper>
           <SectionTitle variant="primary">
-            Venir au club
+            Venir jouer au TCF
           </SectionTitle>
-          <div
-            css={mq({
-              display: 'grid',
-              gridTemplateColumns: ['1fr', 'repeat(2, 1fr)'],
-              gridColumnGap: '2rem',
-              gridRowGap: '2rem'
-            })}
+          <Text>
+            Le club est ouvert à toutes et à tous. Envie de taper la petite balle jaune en famille ou entre amis ? En simple, en double ? Nos courts sont disponibles à la réservation, même si vous n'ête pas (encore) adhérents.
+          </Text>
+          <Button
+            as={Link}
+            to="/reservation"
+            fullWidth
+            css={{
+              marginTop: '2rem',
+              marginBottom: '2rem'
+            }}
           >
-            <div>
-              <p>
-                Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
-              </p>
-              <p>
-                Téléphone : 01 75 40 75 20
-              </p>
-              <p>
-                Email : <a href="mailto:tennis.club.franconville@cegetel.net">tennis.club.franconville@cegetel.net</a>
-              </p>
-            </div>
-            <MapIframe
-              src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
-            />
-          </div>
+            Réserver un court
+          </Button>
+          <Text>
+            Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
+          </Text>
+          <Text>
+            Vous pouvez nous contacter par téléphone au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net">tennis.club.franconville@cegetel.net</a>.
+          </Text>
+          <MapIframe
+            src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
+          />
         </Wrapper>
       </Section>
 
