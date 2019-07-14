@@ -1,12 +1,21 @@
-import React from "react";
+import React, { useRef } from "react";
 import BaseSlider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export const Slider = props => {
   const { children, ...rest } = props
+  const ref = useRef(null)
+
+  const pause = () =>
+    ref.current && ref.current.slickPause && ref.current.slickPause()
+
   return (
-    <BaseSlider {...rest}>
+    <BaseSlider
+      onSwipe={pause}
+      ref={ref}
+      {...rest}
+    >
       {children}
     </BaseSlider>
   )
