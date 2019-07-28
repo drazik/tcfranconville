@@ -100,7 +100,7 @@ const IndexPage = () => {
         </Wrapper>
       </Section>
 
-      <Section padded skewed variant="primary">
+      <Section padded skewed variant="primary" css={{ zIndex: 2 }}>
         <Wrapper>
           <SectionTitle variant="primary">
             Venir jouer au TCF
@@ -131,9 +131,14 @@ const IndexPage = () => {
         </Wrapper>
       </Section>
 
-      <Section>
+      <Section css={{
+        paddingTop: 0,
+        paddingBottom: 0,
+        marginTop: '-1rem',
+        zIndex: 1
+      }}>
         <Wrapper>
-          <SectionTitle css={{ position: 'absolute', top: '5rem' }}>
+          <SectionTitle css={{ position: 'absolute', top: '2rem' }}>
             Prochains<br css={mq({ display: ['block', 'none'] })} /> événements
           </SectionTitle>
           <Timeline css={{ paddingTop: '12rem' }} />
