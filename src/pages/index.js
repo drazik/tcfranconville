@@ -102,7 +102,7 @@ const IndexPage = () => {
         </Wrapper>
       </Section>
 
-      <Section padded skewed variant="primary" css={{ zIndex: 2 }}>
+      <Section skewed variant="primary" css={{ zIndex: 2 }}>
         <Wrapper>
           <SectionTitle variant="primary">
             Venir jouer au TCF
