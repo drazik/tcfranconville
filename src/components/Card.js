@@ -33,7 +33,7 @@ function Card(props) {
 }
 
 Card.propTypes = {
-  component: PropTypes.node
+  component: PropTypes.elementType
 }
 
 Card.defaultProps = {
