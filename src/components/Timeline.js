@@ -1,8 +1,8 @@
 import React from 'react'
 import { formatDate } from '../helpers/date'
-import parseDate from 'date-fns/parse'
-import getHours from 'date-fns/get_hours'
-import getMinutes from 'date-fns/get_minutes'
+import parseDate from 'date-fns/parseISO'
+import getHours from 'date-fns/getHours'
+import getMinutes from 'date-fns/getMinutes'
 import { lighten } from 'polished'
 import mq from '../helpers/media-queries'
 

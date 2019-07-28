@@ -14,12 +14,21 @@ const fullWidthStyle = {
   justifyContent: 'center'
 }
 
+const primaryStyle = theme => ({
+  backgroundColor: theme.main,
+  color: 'white'
+})
+
 export const Button = props => {
-  const { as: Component, fullWidth, ...rest } = props
+  const { as: Component = 'button', fullWidth, variant, ...rest } = props
 
   return (
     <Component
-      css={theme => [baseStyle(theme), fullWidth && fullWidthStyle].filter(Boolean)}
+      css={theme => [
+        baseStyle(theme),
+        fullWidth && fullWidthStyle,
+        variant === 'primary' && primaryStyle(theme)
+      ].filter(Boolean)}
       {...rest}
     />
   )

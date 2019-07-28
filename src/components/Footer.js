@@ -65,7 +65,7 @@ function Footer() {
         <div css={footerInner}>
           <Logo size={100} />
           <p css={paragraph}>
-            &copy; Tennis Club Franconville {formatDate(new Date(), 'YYYY')}
+            &copy; Tennis Club Franconville {formatDate(new Date(), 'yyyy')}
           </p>
           <nav css={footerNav}>
             <FooterLink to="/">Accueil</FooterLink>

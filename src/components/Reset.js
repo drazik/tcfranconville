@@ -28,6 +28,12 @@ function Reset(props) {
         a {
           color: inherit;
         }
+
+        /* This rule puts the modal portal on top of the app */
+        .ReactModalPortal {
+          position: relative;
+          z-index: 1000;
+        }
       `}
     />
   )
