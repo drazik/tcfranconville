@@ -32,7 +32,7 @@ export const Slide = props => {
   } = props
 
   return (
-    <div tabindex={tabindex} style={style}>
+    <div tabIndex={tabindex} style={style}>
       <Component
         css={{
           height: '400px',
