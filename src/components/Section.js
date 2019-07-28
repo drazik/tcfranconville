@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
+import mq from '../helpers/media-queries'
+import { withTheme } from 'emotion-theming'
 
 export const SectionTitle = styled.h1(
   {
@@ -33,30 +35,43 @@ const getSectionBackgroundColor = (variant, theme) => {
   }
 }
 
-export const SectionContainer = styled.section(
-  {
+export const SectionContainer = props => {
+  const { variant, theme, skewed, ...rest } = props
+
+  const styles = {
     position: 'relative',
     paddingTop: '5rem',
-    paddingBottom: '5rem'
-  },
-  props => {
-    const styles = {
-      backgroundColor: getSectionBackgroundColor(props.variant, props.theme),
-      color: props.variant === 'primary' ? 'white' : 'inherit',
-    }
-
-    if (props.skewed) {
-      styles.zIndex = 0
-      styles.transformOrigin = '100% 0'
-      styles.transform = 'skewY(3deg)'
-      styles['& > *'] = {
-        transform: 'skewY(-3deg)'
-      }
-    }
-
-    return styles
+    paddingBottom: '5rem',
+    backgroundColor: getSectionBackgroundColor(variant, theme),
+    color: props.variant === 'primary' ? 'white' : 'inherit',
   }
-)
+
+  if (props.skewed) {
+    styles.zIndex = 0
+    styles.transformOrigin = '100% 0'
+    styles.transform = [
+      'skewY(3deg)',
+      'skewY(2.5deg)',
+      'skewY(2deg)',
+      'skewY(1.(deg))'
+    ]
+    styles['& > *'] = {
+      transform: [
+        'skewY(-3deg)',
+        'skewY(-2.5deg)',
+        'skewY(-2deg)',
+        'skewY(-1.(deg))'
+      ]
+    }
+  }
+
+  return (
+    <section
+      css={mq(styles)}
+      {...rest}
+    />
+  )
+}
 
 SectionContainer.propTypes = {
   variant: PropTypes.oneOf(['normal', 'primary', 'light'])
@@ -66,7 +81,7 @@ SectionContainer.defaultProps = {
   variant: 'normal'
 }
 
-export const Section = props => {
+export const Section = withTheme(props => {
   const { children, ...rest } = props
 
   return (
@@ -74,4 +89,4 @@ export const Section = props => {
       {props.skewed ? <div>{children}</div> : children}
     </SectionContainer>
   )
-}
+})

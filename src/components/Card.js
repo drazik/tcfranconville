@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import mq from '../helpers/media-queries'
 
 const card = mq({
-  height: ['200px', '400px'],
+  height: ['200px', '250px', '400px'],
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   boxShadow: '0 40px 30px -30px rgba(0, 0, 0, 0.5)',
@@ -15,8 +15,8 @@ const card = mq({
   textDecoration: 'none',
   fontWeight: 'bold',
   fontSize: '1.5rem',
-  paddingLeft: '1.5rem',
-  paddingBottom: '1.5rem',
+  paddingLeft: ['1.5rem', '1.5rem', '0.75rem', '1.5rem'],
+  paddingBottom: ['1.5rem', '1.5rem', '0.75rem', '1.5rem'],
   borderRadius: '0.5rem',
   textShadow: '1px 1px 2px rgba(0, 0, 0, 0.35)',
   overflow: 'hidden',

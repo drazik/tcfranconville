@@ -66,12 +66,14 @@ const IndexPage = () => {
       </Section>
 
       <Section>
-        <Wrapper css={{ marginTop: -130 }}>
+        <Wrapper css={mq({
+          marginTop: [-130, -150]
+        })}>
           <div
             css={mq({
               display: 'grid',
-              gridTemplateColumns: ['1fr', 'repeat(3, 1fr)'],
-              gridColumnGap: '2rem',
+              gridTemplateColumns: ['1fr',  '1fr', 'repeat(3, 1fr)'],
+              gridColumnGap: ['1rem', '1rem', '1rem', '2rem'],
               gridRowGap: '2rem'
             })}
           >
@@ -134,12 +136,12 @@ const IndexPage = () => {
       <Section css={{
         paddingTop: 0,
         paddingBottom: 0,
-        marginTop: '-1rem',
+        marginTop: '-4rem',
         zIndex: 1
       }}>
         <Wrapper>
           <SectionTitle css={{ position: 'absolute', top: '2rem' }}>
-            Prochains<br css={mq({ display: ['block', 'none'] })} /> événements
+            Prochains<br css={mq({ display: ['block', 'block', 'none'] })} /> événements
           </SectionTitle>
           <Timeline css={{ paddingTop: '12rem' }} />
         </Wrapper>

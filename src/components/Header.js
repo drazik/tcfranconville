@@ -17,7 +17,7 @@ const container = {
 const wrapper = mq({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: ['center', 'flex-start']
+  justifyContent: 'center'
 })
 
 const Header = () => {
