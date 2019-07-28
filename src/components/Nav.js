@@ -162,6 +162,9 @@ const Overlay = props => {
 function Nav() {
   const [isOpen, setOpen] = useState(false)
 
+  // Without this, we can't scroll after page change
+  useEffect(() => () => document.body.style.overflow = 'auto')
+
   const handleOpen = () => {
     setOpen(true)
     document.body.style.overflow = 'hidden'
