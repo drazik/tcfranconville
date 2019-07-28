@@ -113,8 +113,10 @@ const Menu = props => {
 }
 
 const MenuItem = props => {
+  const { as: Component = Link, ...rest } = props
+
   return (
-    <Link
+    <Component
       css={{
         color: 'white',
         fontSize: '1.5rem',
@@ -132,7 +134,7 @@ const MenuItem = props => {
           height: 1
         }
       }}
-      {...props}
+      {...rest}
     />
   )
 }
@@ -184,22 +186,26 @@ function Nav() {
         <MenuItem to="/">
           Accueil
         </MenuItem>
-        <MenuItem to="/">
+        <MenuItem to="/enseignement">
           Enseignement
         </MenuItem>
-        <MenuItem to="/">
+        <MenuItem to="/competition">
           Compétition
         </MenuItem>
-        <MenuItem to="/">
+        <MenuItem to="/animation">
           Animations
         </MenuItem>
         <MenuItem to="/reservation">
           Réservation
         </MenuItem>
-        <MenuItem to="/">
+        <MenuItem to="/contact">
           Contact
         </MenuItem>
-        <MenuItem to="/">
+        <MenuItem
+          as="a"
+          href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
+          target="_blank"
+        >
           <FacebookIcon width="32" height="32" css={{ fill: 'white' }} />
         </MenuItem>
       </Menu>
