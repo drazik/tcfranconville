@@ -53,8 +53,11 @@ const IndexPage = () => {
 
       <Section skewed variant="primary">
         <Wrapper>
+          <SectionTitle variant="primary">
+            Bienvenue !
+          </SectionTitle>
           <Text>
-            Depuis 1980, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
+            Depuis plus de 50 ans, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
           </Text>
           <Text>
             Le TCF est un club vivant et convivial dont la vie s'articule autour de 3 grands axes :
