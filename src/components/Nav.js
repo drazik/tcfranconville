@@ -193,6 +193,9 @@ function Nav() {
         <MenuItem to="/">
           Animations
         </MenuItem>
+        <MenuItem to="/reservation">
+          Réservation
+        </MenuItem>
         <MenuItem to="/">
           Contact
         </MenuItem>
