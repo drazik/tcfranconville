@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import Layout from '../components/Layout'
-import Timeline from '../components/Timeline'
 import Wrapper from '../components/Wrapper'
 import { Section, SectionTitle } from '../components/Section'
 import teachingCardBackground from '../images/teaching-card.jpg'
@@ -16,6 +15,7 @@ import sliderTournament from '../images/slider.jpg'
 import sliderKid from '../images/slider-kid.jpg'
 import slider50ans from '../images/slider-50-ans.jpg'
 import { Button } from '../components/Button'
+import { FacebookFeed } from '../components/FacebookFeed'
 
 const MapIframe = styled.iframe`
   width: 100%;
@@ -133,17 +133,29 @@ const IndexPage = () => {
         </Wrapper>
       </Section>
 
-      <Section css={{
-        paddingTop: 0,
-        paddingBottom: 0,
-        marginTop: '-4rem',
-        zIndex: 1
-      }}>
+      {/* <Section css={{ */}
+      {/*   paddingTop: 0, */}
+      {/*   paddingBottom: 0, */}
+      {/*   marginTop: '-4rem', */}
+      {/*   zIndex: 1 */}
+      {/* }}> */}
+      {/*   <Wrapper> */}
+      {/*     <SectionTitle css={{ position: 'absolute', top: '2rem' }}> */}
+      {/*       Prochains<br css={mq({ display: ['block', 'block', 'none'] })} /> événements */}
+      {/*     </SectionTitle> */}
+      {/*     <Timeline css={{ paddingTop: '12rem' }} /> */}
+      {/*   </Wrapper> */}
+      {/* </Section> */}
+
+      <Section>
         <Wrapper>
-          <SectionTitle css={{ position: 'absolute', top: '2rem' }}>
-            Prochains<br css={mq({ display: ['block', 'block', 'none'] })} /> événements
+          <SectionTitle>
+            L'actualité du club
           </SectionTitle>
-          <Timeline css={{ paddingTop: '12rem' }} />
+          <Text>
+            L'actualité du club est disponible sur notre <a href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/">page Facebook</a>.
+          </Text>
+          <FacebookFeed css={{ marginTop: '3rem' }}/>
         </Wrapper>
       </Section>
     </Layout>
