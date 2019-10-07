@@ -1,52 +1,26 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import FacebookIcon from '../images/icons/facebook.svg'
-import { rgba } from 'polished'
-import isWindowDefined from '../helpers/isWindowDefined'
-
-const useScrollY = () => {
-  const [scrollY, setScrollY] = useState(isWindowDefined ? window.scrollY : 0)
-
-  useEffect(() => {
-    if (!isWindowDefined) {
-      return
-    }
-
-    const updateScrollValue = () => {
-      setScrollY(window.scrollY)
-    }
-
-    window.addEventListener('scroll', updateScrollValue)
-
-    return () => {
-      window.removeEventListener('scroll', updateScrollValue)
-    }
-  })
-
-  return scrollY
-}
+import mq from '../helpers/media-queries'
 
 const BurgerButton = props => {
   const { active, ...rest } = props
-  const scrollY = useScrollY()
-
-  const SCROLL_THRESHOLD = 400
-  const opacity = Math.min(scrollY / SCROLL_THRESHOLD, 1)
 
   return (
     <button
-      css={theme => ({
+      css={theme => mq({
         position: 'fixed',
         top: 'calc(0.5rem + 50px)',
         left: '5%',
         height: 48,
         width: 48,
-        backgroundColor: rgba(theme.main, opacity),
+        backgroundColor: theme.main,
         padding: 0,
         border: 0,
         transform: 'translateY(-50%)',
         borderRadius: '50%',
         zIndex: 999,
+        display: ['block', 'block', 'block', 'none']
       })}
       {...rest}
     >
@@ -164,17 +138,12 @@ const Overlay = props => {
 function Nav() {
   const [isOpen, setOpen] = useState(false)
 
-  // Without this, we can't scroll after page change
-  useEffect(() => () => document.body.style.overflow = 'auto')
-
   const handleOpen = () => {
     setOpen(true)
-    document.body.style.overflow = 'hidden'
   }
 
   const handleClose = () => {
     setOpen(false)
-    document.body.style.overflow = 'auto'
   }
 
   const handler = isOpen ? handleClose : handleOpen
