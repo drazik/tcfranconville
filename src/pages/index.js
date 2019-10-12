@@ -124,21 +124,36 @@ const IndexPage = () => {
                   width: ['100%', '100%', '50%']
                 })}
                   block
-                >
-                  Réserver un court
-                </Button>
-                <Text>
-                  Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
-                </Text>
-                <Text>
-                  Vous pouvez nous contacter par téléphone au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net" css={{ wordWrap: 'break-word' }}>tennis.club.franconville@cegetel.net</a>.
-                </Text>
-                <MapIframe
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
-                />
-              </Stack>
+              >
+                Réserver un court
+              </Button>
+              <Text>
+                Vous aimeriez jouer régulièrement ? Devenez adhérent(e) du TCF afin de bénéficier d'un accès illimité aux courts.
+              </Text>
+              <Button
+                as={Link}
+                to="/tarifs"
+                css={mq({
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                  width: ['100%', '100%', '50%']
+                })}
+                  block
+              >
+                Découvrir la cotisation
+              </Button>
+              <Text>
+                Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland. Un parking est disponible à cette adresse, ainsi qu'un autre au 110 rue des Pommiers Saulniers.
+              </Text>
+              <Text>
+                Vous pouvez nous contacter par téléphone au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net" css={{ wordWrap: 'break-word' }}>tennis.club.franconville@cegetel.net</a>.
+              </Text>
+              <MapIframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.57427100331!2d2.2175768160385503!3d48.9996586793017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6673fa2c4f21b%3A0x73fa94e076916ed!2sTennis%20Club%20de%20Franconville!5e0!3m2!1sfr!2sfr!4v1570894237189!5m2!1sfr!2sfr"
+              />
             </Stack>
-          </Wrapper>
+          </Stack>
+        </Wrapper>
       </Section>
 
       <Section>
