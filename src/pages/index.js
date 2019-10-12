@@ -10,12 +10,8 @@ import mq from '../helpers/media-queries'
 import Card from '../components/Card'
 import { Link } from 'gatsby'
 import { Text } from '../components/Text'
-import { Slider, Slide } from '../components/Slider'
-import sliderTournament from '../images/slider.jpg'
-import sliderKid from '../images/slider-kid.jpg'
-import slider50ans from '../images/slider-50-ans.jpg'
 import { Button } from '../components/Button'
-import { FacebookFeed } from '../components/FacebookFeed'
+import SplashImage from '../components/SplashImage'
 
 const MapIframe = styled.iframe`
   width: 100%;
@@ -23,45 +19,52 @@ const MapIframe = styled.iframe`
   border: 0;
 `
 
+const Stack = props => {
+  const { spacing, ...rest } = props
+
+  const spacingToMultiplicator = {
+    xs: 1,
+    s: 2,
+    m: 4,
+    l: 6
+  }
+
+  return (
+    <div
+      css={theme => mq({
+        '& > *': {
+          marginTop: 0,
+          marginBottom: 0
+        },
+        '& > * + *': {
+          marginTop: theme.spacing * spacingToMultiplicator[spacing]
+        }
+      })}
+      {...rest}
+    />
+  )
+}
+
 const IndexPage = () => {
   return (
     <Layout>
-      <Slider
-        arrows={false}
-        autoplay
-        autoplaySpeed={5000}
-      >
-        <Slide
-          backgroundImage={sliderTournament}
-          text="37ème tournoi Open"
-          as={Link}
-          to="/"
-        />
-        <Slide
-          backgroundImage={sliderKid}
-          text="Inscriptions ouvertes !"
-          as={Link}
-          to="/"
-        />
-        <Slide
-          backgroundImage={slider50ans}
-          text="Les 50 ans du club"
-          as={Link}
-          to="/"
-        />
-      </Slider>
+      <SplashImage />
 
       <Section skewed variant="primary">
         <Wrapper>
-          <SectionTitle variant="primary">
-            Bienvenue !
-          </SectionTitle>
-          <Text>
-            Depuis plus de 50 ans, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
-          </Text>
-          <Text>
-            Le TCF est un club vivant et convivial dont la vie s'articule autour de 3 grands axes :
-          </Text>
+          <Stack spacing="l">
+            <SectionTitle variant="primary">
+              Bienvenue !
+            </SectionTitle>
+            <Stack spacing="m">
+              <Text>
+                Depuis plus de 50 ans, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
+              </Text>
+              <Text>
+                Le TCF est un club vivant et convivial dont la vie s'articule autour de 3 grands axes :
+              </Text>
+            </Stack>
+          </Stack>
         </Wrapper>
       </Section>
 
@@ -104,58 +107,50 @@ const IndexPage = () => {
 
       <Section skewed variant="primary" css={{ zIndex: 2 }}>
         <Wrapper>
-          <SectionTitle variant="primary">
-            Venir jouer au TCF
-          </SectionTitle>
-          <Text>
-            Le club est ouvert à toutes et à tous. Envie de taper la petite balle jaune en famille ou entre amis ? En simple, en double ? Nos courts sont disponibles à la réservation, même si vous n'ête pas (encore) adhérents.
-          </Text>
-          <Button
-            as={Link}
-            to="/reservation"
-            fullWidth
-            css={{
-              marginTop: '2rem',
-              marginBottom: '2rem'
-            }}
-          >
-            Réserver un court
-          </Button>
-          <Text>
-            Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
-          </Text>
-          <Text>
-            Vous pouvez nous contacter par téléphone au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net" css={{ wordWrap: 'break-word' }}>tennis.club.franconville@cegetel.net</a>.
-          </Text>
-          <MapIframe
-            src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
-          />
-        </Wrapper>
+          <Stack spacing="l">
+            <SectionTitle variant="primary">
+              Venir jouer au TCF
+            </SectionTitle>
+            <Stack spacing="m">
+              <Text>
+                Le club est ouvert à toutes et à tous. Envie de taper la petite balle jaune en famille ou entre amis ? En simple, en double ? Nos courts sont disponibles à la réservation, même si vous n'ête pas (encore) adhérents.
+              </Text>
+              <Button
+                as={Link}
+                to="/reservation"
+                css={mq({
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                  width: ['100%', '100%', '50%']
+                })}
+                  block
+                >
+                  Réserver un court
+                </Button>
+                <Text>
+                  Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland.
+                </Text>
+                <Text>
+                  Vous pouvez nous contacter par téléphone au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net" css={{ wordWrap: 'break-word' }}>tennis.club.franconville@cegetel.net</a>.
+                </Text>
+                <MapIframe
+                  src="https://www.openstreetmap.org/export/embed.html?bbox=2.2181868553161626%2C48.99875568510867%2C2.2217273712158208%2C49.00034117786823&amp;layer=mapnik"
+                />
+              </Stack>
+            </Stack>
+          </Wrapper>
       </Section>
-
-      {/* <Section css={{ */}
-      {/*   paddingTop: 0, */}
-      {/*   paddingBottom: 0, */}
-      {/*   marginTop: '-4rem', */}
-      {/*   zIndex: 1 */}
-      {/* }}> */}
-      {/*   <Wrapper> */}
-      {/*     <SectionTitle css={{ position: 'absolute', top: '2rem' }}> */}
-      {/*       Prochains<br css={mq({ display: ['block', 'block', 'none'] })} /> événements */}
-      {/*     </SectionTitle> */}
-      {/*     <Timeline css={{ paddingTop: '12rem' }} /> */}
-      {/*   </Wrapper> */}
-      {/* </Section> */}
 
       <Section>
         <Wrapper>
-          <SectionTitle>
-            L'actualité du club
-          </SectionTitle>
-          <Text>
-            L'actualité du club est disponible sur notre <a href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/">page Facebook</a>.
-          </Text>
-          <FacebookFeed css={{ marginTop: '3rem' }}/>
+          <Stack spacing="l">
+            <SectionTitle>
+              L'actualité du club
+            </SectionTitle>
+            <Text>
+              L'actualité du club est disponible sur notre <a href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/">page Facebook</a>.
+            </Text>
+          </Stack>
         </Wrapper>
       </Section>
     </Layout>

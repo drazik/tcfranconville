@@ -6,12 +6,13 @@ const baseStyle = theme => ({
   textDecoration: 'none',
   borderRadius: '0.5rem',
   padding: '0.75em 0.5em',
-  fontSize: '1.125rem'
+  fontSize: '1.125rem',
+  display: 'inline-flex',
+  justifyContent: 'center'
 })
 
-const fullWidthStyle = {
-  display: 'flex',
-  justifyContent: 'center'
+const blockStyle = {
+  display: 'flex'
 }
 
 const primaryStyle = theme => ({
@@ -20,13 +21,13 @@ const primaryStyle = theme => ({
 })
 
 export const Button = props => {
-  const { as: Component = 'button', fullWidth, variant, ...rest } = props
+  const { as: Component = 'button', variant, block, ...rest } = props
 
   return (
     <Component
       css={theme => [
         baseStyle(theme),
-        fullWidth && fullWidthStyle,
+        block && blockStyle,
         variant === 'primary' && primaryStyle(theme)
       ].filter(Boolean)}
       {...rest}
