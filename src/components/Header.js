@@ -25,7 +25,7 @@ const Header = () => {
     <header css={container}>
       <Wrapper css={wrapper}>
         <Link to="/" title="Revenir à l'accueil">
-          <Logo />
+          <Logo size={125} />
         </Link>
       </Wrapper>
     </header>
