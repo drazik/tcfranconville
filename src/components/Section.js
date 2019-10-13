@@ -53,14 +53,14 @@ export const SectionContainer = props => {
       'skewY(3deg)',
       'skewY(2.5deg)',
       'skewY(2deg)',
-      'skewY(1.(deg))'
+      'skewY(1.5deg)'
     ]
     styles['& > *'] = {
       transform: [
         'skewY(-3deg)',
         'skewY(-2.5deg)',
         'skewY(-2deg)',
-        'skewY(-1.(deg))'
+        'skewY(-1.5deg)'
       ]
     }
   }
