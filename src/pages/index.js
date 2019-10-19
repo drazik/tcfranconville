@@ -12,6 +12,7 @@ import { Text } from '../components/Text'
 import { Button } from '../components/Button'
 import SEO from '../components/seo'
 import { Stack } from '../components/Stack'
+import { FacebookFeed } from '../components/FacebookFeed'
 
 const IndexPage = () => {
   return (
@@ -148,6 +149,7 @@ const IndexPage = () => {
             <Text>
               L'actualité du club est disponible sur notre <a href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/">page Facebook</a>.
             </Text>
+            <FacebookFeed />
           </Stack>
         </Wrapper>
       </Section>
