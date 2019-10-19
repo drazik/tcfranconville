@@ -103,7 +103,7 @@ const IndexPage = () => {
                     Réserver un court
                   </Button>
                   <Text>
-                    Vous aimeriez jouer régulièrement ? En devenant adhérent(e) du TC Franconville, vous pourrez profiter au maximum des infrastructures du club. Différentes possibilités s'offrent à vous : cotisation à l'année, pour 6 mois...
+                    Vous aimeriez jouer régulièrement ? En devenant adhérent(e) du TC Franconville, vous pourrez profiter au maximum des infrastructures du club. Différentes possibilités s'offrent à vous : cotisation à l'année, saisonnière...
                   </Text>
                   <Button
                     as={Link}
