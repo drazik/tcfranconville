@@ -10,6 +10,7 @@ import Card from '../components/Card'
 import { Link } from 'gatsby'
 import { Text } from '../components/Text'
 import { Button } from '../components/Button'
+import SEO from '../components/seo'
 
 const Stack = props => {
   const { spacing, ...rest } = props
@@ -40,6 +41,7 @@ const Stack = props => {
 const IndexPage = () => {
   return (
     <Layout>
+      <SEO title="Accueil" />
       <Section skewed variant="primary">
         <Wrapper>
           <Stack spacing="l">

@@ -4,10 +4,12 @@ import { Section, SectionTitle } from '../components/Section'
 import { Text } from '../components/Text'
 import Wrapper from '../components/Wrapper'
 import { BookingForm } from '../components/BookingForm'
+import SEO from '../components/seo'
 
 const ReservationPage = props => {
   return (
     <Layout>
+      <SEO title="Réservation" />
       <Section skewed variant="primary">
         <Wrapper>
           <BookingForm />

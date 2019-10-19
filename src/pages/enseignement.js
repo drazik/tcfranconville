@@ -17,6 +17,7 @@ import davidPhoto from '../images/teachers/david.jpg'
 import carinePhoto from '../images/teachers/carine.jpg'
 import { Text } from '../components/Text'
 import { Link } from 'gatsby'
+import SEO from '../components/seo'
 
 const PricesLink = props => {
   const { variant, ...rest } = props
@@ -47,6 +48,7 @@ const PricesLink = props => {
 const EnseignementPage = () => {
   return (
     <Layout>
+      <SEO title="Enseignement" />
       <div css={{ position: 'relative' }}>
         <Section padded skewed variant="primary" css={{ zIndex: 4 }}>
           <Wrapper>

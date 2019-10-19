@@ -3,10 +3,12 @@ import Layout from '../components/Layout'
 import { Section } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import { Text } from '../components/Text'
+import SEO from '../components/seo'
 
-const EnseignementPage = () => {
+const TarifsPage = () => {
   return (
     <Layout>
+      <SEO title="Tarifs" />
       <Section padded skewed variant="primary">
         <Wrapper>
           <Text>
@@ -18,4 +20,4 @@ const EnseignementPage = () => {
   )
 }
 
-export default EnseignementPage
+export default TarifsPage
