@@ -10,7 +10,6 @@ import Card from '../components/Card'
 import { Link } from 'gatsby'
 import { Text } from '../components/Text'
 import { Button } from '../components/Button'
-import SplashImage from '../components/SplashImage'
 
 const Stack = props => {
   const { spacing, ...rest } = props
@@ -41,8 +40,6 @@ const Stack = props => {
 const IndexPage = () => {
   return (
     <Layout>
-      <SplashImage />
-
       <Section skewed variant="primary">
         <Wrapper>
           <Stack spacing="l">

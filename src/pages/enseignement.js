@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import SplashImage from '../components/SplashImage'
 import { Section, SectionTitle } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import Card from '../components/Card'
@@ -49,9 +48,6 @@ const EnseignementPage = () => {
   return (
     <Layout>
       <div css={{ position: 'relative' }}>
-        <SplashImage height="400px">
-          L'enseignement
-        </SplashImage>
         <Section padded skewed variant="primary" css={{ zIndex: 4 }}>
           <Wrapper>
             <SectionTitle variant="primary">

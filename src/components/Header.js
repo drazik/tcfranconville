@@ -2,33 +2,28 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Logo from './Logo'
 import Wrapper from './Wrapper'
+import Nav from './Nav'
+import SplashImage from './SplashImage'
 import mq from '../helpers/media-queries'
-
-const container = {
-  position: 'absolute',
-  top: 0,
-  left: 0,
-  right: 0,
-  paddingTop: '0.5rem',
-  paddingBottom: '0.5rem',
-  zIndex: 1
-}
 
 const wrapper = mq({
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  padding: '2rem 0',
+  flexDirection: ['row', 'row', 'row', 'column']
 })
 
 const Header = () => {
   return (
-    <header css={container}>
+    <SplashImage component="header">
       <Wrapper css={wrapper}>
         <Link to="/" title="Revenir à l'accueil">
           <Logo size={125} />
         </Link>
+        <Nav />
       </Wrapper>
-    </header>
+    </SplashImage>
   )
 }
 

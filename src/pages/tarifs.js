@@ -1,6 +1,5 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import SplashImage from '../components/SplashImage'
 import { Section } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import { Text } from '../components/Text'
@@ -8,9 +7,6 @@ import { Text } from '../components/Text'
 const EnseignementPage = () => {
   return (
     <Layout>
-      <SplashImage height="400px">
-        Les tarifs
-      </SplashImage>
       <Section padded skewed variant="primary">
         <Wrapper>
           <Text>

@@ -2,16 +2,12 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import { Text } from '../components/Text'
-import SplashImage from '../components/SplashImage'
 import Wrapper from '../components/Wrapper'
 import { BookingForm } from '../components/BookingForm'
 
 const ReservationPage = props => {
   return (
     <Layout>
-      <SplashImage height="300px">
-        Réservation
-      </SplashImage>
       <Section skewed variant="primary">
         <Wrapper>
           <BookingForm />

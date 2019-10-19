@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
+import { Match } from '@reach/router'
 import FacebookIcon from '../images/icons/facebook.svg'
 import mq from '../helpers/media-queries'
 
@@ -64,21 +65,28 @@ const BurgerButton = props => {
 const Menu = props => {
   const { isOpen, ...rest } = props
 
+  const transform = props.isOpen ? 'translateX(0)' : 'translateX(-100%)'
+
   return (
     <nav
-      css={theme => ({
-        position: 'fixed',
+      css={theme => mq({
+        position: ['fixed', 'fixed', 'fixed', 'static'],
         top: 0,
         bottom: 0,
         left: 0,
-        width: '80%',
-        backgroundColor: theme.main,
+        width: ['80%', '80%', '80%', '100%'],
+        backgroundColor: [theme.main, theme.main, theme.main, 'transparent'],
         zIndex: 998,
-        transform: props.isOpen ? 'translateX(0)' : 'translateX(-100%)',
-        transition: 'transform 0.25s ease-in-out',
-        padding: '6rem 2rem 0',
+        transform: [transform, transform, transform, 'translateX(0)'],
+        transitionProperty: 'transform',
+        transitionDuration: ['0.25s', '0.25s', '0.25s', '0s'],
+        transitionTimingFunction: 'ease-in-out',
+        padding: ['6rem 2rem 0', '6rem 2rem 0', '6rem 2rem 0', 0],
         display: 'flex',
-        flexDirection: 'column'
+        flexDirection: ['column', 'column', 'column', 'row'],
+        justifyContent: 'center',
+        fontWeight: ['normal', 'normal', 'normal', 'bold'],
+        paddingBottom: [0, 0, 0, '1rem']
       })}
       {...rest}
     >
@@ -86,31 +94,80 @@ const Menu = props => {
   )
 }
 
-const MenuItem = props => {
-  const { as: Component = Link, ...rest } = props
+const MenuLink = props => {
+  const { isCurrent, ...rest } = props
+
+  const Component = props.href ? 'a' : Link
 
   return (
-    <Component
-      css={{
-        color: 'white',
-        fontSize: '1.5rem',
-        textTransform: 'uppercase',
-        textDecoration: 'none',
-        padding: '1rem 0',
+    <span
+      css={mq({
         position: 'relative',
+        display: 'inline-flex',
+
+        '& + &': {
+          marginLeft: [0, 0, 0, '2rem']
+        },
 
         '& + &::before': {
           content: '""',
+          display: ['block', 'block', 'block', 'none'],
           position: 'absolute',
           top: 0,
           backgroundColor: 'white',
           width: 100,
           height: 1
         }
-      }}
-      {...rest}
-    />
+      })}
+    >
+      <Component
+        css={theme => mq({
+          color: 'white',
+          fontSize: ['1.5rem', '1.5rem', '1.5rem', '1.25rem'],
+          textTransform: ['uppercase', 'uppercase', 'uppercase', 'none'],
+          textDecoration: 'none',
+          padding: '1rem 0',
+          position: 'relative',
+          textShadow: ['none', 'none', 'none', '1px 1px 1px #000'],
+
+          '&::after': {
+            content: '""',
+            display: ['none', 'none', 'none', isCurrent ? 'block' : 'none'],
+            height: '3px',
+            width: '100%',
+            backgroundColor: theme.main,
+            marginTop: 2
+          }
+        })}
+        {...rest}
+      />
+    </span>
   )
+}
+
+const MenuLinkExternal = props => {
+  return <MenuLink {...props} />
+}
+
+const MenuLinkInternal = props => {
+  return (
+    <Match path={props.to}>
+      {({ match }) => (
+        <MenuLink
+          isCurrent={match}
+          {...props}
+        />
+      )}
+    </Match>
+  )
+}
+
+const MenuItem = props => {
+  if (props.href) {
+    return <MenuLinkExternal {...props} />
+  }
+
+  return <MenuLinkInternal {...props} />
 }
 
 const Overlay = props => {
@@ -174,6 +231,9 @@ function Nav() {
           as="a"
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
           target="_blank"
+          css={mq({
+            display: ['block', 'block', 'block', 'none']
+          })}
         >
           <FacebookIcon width="32" height="32" css={{ fill: 'white' }} />
         </MenuItem>
