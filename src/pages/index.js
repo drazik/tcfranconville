@@ -11,32 +11,7 @@ import { Link } from 'gatsby'
 import { Text } from '../components/Text'
 import { Button } from '../components/Button'
 import SEO from '../components/seo'
-
-const Stack = props => {
-  const { spacing, ...rest } = props
-
-  const spacingToMultiplicator = {
-    xs: 1,
-    s: 2,
-    m: 4,
-    l: 6
-  }
-
-  return (
-    <div
-      css={theme => mq({
-        '& > *': {
-          marginTop: 0,
-          marginBottom: 0
-        },
-        '& > * + *': {
-          marginTop: theme.spacing * spacingToMultiplicator[spacing]
-        }
-      })}
-      {...rest}
-    />
-  )
-}
+import { Stack } from '../components/Stack'
 
 const IndexPage = () => {
   return (
