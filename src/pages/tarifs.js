@@ -56,118 +56,120 @@ const TarifsPage = () => {
               <Text>
                 Nous proposons différents tarifs afin que chacun puisse trouver une cotisation qui correspond le mieux à ses besoins. En cas de question, n'hésitez pas à <Link to="/contact">nous contacter</Link>.
               </Text>
-              <Table>
-                <TableHead>
-                  <TableRow>
-                    <TableCell heading />
-                    <TableCell heading align="center">
-                      <Text>Habitant Franconville</Text>
-                    </TableCell>
-                    <TableCell heading align="center">
-                      <Text>Hors Franconville</Text>
-                    </TableCell>
-                  </TableRow>
-                </TableHead>
-                <TableBody>
-                  <TableRow>
-                    <TableCell>
-                      <Text>Adulte</Text>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>275€ + licence</Text>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>285€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Jeune</Text>
-                        <Caption>&lt;25 ans et hors école de tennis</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell colSpan="2" align="center">
-                      <Text>120€ + licence</Text></TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Semaine</Text>
-                        <Caption>du lundi au vendredi de 8h à 18h</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>220€ + licence</Text>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>230€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Text>Retraite sportive</Text>
-                    </TableCell>
-                    <TableCell colSpan="2" align="center">
-                      <Text>155€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Text>Cotisation parentale</Text>
-                    </TableCell>
-                    <TableCell colSpan="2" align="center">
-                      <Text>95€ (licence comprise)</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Printemps/été</Text>
-                        <Caption>du 1er mars au 31 août</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>160€ + licence</Text>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>170€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Été adulte</Text>
-                        <Caption>du 1er juin au 31 août</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>90€ + licence</Text>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>100€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>
-                          Été jeune
-                        </Text>
-                        <Caption>
-                          du 1er juin au 31 août
-                        </Caption>
-                        <Caption>
-                          &lt;25 ans et hors école de tennis
-                        </Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell colSpan="2" align="center">
-                      <Text>40€ + licence</Text>
-                    </TableCell>
-                  </TableRow>
-                </TableBody>
-              </Table>
+              <div css={{ overflowX: 'scroll' }}>
+                <Table>
+                  <TableHead>
+                    <TableRow>
+                      <TableCell heading />
+                      <TableCell heading align="center">
+                        <Text>Habitant Franconville</Text>
+                      </TableCell>
+                      <TableCell heading align="center">
+                        <Text>Hors Franconville</Text>
+                      </TableCell>
+                    </TableRow>
+                  </TableHead>
+                  <TableBody>
+                    <TableRow>
+                      <TableCell>
+                        <Text>Adulte</Text>
+                      </TableCell>
+                      <TableCell align="center">
+                        <Text>275€ + licence</Text>
+                      </TableCell>
+                      <TableCell align="center">
+                        <Text>285€ + licence</Text>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Stack spacing="xs">
+                          <Text>Jeune</Text>
+                          <Caption>&lt;25 ans et hors école de tennis</Caption>
+                        </Stack>
+                      </TableCell>
+                      <TableCell colSpan="2" align="center">
+                        <Text>120€ + licence</Text></TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Stack spacing="xs">
+                            <Text>Semaine</Text>
+                            <Caption>du lundi au vendredi de 8h à 18h</Caption>
+                          </Stack>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>220€ + licence</Text>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>230€ + licence</Text>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Text>Retraite sportive</Text>
+                        </TableCell>
+                        <TableCell colSpan="2" align="center">
+                          <Text>155€ + licence</Text>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Text>Cotisation parentale</Text>
+                        </TableCell>
+                        <TableCell colSpan="2" align="center">
+                          <Text>95€ (licence comprise)</Text>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Stack spacing="xs">
+                            <Text>Printemps/été</Text>
+                            <Caption>du 1er mars au 31 août</Caption>
+                          </Stack>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>160€ + licence</Text>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>170€ + licence</Text>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Stack spacing="xs">
+                            <Text>Été adulte</Text>
+                            <Caption>du 1er juin au 31 août</Caption>
+                          </Stack>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>90€ + licence</Text>
+                        </TableCell>
+                        <TableCell align="center">
+                          <Text>100€ + licence</Text>
+                        </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>
+                          <Stack spacing="xs">
+                            <Text>
+                              Été jeune
+                            </Text>
+                            <Caption>
+                              du 1er juin au 31 août
+                            </Caption>
+                            <Caption>
+                              &lt;25 ans et hors école de tennis
+                            </Caption>
+                          </Stack>
+                        </TableCell>
+                        <TableCell colSpan="2" align="center">
+                          <Text>40€ + licence</Text>
+                        </TableCell>
+                      </TableRow>
+                    </TableBody>
+                  </Table>
+                </div>
               <Text>
                 Pour toute souscription à une cotisation anuelle, une invitation est offerte.
               </Text>
