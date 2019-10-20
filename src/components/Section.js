@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import PropTypes from 'prop-types'
-import mq from '../helpers/media-queries'
+import { mq as mqNew } from '../helpers/media-queries'
 import { withTheme } from 'emotion-theming'
 
 export const SectionTitle = styled.h1(
@@ -46,28 +46,41 @@ export const SectionContainer = props => {
     color: props.variant === 'primary' ? 'white' : 'inherit',
   }
 
-  if (props.skewed) {
-    styles.zIndex = 0
-    styles.transformOrigin = '100% 0'
-    styles.transform = [
-      'skewY(3deg)',
-      'skewY(2.5deg)',
-      'skewY(2deg)',
-      'skewY(1.5deg)'
-    ]
-    styles['& > *'] = {
-      transform: [
-        'skewY(-3deg)',
-        'skewY(-2.5deg)',
-        'skewY(-2deg)',
-        'skewY(-1.5deg)'
-      ]
+  const skewedStyles = {
+    transform: 'skewY(3deg)',
+    transformOrigin: '100% 0',
+    zIndex: 0,
+
+    '& > *': {
+      transform: 'skewY(-3deg)'
+    },
+
+    [mqNew('s')]: {
+      transform: 'skewY(2.5deg)',
+      '& > *': {
+        transform: 'skewY(-2.5deg)'
+      }
+    },
+
+    [mqNew('m')]: {
+      transform: 'skewY(2deg)',
+      '& > *': {
+        transform: 'skewY(-2deg)'
+
+      },
+    },
+
+    [mqNew('l')]: {
+      transform: 'skewY(1.5deg)',
+      '& > *': {
+        transform: 'skewY(-1.5deg)'
+      }
     }
   }
 
   return (
     <section
-      css={mq(styles)}
+      css={[styles, props.skewed && skewedStyles]}
       {...rest}
     />
   )

@@ -4,15 +4,14 @@ import Logo from './Logo'
 import Wrapper from './Wrapper'
 import Nav from './Nav'
 import SplashImage from './SplashImage'
-import mq from '../helpers/media-queries'
 
-const wrapper = mq({
+const wrapper = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
   padding: '2rem 0',
-  flexDirection: ['row', 'row', 'row', 'column']
-})
+  flexDirection: 'column'
+}
 
 const Header = () => {
   return (

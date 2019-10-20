@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { Match } from '@reach/router'
 import FacebookIcon from '../images/icons/facebook.svg'
-import mq from '../helpers/media-queries'
+import { mq as mqNew } from '../helpers/media-queries'
 
 const BurgerButton = props => {
   const { active, ...rest } = props
 
   return (
     <button
-      css={theme => mq({
+      css={theme => ({
         position: 'fixed',
         top: 'calc(0.5rem + 50px)',
         left: '5%',
@@ -21,7 +21,11 @@ const BurgerButton = props => {
         transform: 'translateY(-50%)',
         borderRadius: '50%',
         zIndex: 999,
-        display: ['block', 'block', 'block', 'none']
+        display: 'block',
+
+        [mqNew('l')]: {
+          display: 'none'
+        }
       })}
       {...rest}
     >
@@ -69,24 +73,36 @@ const Menu = props => {
 
   return (
     <nav
-      css={theme => mq({
-        position: ['fixed', 'fixed', 'fixed', 'static'],
+      css={theme => ({
+        position: 'fixed',
         top: 0,
         bottom: 0,
         left: 0,
-        width: ['80%', '80%', '80%', '100%'],
-        backgroundColor: [theme.main, theme.main, theme.main, 'transparent'],
+        width: '80%',
+        backgroundColor: theme.main,
         zIndex: 998,
-        transform: [transform, transform, transform, 'translateX(0)'],
+        transform: transform,
         transitionProperty: 'transform',
-        transitionDuration: ['0.25s', '0.25s', '0.25s', '0s'],
+        transitionDuration: '0.25s',
         transitionTimingFunction: 'ease-in-out',
-        padding: ['6rem 2rem 0', '6rem 2rem 0', '6rem 2rem 0', 0],
+        padding: '6rem 2rem 0',
         display: 'flex',
-        flexDirection: ['column', 'column', 'column', 'row'],
+        flexDirection: 'column',
         justifyContent: 'center',
-        fontWeight: ['normal', 'normal', 'normal', 'bold'],
-        paddingBottom: [0, 0, 0, '1rem']
+        fontWeight: 'normal',
+        paddingBottom: 0,
+
+        [mqNew('l')]: {
+          position: 'static',
+          width: '100%',
+          backgroundColor: 'transparent',
+          transform: 'translateX(0)',
+          transitionDuration: '0s',
+          padding: 0,
+          flexDirection: 'row',
+          fontWeight: 'bold',
+          paddingBottom: '1rem'
+        }
       })}
       {...rest}
     >
@@ -101,42 +117,59 @@ const MenuLink = props => {
 
   return (
     <span
-      css={mq({
+      css={{
         position: 'relative',
         display: 'inline-flex',
 
         '& + &': {
-          marginLeft: [0, 0, 0, '2rem']
+          marginLeft: 0,
+
+          [mqNew('l')]: {
+            marginLeft: '2rem'
+          }
         },
 
         '& + &::before': {
           content: '""',
-          display: ['block', 'block', 'block', 'none'],
+          display: 'block',
           position: 'absolute',
           top: 0,
           backgroundColor: 'white',
           width: 100,
-          height: 1
+          height: 1,
+
+          [mqNew('l')]: {
+            display: 'none'
+          }
         }
-      })}
+      }}
     >
       <Component
-        css={theme => mq({
+        css={theme => ({
           color: 'white',
-          fontSize: ['1.5rem', '1.5rem', '1.5rem', '1.25rem'],
-          textTransform: ['uppercase', 'uppercase', 'uppercase', 'none'],
+          fontSize: '1.5rem',
+          textTransform: 'uppercase',
           textDecoration: 'none',
           padding: '1rem 0',
           position: 'relative',
-          textShadow: ['none', 'none', 'none', '1px 1px 1px #000'],
+          textShadow: 'none',
+
+          [mqNew('l')]: {
+            fontSize: '1.25rem',
+            textTransform: 'none',
+            textShadow: '1px 1px 1px #000'
+          },
 
           '&::after': {
             content: '""',
-            display: ['none', 'none', 'none', isCurrent ? 'block' : 'none'],
+            display: 'none',
             height: '3px',
             width: '100%',
             backgroundColor: theme.main,
-            marginTop: 2
+            marginTop: 2,
+            [mqNew('l')]: {
+              display: isCurrent ? 'block' : 'none'
+            }
           }
         })}
         {...rest}
@@ -231,9 +264,13 @@ function Nav() {
           as="a"
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
           target="_blank"
-          css={mq({
-            display: ['block', 'block', 'block', 'none']
-          })}
+          css={{
+            display: 'block',
+
+            [mqNew('l')]: {
+              display: 'none'
+            }
+          }}
         >
           <FacebookIcon width="32" height="32" css={{ fill: 'white' }} />
         </MenuItem>

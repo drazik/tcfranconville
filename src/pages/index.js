@@ -5,7 +5,7 @@ import { Section, SectionTitle } from '../components/Section'
 import teachingCardBackground from '../images/teaching-card.jpg'
 import competitionCardBackground from '../images/competition-card.jpg'
 import animationCardBackground from '../images/animation-card.jpg'
-import mq from '../helpers/media-queries'
+import { mq as mqNew } from '../helpers/media-queries'
 import Card from '../components/Card'
 import { Link } from 'gatsby'
 import { Text } from '../components/Text'
@@ -37,16 +37,28 @@ const IndexPage = () => {
       </Section>
 
       <Section>
-        <Wrapper css={mq({
-          marginTop: [-130, -150]
-        })}>
+        <Wrapper css={{
+          marginTop: -130,
+
+          [mqNew('s')]: {
+            marginTop: -150
+          }
+        }}>
           <div
-            css={mq({
+            css={{
               display: 'grid',
-              gridTemplateColumns: ['1fr',  '1fr', 'repeat(3, 1fr)'],
-              gridColumnGap: ['1rem', '1rem', '1rem', '2rem'],
-              gridRowGap: '2rem'
-            })}
+              gridTemplateColumns: '1fr',
+              gridColumnGap: '1rem',
+              gridRowGap: '2rem',
+
+              [mqNew('m')]: {
+                gridTemplateColumns: 'repeat(3, 1fr)'
+              },
+
+              [mqNew('l')]: {
+                gridColumnGap: '2rem'
+              }
+            }}
           >
             <Card
               component={Link}
@@ -80,10 +92,14 @@ const IndexPage = () => {
               Venir jouer au TCF
             </SectionTitle>
             <div
-              css={theme => mq({
+              css={theme => ({
                 display: 'grid',
-                gridTemplateColumns: ['1fr', '1fr', 'repeat(2, 1fr)'],
-                gridGap: theme.spacing * 6
+                gridTemplateColumns: '1fr',
+                gridGap: theme.spacing * 6,
+
+                [mqNew('m')]: {
+                  gridTemplateColumns: 'repeat(2, 1fr)'
+                }
               })}
             >
               <div>
@@ -94,10 +110,10 @@ const IndexPage = () => {
                   <Button
                     as={Link}
                     to="/reservation"
-                    css={mq({
+                    css={{
                       marginLeft: 'auto',
                       marginRight: 'auto'
-                    })}
+                    }}
                     block
                   >
                     Réserver un court
@@ -108,10 +124,10 @@ const IndexPage = () => {
                   <Button
                     as={Link}
                     to="/tarifs"
-                    css={mq({
+                    css={{
                       marginLeft: 'auto',
                       marginRight: 'auto'
-                    })}
+                    }}
                     block
                   >
                     Découvrir la cotisation
@@ -126,11 +142,19 @@ const IndexPage = () => {
               </div>
               <div>
                 <iframe
-                  css={mq({
+                  css={{
                     width: '100%',
-                    height: ['400px', '500px', '100%'],
-                    border: 0
-                  })}
+                    height: 400,
+                    border: 0,
+
+                    [mqNew('s')]: {
+                      height: 500
+                    },
+
+                    [mqNew('m')]: {
+                      height: '100%'
+                    }
+                  }}
                   title="Carte"
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2617.57427100331!2d2.2175768160385503!3d48.9996586793017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e6673fa2c4f21b%3A0x73fa94e076916ed!2sTennis%20Club%20de%20Franconville!5e0!3m2!1sfr!2sfr!4v1570894237189!5m2!1sfr!2sfr"
                 ></iframe>
