@@ -5,8 +5,8 @@ export const Stack = props => {
   const { spacing = 'm', ...rest } = props
 
   const spacingToMultiplicator = {
-    xs: 1,
-    s: 2,
+    xs: 0.5,
+    s: 1,
     m: 4,
     l: 6
   }
@@ -19,7 +19,7 @@ export const Stack = props => {
           marginBottom: 0
         },
         '& > * + *': {
-          marginTop: theme.spacing * spacingToMultiplicator[spacing]
+          marginTop: `${theme.spacing * spacingToMultiplicator[spacing]}px !important`
         }
       })}
       {...rest}
