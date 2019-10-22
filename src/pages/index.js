@@ -62,6 +62,7 @@ const IndexPage = () => {
           >
             <Card
               component={Link}
+              clickable
               to="/enseignement"
               css={{ backgroundImage: `url(${teachingCardBackground})` }}
             >
@@ -69,6 +70,7 @@ const IndexPage = () => {
             </Card>
             <Card
               component={Link}
+              clickable
               to="/competition"
               css={{ backgroundImage: `url(${competitionCardBackground})` }}
             >
@@ -76,6 +78,7 @@ const IndexPage = () => {
             </Card>
             <Card
               component={Link}
+              clickable
               to="/animations"
               css={{ backgroundImage: `url(${animationCardBackground})` }}
             >

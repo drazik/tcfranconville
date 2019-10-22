@@ -33,31 +33,35 @@ const card = {
   [mqNew('l')]: {
     height: 400,
     padding: '1.5rem',
-    transition: 'transform 0.35s ease-in-out'
-  },
+  }
+}
+
+const clickableCard = {
+  transition: 'transform 0.25s ease-in-out',
 
   '&:hover,&:focus': {
-    transform: 'none',
-
-    [mqNew('l')]: {
-      transform: 'translateY(-0.5rem)'
-    }
+    transform: 'translateY(-0.5rem)'
   }
 }
 
 function Card(props) {
-  const { component: Component, ...rest } = props
+  const { component: Component, clickable, ...rest } = props
   return (
-    <Component css={card} {...rest} />
+    <Component
+      css={[card, clickable && clickableCard]}
+      {...rest}
+    />
   )
 }
 
 Card.propTypes = {
-  component: PropTypes.elementType
+  component: PropTypes.elementType,
+  clickable: PropTypes.bool
 }
 
 Card.defaultProps = {
-  component: 'div'
+  component: 'div',
+  clickable: false
 }
 
 export default Card
