@@ -8,7 +8,8 @@ const baseStyle = theme => ({
   padding: '0.75em 0.5em',
   fontSize: '1.125rem',
   display: 'inline-flex',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  textAlign: 'center'
 })
 
 const blockStyle = {

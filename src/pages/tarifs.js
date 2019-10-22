@@ -45,7 +45,7 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed variant="light">
+      <Section padded skewed variant="light" id="cotisation">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Cotisation</SectionTitle>
@@ -177,7 +177,7 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed>
+      <Section padded skewed id="cours-adultes">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Cours adultes</SectionTitle>
@@ -250,7 +250,7 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed variant="light">
+      <Section padded skewed variant="light" id="ecole-de-tennis">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>École de tennis</SectionTitle>
@@ -336,7 +336,7 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed>
+      <Section padded skewed id="reductions">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Réductions</SectionTitle>

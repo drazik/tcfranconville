@@ -8,11 +8,7 @@ const Teacher = props => {
     <div
       css={{
         display: 'flex',
-        alignItems: 'center',
-
-        '& + &': {
-          marginTop: '2rem'
-        }
+        alignItems: 'center'
       }}
       {...rest}
     >
