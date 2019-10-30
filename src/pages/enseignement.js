@@ -236,7 +236,7 @@ const EnseignementPage = () => {
             >
               <Teacher
                 name="Olivier Langlois"
-                description="D.E."
+                description="D.E.S."
                 photo={olivierPhoto}
               />
               <Teacher
