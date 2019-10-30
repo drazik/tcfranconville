@@ -3,7 +3,6 @@ import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 import franconvilleLogo from '../images/logo-franconville.png'
-import { mq } from '../helpers/media-queries'
 
 const footer = {
   position: 'relative',
