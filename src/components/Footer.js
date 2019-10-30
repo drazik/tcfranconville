@@ -2,6 +2,8 @@ import React from 'react'
 import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
+import franconvilleLogo from '../images/logo-franconville.png'
+import { mq } from '../helpers/media-queries'
 
 const footer = {
   position: 'relative',
@@ -38,7 +40,23 @@ const paragraph = {
 function Footer() {
   return (
     <footer css={footer}>
-      <Logo size={100} />
+      <div css={{
+        display: 'flex',
+        alignItems: 'center',
+
+        '* + *': {
+          marginLeft: 64
+        }
+      }}>
+        <Logo size={100} />
+        <img
+          src={franconvilleLogo}
+          css={{
+            width: 150
+          }}
+            alt=""
+          />
+      </div>
       <p css={paragraph}>
         &copy; Tennis Club Franconville {formatDate(new Date(), 'yyyy')}
       </p>
