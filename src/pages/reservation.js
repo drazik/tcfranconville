@@ -3,32 +3,77 @@ import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import { Text } from '../components/Text'
 import Wrapper from '../components/Wrapper'
-import { BookingForm } from '../components/BookingForm'
 import SEO from '../components/seo'
+import { PageTitle } from '../components/PageTitle'
+import { Stack } from '../components/Stack'
+import { Button } from '../components/Button'
+import { ExternalLink } from '../components/ExternalLink'
+import { Link } from 'gatsby'
+import { mq } from '../helpers/media-queries'
 
 const ReservationPage = props => {
   return (
     <Layout>
       <SEO title="Réservation" />
       <Section skewed variant="primary">
-        <Wrapper>
-          <BookingForm />
-        </Wrapper>
+        <PageTitle>Réservation</PageTitle>
       </Section>
       <Section>
         <Wrapper>
-          <SectionTitle>
-            Infos pratiques
-          </SectionTitle>
-          <Text>
-            Le TC Franconville est situé au 78 Avenue des Marais, à côté du stade municipal Jean Rolland. Un parking est disponible à cette adresse, mais vous en trouverez un autre au 112 Rue des Pommiers Saulniers.
-          </Text>
-          <Text>
-            Pour les adhérents, les réservations s'effectuent via le service de la FFT <a href="https://tenup.fft.fr/" target="_blank" rel="noopener noreferrer">Tenup</a>. Pour les non adhérents, le service <a href="https://anybuddyapp.com" target="_blank" rel="noopener noreferrer">Anybuddy</a> vous permet de réserver et de payer en ligne, ainsi que d'accéder au club en toute autonomie.
-          </Text>
-          <Text>
-            En cas de question, vous pouvez contacter le club au au 01 75 40 75 20 ou par e-mail à l'adresse <a href="mailto:tennis.club.franconville@cegetel.net" css={{ wordWrap: 'break-word' }}>tennis.club.franconville@cegetel.net</a>.
-          </Text>
+          <div
+            css={theme => ({
+              display: 'grid',
+              gridTemplateColumns: '1fr',
+              gridGap: theme.spacing * 4,
+
+              [mq('m')]: {
+                gridGap: theme.spacing * 8
+              },
+
+              [mq('l')]: {
+                gridTemplateColumns: 'repeat(2, 1fr)'
+              }
+            })}
+          >
+            <div>
+              <Stack>
+                <SectionTitle>Adhérent</SectionTitle>
+                <Text>
+                  Les adhérents du club peuvent passer par leur espace <ExternalLink href="https://tenup.fft.fr/">TenUp</ExternalLink> pour réserver un court.
+                </Text>
+                <Text>
+                  Si vous n'avez pas encore de compte, vous pouvez en créer un. Vous aurez besoin de votre numéro de licence, qui vous a été envoyé par e-mail. En cas de difficultés, pensez à consulter <ExternalLink href="https://tenup.fft.fr/FAQ">la FAQ de TenUp</ExternalLink>.
+                </Text>
+                <Button
+                  as={ExternalLink}
+                  href="https://tenup.fft.fr"
+                  variant="primary"
+                  block
+                >
+                  Accéder à TenUp
+                </Button>
+              </Stack>
+            </div>
+            <div>
+              <Stack>
+                <SectionTitle>Non adhérent</SectionTitle>
+                <Text>
+                  Pour les non adhérents, l'application <ExternalLink href="">Anybuddy</ExternalLink> vous permet de réserver, payer et accéder au club en toute autonomie.
+                </Text>
+                <Text>
+                  Si vous jouez régulièrement, pensez à jetter un oeil à <Link to="/tarifs#cotisation">la cotisation</Link>. Elle pourrait être plus avantagieuse que des réservations à l'unité. N'hésitez pas à nous contacter si vous avez des questions à ce propos.
+                </Text>
+                <Button
+                  as={ExternalLink}
+                  href="https://anybuddyapp.com/"
+                  variant="primary"
+                  block
+                >
+                  Accéder à Anybuddy
+                </Button>
+              </Stack>
+            </div>
+          </div>
         </Wrapper>
       </Section>
     </Layout>
