@@ -26,10 +26,17 @@ const IndexPage = () => {
             </SectionTitle>
             <Stack spacing="m">
               <Text>
-                Depuis plus de 50 ans, le TC Franconville est In id velit sodales arcu iaculis venenatis. Etiam at leo. Vivamus vitae sem. Mauris volutpat congue risus. Curabitur leo. Aenean tempor tortor eget ligula. Aenean vel augue. Vestibulum ac justo. In hac habitasse platea dictumst. Nam dignissim nisi non mauris. Donec et tortor. Morbi felis. Donec aliquet, erat eu.
+                Vous souhaitez vous maintenir en forme, en familles, entre amis ?<br />
+                Vous voulez progresser dans votre discipline sportive, le tennis ?<br />
+                Vous recherchez un lieu de partage d'émotions ?
               </Text>
               <Text>
-                Le TCF est un club vivant et convivial dont la vie s'articule autour de 3 grands axes :
+                Quels que soient votre âge, votre niveau, votre ambition, le TCF vous offre :
+              </Text>
+              <Text component="ul">
+                <li>Des enseignements à haute valeur ajoutée, dynamiques, motivants</li>
+                <li>des compétitions adaptées, individuelles ou par équipe</li>
+                <li>des animations placées sous le signe de la convivialité, du jeu et de la gastronomie !</li>
               </Text>
             </Stack>
           </Stack>
