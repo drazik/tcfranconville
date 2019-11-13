@@ -56,6 +56,9 @@ const TarifsPage = () => {
               <Text>
                 Nous proposons différents tarifs afin que chacun puisse trouver une cotisation qui correspond le mieux à ses besoins. En cas de question, n'hésitez pas à <Link to="/contact">nous contacter</Link>.
               </Text>
+              <Text>
+                Vous pouvez prendre votre cotisation en ligne sur <ExternalLink href="https://tenup.fft.fr/club/57950106/offres">TenUp</ExternalLink>.
+              </Text>
               <div css={{ overflowX: 'auto' }}>
                 <Table>
                   <TableHead>
