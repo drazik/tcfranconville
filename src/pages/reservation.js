@@ -39,7 +39,7 @@ const ReservationPage = props => {
               <Stack>
                 <SectionTitle>Adhérent</SectionTitle>
                 <Text>
-                  Les adhérents du club peuvent passer par leur espace <ExternalLink href="https://tenup.fft.fr/">TenUp</ExternalLink> pour réserver un court.
+                  Les adhérents du club peuvent passer par leur espace <ExternalLink href="https://tenup.fft.fr/">TenUp</ExternalLink> pour réserver un court afin de jouer avec un autre adhérent, ou faire découvrir le club à un invité moyennant 6€ par invitation.
                 </Text>
                 <Text>
                   Si vous n'avez pas encore de compte, vous pouvez en créer un. Vous aurez besoin de votre numéro de licence, qui vous a été envoyé par e-mail. En cas de difficultés, pensez à consulter <ExternalLink href="https://tenup.fft.fr/FAQ">la FAQ de TenUp</ExternalLink>.
