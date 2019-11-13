@@ -61,7 +61,7 @@ const ReservationPage = props => {
                   Pour les non adhérents, l'application <ExternalLink href="">Anybuddy</ExternalLink> vous permet de réserver, payer et accéder au club en toute autonomie.
                 </Text>
                 <Text>
-                  Si vous jouez régulièrement, pensez à jetter un oeil à <Link to="/tarifs#cotisation">la cotisation</Link>. Elle pourrait être plus avantagieuse que des réservations à l'unité. N'hésitez pas à nous contacter si vous avez des questions à ce propos.
+                  Si vous jouez régulièrement, pensez à jetter un oeil à <Link to="/tarifs#cotisation">la cotisation</Link>. Elle pourrait être plus avantageuse que des réservations à l'unité. N'hésitez pas à nous contacter si vous avez des questions à ce propos.
                 </Text>
                 <Button
                   as={ExternalLink}
