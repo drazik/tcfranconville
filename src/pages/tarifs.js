@@ -51,7 +51,7 @@ const TarifsPage = () => {
             <SectionTitle>Cotisation</SectionTitle>
             <Stack>
               <Text>
-                La cotisation vous donne accès aux infrastructures du club et vous permet de réserver des courts afin de jouer avec d'autres adhérents ou avec des invités.
+                La cotisation vous donne accès aux infrastructures du club et vous permet de réserver des courts afin de jouer avec d'autres adhérents ou avec des invités (moyennant 6€ par invitation).
               </Text>
               <Text>
                 Nous proposons différents tarifs afin que chacun puisse trouver une cotisation qui correspond le mieux à ses besoins. En cas de question, n'hésitez pas à <Link to="/contact">nous contacter</Link>.
