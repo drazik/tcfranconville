@@ -1,4 +1,5 @@
 import React from 'react'
+import { Caption } from '../Text'
 
 export const Table = props => {
   return (
@@ -24,23 +25,38 @@ export const TableBody = props => {
   )
 }
 
+const baseRowStyle = {
+  'tbody &': {
+    borderTop: '1px solid #dfdfdf'
+  },
+
+  'tbody &:nth-child(2n)': {
+    backgroundColor: 'white'
+  },
+
+  'tbody &:nth-child(2n + 1)': {
+    backgroundColor: '#f7f2f2'
+  }
+}
+
+const primaryRowStyle = theme => ({
+  'tbody &': {
+    backgroundColor: `${theme.main} !important`,
+    color: 'white !important'
+  },
+
+  [Caption]: {
+    color: 'white !important'
+  }
+})
+
 export const TableRow = props => {
+  const { variant, ...rest } = props
+
   return (
     <tr
-      css={{
-        'tbody &': {
-          borderTop: '1px solid #dfdfdf'
-        },
-
-        'tbody &:nth-child(2n)': {
-          backgroundColor: 'white'
-        },
-
-        'tbody &:nth-child(2n + 1)': {
-          backgroundColor: '#f7f2f2'
-        }
-      }}
-      {...props}
+      css={theme => [baseRowStyle, variant === 'primary' && primaryRowStyle(theme)]}
+      {...rest}
     />
   )
 }

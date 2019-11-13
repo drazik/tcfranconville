@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from '@emotion/styled'
 
 export const Text = props => {
   const { component: Component = 'p', ...rest } = props
@@ -17,17 +18,10 @@ export const Text = props => {
 }
 
 
-export const Caption = props => {
-  return (
-    <Text
-      css={{
-        fontSize: '0.75rem',
-        color: '#393939'
-      }}
-      {...props}
-    />
-  )
-}
+export const Caption = styled(Text)({
+  fontSize: '0.75rem',
+  color: '#393939'
+})
 
 export const Subtitle = props => {
   return (

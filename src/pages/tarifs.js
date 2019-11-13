@@ -113,9 +113,12 @@ const TarifsPage = () => {
                           <Text>155€ + licence</Text>
                         </TableCell>
                       </TableRow>
-                      <TableRow>
+                      <TableRow variant="primary">
                         <TableCell>
                           <Text>Cotisation parentale</Text>
+                          <Caption>
+                            Venez jouer avec votre enfant autant de fois que vous le souhaitez !
+                          </Caption>
                         </TableCell>
                         <TableCell colSpan="2" align="center">
                           <Text>95€ (licence comprise)</Text>
