@@ -1,10 +1,11 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import { Section } from '../components/Section'
+import { Section, SectionTitle } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import { Text } from '../components/Text'
 import SEO from '../components/seo'
 import { PageTitle } from '../components/PageTitle'
+import { Stack } from '../components/Stack'
 
 const CompetitionPage = () => {
   return (
@@ -15,7 +16,58 @@ const CompetitionPage = () => {
         </Section>
       <Section skewed>
         <Wrapper>
-          <Text>TODO</Text>
+          <Stack spacing="xl">
+            <Text>
+              Venez participer quel que soit votre âge et votre niveau à des compétitions par équipes en championnats ou en tournois individuellement
+            </Text>
+            <Stack spacing="l">
+              <SectionTitle>Jeunes</SectionTitle>
+              <Stack>
+                <Text>Championnat printemps (garçons-filles)</Text>
+                <Text>
+                  Tournois internes couleurs une fois par trimestre (balles évolutives)
+                </Text>
+                <Text>
+                  Tournoi découverte vert fin de saison sportive
+                </Text>
+                <Text>
+                  Tournoi interne du club (balles dures) pour les catégories U12, U14, U16, U18
+                </Text>
+                <Text>
+                  Tournoi OPEN
+                </Text>
+              </Stack>
+            </Stack>
+          </Stack>
+        </Wrapper>
+      </Section>
+      <Section skewed variant="light">
+        <Wrapper>
+          <Stack spacing="l">
+            <SectionTitle>Seniors</SectionTitle>
+            <Stack>
+              <Text>Championnat Rème série (Dames-Messieurs)</Text>
+              <Text>Championnat +35 ans pour les Dames et Messieurs</Text>
+              <Text>Championnat +45 ans Dames</Text>
+              <Text>Championnat printemps : 3 équipes engagées pour les Dames et les Messieurs, dont une équipe Dame en Championnat de France</Text>
+              <Text>Tournoi journée</Text>
+              <Text>Tournoi interne</Text>
+              <Text>Tournoi OPEN</Text>
+            </Stack>
+          </Stack>
+        </Wrapper>
+      </Section>
+      <Section skewed>
+        <Wrapper>
+          <Stack spacing="l">
+            <SectionTitle>Seniors +</SectionTitle>
+            <Stack>
+              <Text>Championnat Messieurs +55 ans</Text>
+              <Text>Tournois Open Seniors +</Text>
+              <Text>Tournoi interne</Text>
+              <Text>Tournoi OPEN</Text>
+            </Stack>
+          </Stack>
         </Wrapper>
       </Section>
     </Layout>
