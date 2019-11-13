@@ -121,7 +121,7 @@ const TarifsPage = () => {
                           </Caption>
                         </TableCell>
                         <TableCell colSpan="2" align="center">
-                          <Text>95€ (licence comprise)</Text>
+                          <Text>66€ + licence</Text>
                         </TableCell>
                       </TableRow>
                       <TableRow>
