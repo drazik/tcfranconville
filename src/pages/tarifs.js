@@ -346,7 +346,7 @@ const TarifsPage = () => {
             <Stack>
               <Subtitle tag="h2">Réduction conjoint</Subtitle>
               <Text>
-                Si votre conjoint s'inscrit aussi, vous bénéficiez de 80€ de réduction. Il ne vous reste plus qu'à le/la convaincre.
+                Si votre conjoint prend aussi une cotisation annuelle, vous bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste plus qu'à le/la convaincre.
               </Text>
               <Subtitle tag="h2">Réduction enfant</Subtitle>
               <Text>
@@ -368,10 +368,10 @@ const TarifsPage = () => {
             </SectionTitle>
             <Stack>
               <Text>
-                Vous avez la possibilité de donner un coup de pouce financier à votre club. Pour cela, vous pouvez faire un don (montant maximum de 200€). Pour chaque tranche de 15€, <strong>10€ sont déductibles de vos impôts</strong> et vous bénéficiez d'<strong>une remise de 5€ sur votre cotisation</strong>.
+                Vous avez la possibilité de donner un coup de pouce financier à votre club. Pour cela, vous pouvez faire un don. Pour chaque tranche de 15€, près de <strong>10€ sont déductibles de vos impôts sur le revenu</strong> et vous bénéficiez d'<strong>une remise immédiate de 5€ sur votre cotisation</strong>.
               </Text>
               <Text>
-                En faisant un don, vous permettez au club de contenir la hausse des tarifs, mais aussi de mettre en place des projets permettant d'améliorer les infrastructures et les équipements à disposition des adhérents.
+                En faisant un don, vous permettez au club de contenir la hausse des tarifs, mais également de mettre en place des projets permettant d'améliorer les infrastructures et les équipements à disposition des adhérents.
               </Text>
             </Stack>
           </Stack>
