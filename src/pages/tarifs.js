@@ -200,7 +200,7 @@ const TarifsPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <Text>Plateau</Text>
+                      <Text>Plateau (8 joueurs sur 2 terrains)</Text>
                       <Caption>
                         1h30 de jeu dont 1h15 encadrée par un DE et un AMT
                       </Caption>
@@ -212,7 +212,7 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Classique</Text>
+                        <Text>Classique (4 joueurs)</Text>
                         <Caption>1h encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
@@ -223,7 +223,7 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Intensif</Text>
+                        <Text>Intensif (4 joueurs)</Text>
                         <Caption>1h30 encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
@@ -233,7 +233,7 @@ const TarifsPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>Séance de 1h ou 1h15 encadrée</Text>
+                      <Text>Séance de 1h ou 1h15 encadrée par un DE et un AMT</Text>
                     </TableCell>
                     <TableCell align="center">
                       <Text>13€</Text>
@@ -241,7 +241,7 @@ const TarifsPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>Séance de 1h30 encadrée</Text>
+                      <Text>Séance de 1h30 encadrée par un DE</Text>
                     </TableCell>
                     <TableCell align="center">
                       <Text>20€</Text>
@@ -273,7 +273,7 @@ const TarifsPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <Text>Mini-tennis 1h</Text>
+                      <Text>Mini-tennis</Text>
                       <Caption>
                         1h, 2014-2015
                       </Caption>
