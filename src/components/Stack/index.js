@@ -8,7 +8,8 @@ export const Stack = props => {
     xs: 0.5,
     s: 1,
     m: 4,
-    l: 6
+    l: 6,
+    xl: 12
   }
 
   return (
@@ -28,5 +29,5 @@ export const Stack = props => {
 }
 
 Stack.propTypes = {
-  spacing: PropTypes.oneOf(['xs', 's', 'm', 'l'])
+  spacing: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl'])
 }
