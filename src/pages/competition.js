@@ -52,8 +52,7 @@ const CompetitionPage = () => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Seniors</SectionTitle>
-            <TwoCol>
-              <div />
+            <TwoCol reversed>
               <Stack>
                 <Text>Championnat Rème série (Dames-Messieurs)</Text>
                 <Text>Championnat +35 ans pour les Dames et Messieurs</Text>
@@ -63,6 +62,7 @@ const CompetitionPage = () => {
                 <Text>Tournoi interne</Text>
                 <Text>Tournoi OPEN</Text>
               </Stack>
+              <div />
             </TwoCol>
           </Stack>
         </Wrapper>
