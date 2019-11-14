@@ -3,36 +3,49 @@ import PropTypes from 'prop-types'
 import { mq as mqNew } from '../helpers/media-queries'
 
 const card = {
-  height: 200,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
+  backgroundColor: 'white',
   boxShadow: '0 40px 30px -30px rgba(0, 0, 0, 0.5)',
   transition: 'none',
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-end',
-  color: 'white',
   textDecoration: 'none',
-  fontWeight: 'bold',
-  fontSize: '1.5rem',
   padding: '1.5rem',
   borderRadius: '0.5rem',
-  textShadow: '1px 1px 2px rgba(0, 0, 0, 0.35)',
   overflow: 'hidden',
 
   [mqNew('s')]: {
-    height: 250,
     padding: '1.5rem'
   },
 
   [mqNew('m')]: {
-    height: 300,
     padding: '0.75rem'
   },
 
   [mqNew('l')]: {
-    height: 400,
     padding: '1.5rem',
+  }
+}
+
+const imageCard = {
+  height: 200,
+  backgroundSize: 'cover',
+  backgroundPosition: 'center',
+  justifyContent: 'flex-end',
+  fontWeight: 'bold',
+  fontSize: '1.5rem',
+  textShadow: '1px 1px 2px rgba(0, 0, 0, 0.35)',
+  color: 'white',
+
+  [mqNew('s')]: {
+    height: 250
+  },
+
+  [mqNew('m')]: {
+    height: 300
+  },
+
+  [mqNew('l')]: {
+    height: 400
   }
 }
 
@@ -45,10 +58,14 @@ const clickableCard = {
 }
 
 function Card(props) {
-  const { component: Component, clickable, ...rest } = props
+  const { component: Component, clickable, variant, ...rest } = props
   return (
     <Component
-      css={[card, clickable && clickableCard]}
+      css={[
+        card,
+        clickable && clickableCard,
+        variant === 'image' && imageCard
+      ]}
       {...rest}
     />
   )
@@ -56,12 +73,14 @@ function Card(props) {
 
 Card.propTypes = {
   component: PropTypes.elementType,
-  clickable: PropTypes.bool
+  clickable: PropTypes.bool,
+  variant: PropTypes.oneOf(['normal', 'image'])
 }
 
 Card.defaultProps = {
   component: 'div',
-  clickable: false
+  clickable: false,
+  variant: 'normal'
 }
 
 export default Card

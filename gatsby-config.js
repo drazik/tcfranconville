@@ -1,5 +1,19 @@
 require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
+const fbQuery = `posts {
+  message,
+  created_time,
+  id,
+  permalink_url,
+  attachments {
+    url,
+    type,
+    title,
+    media,
+    target
+  }
+}`
+
 module.exports = {
   siteMetadata: {
     title: `TC Franconville`,
@@ -42,7 +56,7 @@ module.exports = {
       options: {
         places: [`TCFranconvilleOfficiel`],
         params: {
-          fields: 'posts { message, created_time, id, permalink_url }',
+          fields: fbQuery,
         },
         key: process.env.FB_TOKEN
       }

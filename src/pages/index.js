@@ -65,6 +65,7 @@ const IndexPage = () => {
               clickable
               to="/enseignement"
               css={{ backgroundImage: `url(${teachingCardBackground})` }}
+              variant="image"
             >
               Enseignement
             </Card>
@@ -73,6 +74,7 @@ const IndexPage = () => {
               clickable
               to="/competition"
               css={{ backgroundImage: `url(${competitionCardBackground})` }}
+              variant="image"
             >
               Compétition
             </Card>
@@ -81,6 +83,7 @@ const IndexPage = () => {
               clickable
               to="/animations"
               css={{ backgroundImage: `url(${animationCardBackground})` }}
+              variant="image"
             >
               Animations
             </Card>
