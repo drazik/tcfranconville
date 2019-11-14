@@ -7,6 +7,7 @@ import SEO from '../components/seo'
 import { PageTitle } from '../components/PageTitle'
 import { PageDescription } from '../components/PageDescription'
 import { Stack } from '../components/Stack'
+import { TwoCol } from '../components/TwoCol'
 
 const CompetitionPage = () => {
   return (
@@ -26,21 +27,24 @@ const CompetitionPage = () => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Jeunes</SectionTitle>
-            <Stack>
-              <Text>Championnat printemps (garçons-filles)</Text>
-              <Text>
-                Tournois internes couleurs une fois par trimestre (balles évolutives)
-              </Text>
-              <Text>
-                Tournoi découverte vert fin de saison sportive
-              </Text>
-              <Text>
-                Tournoi interne du club (balles dures) pour les catégories U12, U14, U16, U18
-              </Text>
-              <Text>
-                Tournoi OPEN
-              </Text>
-            </Stack>
+            <TwoCol>
+              <Stack>
+                <Text>Championnat printemps (garçons-filles)</Text>
+                <Text>
+                  Tournois internes couleurs une fois par trimestre (balles évolutives)
+                </Text>
+                <Text>
+                  Tournoi découverte vert fin de saison sportive
+                </Text>
+                <Text>
+                  Tournoi interne du club (balles dures) pour les catégories U12, U14, U16, U18
+                </Text>
+                <Text>
+                  Tournoi OPEN
+                </Text>
+              </Stack>
+              <div />
+            </TwoCol>
           </Stack>
         </Wrapper>
       </Section>
@@ -48,15 +52,18 @@ const CompetitionPage = () => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Seniors</SectionTitle>
-            <Stack>
-              <Text>Championnat Rème série (Dames-Messieurs)</Text>
-              <Text>Championnat +35 ans pour les Dames et Messieurs</Text>
-              <Text>Championnat +45 ans Dames</Text>
-              <Text>Championnat printemps : 3 équipes engagées pour les Dames et les Messieurs, dont une équipe Dame en Championnat de France</Text>
-              <Text>Tournoi journée</Text>
-              <Text>Tournoi interne</Text>
-              <Text>Tournoi OPEN</Text>
-            </Stack>
+            <TwoCol>
+              <div />
+              <Stack>
+                <Text>Championnat Rème série (Dames-Messieurs)</Text>
+                <Text>Championnat +35 ans pour les Dames et Messieurs</Text>
+                <Text>Championnat +45 ans Dames</Text>
+                <Text>Championnat printemps : 3 équipes engagées pour les Dames et les Messieurs, dont une équipe Dame en Championnat de France</Text>
+                <Text>Tournoi journée</Text>
+                <Text>Tournoi interne</Text>
+                <Text>Tournoi OPEN</Text>
+              </Stack>
+            </TwoCol>
           </Stack>
         </Wrapper>
       </Section>
@@ -64,12 +71,15 @@ const CompetitionPage = () => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Seniors +</SectionTitle>
-            <Stack>
-              <Text>Championnat Messieurs +55 ans</Text>
-              <Text>Tournois Open Seniors +</Text>
-              <Text>Tournoi interne</Text>
-              <Text>Tournoi OPEN</Text>
-            </Stack>
+            <TwoCol>
+              <Stack>
+                <Text>Championnat Messieurs +55 ans</Text>
+                <Text>Tournois Open Seniors +</Text>
+                <Text>Tournoi interne</Text>
+                <Text>Tournoi OPEN</Text>
+              </Stack>
+              <div />
+            </TwoCol>
           </Stack>
         </Wrapper>
       </Section>
