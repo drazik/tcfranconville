@@ -12,9 +12,11 @@ import { Text } from '../components/Text'
 import { Button } from '../components/Button'
 import SEO from '../components/seo'
 import { Stack } from '../components/Stack'
-import { FacebookFeed } from '../components/FacebookFeed'
+import { Post } from '../components/Post'
 
-const IndexPage = () => {
+const IndexPage = ({ data }) => {
+  const [post] = data.allFacebookPosts.edges.map(edge => edge.node).filter(post => post.message)
+
   return (
     <Layout>
       <SEO title="Accueil" />
@@ -176,15 +178,50 @@ const IndexPage = () => {
             <SectionTitle>
               L'actualité du club
             </SectionTitle>
-            <Text>
-              L'actualité du club est disponible sur notre <a href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/">page Facebook</a>.
-            </Text>
-            <FacebookFeed />
+            <Post post={post} />
+            <div css={{ textAlign: 'center' }}>
+              <Button
+                as={Link}
+                to="/actualite"
+                variant="primary"
+              >
+                Voir plus d'actualités
+              </Button>
+            </div>
           </Stack>
         </Wrapper>
       </Section>
     </Layout>
   )
 }
+
+export const query = graphql`
+  query HomePageQuery {
+    allFacebookPosts {
+      edges {
+        node {
+          id
+          message
+          created_time
+          permalink_url
+          attachments {
+            data {
+              url
+              type
+              title
+              media {
+                image {
+                  height
+                  src
+                  width
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage

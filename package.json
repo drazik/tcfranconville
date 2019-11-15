@@ -27,7 +27,8 @@
     "react-helmet": "^5.2.0",
     "react-modal": "^3.9.1",
     "react-slick": "^0.24.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "snarkdown": "^1.2.2"
   },
   "devDependencies": {
     "babel-jest": "^24.8.0",

@@ -242,9 +242,6 @@ function Nav() {
     <>
       <BurgerButton onClick={handler} active={isOpen} />
       <Menu isOpen={isOpen}>
-        <MenuItem to="/">
-          Accueil
-        </MenuItem>
         <MenuItem to="/enseignement">
           Enseignement
         </MenuItem>
@@ -259,6 +256,9 @@ function Nav() {
         </MenuItem>
         <MenuItem to="/reservation">
           Réservation
+        </MenuItem>
+        <MenuItem to="/actualite">
+          Actualité
         </MenuItem>
         <MenuItem to="/contact">
           Contact
