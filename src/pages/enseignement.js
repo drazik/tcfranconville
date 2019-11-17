@@ -88,6 +88,7 @@ const EnseignementPage = () => {
                     marginBottom: 0
                   }
                 }}
+                variant="image"
               />
             </div>
           </Wrapper>
@@ -150,6 +151,7 @@ const EnseignementPage = () => {
                     marginBottom: 0
                   }
                 }}
+                variant="image"
               />
             </div>
           </Wrapper>
@@ -212,6 +214,7 @@ const EnseignementPage = () => {
                     marginBottom: 0
                   }
                 }}
+                variant="image"
               />
             </div>
           </Wrapper>

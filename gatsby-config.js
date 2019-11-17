@@ -1,3 +1,19 @@
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
+
+const fbQuery = `posts {
+  message,
+  created_time,
+  id,
+  permalink_url,
+  attachments {
+    url,
+    type,
+    title,
+    media,
+    target
+  }
+}`
+
 module.exports = {
   siteMetadata: {
     title: `TC Franconville`,
@@ -34,7 +50,17 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-emotion'
+    'gatsby-plugin-emotion',
+    {
+      resolve: `gatsby-source-facebook`,
+      options: {
+        places: [`TCFranconvilleOfficiel`],
+        params: {
+          fields: fbQuery,
+        },
+        key: process.env.FB_TOKEN
+      }
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',

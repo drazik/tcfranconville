@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "10.0.9",
     "@emotion/styled": "10.0.9",
-    "date-fns": "^2.0.0-beta.2",
+    "date-fns": "^2.6.0",
     "emotion-theming": "10.0.9",
     "gatsby": "^2.1.27",
     "gatsby-image": "^2.0.31",
@@ -15,6 +15,7 @@
     "gatsby-plugin-offline": "^2.0.24",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-sharp": "^2.0.25",
+    "gatsby-source-facebook": "^1.0.3",
     "gatsby-source-filesystem": "^2.0.23",
     "gatsby-transformer-sharp": "^2.1.15",
     "lodash": "4.17.13",
@@ -26,11 +27,13 @@
     "react-helmet": "^5.2.0",
     "react-modal": "^3.9.1",
     "react-slick": "^0.24.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "snarkdown": "^1.2.2"
   },
   "devDependencies": {
     "babel-jest": "^24.8.0",
     "babel-preset-gatsby": "^0.2.5",
+    "dotenv": "^8.2.0",
     "gatsby-plugin-emotion": "4.0.6",
     "gatsby-plugin-react-svg": "2.1.1",
     "identity-obj-proxy": "^3.0.0",
