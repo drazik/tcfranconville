@@ -10,7 +10,7 @@ export const TwoCol = props => {
       css={theme => ({
         display: 'grid',
         gridTemplateColumns: '1fr',
-        gridAutoFlow: 'column',
+        gridAutoFlow: 'row',
         gridGap: theme.spacing * 6,
 
         [mq('m')]: {

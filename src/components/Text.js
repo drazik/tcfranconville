@@ -34,3 +34,15 @@ export const Subtitle = props => {
     />
   )
 }
+
+export const List = props => {
+  return (
+    <Text {...props} component="ul" />
+  )
+}
+
+export const ListItem = props => {
+  return (
+    <Text {...props} component="li" />
+  )
+}

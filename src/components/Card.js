@@ -45,7 +45,7 @@ const imageCard = {
   },
 
   [mqNew('l')]: {
-    height: 400
+    height: 500
   }
 }
 
