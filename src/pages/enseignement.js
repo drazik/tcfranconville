@@ -11,7 +11,7 @@ import olivierPhoto from '../images/teachers/olivier.jpg'
 import jeanClaudePhoto from '../images/teachers/jean-claude.jpg'
 import davidPhoto from '../images/teachers/david.jpg'
 import carinePhoto from '../images/teachers/carine.jpg'
-import { Text } from '../components/Text'
+import { Text, List, ListItem } from '../components/Text'
 import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import { mq } from '../helpers/media-queries'
@@ -224,40 +224,33 @@ const EnseignementPage = () => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>
-              Les enseignants
+              Nos enseignants
             </SectionTitle>
-            <div
-              css={theme => ({
-                display: 'grid',
-                gridTemplateColumns: '1fr',
-                gridGap: theme.spacing * 6,
-
-                [mq('m')]: {
-                  gridTemplateColumns: 'repeat(2, 1fr)'
-                }
-              })}
-            >
-              <Teacher
-                name="Olivier Langlois"
-                description="D.E.S."
-                photo={olivierPhoto}
-              />
-              <Teacher
-                name="Carine Guyard"
-                description="D.E."
-                photo={carinePhoto}
-              />
-              <Teacher
-                name="David Gelsomino"
-                description="D.E."
-                photo={davidPhoto}
-              />
-              <Teacher
-                name="Jean-Claude Pastrans"
-                description="A.M.T."
-                photo={jeanClaudePhoto}
-              />
-            </div>
+            <Stack spacing="m">
+              <Text>
+                L'équipe enseignante du TC Franconville est composée de :
+              </Text>
+              <List>
+                <ListItem>1 Diplomé d'État Supérieur (D.E.S)</ListItem>
+                <ListItem>2 Diplomés d'État (D.E)</ListItem>
+                <ListItem>2 Éducateurs (CQPAMT)</ListItem>
+                <ListItem>2 Éducateurs en formation</ListItem>
+              </List>
+              <Text>
+                Notre équipe est à votre écoute pour répondre à vos besoins et
+                ainsi vous accompagner dans l'apprentissage du tennis quels que
+                soient votre niveau et votre âge. Ils seront ravis de vous faire
+                profiter de leurs années d'expérience dans la formation du
+                joueur de tennis.
+              </Text>
+              <Text>
+                Un suivi est réalisé toute l'année selon que vous soyez un
+                pratiquant loisir ou compétiteur.
+              </Text>
+              <Text>
+                Alors n'hésitez plus et faites partie de l'aventure au TCF !
+              </Text>
+            </Stack>
           </Stack>
         </Wrapper>
       </Section>
