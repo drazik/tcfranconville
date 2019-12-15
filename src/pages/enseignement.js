@@ -15,10 +15,73 @@ import { PageTitle } from '../components/PageTitle'
 import { PageDescription } from '../components/PageDescription'
 import { TwoCol } from '../components/TwoCol'
 import { IllustrationCard } from '../components/IllustrationCard'
+import { ReactComponent as InfoIcon } from '../images/icons/info.svg'
 
 const SectionTitleDetails = props => {
   return (
     <div css={{ fontSize: '1rem' }} {...props} />
+  )
+}
+
+const Info = props => {
+  const { children, ...rest } = props
+  const r = 50
+  const d = 2 * r
+
+  return (
+    <div
+      css={{
+        position: 'relative'
+      }}
+    >
+      <InfoIcon
+        viewBox="0 0 29 29"
+        width="50"
+        height="50"
+        css={theme => ({
+          position: 'absolute',
+          top: -10,
+          left: -10,
+          fill: theme.main
+        })}
+      />
+      <div
+        css={theme => ({
+          padding: 'calc(50px + 1rem) 1.5rem 2rem',
+            color: 'white',
+            overflow: 'hidden',
+            position: 'relative',
+            borderRadius: '0.75rem',
+
+            '&::before': {
+              content: "''",
+              position: 'absolute',
+              width: d,
+              height: d,
+              boxShadow: `0 0 0 1000px ${theme.main}`,
+              top: -r,
+              left: -r,
+              borderRadius: '50%',
+              zIndex: -1
+            }
+        })}
+        {...rest}
+      >
+        <p
+          css={{
+            position: 'absolute',
+            top: 25,
+            left: 'calc(50px + 1rem)',
+            fontWeight: 'bold',
+            margin: 0,
+            transform: 'translateY(-50%)'
+          }}
+        >
+          Le saviez-vous ?
+        </p>
+        {children}
+      </div>
+    </div>
   )
 }
 
@@ -121,6 +184,13 @@ const EnseignementPage = () => {
                   41 enfants inscrits en mini-tennis en 2019-2020, soit une
                   explosion des effectifs de 70% !
                 </Text>
+                <Info>
+                  <Text>
+                    Le club dispose d'un terrain de mini-tennis (devant le mur
+                    du club-house) sur lequel les enfants peuvent librement venir
+                    s'entrainer !
+                  </Text>
+                </Info>
               </Stack>
               <IllustrationCard
                 image={minitennisCardBackground}
@@ -173,6 +243,13 @@ const EnseignementPage = () => {
                 <Text>
                   50% des enfants poursuivent le tennis l'année suivante !
                 </Text>
+                <Info>
+                  <Text>
+                    Pour 95€ seulement, vous pouvez jouer autant que vous le
+                    voulez avec votre enfant inscrit à l'école de tennis et même
+                    réserver un court avec lui ! Optez pour la cotisation parent !
+                  </Text>
+                </Info>
               </Stack>
               <IllustrationCard image={junior2CardBackground} ratio={500/598} />
             </TwoCol>

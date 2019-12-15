@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'gatsby'
 import { Match } from '@reach/router'
-import FacebookIcon from '../images/icons/facebook.svg'
+import { ReactComponent as FBIcon } from '../images/icons/facebook.svg'
 import { mq as mqNew } from '../helpers/media-queries'
 
 const BurgerButton = props => {
@@ -275,7 +275,12 @@ function Nav() {
             }
           }}
         >
-          <FacebookIcon width="32" height="32" css={{ fill: 'white' }} />
+          <FBIcon
+            viewBox="0 0 512 512"
+            width="32"
+            height="32"
+            css={{ fill: 'white' }}
+          />
         </MenuItem>
       </Menu>
       <Overlay isOpen={isOpen} onClick={handler} />
