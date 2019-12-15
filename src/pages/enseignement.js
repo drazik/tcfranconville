@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import Wrapper from '../components/Wrapper'
-import Card from '../components/Card'
 import minitennisCardBackground from '../images/teaching/minitennis.jpg'
 import juniorCardBackground from '../images/teaching/junior.jpg'
 import junior2CardBackground from '../images/teaching/junior2.jpg'
@@ -15,6 +14,7 @@ import { Stack } from '../components/Stack'
 import { PageTitle } from '../components/PageTitle'
 import { PageDescription } from '../components/PageDescription'
 import { TwoCol } from '../components/TwoCol'
+import { IllustrationCard } from '../components/IllustrationCard'
 
 const SectionTitleDetails = props => {
   return (
@@ -39,7 +39,7 @@ const EnseignementPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section skewed css={{ zIndex: 5 }}>
+      <Section skewed>
         <Wrapper>
           <Stack spacing="m">
             <Text>
@@ -85,7 +85,7 @@ const EnseignementPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section skewed variant="light" css={{ zIndex: 4 }}>
+      <Section skewed variant="light">
         <Wrapper>
           <Stack spacing="xl">
             <SectionTitle>Notre école de tennis</SectionTitle>
@@ -122,11 +122,9 @@ const EnseignementPage = () => {
                   explosion des effectifs de 70% !
                 </Text>
               </Stack>
-              <Card
-                css={{
-                  backgroundImage: `url(${minitennisCardBackground})`
-                }}
-                variant="image"
+              <IllustrationCard
+                image={minitennisCardBackground}
+                ratio={3000/1987}
               />
             </TwoCol>
             <TwoCol reversed css={{ alignItems: 'center' }}>
@@ -151,13 +149,7 @@ const EnseignementPage = () => {
                   Une fidélisation d'environ 60% des enfants !
                 </Text>
               </Stack>
-              <Card
-                css={{
-                  backgroundImage: `url(${juniorCardBackground})`,
-                  backgroundPosition: '50% 100%'
-                }}
-                variant="image"
-              />
+              <IllustrationCard image={juniorCardBackground} ratio={600/400} />
             </TwoCol>
             <TwoCol css={{ alignItems: 'center' }}>
               <Stack spacing="m">
@@ -182,12 +174,7 @@ const EnseignementPage = () => {
                   50% des enfants poursuivent le tennis l'année suivante !
                 </Text>
               </Stack>
-              <Card
-                css={{
-                  backgroundImage: `url(${junior2CardBackground})`
-                }}
-                variant="image"
-              />
+              <IllustrationCard image={junior2CardBackground} ratio={500/598} />
             </TwoCol>
             <TwoCol reversed css={{ alignItems: 'center' }}>
               <Stack spacing="m">
@@ -214,13 +201,7 @@ const EnseignementPage = () => {
                   Un effectif en hausse de 25% entre 2019 et 2020 !
                 </Text>
               </Stack>
-              <Card
-                css={{
-                  backgroundImage: `url(${teenCardBackground})`,
-                  backgroundPosition: '50% 100%'
-                }}
-                variant="image"
-              />
+              <IllustrationCard image={teenCardBackground} ratio={500/630} />
             </TwoCol>
           </Stack>
         </Wrapper>
@@ -260,13 +241,7 @@ const EnseignementPage = () => {
                   </ListItem>
                 </List>
               </Stack>
-              <Card
-                css={{
-                  backgroundImage: `url(${adultCardBackground})`,
-                  backgroundPosition: '50% 10%'
-                }}
-                variant="image"
-              />
+              <IllustrationCard image={adultCardBackground} ratio={500/750} />
             </TwoCol>
           </Stack>
         </Wrapper>
