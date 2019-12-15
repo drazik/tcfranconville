@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 export const Stack = props => {
-  const { spacing = 'm', ...rest } = props
+  const { spacing = 'm', component: Component, ...rest } = props
 
   const spacingToMultiplicator = {
     xs: 0.5,
@@ -13,7 +13,7 @@ export const Stack = props => {
   }
 
   return (
-    <div
+    <Component
       css={theme => ({
         '& > *': {
           marginTop: 0,
@@ -30,4 +30,9 @@ export const Stack = props => {
 
 Stack.propTypes = {
   spacing: PropTypes.oneOf(['xs', 's', 'm', 'l', 'xl'])
+}
+
+Stack.defaultProps = {
+  component: 'div',
+  spacing: 'm'
 }
