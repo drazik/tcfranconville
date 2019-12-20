@@ -3,7 +3,7 @@ import { mq } from '../../helpers/media-queries'
 import PropTypes from 'prop-types'
 
 export const TwoCol = props => {
-  const { reversed = false, ...rest } = props
+  const { reversed = false, align = 'start', ...rest } = props
 
   return (
     <div
@@ -12,6 +12,7 @@ export const TwoCol = props => {
         gridTemplateColumns: '1fr',
         gridAutoFlow: 'row',
         gridGap: theme.spacing * 6,
+        alignItems: align,
 
         [mq('m')]: {
           gridTemplateColumns: 'repeat(2, 1fr)',
@@ -28,5 +29,6 @@ export const TwoCol = props => {
 }
 
 TwoCol.propTypes = {
-  reversed: PropTypes.bool
+  reversed: PropTypes.bool,
+  align: PropTypes.oneOf(['start', 'center', 'end'])
 }
