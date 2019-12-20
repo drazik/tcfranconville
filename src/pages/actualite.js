@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import { Section } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import SEO from '../components/seo'
@@ -15,7 +14,7 @@ const ActualitePage = ({ data }) => {
   const posts = data.allFacebookPosts.edges.map(edge => edge.node).filter(post => post.message).slice(0, 10)
 
   return (
-    <Layout>
+    <>
       <SEO title="Actualité" />
         <Section skewed variant="primary">
           <PageTitle>L'actu du club</PageTitle>
@@ -39,7 +38,7 @@ const ActualitePage = ({ data }) => {
           </Stack>
         </Wrapper>
       </Section>
-    </Layout>
+    </>
   )
 }
 

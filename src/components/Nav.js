@@ -242,25 +242,25 @@ function Nav() {
     <>
       <BurgerButton onClick={handler} active={isOpen} />
       <Menu isOpen={isOpen}>
-        <MenuItem to="/enseignement">
+        <MenuItem to="/enseignement" onClick={handleClose}>
           Enseignement
         </MenuItem>
-        <MenuItem to="/competition">
+        <MenuItem to="/competition" onClick={handleClose}>
           Compétition
         </MenuItem>
-        <MenuItem to="/animation">
+        <MenuItem to="/animation" onClick={handleClose}>
           Animations
         </MenuItem>
-        <MenuItem to="/tarifs">
+        <MenuItem to="/tarifs" onClick={handleClose}>
           Tarifs
         </MenuItem>
-        <MenuItem to="/reservation">
+        <MenuItem to="/reservation" onClick={handleClose}>
           Réservation
         </MenuItem>
-        <MenuItem to="/actualite">
+        <MenuItem to="/actualite" onClick={handleClose}>
           Actualité
         </MenuItem>
-        <MenuItem to="/contact">
+        <MenuItem to="/contact" onClick={handleClose}>
           Contact
         </MenuItem>
         <MenuItem

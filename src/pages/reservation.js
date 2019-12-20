@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import { Text } from '../components/Text'
 import Wrapper from '../components/Wrapper'
@@ -13,7 +12,7 @@ import { mq } from '../helpers/media-queries'
 
 const ReservationPage = props => {
   return (
-    <Layout>
+    <>
       <SEO title="Réservation" />
       <Section skewed variant="primary">
         <PageTitle>Réservation</PageTitle>
@@ -76,7 +75,7 @@ const ReservationPage = props => {
           </div>
         </Wrapper>
       </Section>
-    </Layout>
+    </>
   )
 }
 

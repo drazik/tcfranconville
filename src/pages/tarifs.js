@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import { Text, Caption, Subtitle } from '../components/Text'
@@ -18,7 +17,7 @@ import { PageTitle } from '../components/PageTitle'
 
 const TarifsPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Tarifs" />
       <Section padded skewed variant="primary">
         <Wrapper>
@@ -380,7 +379,7 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-    </Layout>
+    </>
   )
 }
 

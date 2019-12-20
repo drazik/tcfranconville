@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import Wrapper from '../components/Wrapper'
 import { Section, SectionTitle } from '../components/Section'
 import teachingCardBackground from '../images/teaching-card.jpg'
@@ -18,7 +17,7 @@ const IndexPage = ({ data }) => {
   const [post] = data.allFacebookPosts.edges.map(edge => edge.node).filter(post => post.message)
 
   return (
-    <Layout>
+    <>
       <SEO title="Accueil" />
       <Section skewed variant="primary">
         <Wrapper>
@@ -198,7 +197,7 @@ const IndexPage = ({ data }) => {
           </Stack>
         </Wrapper>
       </Section>
-    </Layout>
+    </>
   )
 }
 

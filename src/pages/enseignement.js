@@ -1,5 +1,4 @@
 import React from 'react'
-import Layout from '../components/Layout'
 import { Section, SectionTitle } from '../components/Section'
 import Wrapper from '../components/Wrapper'
 import minitennisCardBackground from '../images/teaching/minitennis.jpg'
@@ -87,7 +86,7 @@ const Info = props => {
 
 const EnseignementPage = () => {
   return (
-    <Layout>
+    <>
       <SEO title="Enseignement" />
       <Section skewed variant="primary">
         <Wrapper>
@@ -357,7 +356,7 @@ const EnseignementPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-    </Layout>
+    </>
   )
 }
 
