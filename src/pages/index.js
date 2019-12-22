@@ -19,7 +19,15 @@ const IndexPage = ({ data }) => {
   return (
     <>
       <SEO title="Accueil" />
-      <Section skewed variant="primary">
+      <Section
+        skewed
+        variant="primary"
+        css={{
+          [mq('s')]: {
+            paddingBottom: '6rem',
+          }
+        }}
+      >
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle variant="primary">
@@ -46,10 +54,10 @@ const IndexPage = ({ data }) => {
 
       <Section>
         <Wrapper css={{
-          marginTop: -130,
+          marginTop: -80,
 
           [mq('s')]: {
-            marginTop: -150
+            marginTop: -100
           }
         }}>
           <div

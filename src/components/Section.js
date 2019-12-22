@@ -40,8 +40,7 @@ export const SectionContainer = props => {
 
   const styles = {
     position: 'relative',
-    paddingTop: '5rem',
-    paddingBottom: '5rem',
+    padding: '3rem 0',
     backgroundColor: getSectionBackgroundColor(variant, theme),
     color: props.variant === 'primary' ? 'white' : 'inherit',
   }
