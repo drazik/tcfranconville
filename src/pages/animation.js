@@ -20,11 +20,11 @@ const AnimationPage = () => {
         <Wrapper>
           <PageTitle>Animations</PageTitle>
           <PageDescription>
-            Le club de tennis de Franconville vous propose de nombreuses tout
-            au long de l'année. Se retrouver au sein du club, c'est l'occasion
-            de partager sa passion du tennis autour de moments conviviaux. Les
-            animations à thèmes sont ouvertes à tous : enfants, compétiteurs,
-            parents...
+            Le club de tennis de Franconville vous propose de nombreuses
+            animations tout au long de l'année. Se retrouver au sein du club,
+            c'est l'occasion de partager sa passion du tennis autour de moments
+            conviviaux. Les animations à thèmes sont ouvertes à tous : enfants,
+            compétiteurs, parents...
           </PageDescription>
         </Wrapper>
       </Section>
