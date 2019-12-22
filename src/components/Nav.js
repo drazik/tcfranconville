@@ -248,7 +248,7 @@ function Nav() {
         <MenuItem to="/competition" onClick={handleClose}>
           Compétition
         </MenuItem>
-        <MenuItem to="/animation" onClick={handleClose}>
+        <MenuItem to="/animations" onClick={handleClose}>
           Animations
         </MenuItem>
         <MenuItem to="/tarifs" onClick={handleClose}>
