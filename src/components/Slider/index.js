@@ -1,82 +1,113 @@
-import React, { useRef, forwardRef, useEffect, useState } from 'react'
-import Hammer from 'hammerjs'
+import React from 'react'
+import styled from '@emotion/styled'
 
-const SliderTrack = forwardRef((props, ref) => {
-  const { transform, animating, ...rest } = props
-
-  return (
-    <div
-      css={{
-        display: 'flex',
-        flexWrap: 'nowrap',
-        transition: animating ? 'transform 0.4s ease-in-out' : null,
-      }}
-      style={{ transform }}
-      ref={ref}
-      {...rest}
-    />
-  )
-})
-
-export const Slider = props => {
-  const { children, ...rest } = props
-  const trackRef = useRef(null)
-  const animationTimeoutRef = useRef(null)
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [animating, setAnimating] = useState(false)
-  const [delta, setDelta] = useState(0)
-
-  useEffect(() => {
-    const goToSlide = index => {
-      if (index < 0) {
-        index = 0
-      } else if (index >= children.length) {
-        index = children.length - 1
-      }
-
-      setAnimating(true)
-      setDelta(0)
-      clearTimeout(animationTimeoutRef.current)
-      animationTimeoutRef.current = setTimeout(() => setAnimating(false), 400)
-      setCurrentIndex(index)
-    }
-
-    const onPan = e => {
-      if (e.isFinal) {
-        if (e.deltaX < 0) {
-          goToSlide(currentIndex + 1)
-        } else if (e.deltaX > 0) {
-          goToSlide(currentIndex - 1)
-        } else {
-          goToSlide(currentIndex)
-        }
-      } else {
-        setDelta(e.deltaX)
-      }
-    }
-
-    const manager = new Hammer.Manager(trackRef.current)
-    manager.add(new Hammer.Pan({ threshold: 0, pointers: 0 }))
-    manager.on('pan', onPan)
-
-    return () => {
-      manager.off('pan', onPan)
-    }
-  }, [currentIndex, children.length])
-
-  const transform = `translateX(calc(${-currentIndex * 100}% ${
-    delta < 0 ? '-' : '+'
-  } ${Math.abs(delta)}px))`
-
-  return (
-    <div css={{ overflow: 'hidden' }} {...rest}>
-      <SliderTrack ref={trackRef} transform={transform} animating={animating}>
-        {children}
-      </SliderTrack>
-    </div>
-  )
+const SliderTrack = props => {
+  return <div css={{ display: 'flex', flexWrap: 'nowrap' }} {...props} />
 }
 
 export const Slide = props => {
-  return <div css={{ width: '100%', flexShrink: 0 }} {...props} />
+  return (
+    <div css={{ flexBasis: '100%', flexShrink: 0, flexGrow: 0 }} {...props} />
+  )
+}
+
+const SliderControl = styled.button({
+  position: 'absolute',
+  top: 0,
+  bottom: 0,
+  width: '2rem',
+  border: 0,
+  backgroundColor: 'transparent',
+  color: 'white',
+  padding: 0,
+  transition: 'background-color 0.25s ease-out',
+  cursor: 'pointer',
+
+  '&:hover': {
+    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+  },
+})
+
+const SliderControlArrow = styled.span`
+  --angle: 35deg;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  transform: translate(-50%);
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    let: 50%;
+    width: 100%;
+    height: 3px;
+    margin-top: -1px;
+    margin-left: -50%;
+    background-color: white;
+    border-radius: 2px;
+    transform-origin: ${props =>
+      props.direction === 'left' ? '0 50%' : '100% 50%'};
+    transition: transform 0.2s ease-in-out;
+  }
+
+  &::before {
+    transform: rotate(calc(var(--angle) * -1));
+  }
+
+  &::after {
+    transform: rotate(var(--angle));
+  }
+
+  ${SliderControl}:hover &,
+  ${SliderControl}:focus & {
+    --angle: 30deg;
+  }
+`
+
+const SliderPrevious = props => {
+  return (
+    <SliderControl css={{ left: 0 }} {...props}>
+      <SliderControlArrow direction="left" />
+    </SliderControl>
+  )
+}
+
+const SliderNext = props => {
+  return (
+    <SliderControl css={{ right: 0 }} {...props}>
+      <SliderControlArrow direction="right" />
+    </SliderControl>
+  )
+}
+
+const useSlider = nbSlides => {
+  return [
+    {},
+    true,
+    true,
+    () => console.log('previous'),
+    () => console.log('next'),
+  ]
+}
+
+export const Slider = ({ children, style, ...props }) => {
+  const [sliderStyle, hasPrevious, hasNext, goToPrevious, goToNext] = useSlider(
+    children.length
+  )
+
+  return (
+    <div
+      css={{ overflow: 'hidden', position: 'relative' }}
+      style={{ ...style, ...sliderStyle }}
+      {...props}
+    >
+      <SliderTrack>{children}</SliderTrack>
+      {hasPrevious && <SliderPrevious onClick={goToPrevious} />}
+      {hasNext && <SliderNext onClick={goToNext} />}
+    </div>
+  )
 }
