@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from '@emotion/styled'
 
 const SliderTrack = props => {
-  return <div css={{ display: 'flex', flexWrap: 'nowrap' }} {...props} />
+  return (
+    <div
+      css={{
+        display: 'flex',
+        flexWrap: 'nowrap',
+        transition: 'transform 0.4s ease-in-out',
+      }}
+      {...props}
+    />
+  )
 }
 
 export const Slide = props => {
@@ -24,7 +33,7 @@ const SliderControl = styled.button({
   cursor: 'pointer',
 
   '&:hover': {
-    backgroundColor: 'rgba(0, 0, 0, 0.35)',
+    backgroundColor: 'rgba(0, 0, 0, 0.25)',
   },
 })
 
@@ -84,30 +93,85 @@ const SliderNext = props => {
   )
 }
 
-const useSlider = nbSlides => {
-  return [
-    {},
-    true,
-    true,
-    () => console.log('previous'),
-    () => console.log('next'),
-  ]
-}
-
-export const Slider = ({ children, style, ...props }) => {
-  const [sliderStyle, hasPrevious, hasNext, goToPrevious, goToNext] = useSlider(
-    children.length
-  )
-
+const SliderDots = ({ currentIndex, nbSlides, ...props }) => {
   return (
     <div
-      css={{ overflow: 'hidden', position: 'relative' }}
-      style={{ ...style, ...sliderStyle }}
-      {...props}
+      css={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}
     >
-      <SliderTrack>{children}</SliderTrack>
-      {hasPrevious && <SliderPrevious onClick={goToPrevious} />}
-      {hasNext && <SliderNext onClick={goToNext} />}
+      {Array.from({ length: nbSlides }).map((_, index) => (
+        <div
+          key={index}
+          css={theme => ({
+            width: '0.5rem',
+            height: '0.5rem',
+            border: `2px solid ${theme.main}`,
+            backgroundColor: index === currentIndex ? theme.main : 'white',
+            margin: '0 1rem',
+            borderRadius: '50%',
+            opacity: index === currentIndex ? 1 : 0.7,
+            transform: index === currentIndex ? 'scale(1.5)' : null,
+            transition: 'transform 0.2s ease-out',
+          })}
+        />
+      ))}
+    </div>
+  )
+}
+
+const useSlider = nbSlides => {
+  const [index, setIndex] = useState(0)
+
+  const style = {
+    transform: `translateX(${-index * 100}%)`,
+  }
+
+  const hasPrevious = index > 0
+  const hasNext = index < nbSlides - 1
+
+  const goToPrevious = () => {
+    if (!hasPrevious) {
+      return
+    }
+
+    setIndex(index - 1)
+  }
+
+  const goToNext = () => {
+    if (!hasNext) {
+      return
+    }
+
+    setIndex(index + 1)
+  }
+
+  return [style, hasPrevious, hasNext, goToPrevious, goToNext, index]
+}
+
+export const Slider = ({ children, ...props }) => {
+  const [
+    style,
+    hasPrevious,
+    hasNext,
+    goToPrevious,
+    goToNext,
+    currentIndex,
+  ] = useSlider(children.length)
+
+  return (
+    <div css={{ position: 'relative' }} {...props}>
+      <div
+        css={{
+          overflow: 'hidden',
+          position: 'relative',
+          borderRadius: '0.5rem',
+          boxShadow: '0 40px 30px -30px rgba(0,0,0,0.5)',
+        }}
+      >
+        <SliderTrack style={style}>{children}</SliderTrack>
+        {hasPrevious && <SliderPrevious onClick={goToPrevious} />}
+        {hasNext && <SliderNext onClick={goToNext} />}
+      </div>
+      <SliderDots currentIndex={currentIndex} nbSlides={children.length} />
     </div>
   )
 }

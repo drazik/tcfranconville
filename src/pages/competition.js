@@ -19,9 +19,6 @@ const Slider = props => {
   return (
     <BaseSlider
       css={{
-        boxShadow: '0 40px 30px -30px rgba(0, 0, 0, 0.5)',
-        borderRadius: '0.5rem',
-
         '& img': {
           verticalAlign: 'middle',
           width: '100%',
