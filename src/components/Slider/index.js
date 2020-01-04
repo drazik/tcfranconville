@@ -8,6 +8,8 @@ const SliderTrack = props => {
       css={{
         display: 'flex',
         flexWrap: 'nowrap',
+        touchAction: 'pan-x',
+        willChange: 'transform',
       }}
       {...props}
     />
@@ -179,8 +181,8 @@ const useSlider = nbSlides => {
         },
       })
     },
-    onSwipedLeft: e => console.log(e),
-    onSwipedRight: e => console.log(e),
+    onSwipedLeft: () => dispatch({ type: 'next', payload: { nbSlides } }),
+    onSwipedRight: () => dispatch({ type: 'previous' }),
   })
 
   const areDesiredAndCurrentDiffents =
