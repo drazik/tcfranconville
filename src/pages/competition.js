@@ -63,6 +63,18 @@ const CompetitionPage = () => {
                     Filles / garçons / dames / messieurs
                   </SectionTitleDetails>
                 </SectionTitle>
+                <Stack spacing="m">
+                  <Text>
+                    Le TCF présente chaque année 3 équipes messieurs (dont une
+                    en excellence régionale), 3 équipes dames (dont une en
+                    nationale 3), entre 3 et 6 équipes jeunes (dont 2 de
+                    filles).
+                  </Text>
+                  <Text>
+                    Les meilleurs classements senior du TCF en 2019 sont 1/6,
+                    4/6 pour les messieurs; 3/6, 4/6 pour les dames.
+                  </Text>
+                </Stack>
               </Stack>
             </TwoCol>
             <TwoCol reversed>
@@ -71,6 +83,14 @@ const CompetitionPage = () => {
                   Championnat 4ème série
                   <SectionTitleDetails>Dames / messieurs</SectionTitleDetails>
                 </SectionTitle>
+                <Stack spacing="m">
+                  <Text>
+                    Le TCF est un des rares clubs du Val d'Oise à présenter 3
+                    équipes dames et 2 équipes messieurs en Potel. Les équipes 1
+                    sont en série 1 et remportent régulièrement le championnat
+                    du Val d'Oise.
+                  </Text>
+                </Stack>
               </Stack>
             </TwoCol>
             <TwoCol>
@@ -79,6 +99,14 @@ const CompetitionPage = () => {
                   Championnat +35 ans
                   <SectionTitleDetails>Dames / messieurs</SectionTitleDetails>
                 </SectionTitle>
+                <Stack spacing="m">
+                  <Text>
+                    Le TCF a la chance de pouvoir faire jouer 2 équipes
+                    messieurs (dont une en excellence régionale) et 2 équipes
+                    dames (dont une est championne du Val d'Oise 2019 et monte
+                    en championnat de France).
+                  </Text>
+                </Stack>
               </Stack>
             </TwoCol>
             <TwoCol reversed>
@@ -87,6 +115,13 @@ const CompetitionPage = () => {
                   Championnat +45 ans
                   <SectionTitleDetails>Dames</SectionTitleDetails>
                 </SectionTitle>
+                <Stack spacing="m">
+                  <Text>
+                    Le TCF a 90% de ses adhérentes qui jouent en équipe,
+                    notamment dans 2 équipes Caren +45, dont une est en
+                    excellence départementale.
+                  </Text>
+                </Stack>
               </Stack>
             </TwoCol>
             <TwoCol>
@@ -95,6 +130,12 @@ const CompetitionPage = () => {
                   Championnat +55 ans
                   <SectionTitleDetails>Messieurs</SectionTitleDetails>
                 </SectionTitle>
+                <Stack spacing="m">
+                  <Text>
+                    Les messieurs +55 représentent dignement le TCF, avec une de
+                    ses 2 équipes 1/2 finaliste en challenge AFTS 2019.
+                  </Text>
+                </Stack>
               </Stack>
             </TwoCol>
           </Stack>
@@ -105,8 +146,8 @@ const CompetitionPage = () => {
           <Stack spacing="l">
             <SectionTitle>Épreuves individuelles</SectionTitle>
             <Text>
-              Le club organise aussi des compétitions individuelles pour tous
-              les âges et niveaux
+              Le club organise des compétitions individuelles pour tous les âges
+              et niveaux
             </Text>
             <Stack spacing="xl">
               <TwoCol align="center">
@@ -116,8 +157,8 @@ const CompetitionPage = () => {
                     <Text>
                       Chaque été le club organise son tournoi Open, au mois
                       d'août. De nombreux(ses) joueur(euses) du club, du
-                      département ainsi que de la France entière y prennent
-                      part.
+                      département ainsi que de la France entière voire de
+                      l'étranger y prennent part.
                     </Text>
                     <Text>
                       Catégories : simples dames (senior, 35, 45, 55); simples
@@ -125,8 +166,8 @@ const CompetitionPage = () => {
                       U14, U16, U18).
                     </Text>
                     <Text>
-                      La 38ème édition du tournoi open du TCF aura lieu du n au
-                      m août 2020.
+                      La 38ème édition du tournoi open du TCF aura lieu du 14 au
+                      30 août 2020.
                     </Text>
                   </Stack>
                 </Stack>
@@ -171,7 +212,12 @@ const CompetitionPage = () => {
                 <Stack spacing="l">
                   <SectionTitle>Tournoi Open Séniors+</SectionTitle>
                   <Stack spacing="m">
-                    <Text>...</Text>
+                    <Text>
+                      Vous avez plus de 55 ans ? Venez vous confronter en
+                      journée en semaine à des joueurs d'Île de France au club
+                      de Franconville au mois de mars et sur terre battue.
+                    </Text>
+                    <Text>Prochaine édition du 16 mars au 3 avril 2020.</Text>
                   </Stack>
                 </Stack>
               </TwoCol>
@@ -188,13 +234,20 @@ const CompetitionPage = () => {
                       Catégories : filles/garçons (U12, U16), dames (senior,
                       +35), messieurs (senior, +35, +55).
                     </Text>
-                    <Text>Le prochain tournoi interne aura lieu...</Text>
+                    <Text>
+                      Les adhérents du TCF peuvent également se confronter en
+                      double à cette occasion (mixtes, dames et messieurs).
+                    </Text>
+                    <Text>
+                      Le prochain tournoi interne aura lieu du 1er au 28 juin
+                      2020.
+                    </Text>
                   </Stack>
                 </Stack>
               </TwoCol>
               <TwoCol align="center">
                 <Stack spacing="l">
-                  <SectionTitle>Tournois internes couleurs</SectionTitle>
+                  <SectionTitle>Tournois internes couleur</SectionTitle>
                   <Stack spacing="m">
                     <Text>
                       Une fois par trimestres nos enseignants organisent des
