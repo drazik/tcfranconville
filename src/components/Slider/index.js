@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useReducer, useEffect } from 'react'
 import styled from '@emotion/styled'
+import { useSwipeable } from 'react-swipeable'
 
 const SliderTrack = props => {
   return (
@@ -7,7 +8,6 @@ const SliderTrack = props => {
       css={{
         display: 'flex',
         flexWrap: 'nowrap',
-        transition: 'transform 0.4s ease-in-out',
       }}
       {...props}
     />
@@ -118,22 +118,110 @@ const SliderDots = ({ currentIndex, nbSlides, ...props }) => {
   )
 }
 
+const initialState = {
+  offset: 0,
+  currentIndex: 0,
+  desiredIndex: null,
+}
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'drag':
+      return {
+        ...state,
+        offset: action.payload.offset,
+      }
+
+    case 'previous':
+      return {
+        ...state,
+        offset: 0,
+        desiredIndex: getPreviousIndex(state),
+      }
+
+    case 'next':
+      return {
+        ...state,
+        offset: 0,
+        desiredIndex: getNextIndex(state, action.payload.nbSlides),
+      }
+
+    case 'done':
+      return {
+        ...state,
+        currentIndex: state.desiredIndex,
+        desiredIndex: null,
+      }
+
+    default:
+      return state
+  }
+}
+
+const getPreviousIndex = state => {
+  return state.currentIndex > 0 ? state.currentIndex - 1 : 0
+}
+
+const getNextIndex = (state, nbSlides) => {
+  return state.currentIndex === nbSlides - 1
+    ? nbSlides - 1
+    : state.currentIndex + 1
+}
+
 const useSlider = nbSlides => {
-  const [index, setIndex] = useState(0)
+  const [state, dispatch] = useReducer(reducer, initialState)
+  const handlers = useSwipeable({
+    onSwiping: e => {
+      dispatch({
+        type: 'drag',
+        payload: {
+          offset: e.deltaX,
+        },
+      })
+    },
+    onSwipedLeft: e => console.log(e),
+    onSwipedRight: e => console.log(e),
+  })
+
+  const areDesiredAndCurrentDiffents =
+    state.desiredIndex !== null && state.desiredIndex !== state.currentIndex
+
+  const index = areDesiredAndCurrentDiffents
+    ? state.desiredIndex
+    : state.currentIndex
 
   const style = {
-    transform: `translateX(${-index * 100}%)`,
+    transform: `translateX(calc(${-index * 100}% ${
+      state.offset < 0 ? '+' : '-'
+    } ${Math.abs(state.offset)}px))`,
+    transition: areDesiredAndCurrentDiffents
+      ? 'transform 0.4s ease-in-out'
+      : null,
   }
 
-  const hasPrevious = index > 0
-  const hasNext = index < nbSlides - 1
+  useEffect(() => {
+    let timeout
+
+    if (areDesiredAndCurrentDiffents) {
+      timeout = setTimeout(() => dispatch({ type: 'done' }), 400)
+    }
+
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout)
+      }
+    }
+  }, [areDesiredAndCurrentDiffents])
+
+  const hasPrevious = state.currentIndex > 0
+  const hasNext = state.currentIndex < nbSlides - 1
 
   const goToPrevious = () => {
     if (!hasPrevious) {
       return
     }
 
-    setIndex(index - 1)
+    dispatch({ type: 'previous', payload: { nbSlides } })
   }
 
   const goToNext = () => {
@@ -141,10 +229,18 @@ const useSlider = nbSlides => {
       return
     }
 
-    setIndex(index + 1)
+    dispatch({ type: 'next', payload: { nbSlides } })
   }
 
-  return [style, hasPrevious, hasNext, goToPrevious, goToNext, index]
+  return [
+    style,
+    hasPrevious,
+    hasNext,
+    goToPrevious,
+    goToNext,
+    state.currentIndex,
+    handlers,
+  ]
 }
 
 export const Slider = ({ children, ...props }) => {
@@ -155,6 +251,7 @@ export const Slider = ({ children, ...props }) => {
     goToPrevious,
     goToNext,
     currentIndex,
+    handlers,
   ] = useSlider(children.length)
 
   return (
@@ -166,6 +263,7 @@ export const Slider = ({ children, ...props }) => {
           borderRadius: '0.5rem',
           boxShadow: '0 40px 30px -30px rgba(0,0,0,0.5)',
         }}
+        {...handlers}
       >
         <SliderTrack style={style}>{children}</SliderTrack>
         {hasPrevious && <SliderPrevious onClick={goToPrevious} />}
