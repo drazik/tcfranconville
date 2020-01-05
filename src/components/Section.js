@@ -14,15 +14,18 @@ export const SectionTitle = styled.h1(
       marginTop: '0.75rem',
       height: 3,
       width: '3rem',
-    }
+    },
   },
   props => ({
     '&::after': {
-      backgroundColor:
-        props.variant === 'primary' ? 'white' : props.theme.main
-    }
+      backgroundColor: props.variant === 'primary' ? 'white' : props.theme.main,
+    },
   })
 )
+
+export const SectionTitleDetails = props => {
+  return <div css={{ fontSize: '1rem' }} {...props} />
+}
 
 const getSectionBackgroundColor = (variant, theme) => {
   switch (variant) {
@@ -40,7 +43,8 @@ export const SectionContainer = props => {
 
   const styles = {
     position: 'relative',
-    padding: '3rem 0',
+    paddingTop: '5rem',
+    paddingBottom: '5rem',
     backgroundColor: getSectionBackgroundColor(variant, theme),
     color: props.variant === 'primary' ? 'white' : 'inherit',
   }
@@ -51,46 +55,40 @@ export const SectionContainer = props => {
     zIndex: 0,
 
     '& > *': {
-      transform: 'skewY(-3deg)'
+      transform: 'skewY(-3deg)',
     },
 
     [mqNew('s')]: {
       transform: 'skewY(2.5deg)',
       '& > *': {
-        transform: 'skewY(-2.5deg)'
-      }
+        transform: 'skewY(-2.5deg)',
+      },
     },
 
     [mqNew('m')]: {
       transform: 'skewY(2deg)',
       '& > *': {
-        transform: 'skewY(-2deg)'
-
+        transform: 'skewY(-2deg)',
       },
     },
 
     [mqNew('l')]: {
       transform: 'skewY(1.5deg)',
       '& > *': {
-        transform: 'skewY(-1.5deg)'
-      }
-    }
+        transform: 'skewY(-1.5deg)',
+      },
+    },
   }
 
-  return (
-    <section
-      css={[styles, props.skewed && skewedStyles]}
-      {...rest}
-    />
-  )
+  return <section css={[styles, props.skewed && skewedStyles]} {...rest} />
 }
 
 SectionContainer.propTypes = {
-  variant: PropTypes.oneOf(['normal', 'primary', 'light'])
+  variant: PropTypes.oneOf(['normal', 'primary', 'light']),
 }
 
 SectionContainer.defaultProps = {
-  variant: 'normal'
+  variant: 'normal',
 }
 
 export const Section = withTheme(props => {
