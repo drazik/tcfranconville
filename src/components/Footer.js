@@ -74,6 +74,19 @@ function Footer() {
       <p css={paragraph}>
         &copy; Tennis Club Franconville {formatDate(new Date(), 'yyyy')}
       </p>
+      <ul
+        css={{
+          display: 'flex',
+          listStyle: 'none',
+          paddingLeft: 0,
+        }}
+      >
+        <li>
+          <ExternalLink href="http://www.gs.applipub-fft.fr/fftfr/frameset.do?dispatch=load">
+            Gestion Sportive
+          </ExternalLink>
+        </li>
+      </ul>
     </footer>
   )
 }
