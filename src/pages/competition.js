@@ -48,7 +48,7 @@ const CompetitionPage = () => {
       </Section>
       <Section variant="light" skewed>
         <Wrapper>
-          <Stack spacing="l">
+          <Stack spacing="xl">
             <SectionTitle>Épreuves par équipe</SectionTitle>
             <Text>
               Tout au long de chaque saison sportive, des équipes de différents
@@ -76,8 +76,20 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
+              <Slider>
+                {['01', '02', '03'].map(name => (
+                  <Slide key={name}>
+                    <Ratio ratio={3 / 2}>
+                      <img
+                        src={require(`../images/competition/championnat-printemps/${name}.jpg`)}
+                        alt=""
+                      />
+                    </Ratio>
+                  </Slide>
+                ))}
+              </Slider>
             </TwoCol>
-            <TwoCol reversed>
+            <TwoCol reversed align="center">
               <Stack spacing="l">
                 <SectionTitle>
                   Championnat 4ème série
@@ -92,6 +104,18 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
+              <Slider>
+                {['01', '02', '03', '04'].map(name => (
+                  <Slide key={name}>
+                    <Ratio ratio={3 / 2}>
+                      <img
+                        src={require(`../images/competition/potel/${name}.jpg`)}
+                        alt=""
+                      />
+                    </Ratio>
+                  </Slide>
+                ))}
+              </Slider>
             </TwoCol>
             <TwoCol>
               <Stack spacing="l">
@@ -109,7 +133,7 @@ const CompetitionPage = () => {
                 </Stack>
               </Stack>
             </TwoCol>
-            <TwoCol reversed>
+            <TwoCol reversed align="center">
               <Stack spacing="l">
                 <SectionTitle>
                   Championnat +45 ans
@@ -123,8 +147,12 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
+              <IllustrationCard
+                image={require('../images/competition/championnat-45/01.jpg')}
+                ratio={1280 / 960}
+              />
             </TwoCol>
-            <TwoCol>
+            <TwoCol align="center">
               <Stack spacing="l">
                 <SectionTitle>
                   Championnat +55 ans
@@ -137,6 +165,10 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
+              <IllustrationCard
+                image={require('../images/competition/championnat-55/01.jpg')}
+                ratio={2560 / 1920}
+              />
             </TwoCol>
           </Stack>
         </Wrapper>
@@ -220,8 +252,20 @@ const CompetitionPage = () => {
                     <Text>Prochaine édition du 16 mars au 3 avril 2020.</Text>
                   </Stack>
                 </Stack>
+                <Slider>
+                  {['01', '02', '03'].map(name => (
+                    <Slide key={name}>
+                      <Ratio ratio={3 / 2}>
+                        <img
+                          src={require(`../images/competition/open-senior-plus/${name}.jpg`)}
+                          alt=""
+                        />
+                      </Ratio>
+                    </Slide>
+                  ))}
+                </Slider>
               </TwoCol>
-              <TwoCol reversed>
+              <TwoCol reversed align="center">
                 <Stack spacing="l">
                   <SectionTitle>Tournoi interne</SectionTitle>
                   <Stack spacing="m">
@@ -244,6 +288,18 @@ const CompetitionPage = () => {
                     </Text>
                   </Stack>
                 </Stack>
+                <Slider>
+                  {['01', '02', '03', '04'].map(name => (
+                    <Slide key={name}>
+                      <Ratio ratio={3 / 2}>
+                        <img
+                          src={require(`../images/competition/interne/${name}.jpg`)}
+                          alt=""
+                        />
+                      </Ratio>
+                    </Slide>
+                  ))}
+                </Slider>
               </TwoCol>
               <TwoCol align="center">
                 <Stack spacing="l">
@@ -272,14 +328,6 @@ const CompetitionPage = () => {
                     </Slide>
                   ))}
                 </Slider>
-              </TwoCol>
-              <TwoCol reversed>
-                <Stack spacing="l">
-                  <SectionTitle>Tournoi découverte vert</SectionTitle>
-                  <Stack spacing="m">
-                    <Text>En fin de saison sportive</Text>
-                  </Stack>
-                </Stack>
               </TwoCol>
             </Stack>
           </Stack>
