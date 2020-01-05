@@ -3,6 +3,8 @@ import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 import franconvilleLogo from '../images/logo-franconville.png'
+import ecosportLogo from '../images/logo-ecosport.png'
+import { ExternalLink } from '../components/ExternalLink'
 
 const footer = {
   position: 'relative',
@@ -26,35 +28,48 @@ const footer = {
     left: 0,
     right: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.15)',
-    zIndex: -1
-  }
+    zIndex: -1,
+  },
 }
 
 const paragraph = {
   marginTop: '3rem',
   fontSize: '1.25rem',
-  textAlign: 'center'
+  textAlign: 'center',
 }
 
 function Footer() {
   return (
     <footer css={footer}>
-      <div css={{
-        display: 'flex',
-        alignItems: 'center',
+      <div
+        css={{
+          display: 'flex',
+          alignItems: 'center',
 
-        '* + *': {
-          marginLeft: 64
-        }
-      }}>
+          '* + *': {
+            marginLeft: 64,
+          },
+        }}
+      >
         <Logo size={100} />
-        <img
-          src={franconvilleLogo}
-          css={{
-            width: 150
-          }}
-            alt=""
+        <ExternalLink href="https://www.ville-franconville.fr/">
+          <img
+            src={franconvilleLogo}
+            css={{
+              width: 150,
+            }}
+            alt="Ville de Franconville"
           />
+        </ExternalLink>
+        <ExternalLink href="https://www.ecosport-tennis.fr/">
+          <img
+            src={ecosportLogo}
+            css={{
+              width: 150,
+            }}
+            alt="Ecosport Tennis"
+          />
+        </ExternalLink>
       </div>
       <p css={paragraph}>
         &copy; Tennis Club Franconville {formatDate(new Date(), 'yyyy')}
