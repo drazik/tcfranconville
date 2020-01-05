@@ -79,12 +79,24 @@ function Footer() {
           display: 'flex',
           listStyle: 'none',
           paddingLeft: 0,
+
+          '& > li': {
+            margin: '0 1rem',
+          },
         }}
       >
         <li>
           <ExternalLink href="http://www.gs.applipub-fft.fr/fftfr/frameset.do?dispatch=load">
             Gestion Sportive
           </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="http://www.comite.fft.fr/val-d-oise/val-d-oise_a/cms/index_public.php?us_action=show_note_site&login_off=1&ui_id_site=1">
+            Comité du Val d'Oise
+          </ExternalLink>
+        </li>
+        <li>
+          <ExternalLink href="https://tenup.fft.fr/">TenUp</ExternalLink>
         </li>
       </ul>
     </footer>
