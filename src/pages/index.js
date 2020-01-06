@@ -14,7 +14,9 @@ import { Stack } from '../components/Stack'
 import { Post } from '../components/Post'
 
 const IndexPage = ({ data }) => {
-  const [post] = data.allFacebookPosts.edges.map(edge => edge.node).filter(post => post.message)
+  const [post] = data.allFacebookPosts.edges
+    .map(edge => edge.node)
+    .filter(post => post.message)
 
   return (
     <>
@@ -22,22 +24,29 @@ const IndexPage = ({ data }) => {
       <Section skewed variant="primary" css={{ paddingTop: '3rem' }}>
         <Wrapper>
           <Stack spacing="l">
-            <SectionTitle variant="primary">
-              Bienvenue !
-            </SectionTitle>
+            <SectionTitle variant="primary">Bienvenue !</SectionTitle>
             <Stack spacing="m">
               <Text>
-                Vous souhaitez vous maintenir en forme, en familles, entre amis ?<br />
-                Vous voulez progresser dans votre discipline sportive, le tennis ?<br />
+                Vous souhaitez vous maintenir en forme, en familles, entre amis
+                ?<br />
+                Vous voulez progresser dans votre discipline sportive, le tennis
+                ?<br />
                 Vous recherchez un lieu de partage d'émotions ?
               </Text>
               <Text>
-                Quels que soient votre âge, votre niveau, votre ambition, le TCF vous offre :
+                Quels que soient votre âge, votre niveau, votre ambition, le TCF
+                vous offre :
               </Text>
               <Text component="ul">
-                <li>Des enseignements à haute valeur ajoutée, dynamiques, motivants</li>
+                <li>
+                  des enseignements à haute valeur ajoutée, dynamiques,
+                  motivants
+                </li>
                 <li>des compétitions adaptées, individuelles ou par équipe</li>
-                <li>des animations placées sous le signe de la convivialité, du jeu et de la gastronomie !</li>
+                <li>
+                  des animations placées sous le signe de la convivialité, du
+                  jeu et de la gastronomie !
+                </li>
               </Text>
             </Stack>
           </Stack>
@@ -45,13 +54,15 @@ const IndexPage = ({ data }) => {
       </Section>
 
       <Section>
-        <Wrapper css={{
-          marginTop: -130,
+        <Wrapper
+          css={{
+            marginTop: -130,
 
-          [mq('s')]: {
-            marginTop: -150
-          }
-        }}>
+            [mq('s')]: {
+              marginTop: -150,
+            },
+          }}
+        >
           <div
             css={{
               display: 'grid',
@@ -60,12 +71,12 @@ const IndexPage = ({ data }) => {
               gridRowGap: '2rem',
 
               [mq('m')]: {
-                gridTemplateColumns: 'repeat(3, 1fr)'
+                gridTemplateColumns: 'repeat(3, 1fr)',
               },
 
               [mq('l')]: {
-                gridColumnGap: '2rem'
-              }
+                gridColumnGap: '2rem',
+              },
             }}
           >
             <Card
@@ -102,12 +113,13 @@ const IndexPage = ({ data }) => {
       <Section skewed variant="primary" css={{ zIndex: 2 }}>
         <Wrapper>
           <Stack spacing="l">
-            <SectionTitle variant="primary">
-              Venir jouer au TCF
-            </SectionTitle>
+            <SectionTitle variant="primary">Venir jouer au TCF</SectionTitle>
             <Stack spacing="m">
               <Text>
-                Le club est ouvert à toutes et à tous. Envie de taper la petite balle jaune en famille ou entre amis ? En simple, en double ? Nos courts sont disponibles à la réservation, même si vous n'ête pas (encore) adhérents.
+                Le club est ouvert à toutes et à tous. Envie de taper la petite
+                balle jaune en famille ou entre amis ? En simple, en double ?
+                Nos courts sont disponibles à la réservation, même si vous
+                n'êtes pas (encore) adhérent.
               </Text>
               <Button
                 as={Link}
@@ -115,14 +127,17 @@ const IndexPage = ({ data }) => {
                 css={{
                   marginLeft: 'auto',
                   marginRight: 'auto',
-                  maxWidth: 300
+                  maxWidth: 300,
                 }}
                 block
               >
                 Réserver un court
               </Button>
               <Text>
-                Vous aimeriez jouer régulièrement ? En devenant adhérent(e) du TC Franconville, vous pourrez profiter au maximum des infrastructures du club. Différentes possibilités s'offrent à vous : cotisation à l'année, saisonnière...
+                Vous aimeriez jouer régulièrement ? En devenant adhérent(e) du
+                TC Franconville, vous pourrez profiter au maximum des
+                infrastructures du club. Différentes possibilités s'offrent à
+                vous : cotisation à l'année, saisonnière...
               </Text>
               <Button
                 as={Link}
@@ -130,16 +145,12 @@ const IndexPage = ({ data }) => {
                 css={{
                   marginLeft: 'auto',
                   marginRight: 'auto',
-                  maxWidth: 300
+                  maxWidth: 300,
                 }}
                 block
               >
                 Découvrir la cotisation
               </Button>
-              <Text>
-                N'hésitez pas à <Link to="/contact">nous contacter</Link> si
-                besoin.
-              </Text>
             </Stack>
           </Stack>
         </Wrapper>
@@ -148,16 +159,10 @@ const IndexPage = ({ data }) => {
       <Section>
         <Wrapper>
           <Stack spacing="l">
-            <SectionTitle>
-              L'actualité du club
-            </SectionTitle>
+            <SectionTitle>L'actualité du club</SectionTitle>
             <Post post={post} />
             <div css={{ textAlign: 'center' }}>
-              <Button
-                as={Link}
-                to="/actualite"
-                variant="primary"
-              >
+              <Button as={Link} to="/actualite" variant="primary">
                 Voir plus d'actualités
               </Button>
             </div>
