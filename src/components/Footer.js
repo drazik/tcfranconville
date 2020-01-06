@@ -5,6 +5,7 @@ import Logo from './Logo'
 import franconvilleLogo from '../images/logo-franconville.png'
 import ecosportLogo from '../images/logo-ecosport.png'
 import { ExternalLink } from '../components/ExternalLink'
+import { mq } from '../helpers/media-queries'
 
 const footer = {
   position: 'relative',
@@ -42,14 +43,23 @@ function Footer() {
   return (
     <footer css={footer}>
       <div
-        css={{
+        css={theme => ({
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
 
-          '* + *': {
-            marginLeft: 64,
+          '& > * + *': {
+            marginTop: theme.spacing * 4,
           },
-        }}
+
+          [mq('m')]: {
+            flexDirection: 'row',
+
+            '& > *': {
+              margin: `0 ${theme.spacing * 4}px`,
+            },
+          },
+        })}
       >
         <Logo size={100} />
         <ExternalLink href="https://www.ville-franconville.fr/">
@@ -79,9 +89,12 @@ function Footer() {
           display: 'flex',
           listStyle: 'none',
           paddingLeft: 0,
+          whiteSpace: 'nowrap',
+          flexWrap: 'wrap',
+          alignItems: 'center',
 
           '& > li': {
-            margin: '0 1rem',
+            margin: '0.5rem 1rem',
           },
         }}
       >
