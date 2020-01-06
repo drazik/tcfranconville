@@ -107,14 +107,14 @@ const EnseignementPage = () => {
             </Text>
             <List>
               <ListItem>
-                Partager le plaisir du jeu en s'amusant avant tout
+                partager le plaisir du jeu en s'amusant avant tout
               </ListItem>
               <ListItem>
-                Faire progresser chaque enfant à son rythme en tenant compte des
+                faire progresser chaque enfant à son rythme en tenant compte des
                 singularités de chacun
               </ListItem>
               <ListItem>
-                Transmettre les valeurs de l'esprit sportif associant fair-play,
+                transmettre les valeurs de l'esprit sportif associant fair-play,
                 dépassement de soi et esprit de compétition
               </ListItem>
             </List>
@@ -125,17 +125,17 @@ const EnseignementPage = () => {
               <ListItem>
                 promouvoir le tennis à l'extérieur du club par des actions comme
                 le « tennis à l'école » en lien avec la mairie de Franconville
-                et l'inspection académique,
+                et l'inspection académique
               </ListItem>
               <ListItem>
                 emmener nos compétiteurs à développer leur potentiel en les
                 intégrant à un centre d'entraînement intensif, en leur proposant
-                des cours supplémentaires,...
+                des cours supplémentaires...
               </ListItem>
               <ListItem>
                 fidéliser les enfants par le développement du jeu en dehors des
                 cours (animations tennis, organisation de tournois,
-                participation à des compétitions par équipes,...)
+                participation à des compétitions par équipes...)
               </ListItem>
               <ListItem>
                 faciliter la transition vers l'âge adulte en intégrant les ados
@@ -292,6 +292,9 @@ const EnseignementPage = () => {
                   Des formats variables en fonction des préférences de chacun :
                 </Text>
                 <List>
+                  <ListItem>
+                    1h avec un enseignant DE : 4 joueurs sur 1 terrain
+                  </ListItem>
                   <ListItem>
                     1h15 (+15 minutes de jeu libre) en plateau pour des
                     partenaires plus variés : 8 joueurs sur 2 terrains avec 2
