@@ -41,7 +41,7 @@ const CompetitionPage = () => {
             <PageDescription>
               Venez participer quel que soit votre âge et votre niveau à des
               compétitions par équipes en championnats ou en tournois
-              individuellement.
+              individuellement
             </PageDescription>
           </Stack>
         </Wrapper>
@@ -53,7 +53,7 @@ const CompetitionPage = () => {
             <Text>
               Tout au long de chaque saison sportive, des équipes de différents
               âges et niveaux sont constituées pour participer à des
-              compétitions par équipe.
+              compétitions par équipe
             </Text>
             <TwoCol>
               <Stack spacing="l">
@@ -67,12 +67,11 @@ const CompetitionPage = () => {
                   <Text>
                     Le TCF présente chaque année 3 équipes messieurs (dont une
                     en excellence régionale), 3 équipes dames (dont une en
-                    nationale 3), entre 3 et 6 équipes jeunes (dont 2 de
-                    filles).
+                    nationale 3), entre 3 et 6 équipes jeunes (dont 2 de filles)
                   </Text>
                   <Text>
                     Les meilleurs classements senior du TCF en 2019 sont 1/6,
-                    4/6 pour les messieurs; 3/6, 4/6 pour les dames.
+                    4/6 pour les messieurs; 3/6, 4/6 pour les dames
                   </Text>
                 </Stack>
               </Stack>
@@ -100,7 +99,7 @@ const CompetitionPage = () => {
                     Le TCF est un des rares clubs du Val d'Oise à présenter 3
                     équipes dames et 2 équipes messieurs en Potel. Les équipes 1
                     sont en série 1 et remportent régulièrement le championnat
-                    du Val d'Oise.
+                    du Val d'Oise
                   </Text>
                 </Stack>
               </Stack>
@@ -128,7 +127,7 @@ const CompetitionPage = () => {
                     Le TCF a la chance de pouvoir faire jouer 2 équipes
                     messieurs (dont une en excellence régionale) et 2 équipes
                     dames (dont une est championne du Val d'Oise 2019 et monte
-                    en championnat de France).
+                    en championnat de France)
                   </Text>
                 </Stack>
               </Stack>
@@ -143,7 +142,7 @@ const CompetitionPage = () => {
                   <Text>
                     Le TCF a 90% de ses adhérentes qui jouent en équipe,
                     notamment dans 2 équipes Caren +45, dont une est en
-                    excellence départementale.
+                    excellence départementale
                   </Text>
                 </Stack>
               </Stack>
@@ -161,7 +160,7 @@ const CompetitionPage = () => {
                 <Stack spacing="m">
                   <Text>
                     Les messieurs +55 représentent dignement le TCF, avec une de
-                    ses 2 équipes 1/2 finaliste en challenge AFTS 2019.
+                    ses 2 équipes 1/2 finaliste en challenge AFTS 2019
                   </Text>
                 </Stack>
               </Stack>
@@ -190,16 +189,16 @@ const CompetitionPage = () => {
                       Chaque été le club organise son tournoi Open, au mois
                       d'août. De nombreux(ses) joueur(euses) du club, du
                       département ainsi que de la France entière voire de
-                      l'étranger y prennent part.
+                      l'étranger y prennent part
                     </Text>
                     <Text>
                       Catégories : simples dames (senior, 35, 45, 55); simples
                       messieurs (senior, 35, 45, 55, 65); filles/garçons (U12,
-                      U14, U16, U18).
+                      U14, U16, U18)
                     </Text>
                     <Text>
                       La 38ème édition du tournoi open du TCF aura lieu du 14 au
-                      30 août 2020.
+                      30 août 2020
                     </Text>
                   </Stack>
                 </Stack>
@@ -223,15 +222,15 @@ const CompetitionPage = () => {
                     <Text>
                       Organisé entre fin novembre et début décembre en semaine.
                       Les matchs ont lieu en journée (premiers matchs à 9h,
-                      dernière rotation à 15h), du lundi au vendredi.
+                      dernière rotation à 15h), du lundi au vendredi
                     </Text>
                     <Text>
                       Deux catégories : simple messieurs senior et simple dames
-                      senior.
+                      senior
                     </Text>
                     <Text>
                       La prochaine édition du tournoi Open journée aura lieu en
-                      novembre 2020.
+                      novembre 2020
                     </Text>
                   </Stack>
                 </Stack>
@@ -247,9 +246,9 @@ const CompetitionPage = () => {
                     <Text>
                       Vous avez plus de 55 ans ? Venez vous confronter en
                       journée en semaine à des joueurs d'Île de France au club
-                      de Franconville au mois de mars et sur terre battue.
+                      de Franconville au mois de mars et sur terre battue
                     </Text>
-                    <Text>Prochaine édition du 16 mars au 3 avril 2020.</Text>
+                    <Text>Prochaine édition du 16 mars au 3 avril 2020</Text>
                   </Stack>
                 </Stack>
                 <Slider>
@@ -272,19 +271,19 @@ const CompetitionPage = () => {
                     <Text>
                       Au printemps, le tournoi interne permet à tous(tes) les
                       joueurs(euses) du club de jouer ensemble dans la
-                      convivialité et la bonne humeur qui caractérisent le TCF.
+                      convivialité et la bonne humeur qui caractérisent le TCF
                     </Text>
                     <Text>
                       Catégories : filles/garçons (U12, U16), dames (senior,
-                      +35), messieurs (senior, +35, +55).
+                      +35), messieurs (senior, +35, +55)
                     </Text>
                     <Text>
                       Les adhérents du TCF peuvent également se confronter en
-                      double à cette occasion (mixtes, dames et messieurs).
+                      double à cette occasion (mixtes, dames et messieurs)
                     </Text>
                     <Text>
                       Le prochain tournoi interne aura lieu du 1er au 28 juin
-                      2020.
+                      2020
                     </Text>
                   </Stack>
                 </Stack>
@@ -309,11 +308,9 @@ const CompetitionPage = () => {
                       Une fois par trimestres nos enseignants organisent des
                       tournois par couleurs pour les enfants du club. Les
                       enfants y sont regroupés par niveaux et jouent avec des
-                      balles évolutives.
+                      balles évolutives
                     </Text>
-                    <Text>
-                      Catégories : blanc, violet, rouge, orange, vert.
-                    </Text>
+                    <Text>Catégories : blanc, violet, rouge, orange, vert</Text>
                   </Stack>
                 </Stack>
                 <Slider>
