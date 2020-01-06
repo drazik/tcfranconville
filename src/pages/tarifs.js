@@ -366,12 +366,12 @@ const TarifsPage = () => {
               <Text>
                 Si votre conjoint prend aussi une cotisation annuelle, vous
                 bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste
-                plus qu'à le/la convaincre.
+                plus qu'à le/la convaincre
               </Text>
               <Subtitle tag="h2">Réduction enfant</Subtitle>
               <Text>
                 Lors de l'inscription de plusieurs enfants, vous bénéficiez de
-                30€ de réduction par enfant (10€ pour le mini-tennis).
+                30€ de réduction par enfant (10€ pour le mini-tennis)
               </Text>
               <Subtitle tag="h2">Forfait familial</Subtitle>
               <Text>À partir de 1200€...</Text>
@@ -392,7 +392,9 @@ const TarifsPage = () => {
                   10€ sont déductibles de vos impôts sur le revenu
                 </strong>{' '}
                 et vous bénéficiez d'
-                <strong>une remise immédiate de 5€ sur votre cotisation</strong>
+                <strong>
+                  une remise immédiate de 25% du don sur votre cotisation
+                </strong>
                 .
               </Text>
               <Text>
