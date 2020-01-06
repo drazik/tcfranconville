@@ -189,11 +189,11 @@ const CompetitionPage = () => {
                       Chaque été le club organise son tournoi Open, au mois
                       d'août. De nombreux(ses) joueur(euses) du club, du
                       département ainsi que de la France entière voire de
-                      l'étranger y prennent part
+                      l'étranger (450 en 2019) y prennent part
                     </Text>
                     <Text>
-                      Catégories : simples dames (senior, 35, 45, 55); simples
-                      messieurs (senior, 35, 45, 55, 65); filles/garçons (U12,
+                      Catégories : simples dames (senior, 35, 45, 55) ; simples
+                      messieurs (senior, 35, 45, 55, 65) ; filles/garçons (U12,
                       U14, U16, U18)
                     </Text>
                     <Text>
@@ -305,7 +305,7 @@ const CompetitionPage = () => {
                   <SectionTitle>Tournois internes couleur</SectionTitle>
                   <Stack spacing="m">
                     <Text>
-                      Une fois par trimestres nos enseignants organisent des
+                      Une fois par trimestre nos enseignants organisent des
                       tournois par couleurs pour les enfants du club. Les
                       enfants y sont regroupés par niveaux et jouent avec des
                       balles évolutives
