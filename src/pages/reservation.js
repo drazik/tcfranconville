@@ -7,7 +7,7 @@ import { PageTitle } from '../components/PageTitle'
 import { Stack } from '../components/Stack'
 import { Button } from '../components/Button'
 import { ExternalLink } from '../components/ExternalLink'
-import { Link } from 'gatsby'
+import { Link } from 'gatsby'
 import { mq } from '../helpers/media-queries'
 
 const ReservationPage = props => {
@@ -26,22 +26,34 @@ const ReservationPage = props => {
               gridGap: theme.spacing * 4,
 
               [mq('m')]: {
-                gridGap: theme.spacing * 8
+                gridGap: theme.spacing * 8,
               },
 
               [mq('l')]: {
-                gridTemplateColumns: 'repeat(2, 1fr)'
-              }
+                gridTemplateColumns: 'repeat(2, 1fr)',
+              },
             })}
           >
             <div>
               <Stack>
                 <SectionTitle>Adhérent</SectionTitle>
                 <Text>
-                  Les adhérents du club peuvent passer par leur espace <ExternalLink href="https://tenup.fft.fr/">TenUp</ExternalLink> pour réserver un court afin de jouer avec un autre adhérent, ou faire découvrir le club à un invité moyennant 6€ par invitation.
+                  Les adhérents du club peuvent passer par leur espace{' '}
+                  <ExternalLink href="https://tenup.fft.fr/">
+                    TenUp
+                  </ExternalLink>{' '}
+                  pour réserver un court afin de jouer avec un autre adhérent,
+                  ou faire découvrir le club à un invité moyennant 6€ par
+                  invitation.
                 </Text>
                 <Text>
-                  Si vous n'avez pas encore de compte, vous pouvez en créer un. Vous aurez besoin de votre numéro de licence, qui vous a été envoyé par e-mail. En cas de difficultés, pensez à consulter <ExternalLink href="https://tenup.fft.fr/FAQ">la FAQ de TenUp</ExternalLink>.
+                  Si vous n'avez pas encore de compte, vous pouvez en créer un.
+                  Vous aurez besoin de votre numéro de licence, qui vous a été
+                  envoyé par e-mail. En cas de difficultés, pensez à consulter{' '}
+                  <ExternalLink href="https://tenup.fft.fr/FAQ">
+                    la FAQ de TenUp
+                  </ExternalLink>
+                  .
                 </Text>
                 <Button
                   as={ExternalLink}
@@ -57,10 +69,16 @@ const ReservationPage = props => {
               <Stack>
                 <SectionTitle>Non adhérent</SectionTitle>
                 <Text>
-                  Pour les non adhérents, l'application <ExternalLink href="">Anybuddy</ExternalLink> vous permet de réserver, payer et accéder au club en toute autonomie.
+                  Pour les non adhérents, l'application{' '}
+                  <ExternalLink href="">Anybuddy</ExternalLink> vous permet de
+                  réserver, payer et accéder au club en toute autonomie.
                 </Text>
                 <Text>
-                  Si vous jouez régulièrement, pensez à jetter un oeil à <Link to="/tarifs#cotisation">la cotisation</Link>. Elle pourrait être plus avantageuse que des réservations à l'unité. N'hésitez pas à nous contacter si vous avez des questions à ce propos.
+                  Si vous jouez régulièrement, pensez à jeter un oeil à{' '}
+                  <Link to="/tarifs#cotisation">la cotisation</Link>. Elle
+                  pourrait être plus avantageuse que des réservations à l'unité.
+                  N'hésitez pas à nous contacter si vous avez des questions à ce
+                  propos
                 </Text>
                 <Button
                   as={ExternalLink}
