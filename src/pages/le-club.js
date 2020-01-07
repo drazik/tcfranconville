@@ -8,12 +8,12 @@ import { TwoCol } from '../components/TwoCol'
 import { Stack } from '../components/Stack'
 import { mq } from '../helpers/media-queries'
 
-const ContactPage = () => {
+const LeClubPage = () => {
   return (
     <>
       <SEO title="Contact" />
       <Section skewed variant="primary">
-        <PageTitle>Contact</PageTitle>
+        <PageTitle>Le club</PageTitle>
       </Section>
       <Section skewed>
         <Wrapper>
@@ -26,11 +26,11 @@ const ContactPage = () => {
               </Text>
               <Text>
                 Vous pouvez nous contacter par téléphone au
-                01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse
-                {' '}
+                01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{' '}
                 <a href="mailto:tennis.club.franconville@cegetel.net">
                   tennis.club.franconville@cegetel.net
-                </a>.
+                </a>
+                .
               </Text>
             </Stack>
             <div>
@@ -41,7 +41,7 @@ const ContactPage = () => {
                   border: 0,
 
                   [mq('s')]: {
-                    height: 500
+                    height: 500,
                   },
                 }}
                 title="Carte"
@@ -55,4 +55,4 @@ const ContactPage = () => {
   )
 }
 
-export default ContactPage
+export default LeClubPage

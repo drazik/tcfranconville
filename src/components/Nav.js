@@ -24,8 +24,8 @@ const BurgerButton = props => {
         display: 'block',
 
         [mqNew('l')]: {
-          display: 'none'
-        }
+          display: 'none',
+        },
       })}
       {...rest}
     >
@@ -43,12 +43,12 @@ const BurgerButton = props => {
             width: 24,
             height: 2,
             borderRadius: 2,
-            backgroundColor: 'white'
+            backgroundColor: 'white',
           },
 
           '&::before, &::after': {
             content: '""',
-            display: 'block'
+            display: 'block',
           },
 
           '&::before': {
@@ -58,8 +58,8 @@ const BurgerButton = props => {
 
           '&::after': {
             bottom: props.active ? 0 : -6,
-            transform: props.active ? 'rotate(-90deg)' : 'rotate(0)'
-          }
+            transform: props.active ? 'rotate(-90deg)' : 'rotate(0)',
+          },
         }}
       />
     </button>
@@ -101,12 +101,11 @@ const Menu = props => {
           padding: 0,
           flexDirection: 'row',
           fontWeight: 'bold',
-          paddingBottom: '1rem'
-        }
+          paddingBottom: '1rem',
+        },
       })}
       {...rest}
-    >
-    </nav>
+    ></nav>
   )
 }
 
@@ -125,8 +124,8 @@ const MenuLink = props => {
           marginLeft: 0,
 
           [mqNew('l')]: {
-            marginLeft: '2rem'
-          }
+            marginLeft: '2rem',
+          },
         },
 
         '& + &::before': {
@@ -139,9 +138,9 @@ const MenuLink = props => {
           height: 1,
 
           [mqNew('l')]: {
-            display: 'none'
-          }
-        }
+            display: 'none',
+          },
+        },
       }}
     >
       <Component
@@ -157,7 +156,7 @@ const MenuLink = props => {
           [mqNew('l')]: {
             fontSize: '1.25rem',
             textTransform: 'none',
-            textShadow: '1px 1px 1px #000'
+            textShadow: '1px 1px 1px #000',
           },
 
           '&::after': {
@@ -168,9 +167,9 @@ const MenuLink = props => {
             backgroundColor: theme.main,
             marginTop: 2,
             [mqNew('l')]: {
-              display: isCurrent ? 'block' : 'none'
-            }
-          }
+              display: isCurrent ? 'block' : 'none',
+            },
+          },
         })}
         {...rest}
       />
@@ -185,12 +184,7 @@ const MenuLinkExternal = props => {
 const MenuLinkInternal = props => {
   return (
     <Match path={props.to}>
-      {({ match }) => (
-        <MenuLink
-          isCurrent={match}
-          {...props}
-        />
-      )}
+      {({ match }) => <MenuLink isCurrent={match} {...props} />}
     </Match>
   )
 }
@@ -218,7 +212,7 @@ const Overlay = props => {
         zIndex: 997,
         opacity: props.isOpen ? 1 : 0,
         visibility: props.isOpen ? 'visible' : 'hidden',
-        transition: 'opacity 0.25s ease-out, visibility'
+        transition: 'opacity 0.25s ease-out, visibility',
       }}
       {...rest}
     />
@@ -251,6 +245,9 @@ function Nav() {
         <MenuItem to="/animations" onClick={handleClose}>
           Animations
         </MenuItem>
+        <MenuItem to="/le-club" onClick={handleClose}>
+          Le club
+        </MenuItem>
         <MenuItem to="/tarifs" onClick={handleClose}>
           Tarifs
         </MenuItem>
@@ -260,9 +257,6 @@ function Nav() {
         <MenuItem to="/actualite" onClick={handleClose}>
           Actualité
         </MenuItem>
-        <MenuItem to="/contact" onClick={handleClose}>
-          Contact
-        </MenuItem>
         <MenuItem
           as="a"
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
@@ -271,8 +265,8 @@ function Nav() {
             display: 'block',
 
             [mqNew('l')]: {
-              display: 'none'
-            }
+              display: 'none',
+            },
           }}
         >
           <FBIcon
