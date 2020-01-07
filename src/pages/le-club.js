@@ -7,6 +7,9 @@ import { PageTitle } from '../components/PageTitle'
 import { TwoCol } from '../components/TwoCol'
 import { Stack } from '../components/Stack'
 import { mq } from '../helpers/media-queries'
+import { SectionTitle } from '../components/Section'
+import { List, ListItem } from '../components/List'
+import { IllustrationCard } from '../components/IllustrationCard'
 
 const LeClubPage = () => {
   return (
@@ -15,23 +18,58 @@ const LeClubPage = () => {
       <Section skewed variant="primary">
         <PageTitle>Le club</PageTitle>
       </Section>
+      <Section skewed variant="light">
+        <Wrapper>
+          <TwoCol align="center">
+            <Stack spacing="l">
+              <SectionTitle>Les infrastructures</SectionTitle>
+              <Stack spacing="m">
+                <Text>
+                  Le club met à disposition de ses adhérents{' '}
+                  <strong>9 courts dont 3 couverts</strong>
+                </Text>
+                <List>
+                  <ListItem>2 courts extérieurs éclairés en greenset</ListItem>
+                  <ListItem>1 court extérieur en béton poreux</ListItem>
+                  <ListItem>3 courts extérieurs en terre battue</ListItem>
+                  <ListItem>3 courts couverts en terre battue</ListItem>
+                  <ListItem>1 court de mini-tennis</ListItem>
+                  <ListItem>1 mur d'entraînement</ListItem>
+                </List>
+                <Text>
+                  Vous pourrez par ailleurs profiter du club-house et de la
+                  terrasse en toute convivialité
+                </Text>
+              </Stack>
+            </Stack>
+            <IllustrationCard
+              image={require('../images/installations.jpg')}
+              ratio={550 / 406}
+            />
+          </TwoCol>
+        </Wrapper>
+      </Section>
       <Section skewed>
         <Wrapper>
           <TwoCol align="center">
-            <Stack spacing="m">
-              <Text>
-                Le TC Franconville est situé au 78 Avenue des Marais, à côté du
-                stade municipal Jean Rolland. Un parking est disponible à cette
-                adresse, ainsi qu'un autre au 110 rue des Pommiers Saulniers.
-              </Text>
-              <Text>
-                Vous pouvez nous contacter par téléphone au
-                01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{' '}
-                <a href="mailto:tennis.club.franconville@cegetel.net">
-                  tennis.club.franconville@cegetel.net
-                </a>
-                .
-              </Text>
+            <Stack spacing="l">
+              <SectionTitle>Contacter le club</SectionTitle>
+              <Stack spacing="m">
+                <Text>
+                  Le TC Franconville est situé au 78 Avenue des Marais, à côté
+                  du stade municipal Jean Rolland. Un parking est disponible à
+                  cette adresse, ainsi qu'un autre au 110 rue des Pommiers
+                  Saulniers.
+                </Text>
+                <Text>
+                  Vous pouvez nous contacter par téléphone au
+                  01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{' '}
+                  <a href="mailto:tennis.club.franconville@cegetel.net">
+                    tennis.club.franconville@cegetel.net
+                  </a>
+                  .
+                </Text>
+              </Stack>
             </Stack>
             <div>
               <iframe
