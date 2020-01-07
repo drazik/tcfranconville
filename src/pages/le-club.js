@@ -10,6 +10,8 @@ import { mq } from '../helpers/media-queries'
 import { SectionTitle } from '../components/Section'
 import { List, ListItem } from '../components/List'
 import { IllustrationCard } from '../components/IllustrationCard'
+import { ExternalLink } from '../components/ExternalLink'
+import { Partner } from '../components/Partner'
 
 const LeClubPage = () => {
   return (
@@ -87,6 +89,57 @@ const LeClubPage = () => {
               ></iframe>
             </div>
           </TwoCol>
+        </Wrapper>
+      </Section>
+      <Section skewed variant="light">
+        <Wrapper>
+          <Stack spacing="l">
+            <SectionTitle>Partenaires</SectionTitle>
+            <Stack spacing="m">
+              <Partner
+                logo={require('../images/partners/ecosport.png')}
+                name="Ecosport"
+                description={
+                  <>
+                    <Text>
+                      Ecosport est un magasin spécialisé dans la vente
+                      d'articles de tennis pour les clubs et les particuliers.
+                    </Text>
+                    <Text>
+                      Ils proposent à leurs clients l'un des plus grand choix en
+                      France d'articles dédiés principalement à la pratique du
+                      tennis, ce choix s'effectuant dans les plus grandes
+                      marques connues (Nike, Asics, Adidas, Wilson, Babolat,
+                      Tecnifibre, Yonex, Dunlop, Fila, Pro Kennex).
+                    </Text>
+                    <div>
+                      <ExternalLink href="https://www.ecosport-tennis.fr/">
+                        En savoir plus
+                      </ExternalLink>
+                    </div>
+                  </>
+                }
+              />
+              <Partner
+                logo={require('../images/partners/capifrance.png')}
+                name="Ludovic KORA"
+                description={
+                  <>
+                    <Text>
+                      Agent immobilier dans le réseau Capifrance, Ludovic vous
+                      accompagne quelque soit votre projet immobilier en vous
+                      apportant des solutions pertinentes et efficaces.
+                    </Text>
+                    <div>
+                      <ExternalLink href="https://www.ecosport-tennis.fr/">
+                        En savoir plus
+                      </ExternalLink>
+                    </div>
+                  </>
+                }
+              />
+            </Stack>
+          </Stack>
         </Wrapper>
       </Section>
     </>

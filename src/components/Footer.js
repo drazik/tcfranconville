@@ -3,7 +3,6 @@ import { formatDate } from '../helpers/date'
 import footerBackground from '../images/footer.jpg'
 import Logo from './Logo'
 import franconvilleLogo from '../images/logo-franconville.png'
-import ecosportLogo from '../images/logo-ecosport.png'
 import { ExternalLink } from '../components/ExternalLink'
 import { mq } from '../helpers/media-queries'
 
@@ -69,15 +68,6 @@ function Footer() {
               width: 150,
             }}
             alt="Ville de Franconville"
-          />
-        </ExternalLink>
-        <ExternalLink href="https://www.ecosport-tennis.fr/">
-          <img
-            src={ecosportLogo}
-            css={{
-              width: 150,
-            }}
-            alt="Ecosport Tennis"
           />
         </ExternalLink>
       </div>
