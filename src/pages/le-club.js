@@ -14,7 +14,7 @@ import { IllustrationCard } from '../components/IllustrationCard'
 const LeClubPage = () => {
   return (
     <>
-      <SEO title="Contact" />
+      <SEO title="Le club" />
       <Section skewed variant="primary">
         <PageTitle>Le club</PageTitle>
       </Section>
