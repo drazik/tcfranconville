@@ -131,7 +131,7 @@ const LeClubPage = () => {
                       apportant des solutions pertinentes et efficaces.
                     </Text>
                     <div>
-                      <ExternalLink href="https://www.ecosport-tennis.fr/">
+                      <ExternalLink href="https://www.capifrance.fr/conseillers/ludovic.kora">
                         En savoir plus
                       </ExternalLink>
                     </div>
