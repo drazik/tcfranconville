@@ -106,9 +106,9 @@ const LeClubPage = () => {
                       d'articles de tennis pour les clubs et les particuliers.
                     </Text>
                     <Text>
-                      Ils proposent à leurs clients l'un des plus grand choix en
-                      France d'articles dédiés principalement à la pratique du
-                      tennis, ce choix s'effectuant dans les plus grandes
+                      Ils proposent à leurs clients l'un des plus grands choix
+                      en France d'articles dédiés principalement à la pratique
+                      du tennis, ce choix s'effectuant dans les plus grandes
                       marques connues (Nike, Asics, Adidas, Wilson, Babolat,
                       Tecnifibre, Yonex, Dunlop, Fila, Pro Kennex).
                     </Text>
@@ -126,9 +126,10 @@ const LeClubPage = () => {
                 description={
                   <>
                     <Text>
-                      Agent immobilier dans le réseau Capifrance, Ludovic vous
-                      accompagne quelque soit votre projet immobilier en vous
-                      apportant des solutions pertinentes et efficaces.
+                      Agent immobilier dans le réseau Capifrance, Ludovic,
+                      adhérent du TCF, vous accompagne quel que soit votre
+                      projet immobilier en vous apportant des solutions
+                      pertinentes et efficaces.
                     </Text>
                     <div>
                       <ExternalLink href="https://www.capifrance.fr/conseillers/ludovic.kora">
