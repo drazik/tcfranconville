@@ -234,7 +234,7 @@ function Nav() {
 
   return (
     <>
-      <BurgerButton onClick={handler} active={isOpen} />
+      <BurgerButton onClick={handler} active={isOpen} aria-label="Menu" />
       <Menu isOpen={isOpen}>
         <MenuItem to="/enseignement" onClick={handleClose}>
           Enseignement
