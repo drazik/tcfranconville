@@ -261,6 +261,7 @@ function Nav() {
           as="a"
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
           target="_blank"
+          title="Page Facebook du TC Franconville"
           css={{
             display: 'block',
 
