@@ -43,14 +43,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-svgr',
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /images\/icons/
-    //     }
-    //   }
-    // },
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-source-facebook`,
@@ -62,8 +54,5 @@ module.exports = {
         key: process.env.FB_TOKEN,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ],
 }
