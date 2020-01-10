@@ -54,5 +54,6 @@ module.exports = {
         key: process.env.FB_TOKEN,
       },
     },
+    'gatsby-plugin-offline',
   ],
 }
