@@ -19,6 +19,7 @@ module.exports = {
     title: `Tennis Club Franconville`,
     description: `Club de tennis convivial à Franconville (Val d'Oise). 9 courts de tennis dont 3 couverts  et 2 extérieurs éclairés.`,
     author: 'TC Franconville',
+    baseUrl: 'https://tcfranconville.fr',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
