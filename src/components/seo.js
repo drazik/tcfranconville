@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: 'og:image',
-          content: site.siteMetadata.baseUrl + '/logo.png',
+          content: site.siteMetadata.baseUrl + '/logo.png?20200111',
         },
         {
           name: `twitter:card`,
