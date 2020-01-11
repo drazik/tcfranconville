@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { Match } from '@reach/router'
 import { ReactComponent as FBIcon } from '../images/icons/facebook.svg'
 import { mq as mqNew } from '../helpers/media-queries'
+import { ExternalLink } from '../components/ExternalLink'
 
 const BurgerButton = props => {
   const { active, ...rest } = props
@@ -234,7 +235,7 @@ function Nav() {
 
   return (
     <>
-      <BurgerButton onClick={handler} active={isOpen} />
+      <BurgerButton onClick={handler} active={isOpen} aria-label="Menu" />
       <Menu isOpen={isOpen}>
         <MenuItem to="/enseignement" onClick={handleClose}>
           Enseignement
@@ -258,9 +259,9 @@ function Nav() {
           Actualité
         </MenuItem>
         <MenuItem
-          as="a"
+          as={ExternalLink}
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
-          target="_blank"
+          title="Page Facebook du TC Franconville"
           css={{
             display: 'block',
 

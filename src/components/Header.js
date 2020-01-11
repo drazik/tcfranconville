@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Logo from './Logo'
+import { Logo } from './Logo'
 import Wrapper from './Wrapper'
 import Nav from './Nav'
 import SplashImage from './SplashImage'
@@ -10,7 +10,7 @@ const wrapper = {
   alignItems: 'center',
   justifyContent: 'center',
   padding: '2rem 0',
-  flexDirection: 'column'
+  flexDirection: 'column',
 }
 
 const Header = () => {
@@ -18,7 +18,7 @@ const Header = () => {
     <SplashImage component="header">
       <Wrapper css={wrapper}>
         <Link to="/" title="Revenir à l'accueil">
-          <Logo size={125} />
+          <Logo size={110} />
         </Link>
         <Nav />
       </Wrapper>

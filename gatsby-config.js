@@ -1,4 +1,4 @@
-require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
+require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
 
 const fbQuery = `posts {
   message,
@@ -16,8 +16,10 @@ const fbQuery = `posts {
 
 module.exports = {
   siteMetadata: {
-    title: `TC Franconville`,
-    description: `Club de tennis convivial. 9 courts de tennis dont 3 couverts  et 2 extérieurs éclairés.`
+    title: `Tennis Club Franconville`,
+    description: `Club de tennis convivial à Franconville (Val d'Oise). 9 courts de tennis dont 3 couverts  et 2 extérieurs éclairés.`,
+    author: 'TC Franconville',
+    baseUrl: 'https://tcfranconville.fr',
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -33,24 +35,16 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `Tennis Club Franconville`,
+        short_name: `TC Franconville`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fcf7f8`,
+        theme_color: `#1a38b1`,
         display: `minimal-ui`,
-        // icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.png`,
       },
     },
     'gatsby-plugin-svgr',
-    // {
-    //   resolve: 'gatsby-plugin-react-svg',
-    //   options: {
-    //     rule: {
-    //       include: /images\/icons/
-    //     }
-    //   }
-    // },
     'gatsby-plugin-emotion',
     {
       resolve: `gatsby-source-facebook`,
@@ -59,11 +53,9 @@ module.exports = {
         params: {
           fields: fbQuery,
         },
-        key: process.env.FB_TOKEN
-      }
+        key: process.env.FB_TOKEN,
+      },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-offline',
   ],
 }
