@@ -16,7 +16,10 @@ import { Partner } from '../components/Partner'
 const LeClubPage = () => {
   return (
     <>
-      <SEO title="Le club" />
+      <SEO
+        title="Le club"
+        description="Situé au 78 avenue des marais, à côté du stade municipal Jean Rolland, le club dispose de 9 courts dont 3 couverts et 2 extérieurs éclairés."
+      />
       <Section skewed variant="primary">
         <PageTitle>Le club</PageTitle>
       </Section>
