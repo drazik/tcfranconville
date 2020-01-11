@@ -18,7 +18,7 @@ import { PageTitle } from '../components/PageTitle'
 const TarifsPage = () => {
   return (
     <>
-      <SEO title="Tarifs" />
+      <SEO title="Tarifs" description="Tarifs pour la saison 2019/2020" />
       <Section padded skewed variant="primary">
         <Wrapper>
           <PageTitle>Tarifs 2019/2020</PageTitle>
