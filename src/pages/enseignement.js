@@ -85,7 +85,10 @@ const Info = props => {
 const EnseignementPage = () => {
   return (
     <>
-      <SEO title="Enseignement" />
+      <SEO
+        title="Enseignement"
+        description="Grâce à ses enseignants très qualifiés, le TC Franconville propose des cours pour tout âge et tout niveau."
+      />
       <Section skewed variant="primary">
         <Wrapper>
           <Stack spacing="m">
