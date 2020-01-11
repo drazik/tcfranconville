@@ -373,8 +373,6 @@ const TarifsPage = () => {
                 Lors de l'inscription de plusieurs enfants, vous bénéficiez de
                 30€ de réduction par enfant (10€ pour le mini-tennis)
               </Text>
-              <Subtitle tag="h2">Forfait familial</Subtitle>
-              <Text>À partir de 1200€...</Text>
             </Stack>
           </Stack>
         </Wrapper>
