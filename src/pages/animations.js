@@ -15,7 +15,10 @@ import illustration05 from '../images/animations/05.jpg'
 const AnimationPage = () => {
   return (
     <>
-      <SEO title="Animations" />
+      <SEO
+        title="Animations"
+        description="Le club de tennis de Franconville vous propose de nombreuses animations conviviales tout au long de l'année."
+      />
       <Section skewed variant="primary">
         <Wrapper>
           <PageTitle>Animations</PageTitle>
@@ -39,10 +42,7 @@ const AnimationPage = () => {
                 Chandeleur, Pâques, ou autre...
               </Text>
             </Stack>
-            <IllustrationCard
-              image={illustration01}
-              ratio={652/489}
-            />
+            <IllustrationCard image={illustration01} ratio={652 / 489} />
           </TwoCol>
         </Wrapper>
       </Section>
@@ -57,10 +57,7 @@ const AnimationPage = () => {
                 loto, de la fête du club et bien plus encore...
               </Text>
             </Stack>
-            <IllustrationCard
-              image={illustration03}
-              ratio={600/406}
-            />
+            <IllustrationCard image={illustration03} ratio={600 / 406} />
           </TwoCol>
         </Wrapper>
       </Section>
@@ -74,10 +71,7 @@ const AnimationPage = () => {
                 spontanée : doubles-surprises, Secret Santa...
               </Text>
             </Stack>
-            <IllustrationCard
-              image={illustration05}
-              ratio={1440/1080}
-            />
+            <IllustrationCard image={illustration05} ratio={1440 / 1080} />
           </TwoCol>
         </Wrapper>
       </Section>
