@@ -13,7 +13,10 @@ import { mq } from '../helpers/media-queries'
 const ReservationPage = props => {
   return (
     <>
-      <SEO title="Réservation" />
+      <SEO
+        title="Réservation"
+        description="Que vous soyez adhérent ou non, vous pouvez réserver un court de tennis à l'heure au TC Franconville"
+      />
       <Section skewed variant="primary">
         <PageTitle>Réservation</PageTitle>
       </Section>
