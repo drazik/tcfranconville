@@ -33,7 +33,10 @@ const Slider = props => {
 const CompetitionPage = () => {
   return (
     <>
-      <SEO title="Compétition" />
+      <SEO
+        title="Compétition"
+        description="Venez participer quel que soit votre âge et votre niveau à des compétitions par équipes en championnats ou en tournois individuellement"
+      />
       <Section skewed variant="primary">
         <Wrapper>
           <Stack>
