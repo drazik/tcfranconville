@@ -8,11 +8,8 @@ import { PageDescription } from '../components/PageDescription'
 import { Stack } from '../components/Stack'
 import { TwoCol } from '../components/TwoCol'
 import { IllustrationCard } from '../components/IllustrationCard'
-import illustration01 from '../images/animations/01.jpg'
-import illustration03 from '../images/animations/03.jpg'
-import illustration05 from '../images/animations/05.jpg'
 
-const AnimationPage = () => {
+const AnimationPage = ({ data }) => {
   return (
     <>
       <SEO
@@ -42,7 +39,10 @@ const AnimationPage = () => {
                 Chandeleur, Pâques, ou autre...
               </Text>
             </Stack>
-            <IllustrationCard image={illustration01} ratio={652 / 489} />
+            <IllustrationCard
+              image={data.childrenImage.childImageSharp.fluid}
+              ratio={652 / 489}
+            />
           </TwoCol>
         </Wrapper>
       </Section>
@@ -57,7 +57,10 @@ const AnimationPage = () => {
                 loto, de la fête du club et bien plus encore...
               </Text>
             </Stack>
-            <IllustrationCard image={illustration03} ratio={600 / 406} />
+            <IllustrationCard
+              image={data.familyImage.childImageSharp.fluid}
+              ratio={600 / 406}
+            />
           </TwoCol>
         </Wrapper>
       </Section>
@@ -71,12 +74,43 @@ const AnimationPage = () => {
                 spontanée : doubles-surprises, Secret Santa...
               </Text>
             </Stack>
-            <IllustrationCard image={illustration05} ratio={1440 / 1080} />
+            <IllustrationCard
+              image={data.adultImage.childImageSharp.fluid}
+              ratio={1440 / 1080}
+            />
           </TwoCol>
         </Wrapper>
       </Section>
     </>
   )
 }
+
+export const query = graphql`
+  query AnimationsPageQuery {
+    childrenImage: file(relativePath: { eq: "animations/01.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    familyImage: file(relativePath: { eq: "animations/03.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    adultImage: file(relativePath: { eq: "animations/05.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default AnimationPage
