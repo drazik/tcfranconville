@@ -13,7 +13,8 @@ import { Stack } from '../components/Stack'
 import { TwoCol } from '../components/TwoCol'
 import { Slider as BaseSlider, Slide } from '../components/Slider'
 import Ratio from 'react-ratio'
-import { IllustrationCard } from '../components/IllustrationCard'
+import { graphql } from 'gatsby'
+import { FluidBgImg } from '../components/FluidBgImg'
 
 const Slider = props => {
   return (
@@ -30,7 +31,7 @@ const Slider = props => {
   )
 }
 
-const CompetitionPage = () => {
+const CompetitionPage = ({ data }) => {
   return (
     <>
       <SEO
@@ -79,13 +80,10 @@ const CompetitionPage = () => {
                 </Stack>
               </Stack>
               <Slider>
-                {['01', '02', '03'].map(name => (
-                  <Slide key={name}>
+                {data.championnatPrintempsImages.edges.map(edge => (
+                  <Slide key={edge.node.id}>
                     <Ratio ratio={3 / 2}>
-                      <img
-                        src={require(`../images/competition/championnat-printemps/${name}.jpg`)}
-                        alt=""
-                      />
+                      <FluidBgImg image={edge.node.childImageSharp.fluid} />
                     </Ratio>
                   </Slide>
                 ))}
@@ -107,13 +105,10 @@ const CompetitionPage = () => {
                 </Stack>
               </Stack>
               <Slider>
-                {['01', '02', '03', '04'].map(name => (
-                  <Slide key={name}>
+                {data.potelImages.edges.map(edge => (
+                  <Slide key={edge.node.id}>
                     <Ratio ratio={3 / 2}>
-                      <img
-                        src={require(`../images/competition/potel/${name}.jpg`)}
-                        alt=""
-                      />
+                      <FluidBgImg image={edge.node.childImageSharp.fluid} />
                     </Ratio>
                   </Slide>
                 ))}
@@ -149,10 +144,15 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
-              <IllustrationCard
-                image={require('../images/competition/championnat-45/01.jpg')}
-                ratio={1280 / 960}
-              />
+              <Slider>
+                {data.championnat45Images.edges.map(edge => (
+                  <Slide key={edge.node.id}>
+                    <Ratio ratio={1280 / 960}>
+                      <FluidBgImg image={edge.node.childImageSharp.fluid} />
+                    </Ratio>
+                  </Slide>
+                ))}
+              </Slider>
             </TwoCol>
             <TwoCol align="center">
               <Stack spacing="l">
@@ -167,10 +167,15 @@ const CompetitionPage = () => {
                   </Text>
                 </Stack>
               </Stack>
-              <IllustrationCard
-                image={require('../images/competition/championnat-55/01.jpg')}
-                ratio={2560 / 1920}
-              />
+              <Slider>
+                {data.championnat55Images.edges.map(edge => (
+                  <Slide key={edge.node.id}>
+                    <Ratio ratio={2560 / 1920}>
+                      <FluidBgImg image={edge.node.childImageSharp.fluid} />
+                    </Ratio>
+                  </Slide>
+                ))}
+              </Slider>
             </TwoCol>
           </Stack>
         </Wrapper>
@@ -206,13 +211,10 @@ const CompetitionPage = () => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {['01', '02', '03', '04', '05'].map(name => (
-                    <Slide key={name}>
-                      <Ratio ratio={2048 / 1536}>
-                        <img
-                          src={require(`../images/competition/open/${name}.jpg`)}
-                          alt=""
-                        />
+                  {data.openImages.edges.map(edge => (
+                    <Slide key={edge.node.id}>
+                      <Ratio ratio={3 / 2}>
+                        <FluidBgImg image={edge.node.childImageSharp.fluid} />
                       </Ratio>
                     </Slide>
                   ))}
@@ -237,10 +239,15 @@ const CompetitionPage = () => {
                     </Text>
                   </Stack>
                 </Stack>
-                <IllustrationCard
-                  image={require('../images/competition/open-journee/01.jpg')}
-                  ratio={956 / 717}
-                />
+                <Slider>
+                  {data.openJourneeImages.edges.map(edge => (
+                    <Slide key={edge.node.id}>
+                      <Ratio ratio={956 / 717}>
+                        <FluidBgImg image={edge.node.childImageSharp.fluid} />
+                      </Ratio>
+                    </Slide>
+                  ))}
+                </Slider>
               </TwoCol>
               <TwoCol>
                 <Stack spacing="l">
@@ -255,13 +262,10 @@ const CompetitionPage = () => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {['01', '02', '03'].map(name => (
-                    <Slide key={name}>
+                  {data.openSeniorPlusImages.edges.map(edge => (
+                    <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
-                        <img
-                          src={require(`../images/competition/open-senior-plus/${name}.jpg`)}
-                          alt=""
-                        />
+                        <FluidBgImg image={edge.node.childImageSharp.fluid} />
                       </Ratio>
                     </Slide>
                   ))}
@@ -291,13 +295,10 @@ const CompetitionPage = () => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {['01', '02', '03', '04'].map(name => (
-                    <Slide key={name}>
+                  {data.interneImages.edges.map(edge => (
+                    <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
-                        <img
-                          src={require(`../images/competition/interne/${name}.jpg`)}
-                          alt=""
-                        />
+                        <FluidBgImg image={edge.node.childImageSharp.fluid} />
                       </Ratio>
                     </Slide>
                   ))}
@@ -317,13 +318,10 @@ const CompetitionPage = () => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {['01', '02'].map(name => (
-                    <Slide key={name}>
-                      <Ratio ratio={1.33}>
-                        <img
-                          src={require(`../images/competition/interne-couleurs/${name}.jpg`)}
-                          alt=""
-                        />
+                  {data.interneCouleurImages.edges.map(edge => (
+                    <Slide key={edge.node.id}>
+                      <Ratio ratio={3 / 2}>
+                        <FluidBgImg image={edge.node.childImageSharp.fluid} />
                       </Ratio>
                     </Slide>
                   ))}
@@ -336,5 +334,144 @@ const CompetitionPage = () => {
     </>
   )
 }
+
+export const query = graphql`
+  query CompetitionPageQuery {
+    championnatPrintempsImages: allFile(
+      filter: { relativePath: { glob: "competition/championnat-printemps/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    potelImages: allFile(
+      filter: { relativePath: { glob: "competition/potel/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    championnat45Images: allFile(
+      filter: { relativePath: { glob: "competition/championnat-45/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    championnat55Images: allFile(
+      filter: { relativePath: { glob: "competition/championnat-55/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    openImages: allFile(
+      filter: { relativePath: { glob: "competition/open/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    openJourneeImages: allFile(
+      filter: { relativePath: { glob: "competition/open-journee/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    openSeniorPlusImages: allFile(
+      filter: { relativePath: { glob: "competition/open-senior-plus/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    interneImages: allFile(
+      filter: { relativePath: { glob: "competition/interne/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+
+    interneCouleurImages: allFile(
+      filter: { relativePath: { glob: "competition/interne-couleurs/*" } }
+    ) {
+      edges {
+        node {
+          id
+          childImageSharp {
+            fluid(maxWidth: 690) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 export default CompetitionPage

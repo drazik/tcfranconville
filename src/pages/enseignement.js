@@ -5,11 +5,6 @@ import {
   SectionTitleDetails,
 } from '../components/Section'
 import Wrapper from '../components/Wrapper'
-import minitennisCardBackground from '../images/teaching/minitennis.jpg'
-import juniorCardBackground from '../images/teaching/junior.jpg'
-import junior2CardBackground from '../images/teaching/junior2.jpg'
-import teenCardBackground from '../images/teaching/teen.jpg'
-import adultCardBackground from '../images/teaching/adult.jpg'
 import { Text } from '../components/Text'
 import { List, ListItem } from '../components/List'
 import SEO from '../components/seo'
@@ -19,6 +14,7 @@ import { PageDescription } from '../components/PageDescription'
 import { TwoCol } from '../components/TwoCol'
 import { IllustrationCard } from '../components/IllustrationCard'
 import { ReactComponent as InfoIcon } from '../images/icons/info.svg'
+import { graphql } from 'gatsby'
 
 const Info = props => {
   const { children, ...rest } = props
@@ -82,7 +78,8 @@ const Info = props => {
   )
 }
 
-const EnseignementPage = () => {
+const EnseignementPage = ({ data }) => {
+  console.log(data)
   return (
     <>
       <SEO
@@ -190,7 +187,7 @@ const EnseignementPage = () => {
                 </Info>
               </Stack>
               <IllustrationCard
-                image={minitennisCardBackground}
+                image={data.minitennisImage.childImageSharp.fluid}
                 ratio={3000 / 1987}
               />
             </TwoCol>
@@ -211,7 +208,7 @@ const EnseignementPage = () => {
                 <Text>Une fidélisation d'environ 60% des enfants !</Text>
               </Stack>
               <IllustrationCard
-                image={juniorCardBackground}
+                image={data.juniorImage.childImageSharp.fluid}
                 ratio={600 / 400}
               />
             </TwoCol>
@@ -245,7 +242,7 @@ const EnseignementPage = () => {
                 </Info>
               </Stack>
               <IllustrationCard
-                image={junior2CardBackground}
+                image={data.junior2Image.childImageSharp.fluid}
                 ratio={500 / 598}
               />
             </TwoCol>
@@ -269,7 +266,10 @@ const EnseignementPage = () => {
                 </Text>
                 <Text>Un effectif en hausse de 25% entre 2019 et 2020 !</Text>
               </Stack>
-              <IllustrationCard image={teenCardBackground} ratio={500 / 630} />
+              <IllustrationCard
+                image={data.teenImage.childImageSharp.fluid}
+                ratio={500 / 630}
+              />
             </TwoCol>
           </Stack>
         </Wrapper>
@@ -311,7 +311,10 @@ const EnseignementPage = () => {
                   </ListItem>
                 </List>
               </Stack>
-              <IllustrationCard image={adultCardBackground} ratio={500 / 750} />
+              <IllustrationCard
+                image={data.adultImage.childImageSharp.fluid}
+                ratio={500 / 750}
+              />
             </TwoCol>
           </Stack>
         </Wrapper>
@@ -351,5 +354,49 @@ const EnseignementPage = () => {
     </>
   )
 }
+
+export const query = graphql`
+  query EnseignementPageQuery {
+    minitennisImage: file(relativePath: { eq: "teaching/minitennis.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    juniorImage: file(relativePath: { eq: "teaching/junior.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    junior2Image: file(relativePath: { eq: "teaching/junior2.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    teenImage: file(relativePath: { eq: "teaching/teen.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    adultImage: file(relativePath: { eq: "teaching/adult.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`
 
 export default EnseignementPage

@@ -1,18 +1,15 @@
 import React from 'react'
 import { formatDate } from '../helpers/date'
-import footerBackground from '../images/footer.jpg'
 import { Logo } from './Logo'
 import franconvilleLogo from '../images/logo-franconville.png'
 import { ExternalLink } from '../components/ExternalLink'
 import { mq } from '../helpers/media-queries'
+import { useStaticQuery, graphql } from 'gatsby'
+import { FluidBgImg } from './FluidBgImg'
 
 const footer = {
   position: 'relative',
   zIndex: 0,
-  backgroundImage: `url(${footerBackground})`,
-  backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  backgroundAttachment: 'fixed',
   paddingTop: '3rem',
   paddingBottom: '3rem',
   color: 'white',
@@ -39,8 +36,21 @@ const paragraph = {
 }
 
 function Footer() {
+  const data = useStaticQuery(graphql`
+    query {
+      backgroundImage: file(relativePath: { eq: "footer.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <footer css={footer}>
+      <FluidBgImg image={data.backgroundImage.childImageSharp.fluid} />
       <div
         css={theme => ({
           display: 'flex',
