@@ -5,7 +5,7 @@ import franconvilleLogo from '../images/logo-franconville.png'
 import { ExternalLink } from '../components/ExternalLink'
 import { mq } from '../helpers/media-queries'
 import { useStaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import { FluidBgImg } from './FluidBgImg'
 
 const footer = {
   position: 'relative',
@@ -50,19 +50,7 @@ function Footer() {
 
   return (
     <footer css={footer}>
-      <Img
-        fluid={data.backgroundImage.childImageSharp.fluid}
-        alt=""
-        css={{
-          position: 'absolute !important',
-          width: '100%',
-          height: '100%',
-          top: '50%',
-          left: '50%',
-          transform: 'translate(-50%, -50%)',
-          zIndex: -1,
-        }}
-      />
+      <FluidBgImg image={data.backgroundImage.childImageSharp.fluid} />
       <div
         css={theme => ({
           display: 'flex',
