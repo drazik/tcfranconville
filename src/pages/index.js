@@ -1,9 +1,6 @@
 import React from 'react'
 import Wrapper from '../components/Wrapper'
 import { Section, SectionTitle } from '../components/Section'
-import teachingCardBackground from '../images/teaching-card.jpg'
-import competitionCardBackground from '../images/competition-card.jpg'
-import animationCardBackground from '../images/animation-card.jpg'
 import { mq } from '../helpers/media-queries'
 import Card from '../components/Card'
 import { Link, graphql } from 'gatsby'
@@ -57,7 +54,6 @@ const IndexPage = ({ data }) => {
         <Wrapper
           css={{
             marginTop: -130,
-
             [mq('s')]: {
               marginTop: -150,
             },
@@ -83,7 +79,7 @@ const IndexPage = ({ data }) => {
               component={Link}
               clickable
               to="/enseignement"
-              css={{ backgroundImage: `url(${teachingCardBackground})` }}
+              backgroundImage={data.teachingImage.childImageSharp.fluid}
               variant="image"
             >
               Enseignement
@@ -92,7 +88,7 @@ const IndexPage = ({ data }) => {
               component={Link}
               clickable
               to="/competition"
-              css={{ backgroundImage: `url(${competitionCardBackground})` }}
+              backgroundImage={data.competitionImage.childImageSharp.fluid}
               variant="image"
             >
               Compétition
@@ -101,7 +97,7 @@ const IndexPage = ({ data }) => {
               component={Link}
               clickable
               to="/animations"
-              css={{ backgroundImage: `url(${animationCardBackground})` }}
+              backgroundImage={data.animationImage.childImageSharp.fluid}
               variant="image"
             >
               Animations
@@ -196,6 +192,30 @@ export const query = graphql`
               }
             }
           }
+        }
+      }
+    }
+
+    teachingImage: file(relativePath: { eq: "teaching-card.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    competitionImage: file(relativePath: { eq: "competition-card.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+
+    animationImage: file(relativePath: { eq: "animation-card.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 690) {
+          ...GatsbyImageSharpFluid
         }
       }
     }
