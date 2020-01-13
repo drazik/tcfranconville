@@ -16,6 +16,7 @@
     "gatsby-plugin-offline": "^3.0.31",
     "gatsby-plugin-react-helmet": "^3.0.8",
     "gatsby-plugin-sharp": "^2.0.25",
+    "gatsby-plugin-sitemap": "^2.2.25",
     "gatsby-plugin-svgr": "^2.0.2",
     "gatsby-source-facebook": "^1.0.3",
     "gatsby-source-filesystem": "^2.0.23",

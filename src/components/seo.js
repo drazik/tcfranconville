@@ -18,7 +18,7 @@ function SEO({ description, lang, meta, keywords, title }) {
           siteMetadata {
             title
             description
-            baseUrl
+            siteUrl
           }
         }
       }
@@ -53,7 +53,7 @@ function SEO({ description, lang, meta, keywords, title }) {
         },
         {
           property: 'og:image',
-          content: site.siteMetadata.baseUrl + '/logo.png?20200111',
+          content: site.siteMetadata.siteUrl + '/logo.png?20200111',
         },
         {
           name: `twitter:card`,
