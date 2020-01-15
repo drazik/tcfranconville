@@ -1,7 +1,10 @@
 module.exports = (req, res) => {
-  res.json({
-    body: req.body,
-    query: req.query,
-    cookies: req.cookies,
-  })
+  if (
+    req.query['hub.mode'] === 'subscribe' &&
+    req.query['hub.verify_token'] === 'token'
+  ) {
+    res.send(req.query['hub.challenge'])
+  } else {
+    res.sendStatus(400)
+  }
 }
