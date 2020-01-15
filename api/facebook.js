@@ -4,7 +4,10 @@ module.exports = (req, res) => {
     req.query['hub.verify_token'] === 'token'
   ) {
     res.send(req.query['hub.challenge'])
-  } else {
-    res.sendStatus(400)
   }
+
+  res.json({
+    query: req.query,
+    body: req.body,
+  })
 }
