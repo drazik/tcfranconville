@@ -124,8 +124,8 @@ const CompetitionPage = ({ data }) => {
                   <Text>
                     Le TCF a la chance de pouvoir faire jouer 2 équipes
                     messieurs (dont une en excellence régionale) et 2 équipes
-                    dames (dont une est championne du Val d'Oise 2019 et monte
-                    en championnat de France)
+                    dames (dont une est championne du Val d'Oise 2019 et est
+                    qualifiée pour le championnat Île de France)
                   </Text>
                 </Stack>
               </Stack>
