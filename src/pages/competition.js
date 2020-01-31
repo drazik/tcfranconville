@@ -205,8 +205,8 @@ const CompetitionPage = ({ data }) => {
                       U14, U16, U18)
                     </Text>
                     <Text>
-                      La 38ème édition du tournoi open du TCF aura lieu du 14 au
-                      30 août 2020
+                      La 38ème édition du tournoi open du TCF aura lieu du 7 au
+                      23 août 2020
                     </Text>
                   </Stack>
                 </Stack>
