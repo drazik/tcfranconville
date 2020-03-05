@@ -8,6 +8,7 @@ import { PageDescription } from '../components/PageDescription'
 import { Stack } from '../components/Stack'
 import { TwoCol } from '../components/TwoCol'
 import { IllustrationCard } from '../components/IllustrationCard'
+import { graphql } from 'gatsby'
 
 const AnimationPage = ({ data }) => {
   return (
