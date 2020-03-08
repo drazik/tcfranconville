@@ -3,8 +3,9 @@
 const fetch = require('node-fetch')
 const inquirer = require('inquirer')
 const clipboardy = require('clipboardy')
+const path = require('path')
 
-require('dotenv').config({ path: `../.env` })
+require('dotenv').config({ path: path.resolve(__dirname, '../.env') })
 
 async function getShortLiveToken() {
   console.log('Go to Facebook Graph Explorer:')
