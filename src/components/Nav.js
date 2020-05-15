@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import { Link } from 'gatsby'
-import { Match } from '@reach/router'
-import { ReactComponent as FBIcon } from '../images/icons/facebook.svg'
-import { mq as mqNew } from '../helpers/media-queries'
-import { ExternalLink } from '../components/ExternalLink'
+import React, { useState } from "react"
+import { Link } from "gatsby"
+import { Match } from "@reach/router"
+import { ReactComponent as FBIcon } from "../images/icons/facebook.svg"
+import { mq as mqNew } from "../helpers/media-queries"
+import { ExternalLink } from "../components/ExternalLink"
 
 const BurgerButton = props => {
   const { active, ...rest } = props
@@ -11,55 +11,55 @@ const BurgerButton = props => {
   return (
     <button
       css={theme => ({
-        position: 'fixed',
-        top: 'calc(0.5rem + 50px)',
-        left: '5%',
+        position: "fixed",
+        top: "calc(0.5rem + 50px)",
+        left: "5%",
         height: 48,
         width: 48,
         backgroundColor: theme.main,
         padding: 0,
         border: 0,
-        transform: 'translateY(-50%)',
-        borderRadius: '50%',
+        transform: "translateY(-50%)",
+        borderRadius: "50%",
         zIndex: 999,
-        display: 'block',
+        display: "block",
 
-        [mqNew('l')]: {
-          display: 'none',
+        [mqNew("l")]: {
+          display: "none",
         },
       })}
       {...rest}
     >
       <span
         css={{
-          display: 'block',
-          top: '50%',
-          left: '50%',
+          display: "block",
+          top: "50%",
+          left: "50%",
           marginTop: -1,
           marginLeft: -12,
-          transform: props.active ? 'rotate(45deg)' : 'rotate(0)',
+          transform: props.active ? "rotate(45deg)" : "rotate(0)",
 
-          '&, &::before, &::after': {
-            position: 'absolute',
+          "&, &::before, &::after": {
+            position: "absolute",
             width: 24,
             height: 2,
             borderRadius: 2,
-            backgroundColor: 'white',
+            backgroundColor: "white",
           },
 
-          '&::before, &::after': {
+          "&::before, &::after": {
             content: '""',
-            display: 'block',
+            display: "block",
           },
 
-          '&::before': {
+          "&::before": {
             top: props.active ? 0 : -6,
             opacity: props.active ? 0 : 1,
           },
 
-          '&::after': {
+          "&::after": {
             bottom: props.active ? 0 : -6,
-            transform: props.active ? 'rotate(-90deg)' : 'rotate(0)',
+            transform: props.active ? "rotate(-90deg)" : "rotate(0)",
           },
         }}
       />
@@ -70,39 +70,39 @@ const BurgerButton = props => {
 const Menu = props => {
   const { isOpen, ...rest } = props
 
-  const transform = props.isOpen ? 'translateX(0)' : 'translateX(-100%)'
+  const transform = props.isOpen ? "translateX(0)" : "translateX(-100%)"
 
   return (
     <nav
       css={theme => ({
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         bottom: 0,
         left: 0,
-        width: '80%',
+        width: "80%",
         backgroundColor: theme.main,
         zIndex: 998,
         transform: transform,
-        transitionProperty: 'transform',
-        transitionDuration: '0.25s',
-        transitionTimingFunction: 'ease-in-out',
-        padding: '6rem 2rem 0',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        fontWeight: 'normal',
+        transitionProperty: "transform",
+        transitionDuration: "0.25s",
+        transitionTimingFunction: "ease-in-out",
+        padding: "6rem 2rem 0",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        fontWeight: "normal",
         paddingBottom: 0,
 
-        [mqNew('l')]: {
-          position: 'static',
-          width: '100%',
-          backgroundColor: 'transparent',
-          transform: 'translateX(0)',
-          transitionDuration: '0s',
+        [mqNew("l")]: {
+          position: "static",
+          width: "100%",
+          backgroundColor: "transparent",
+          transform: "translateX(0)",
+          transitionDuration: "0s",
           padding: 0,
-          flexDirection: 'row',
-          fontWeight: 'bold',
-          paddingBottom: '1rem',
+          flexDirection: "row",
+          fontWeight: "bold",
+          paddingBottom: "1rem",
         },
       })}
       {...rest}
@@ -113,62 +113,62 @@ const Menu = props => {
 const MenuLink = props => {
   const { isCurrent, ...rest } = props
 
-  const Component = props.href ? 'a' : Link
+  const Component = props.href ? "a" : Link
 
   return (
     <span
       css={{
-        position: 'relative',
-        display: 'inline-flex',
+        position: "relative",
+        display: "inline-flex",
 
-        '& + &': {
+        "& + &": {
           marginLeft: 0,
 
-          [mqNew('l')]: {
-            marginLeft: '2rem',
+          [mqNew("l")]: {
+            marginLeft: "2rem",
           },
         },
 
-        '& + &::before': {
+        "& + &::before": {
           content: '""',
-          display: 'block',
-          position: 'absolute',
+          display: "block",
+          position: "absolute",
           top: 0,
-          backgroundColor: 'white',
+          backgroundColor: "white",
           width: 100,
           height: 1,
 
-          [mqNew('l')]: {
-            display: 'none',
+          [mqNew("l")]: {
+            display: "none",
           },
         },
       }}
     >
       <Component
         css={theme => ({
-          color: 'white',
-          fontSize: '1.5rem',
-          textTransform: 'uppercase',
-          textDecoration: 'none',
-          padding: '1rem 0',
-          position: 'relative',
-          textShadow: 'none',
+          color: "white",
+          fontSize: "1.5rem",
+          textTransform: "uppercase",
+          textDecoration: "none",
+          padding: "1rem 0",
+          position: "relative",
+          textShadow: "none",
 
-          [mqNew('l')]: {
-            fontSize: '1.25rem',
-            textTransform: 'none',
-            textShadow: '1px 1px 1px #000',
+          [mqNew("l")]: {
+            fontSize: "1.25rem",
+            textTransform: "none",
+            textShadow: "1px 1px 1px #000",
           },
 
-          '&::after': {
+          "&::after": {
             content: '""',
-            display: 'none',
-            height: '3px',
-            width: '100%',
+            display: "none",
+            height: "3px",
+            width: "100%",
             backgroundColor: theme.main,
             marginTop: 2,
-            [mqNew('l')]: {
-              display: isCurrent ? 'block' : 'none',
+            [mqNew("l")]: {
+              display: isCurrent ? "block" : "none",
             },
           },
         })}
@@ -204,16 +204,16 @@ const Overlay = props => {
   return (
     <div
       css={{
-        position: 'fixed',
+        position: "fixed",
         top: 0,
         bottom: 0,
         left: 0,
         right: 0,
-        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        backgroundColor: "rgba(0, 0, 0, 0.3)",
         zIndex: 997,
         opacity: props.isOpen ? 1 : 0,
-        visibility: props.isOpen ? 'visible' : 'hidden',
-        transition: 'opacity 0.25s ease-out, visibility',
+        visibility: props.isOpen ? "visible" : "hidden",
+        transition: "opacity 0.25s ease-out, visibility",
       }}
       {...rest}
     />
@@ -263,10 +263,10 @@ function Nav() {
           href="https://fr-fr.facebook.com/TCFranconvilleOfficiel/"
           title="Page Facebook du TC Franconville"
           css={{
-            display: 'block',
+            display: "block",
 
-            [mqNew('l')]: {
-              display: 'none',
+            [mqNew("l")]: {
+              display: "none",
             },
           }}
         >
@@ -274,7 +274,7 @@ function Nav() {
             viewBox="0 0 512 512"
             width="32"
             height="32"
-            css={{ fill: 'white' }}
+            css={{ fill: "white" }}
           />
         </MenuItem>
       </Menu>
