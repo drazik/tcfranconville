@@ -15,7 +15,7 @@ const Layout = props => {
         <Reset />
         <StickyBanner>
           <Text component="strong">Information : </Text>
-          <Text component="span">Le club réouvre à partir du 11 mai. </Text>
+          <Text component="span">Le club réouvre à partir du 15 mai.</Text>
           <Link to="/coronavirus-reouverture">En savoir plus.</Link>
         </StickyBanner>
         <Header />
