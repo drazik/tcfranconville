@@ -39,7 +39,11 @@ const CoronavirusReouverturePage = () => {
               à la désinfection du filet, ainsi que votre gel hydroalcoolique
               afin de vous laver les mains avant l'ouverture de la porte à badge
               à votre arrivée et votre départ, ainsi qu'avant et après le
-              nettoyage du filet.
+              nettoyage du filet. La sortie des terrain est obligatoire 5
+              minutes avant la fin de l'heure afin d'éviter les croisements avec
+              d'autres joueurs. Les accompagnateurs ont l'interdiction de rester
+              dans l'enceinte du club et doivent porter un masque le temps de
+              leur présence dans l'enceinte du club.
             </Text>
             <Text>
               Nous vous demandons de respectuer scrupuleusement ces règles, afin
@@ -47,13 +51,6 @@ const CoronavirusReouverturePage = () => {
               ces installations. Des visites inopinées seront réalisées par les
               membres du comité du TCF, de manière à rappeler et faire respecter
               les règles le cas échéant.
-            </Text>
-            <Text>
-              La sortie des terrain est obligatoire 5 minutes avant la fin de
-              l'heure afin d'éviter les croisements avec d'autres joueurs. Les
-              accompagnateurs ont l'interdiction de rester dans l'enceinte du
-              club et doivent porter un masque le temps de leur présence dans
-              l'enceinte du club.
             </Text>
             <Text>
               Toute réservation est interdite avant d'avoir renvoyé votre{" "}
