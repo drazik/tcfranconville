@@ -19,12 +19,12 @@ const CoronavirusReouverturePage = () => {
           <Stack spacing="l">
             <Text>
               A partir du 15 mai le club sera à nouveau ouvert, et les courts 1,
-              2 et 3 seront accessibles.
+              2 et 3 seront accessibles. L'utilisation du mur est interdite.
             </Text>
             <Text>
               Cette réouverture est bien entendu partielle : seuls les simples
-              sont autorisés pur le moment et le club-house ainsi que les
-              vestiaires restent strictement fermés.
+              entres adhérent(e)s du club sont autorisés pur le moment et le
+              club-house ainsi que les vestiaires restent strictement fermés.
             </Text>
             <Text>
               Un certain nombre de règles devront être respectés par tous,
@@ -32,11 +32,28 @@ const CoronavirusReouverturePage = () => {
               <ExternalLink href="http://www.digital.fft.fr/02-emailing/2020/FFT/clubs/information-sanitaire/docs/Protocole-de-sortie-de-confinement.pdf">
                 protocole élaboré par la FFT
               </ExternalLink>
-              . Nous vous demandons de les respectuer scrupuleusement, afin de
-              préserver la santé de tous et la pérennité de l'ouverture de ces
-              installations. Des visites inopinées seront réalisées par les
+              .
+            </Text>
+            <Text>
+              De plus, nous vous demandons de venir avec le matériel nécessaire
+              à la désinfection du filet, ainsi que votre gel hydroalcoolique
+              afin de vous laver les mains avant l'ouverture de la porte à badge
+              à votre arrivée et votre départ, ainsi qu'avant et après le
+              nettoyage du filet.
+            </Text>
+            <Text>
+              Nous vous demandons de respectuer scrupuleusement ces règles, afin
+              de préserver la santé de tous et la pérennité de l'ouverture de
+              ces installations. Des visites inopinées seront réalisées par les
               membres du comité du TCF, de manière à rappeler et faire respecter
               les règles le cas échéant.
+            </Text>
+            <Text>
+              La sortie des terrain est obligatoire 5 minutes avant la fin de
+              l'heure afin d'éviter les croisements avec d'autres joueurs. Les
+              accompagnateurs ont l'interdiction de rester dans l'enceinte du
+              club et doivent porter un masque le temps de leur présence dans
+              l'enceinte du club.
             </Text>
             <Text>
               Toute réservation est interdite avant d'avoir renvoyé votre{" "}
