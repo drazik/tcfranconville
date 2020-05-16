@@ -1,4 +1,5 @@
 import React from "react"
+import { mq } from "../../helpers/media-queries"
 
 export const StickyBanner = ({ children, ...props }) => {
   return (
@@ -14,6 +15,13 @@ export const StickyBanner = ({ children, ...props }) => {
         right: 0,
         zIndex: 997,
         boxShadow: "0 0 30px 10px rgba(0, 0, 0, 0.5)",
+
+        [mq("l")]: {
+          position: "sticky",
+          top: 0,
+          bottom: "auto",
+          zIndex: 1000,
+        },
       })}
     >
       {children}
