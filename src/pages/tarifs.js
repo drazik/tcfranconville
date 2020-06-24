@@ -1,19 +1,19 @@
-import React from 'react'
-import { Section, SectionTitle } from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text, Caption, Subtitle } from '../components/Text'
-import SEO from '../components/seo'
-import { Stack } from '../components/Stack'
-import { ExternalLink } from '../components/ExternalLink'
-import { Link } from 'gatsby'
+import React from "react"
+import { Section, SectionTitle } from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text, Caption, Subtitle } from "../components/Text"
+import SEO from "../components/seo"
+import { Stack } from "../components/Stack"
+import { ExternalLink } from "../components/ExternalLink"
+import { Link } from "gatsby"
 import {
   Table,
   TableHead,
   TableBody,
   TableRow,
   TableCell,
-} from '../components/Table'
-import { PageTitle } from '../components/PageTitle'
+} from "../components/Table"
+import { PageTitle } from "../components/PageTitle"
 
 const TarifsPage = () => {
   return (
@@ -37,11 +37,12 @@ const TarifsPage = () => {
               </Text>
               <Text>
                 La licence Club 2020 est valable du 1er septembre 2019 au 31
-                août 2020. Son tarif est mis en place par la FFT : 29 € pour les
-                adultes, 20 € pour les 18 ans et moins.
+                août 2020. Son tarif est mis en place par la FFT : 30 € pour les
+                adultes, 20 € pour les jeunes/ados de 6 à 18 ans, 12 € pour les
+                enfants de moins de 6 ans.
               </Text>
               <Text>
-                Être licencié vous procure de nombreux avantages.{' '}
+                Être licencié vous procure de nombreux avantages.{" "}
                 <ExternalLink href="https://www.fft.fr/se-licencier/toutes-les-licences">
                   Rendez vous sur le site de la FFT pour en savoir plus
                 </ExternalLink>
@@ -64,17 +65,17 @@ const TarifsPage = () => {
               <Text>
                 Nous proposons différents tarifs afin que chacun puisse trouver
                 une cotisation qui correspond le mieux à ses besoins. En cas de
-                question, n'hésitez pas à{' '}
+                question, n'hésitez pas à{" "}
                 <Link to="/contact">nous contacter</Link>.
               </Text>
               <Text>
-                Vous pouvez prendre votre cotisation en ligne sur{' '}
+                Vous pouvez prendre votre cotisation en ligne sur{" "}
                 <ExternalLink href="https://tenup.fft.fr/club/57950106/offres">
                   TenUp
                 </ExternalLink>
                 .
               </Text>
-              <div css={{ overflowX: 'auto' }}>
+              <div css={{ overflowX: "auto" }}>
                 <Table>
                   <TableHead>
                     <TableRow>
@@ -385,10 +386,10 @@ const TarifsPage = () => {
               <Text>
                 Vous avez la possibilité de donner un coup de pouce financier à
                 votre club. Pour cela, vous pouvez faire un don. Pour chaque
-                tranche de 15€, près de{' '}
+                tranche de 15€, près de{" "}
                 <strong>
                   10€ sont déductibles de vos impôts sur le revenu
-                </strong>{' '}
+                </strong>{" "}
                 et vous bénéficiez d'
                 <strong>
                   une remise immédiate de 25% du don sur votre cotisation
