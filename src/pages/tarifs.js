@@ -418,6 +418,11 @@ const TarifsPage = () => {
                 Lors de l'inscription de plusieurs enfants, vous bénéficiez de
                 30€ de réduction par enfant (10€ pour le mini-tennis)
               </Text>
+              <Subtitle tag="h2">Parrainage</Subtitle>
+              <Text>
+                Le parrain et le parrainé bénéficient chacun de 15€ de
+                réduction.
+              </Text>
             </Stack>
           </Stack>
         </Wrapper>
