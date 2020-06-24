@@ -148,8 +148,7 @@ const TarifsPage = () => {
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Printemps/été</Text>
-                          <Caption>du 1er mars au 31 août</Caption>
+                          <Text>Semi-annuelle</Text>
                         </Stack>
                       </TableCell>
                       <TableCell align="center">
@@ -162,27 +161,45 @@ const TarifsPage = () => {
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Été adulte</Text>
-                          <Caption>du 1er juin au 31 août</Caption>
+                          <Text>Mini-tennis</Text>
+                          <Caption>2015-2016-2017</Caption>
                         </Stack>
                       </TableCell>
-                      <TableCell align="center">
-                        <Text>90€ + licence</Text>
-                      </TableCell>
-                      <TableCell align="center">
-                        <Text>100€ + licence</Text>
+                      <TableCell align="center" colSpan="2">
+                        <Text>50€</Text>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Été jeune</Text>
-                          <Caption>du 1er juin au 31 août</Caption>
-                          <Caption>&lt;25 ans et hors école de tennis</Caption>
+                          <Text>Club junior 1</Text>
+                          <Caption>2013-2014</Caption>
                         </Stack>
                       </TableCell>
-                      <TableCell colSpan="2" align="center">
-                        <Text>40€ + licence</Text>
+                      <TableCell align="center" colSpan="2">
+                        <Text>80€</Text>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Stack spacing="xs">
+                          <Text>Club junior 2</Text>
+                          <Caption>2011-2012</Caption>
+                        </Stack>
+                      </TableCell>
+                      <TableCell align="center" colSpan="2">
+                        <Text>100€</Text>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Stack spacing="xs">
+                          <Text>Club ados</Text>
+                          <Caption>2003-2010</Caption>
+                        </Stack>
+                      </TableCell>
+                      <TableCell align="center" colSpan="2">
+                        <Text>100€</Text>
                       </TableCell>
                     </TableRow>
                   </TableBody>
