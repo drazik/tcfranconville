@@ -361,7 +361,48 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed id="reductions">
+      <Section padded skewed id="divers">
+        <Wrapper>
+          <Stack spacing="l">
+            <SectionTitle>Divers</SectionTitle>
+            <Stack>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell heading></TableCell>
+                    <TableCell heading align="center">
+                      <Text>Prix</Text>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      <Text>
+                        Réservation d'un terrain par deux non-adhérents du TCF
+                      </Text>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>16€/h</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Text>
+                        Invitation par un adhérent d'un non-adhérent du TCF
+                      </Text>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>6€/h</Text>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Stack>
+          </Stack>
+        </Wrapper>
+      </Section>
+      <Section padded skewed variant="light" id="reductions">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Réductions</SectionTitle>
