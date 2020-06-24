@@ -234,20 +234,9 @@ const TarifsPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <Text>Plateau (8 joueurs sur 2 terrains)</Text>
-                      <Caption>
-                        1h30 de jeu dont 1h15 encadrée par un DE et un AMT
-                      </Caption>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>280€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
                       <Stack spacing="xs">
-                        <Text>Classique (4 joueurs)</Text>
-                        <Caption>1h encadrée par un DE</Caption>
+                        <Text>Annuelle "Classique"</Text>
+                        <Caption>1h hebdomadaire encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
@@ -257,8 +246,8 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Intensif (4 joueurs)</Text>
-                        <Caption>1h30 encadrée par un DE</Caption>
+                        <Text>Annuelle "Intensif"</Text>
+                        <Caption>1h30 hebdomadaire encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
@@ -267,20 +256,18 @@ const TarifsPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>
-                        Séance de 1h ou 1h15 encadrée par un DE et un AMT
-                      </Text>
+                      <Text>Séance de 1h</Text>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>13€</Text>
+                      <Text>15€</Text>
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>Séance de 1h30 encadrée par un DE</Text>
+                      <Text>Séance de 1h30</Text>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>20€</Text>
+                      <Text>23€</Text>
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -295,9 +282,8 @@ const TarifsPage = () => {
             <SectionTitle>École de tennis</SectionTitle>
             <Stack>
               <Text>
-                Les tarifs de l'école de tennis incluent le prix de la
-                cotisation. Les cours se déroulent sur 28 semaines. Le
-                calendrier vous sera communiqué lors de l'inscription.
+                Les cours se déroulent sur 28 semaines. Le calendrier vous sera
+                communiqué lors de l'inscription.
               </Text>
               <Table>
                 <TableHead>
@@ -312,7 +298,29 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Text>Mini-tennis</Text>
-                      <Caption>1h, 2014-2015</Caption>
+                      <Caption>1h, 2015-2016-2017</Caption>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>110€</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Stack spacing="xs">
+                        <Text>Club Junior 1</Text>
+                        <Caption>1h, 2013-2014</Caption>
+                      </Stack>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>130€</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Stack spacing="xs">
+                        <Text>Club Junior 2</Text>
+                        <Caption>1h15, 2010-2012</Caption>
+                      </Stack>
                     </TableCell>
                     <TableCell align="center">
                       <Text>160€</Text>
@@ -321,34 +329,12 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Club Junior 1</Text>
-                        <Caption>1h, 2012-2013</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>210€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Club Junior 2</Text>
-                        <Caption>1h15, 2009-2011</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>260€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
                         <Text>Club Ados</Text>
-                        <Caption>1h15, 2002-2008</Caption>
+                        <Caption>1h15, 2003-2009</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>290€</Text>
+                      <Text>190€</Text>
                     </TableCell>
                   </TableRow>
                   <TableRow>
