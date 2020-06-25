@@ -1,27 +1,27 @@
-import React from 'react'
-import { Section, SectionTitle } from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text, Caption, Subtitle } from '../components/Text'
-import SEO from '../components/seo'
-import { Stack } from '../components/Stack'
-import { ExternalLink } from '../components/ExternalLink'
-import { Link } from 'gatsby'
+import React from "react"
+import { Section, SectionTitle } from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text, Caption, Subtitle } from "../components/Text"
+import SEO from "../components/seo"
+import { Stack } from "../components/Stack"
+import { ExternalLink } from "../components/ExternalLink"
+import { Link } from "gatsby"
 import {
   Table,
   TableHead,
   TableBody,
   TableRow,
   TableCell,
-} from '../components/Table'
-import { PageTitle } from '../components/PageTitle'
+} from "../components/Table"
+import { PageTitle } from "../components/PageTitle"
 
 const TarifsPage = () => {
   return (
     <>
-      <SEO title="Tarifs" description="Tarifs pour la saison 2019/2020" />
+      <SEO title="Tarifs" description="Tarifs pour la saison 2020/2021" />
       <Section padded skewed variant="primary">
         <Wrapper>
-          <PageTitle>Tarifs 2019/2020</PageTitle>
+          <PageTitle>Tarifs 2020/2021</PageTitle>
         </Wrapper>
       </Section>
       <Section padded skewed>
@@ -36,12 +36,13 @@ const TarifsPage = () => {
                 pratique.
               </Text>
               <Text>
-                La licence Club 2020 est valable du 1er septembre 2019 au 31
-                août 2020. Son tarif est mis en place par la FFT : 29 € pour les
-                adultes, 20 € pour les 18 ans et moins.
+                La licence Club 2021 est valable du 1er septembre 2020 au 31
+                août 2021. Son tarif est mis en place par la FFT : 30 € pour les
+                adultes, 20 € pour les jeunes/ados de 6 à 18 ans, 12 € pour les
+                enfants de moins de 6 ans.
               </Text>
               <Text>
-                Être licencié vous procure de nombreux avantages.{' '}
+                Être licencié vous procure de nombreux avantages.{" "}
                 <ExternalLink href="https://www.fft.fr/se-licencier/toutes-les-licences">
                   Rendez vous sur le site de la FFT pour en savoir plus
                 </ExternalLink>
@@ -64,17 +65,17 @@ const TarifsPage = () => {
               <Text>
                 Nous proposons différents tarifs afin que chacun puisse trouver
                 une cotisation qui correspond le mieux à ses besoins. En cas de
-                question, n'hésitez pas à{' '}
+                question, n'hésitez pas à{" "}
                 <Link to="/contact">nous contacter</Link>.
               </Text>
               <Text>
-                Vous pouvez prendre votre cotisation en ligne sur{' '}
+                Vous pouvez prendre votre cotisation en ligne sur{" "}
                 <ExternalLink href="https://tenup.fft.fr/club/57950106/offres">
                   TenUp
                 </ExternalLink>
                 .
               </Text>
-              <div css={{ overflowX: 'auto' }}>
+              <div css={{ overflowX: "auto" }}>
                 <Table>
                   <TableHead>
                     <TableRow>
@@ -147,8 +148,7 @@ const TarifsPage = () => {
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Printemps/été</Text>
-                          <Caption>du 1er mars au 31 août</Caption>
+                          <Text>Semi-annuelle</Text>
                         </Stack>
                       </TableCell>
                       <TableCell align="center">
@@ -161,27 +161,45 @@ const TarifsPage = () => {
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Été adulte</Text>
-                          <Caption>du 1er juin au 31 août</Caption>
+                          <Text>Mini-tennis</Text>
+                          <Caption>2015-2016-2017</Caption>
                         </Stack>
                       </TableCell>
-                      <TableCell align="center">
-                        <Text>90€ + licence</Text>
-                      </TableCell>
-                      <TableCell align="center">
-                        <Text>100€ + licence</Text>
+                      <TableCell align="center" colSpan="2">
+                        <Text>50€</Text>
                       </TableCell>
                     </TableRow>
                     <TableRow>
                       <TableCell>
                         <Stack spacing="xs">
-                          <Text>Été jeune</Text>
-                          <Caption>du 1er juin au 31 août</Caption>
-                          <Caption>&lt;25 ans et hors école de tennis</Caption>
+                          <Text>Club junior 1</Text>
+                          <Caption>2013-2014</Caption>
                         </Stack>
                       </TableCell>
-                      <TableCell colSpan="2" align="center">
-                        <Text>40€ + licence</Text>
+                      <TableCell align="center" colSpan="2">
+                        <Text>80€</Text>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Stack spacing="xs">
+                          <Text>Club junior 2</Text>
+                          <Caption>2011-2012</Caption>
+                        </Stack>
+                      </TableCell>
+                      <TableCell align="center" colSpan="2">
+                        <Text>100€</Text>
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>
+                        <Stack spacing="xs">
+                          <Text>Club ados</Text>
+                          <Caption>2003-2010</Caption>
+                        </Stack>
+                      </TableCell>
+                      <TableCell align="center" colSpan="2">
+                        <Text>100€</Text>
                       </TableCell>
                     </TableRow>
                   </TableBody>
@@ -198,7 +216,7 @@ const TarifsPage = () => {
       <Section padded skewed id="cours-adultes">
         <Wrapper>
           <Stack spacing="l">
-            <SectionTitle>Cours adultes</SectionTitle>
+            <SectionTitle>Cours collectifs adultes</SectionTitle>
             <Stack>
               <Text>
                 Les cours se déroulent sur 28 semaines. Le calendrier vous sera
@@ -216,20 +234,9 @@ const TarifsPage = () => {
                 <TableBody>
                   <TableRow>
                     <TableCell>
-                      <Text>Plateau (8 joueurs sur 2 terrains)</Text>
-                      <Caption>
-                        1h30 de jeu dont 1h15 encadrée par un DE et un AMT
-                      </Caption>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>280€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
                       <Stack spacing="xs">
-                        <Text>Classique (4 joueurs)</Text>
-                        <Caption>1h encadrée par un DE</Caption>
+                        <Text>Annuelle "Classique"</Text>
+                        <Caption>1h hebdomadaire encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
@@ -239,8 +246,8 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Intensif (4 joueurs)</Text>
-                        <Caption>1h30 encadrée par un DE</Caption>
+                        <Text>Annuelle "Intensif"</Text>
+                        <Caption>1h30 hebdomadaire encadrée par un DE</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
@@ -249,20 +256,18 @@ const TarifsPage = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>
-                        Séance de 1h ou 1h15 encadrée par un DE et un AMT
-                      </Text>
+                      <Text>Séance de 1h</Text>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>13€</Text>
+                      <Text>15€</Text>
                     </TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>
-                      <Text>Séance de 1h30 encadrée par un DE</Text>
+                      <Text>Séance de 1h30</Text>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>20€</Text>
+                      <Text>23€</Text>
                     </TableCell>
                   </TableRow>
                 </TableBody>
@@ -277,9 +282,8 @@ const TarifsPage = () => {
             <SectionTitle>École de tennis</SectionTitle>
             <Stack>
               <Text>
-                Les tarifs de l'école de tennis incluent le prix de la
-                cotisation. Les cours se déroulent sur 28 semaines. Le
-                calendrier vous sera communiqué lors de l'inscription.
+                Les cours se déroulent sur 28 semaines. Le calendrier vous sera
+                communiqué lors de l'inscription.
               </Text>
               <Table>
                 <TableHead>
@@ -294,7 +298,29 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Text>Mini-tennis</Text>
-                      <Caption>1h, 2014-2015</Caption>
+                      <Caption>1h, 2015-2016-2017</Caption>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>110€</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Stack spacing="xs">
+                        <Text>Club Junior 1</Text>
+                        <Caption>1h, 2013-2014</Caption>
+                      </Stack>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>130€</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Stack spacing="xs">
+                        <Text>Club Junior 2</Text>
+                        <Caption>1h15, 2010-2012</Caption>
+                      </Stack>
                     </TableCell>
                     <TableCell align="center">
                       <Text>160€</Text>
@@ -303,34 +329,12 @@ const TarifsPage = () => {
                   <TableRow>
                     <TableCell>
                       <Stack spacing="xs">
-                        <Text>Club Junior 1</Text>
-                        <Caption>1h, 2012-2013</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>210€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
-                        <Text>Club Junior 2</Text>
-                        <Caption>1h15, 2009-2011</Caption>
-                      </Stack>
-                    </TableCell>
-                    <TableCell align="center">
-                      <Text>260€</Text>
-                    </TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>
-                      <Stack spacing="xs">
                         <Text>Club Ados</Text>
-                        <Caption>1h15, 2002-2008</Caption>
+                        <Caption>1h15, 2003-2009</Caption>
                       </Stack>
                     </TableCell>
                     <TableCell align="center">
-                      <Text>290€</Text>
+                      <Text>190€</Text>
                     </TableCell>
                   </TableRow>
                   <TableRow>
@@ -357,7 +361,48 @@ const TarifsPage = () => {
           </Stack>
         </Wrapper>
       </Section>
-      <Section padded skewed id="reductions">
+      <Section padded skewed id="divers">
+        <Wrapper>
+          <Stack spacing="l">
+            <SectionTitle>Divers</SectionTitle>
+            <Stack>
+              <Table>
+                <TableHead>
+                  <TableRow>
+                    <TableCell heading></TableCell>
+                    <TableCell heading align="center">
+                      <Text>Prix</Text>
+                    </TableCell>
+                  </TableRow>
+                </TableHead>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>
+                      <Text>
+                        Réservation d'un terrain par deux non-adhérents du TCF
+                      </Text>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>16€/h</Text>
+                    </TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>
+                      <Text>
+                        Invitation par un adhérent d'un non-adhérent du TCF
+                      </Text>
+                    </TableCell>
+                    <TableCell align="center">
+                      <Text>6€/h</Text>
+                    </TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </Stack>
+          </Stack>
+        </Wrapper>
+      </Section>
+      <Section padded skewed variant="light" id="reductions">
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Réductions</SectionTitle>
@@ -373,6 +418,11 @@ const TarifsPage = () => {
                 Lors de l'inscription de plusieurs enfants, vous bénéficiez de
                 30€ de réduction par enfant (10€ pour le mini-tennis)
               </Text>
+              <Subtitle tag="h2">Parrainage</Subtitle>
+              <Text>
+                Le parrain et le parrainé bénéficient chacun de 15€ de
+                réduction.
+              </Text>
             </Stack>
           </Stack>
         </Wrapper>
@@ -385,10 +435,10 @@ const TarifsPage = () => {
               <Text>
                 Vous avez la possibilité de donner un coup de pouce financier à
                 votre club. Pour cela, vous pouvez faire un don. Pour chaque
-                tranche de 15€, près de{' '}
+                tranche de 15€, près de{" "}
                 <strong>
                   10€ sont déductibles de vos impôts sur le revenu
-                </strong>{' '}
+                </strong>{" "}
                 et vous bénéficiez d'
                 <strong>
                   une remise immédiate de 25% du don sur votre cotisation
