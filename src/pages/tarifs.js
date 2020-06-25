@@ -216,7 +216,7 @@ const TarifsPage = () => {
       <Section padded skewed id="cours-adultes">
         <Wrapper>
           <Stack spacing="l">
-            <SectionTitle>Cours adultes</SectionTitle>
+            <SectionTitle>Cours collectifs adultes</SectionTitle>
             <Stack>
               <Text>
                 Les cours se déroulent sur 28 semaines. Le calendrier vous sera
