@@ -18,10 +18,10 @@ import { PageTitle } from "../components/PageTitle"
 const TarifsPage = () => {
   return (
     <>
-      <SEO title="Tarifs" description="Tarifs pour la saison 2019/2020" />
+      <SEO title="Tarifs" description="Tarifs pour la saison 2020/2021" />
       <Section padded skewed variant="primary">
         <Wrapper>
-          <PageTitle>Tarifs 2019/2020</PageTitle>
+          <PageTitle>Tarifs 2020/2021</PageTitle>
         </Wrapper>
       </Section>
       <Section padded skewed>
@@ -36,8 +36,8 @@ const TarifsPage = () => {
                 pratique.
               </Text>
               <Text>
-                La licence Club 2020 est valable du 1er septembre 2019 au 31
-                août 2020. Son tarif est mis en place par la FFT : 30 € pour les
+                La licence Club 2021 est valable du 1er septembre 2020 au 31
+                août 2021. Son tarif est mis en place par la FFT : 30 € pour les
                 adultes, 20 € pour les jeunes/ados de 6 à 18 ans, 12 € pour les
                 enfants de moins de 6 ans.
               </Text>
