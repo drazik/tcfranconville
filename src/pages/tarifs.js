@@ -102,10 +102,7 @@ const TarifsPage = () => {
                     </TableRow>
                     <TableRow>
                       <TableCell>
-                        <Stack spacing="xs">
-                          <Text>Jeune</Text>
-                          <Caption>&lt;25 ans et hors école de tennis</Caption>
-                        </Stack>
+                        <Text>Adultes &lt; 25 ans</Text>
                       </TableCell>
                       <TableCell colSpan="2" align="center">
                         <Text>120€ + licence</Text>
@@ -205,10 +202,6 @@ const TarifsPage = () => {
                   </TableBody>
                 </Table>
               </div>
-              <Text>
-                Pour toute souscription à une cotisation annuelle, une
-                invitation est offerte
-              </Text>
             </Stack>
           </Stack>
         </Wrapper>
@@ -413,10 +406,11 @@ const TarifsPage = () => {
                 bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste
                 plus qu'à le/la convaincre
               </Text>
-              <Subtitle tag="h2">Réduction enfant</Subtitle>
+              <Subtitle tag="h2">Réduction famille</Subtitle>
               <Text>
-                Lors de l'inscription de plusieurs enfants, vous bénéficiez de
-                30€ de réduction par enfant (10€ pour le mini-tennis)
+                Lors de l'inscription de plusieurs membres d'une même famille,
+                vous bénéficiez d'une réduction de 30€ par enfant (10€ pour le
+                mini-tennis)
               </Text>
               <Subtitle tag="h2">Parrainage</Subtitle>
               <Text>
