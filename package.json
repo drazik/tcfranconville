@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
-    "@svgr/webpack": "^4.3.3",
+    "@svgr/webpack": "^5.4.0",
     "clipboardy": "^2.1.0",
     "date-fns": "^2.6.0",
     "emotion-theming": "^10.0.9",
