@@ -1,22 +1,22 @@
-import React from 'react'
+import React from "react"
 import {
   Section,
   SectionTitle,
   SectionTitleDetails,
-} from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text } from '../components/Text'
-import { List, ListItem } from '../components/List'
-import SEO from '../components/seo'
-import { Stack } from '../components/Stack'
-import { PageTitle } from '../components/PageTitle'
-import { PageDescription } from '../components/PageDescription'
-import { TwoCol } from '../components/TwoCol'
-import { IllustrationCard } from '../components/IllustrationCard'
-import { ReactComponent as InfoIcon } from '../images/icons/info.svg'
-import { graphql } from 'gatsby'
+} from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text } from "../components/Text"
+import { List, ListItem } from "../components/List"
+import SEO from "../components/seo"
+import { Stack } from "../components/Stack"
+import { PageTitle } from "../components/PageTitle"
+import { PageDescription } from "../components/PageDescription"
+import { TwoCol } from "../components/TwoCol"
+import { IllustrationCard } from "../components/IllustrationCard"
+import { ReactComponent as InfoIcon } from "../images/icons/info.svg"
+import { graphql } from "gatsby"
 
-const Info = props => {
+const Info = (props) => {
   const { children, ...rest } = props
   const r = 50
   const d = 2 * r
@@ -24,37 +24,37 @@ const Info = props => {
   return (
     <div
       css={{
-        position: 'relative',
+        position: "relative",
       }}
     >
       <InfoIcon
         viewBox="0 0 29 29"
         width="50"
         height="50"
-        css={theme => ({
-          position: 'absolute',
+        css={(theme) => ({
+          position: "absolute",
           top: -10,
           left: -10,
           fill: theme.main,
         })}
       />
       <div
-        css={theme => ({
-          padding: 'calc(50px + 1rem) 1.5rem 2rem',
-          color: 'white',
-          overflow: 'hidden',
-          position: 'relative',
-          borderRadius: '0.75rem',
+        css={(theme) => ({
+          padding: "calc(50px + 1rem) 1.5rem 2rem",
+          color: "white",
+          overflow: "hidden",
+          position: "relative",
+          borderRadius: "0.75rem",
 
-          '&::before': {
+          "&::before": {
             content: "''",
-            position: 'absolute',
+            position: "absolute",
             width: d,
             height: d,
             boxShadow: `0 0 0 1000px ${theme.main}`,
             top: -r,
             left: -r,
-            borderRadius: '50%',
+            borderRadius: "50%",
             zIndex: -1,
           },
         })}
@@ -62,12 +62,12 @@ const Info = props => {
       >
         <p
           css={{
-            position: 'absolute',
+            position: "absolute",
             top: 25,
-            left: 'calc(50px + 1rem)',
-            fontWeight: 'bold',
+            left: "calc(50px + 1rem)",
+            fontWeight: "bold",
             margin: 0,
-            transform: 'translateY(-50%)',
+            transform: "translateY(-50%)",
           }}
         >
           Le saviez-vous ?
@@ -149,7 +149,7 @@ const EnseignementPage = ({ data }) => {
         <Wrapper>
           <Stack spacing="xl">
             <SectionTitle>Notre école de tennis</SectionTitle>
-            <TwoCol css={{ alignItems: 'center' }}>
+            <TwoCol css={{ alignItems: "center" }}>
               <Stack spacing="m">
                 <SectionTitle>
                   Mini-tennis
@@ -191,7 +191,7 @@ const EnseignementPage = ({ data }) => {
                 ratio={3000 / 1987}
               />
             </TwoCol>
-            <TwoCol reversed css={{ alignItems: 'center' }}>
+            <TwoCol reversed css={{ alignItems: "center" }}>
               <Stack spacing="m">
                 <SectionTitle>
                   Club junior 1<br />
@@ -212,7 +212,7 @@ const EnseignementPage = ({ data }) => {
                 ratio={600 / 400}
               />
             </TwoCol>
-            <TwoCol css={{ alignItems: 'center' }}>
+            <TwoCol css={{ alignItems: "center" }}>
               <Stack spacing="m">
                 <SectionTitle>
                   Club junior 2<br />
@@ -246,7 +246,7 @@ const EnseignementPage = ({ data }) => {
                 ratio={500 / 598}
               />
             </TwoCol>
-            <TwoCol reversed css={{ alignItems: 'center' }}>
+            <TwoCol reversed css={{ alignItems: "center" }}>
               <Stack spacing="m">
                 <SectionTitle>
                   Club ados
@@ -278,7 +278,7 @@ const EnseignementPage = ({ data }) => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>Cours adultes</SectionTitle>
-            <TwoCol css={{ alignItems: 'center' }}>
+            <TwoCol css={{ alignItems: "center" }}>
               <Stack spacing="m">
                 <Text>
                   70% de nos adultes (hors retraite sportive) prennent des cours

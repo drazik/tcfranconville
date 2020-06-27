@@ -1,41 +1,41 @@
-import React, { useReducer, useEffect } from 'react'
-import styled from '@emotion/styled'
-import { useSwipeable } from 'react-swipeable'
+import React, { useReducer, useEffect } from "react"
+import styled from "@emotion/styled"
+import { useSwipeable } from "react-swipeable"
 
-const SliderTrack = props => {
+const SliderTrack = (props) => {
   return (
     <div
       css={{
-        display: 'flex',
-        flexWrap: 'nowrap',
-        touchAction: 'pan-x',
-        willChange: 'transform',
+        display: "flex",
+        flexWrap: "nowrap",
+        touchAction: "pan-x",
+        willChange: "transform",
       }}
       {...props}
     />
   )
 }
 
-export const Slide = props => {
+export const Slide = (props) => {
   return (
-    <div css={{ flexBasis: '100%', flexShrink: 0, flexGrow: 0 }} {...props} />
+    <div css={{ flexBasis: "100%", flexShrink: 0, flexGrow: 0 }} {...props} />
   )
 }
 
 const SliderControl = styled.button({
-  position: 'absolute',
+  position: "absolute",
   top: 0,
   bottom: 0,
-  width: '2rem',
+  width: "2rem",
   border: 0,
-  backgroundColor: 'transparent',
-  color: 'white',
+  backgroundColor: "transparent",
+  color: "white",
   padding: 0,
-  transition: 'background-color 0.25s ease-out',
-  cursor: 'pointer',
+  transition: "background-color 0.25s ease-out",
+  cursor: "pointer",
 
-  '&:hover': {
-    backgroundColor: 'rgba(0, 0, 0, 0.25)',
+  "&:hover": {
+    backgroundColor: "rgba(0, 0, 0, 0.25)",
   },
 })
 
@@ -60,8 +60,8 @@ const SliderControlArrow = styled.span`
     margin-left: -50%;
     background-color: white;
     border-radius: 2px;
-    transform-origin: ${props =>
-      props.direction === 'left' ? '0 50%' : '100% 50%'};
+    transform-origin: ${(props) =>
+      props.direction === "left" ? "0 50%" : "100% 50%"};
     transition: transform 0.2s ease-in-out;
   }
 
@@ -79,7 +79,7 @@ const SliderControlArrow = styled.span`
   }
 `
 
-const SliderPrevious = props => {
+const SliderPrevious = (props) => {
   return (
     <SliderControl css={{ left: 0 }} {...props}>
       <SliderControlArrow direction="left" />
@@ -87,7 +87,7 @@ const SliderPrevious = props => {
   )
 }
 
-const SliderNext = props => {
+const SliderNext = (props) => {
   return (
     <SliderControl css={{ right: 0 }} {...props}>
       <SliderControlArrow direction="right" />
@@ -98,21 +98,21 @@ const SliderNext = props => {
 const SliderDots = ({ currentIndex, nbSlides, ...props }) => {
   return (
     <div
-      css={{ display: 'flex', justifyContent: 'center', marginTop: '1.5rem' }}
+      css={{ display: "flex", justifyContent: "center", marginTop: "1.5rem" }}
     >
       {Array.from({ length: nbSlides }).map((_, index) => (
         <div
           key={index}
-          css={theme => ({
-            width: '0.5rem',
-            height: '0.5rem',
+          css={(theme) => ({
+            width: "0.5rem",
+            height: "0.5rem",
             border: `2px solid ${theme.main}`,
-            backgroundColor: index === currentIndex ? theme.main : 'white',
-            margin: '0 1rem',
-            borderRadius: '50%',
+            backgroundColor: index === currentIndex ? theme.main : "white",
+            margin: "0 1rem",
+            borderRadius: "50%",
             opacity: index === currentIndex ? 1 : 0.7,
-            transform: index === currentIndex ? 'scale(1.5)' : null,
-            transition: 'transform 0.2s ease-out',
+            transform: index === currentIndex ? "scale(1.5)" : null,
+            transition: "transform 0.2s ease-out",
           })}
         />
       ))}
@@ -128,27 +128,27 @@ const initialState = {
 
 const reducer = (state, action) => {
   switch (action.type) {
-    case 'drag':
+    case "drag":
       return {
         ...state,
         offset: action.payload.offset,
       }
 
-    case 'previous':
+    case "previous":
       return {
         ...state,
         offset: 0,
         desiredIndex: getPreviousIndex(state),
       }
 
-    case 'next':
+    case "next":
       return {
         ...state,
         offset: 0,
         desiredIndex: getNextIndex(state, action.payload.nbSlides),
       }
 
-    case 'done':
+    case "done":
       return {
         ...state,
         currentIndex: state.desiredIndex,
@@ -160,7 +160,7 @@ const reducer = (state, action) => {
   }
 }
 
-const getPreviousIndex = state => {
+const getPreviousIndex = (state) => {
   return state.currentIndex > 0 ? state.currentIndex - 1 : 0
 }
 
@@ -170,19 +170,19 @@ const getNextIndex = (state, nbSlides) => {
     : state.currentIndex + 1
 }
 
-const useSlider = nbSlides => {
+const useSlider = (nbSlides) => {
   const [state, dispatch] = useReducer(reducer, initialState)
   const handlers = useSwipeable({
-    onSwiping: e => {
+    onSwiping: (e) => {
       dispatch({
-        type: 'drag',
+        type: "drag",
         payload: {
           offset: e.deltaX,
         },
       })
     },
-    onSwipedLeft: () => dispatch({ type: 'next', payload: { nbSlides } }),
-    onSwipedRight: () => dispatch({ type: 'previous' }),
+    onSwipedLeft: () => dispatch({ type: "next", payload: { nbSlides } }),
+    onSwipedRight: () => dispatch({ type: "previous" }),
   })
 
   const areDesiredAndCurrentDiffents =
@@ -194,10 +194,10 @@ const useSlider = nbSlides => {
 
   const style = {
     transform: `translateX(calc(${-index * 100}% ${
-      state.offset < 0 ? '+' : '-'
+      state.offset < 0 ? "+" : "-"
     } ${Math.abs(state.offset)}px))`,
     transition: areDesiredAndCurrentDiffents
-      ? 'transform 0.4s ease-in-out'
+      ? "transform 0.4s ease-in-out"
       : null,
   }
 
@@ -205,7 +205,7 @@ const useSlider = nbSlides => {
     let timeout
 
     if (areDesiredAndCurrentDiffents) {
-      timeout = setTimeout(() => dispatch({ type: 'done' }), 400)
+      timeout = setTimeout(() => dispatch({ type: "done" }), 400)
     }
 
     return () => {
@@ -223,7 +223,7 @@ const useSlider = nbSlides => {
       return
     }
 
-    dispatch({ type: 'previous', payload: { nbSlides } })
+    dispatch({ type: "previous", payload: { nbSlides } })
   }
 
   const goToNext = () => {
@@ -231,7 +231,7 @@ const useSlider = nbSlides => {
       return
     }
 
-    dispatch({ type: 'next', payload: { nbSlides } })
+    dispatch({ type: "next", payload: { nbSlides } })
   }
 
   return [
@@ -257,13 +257,13 @@ export const Slider = ({ children, ...props }) => {
   ] = useSlider(children.length)
 
   return (
-    <div css={{ position: 'relative' }} {...props}>
+    <div css={{ position: "relative" }} {...props}>
       <div
         css={{
-          overflow: 'hidden',
-          position: 'relative',
-          borderRadius: '0.5rem',
-          boxShadow: '0 40px 30px -30px rgba(0,0,0,0.5)',
+          overflow: "hidden",
+          position: "relative",
+          borderRadius: "0.5rem",
+          boxShadow: "0 40px 30px -30px rgba(0,0,0,0.5)",
         }}
         {...handlers}
       >

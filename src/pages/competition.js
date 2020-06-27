@@ -1,29 +1,29 @@
-import React from 'react'
+import React from "react"
 import {
   Section,
   SectionTitle,
   SectionTitleDetails,
-} from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text } from '../components/Text'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/PageTitle'
-import { PageDescription } from '../components/PageDescription'
-import { Stack } from '../components/Stack'
-import { TwoCol } from '../components/TwoCol'
-import { Slider as BaseSlider, Slide } from '../components/Slider'
-import Ratio from 'react-ratio'
-import { graphql } from 'gatsby'
-import { FluidBgImg } from '../components/FluidBgImg'
+} from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text } from "../components/Text"
+import SEO from "../components/seo"
+import { PageTitle } from "../components/PageTitle"
+import { PageDescription } from "../components/PageDescription"
+import { Stack } from "../components/Stack"
+import { TwoCol } from "../components/TwoCol"
+import { Slider as BaseSlider, Slide } from "../components/Slider"
+import Ratio from "react-ratio"
+import { graphql } from "gatsby"
+import { FluidBgImg } from "../components/FluidBgImg"
 
-const Slider = props => {
+const Slider = (props) => {
   return (
     <BaseSlider
       css={{
-        '& img': {
-          verticalAlign: 'middle',
-          width: '100%',
-          height: '100%',
+        "& img": {
+          verticalAlign: "middle",
+          width: "100%",
+          height: "100%",
         },
       }}
       {...props}
@@ -80,7 +80,7 @@ const CompetitionPage = ({ data }) => {
                 </Stack>
               </Stack>
               <Slider>
-                {data.championnatPrintempsImages.edges.map(edge => (
+                {data.championnatPrintempsImages.edges.map((edge) => (
                   <Slide key={edge.node.id}>
                     <Ratio ratio={3 / 2}>
                       <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -105,7 +105,7 @@ const CompetitionPage = ({ data }) => {
                 </Stack>
               </Stack>
               <Slider>
-                {data.potelImages.edges.map(edge => (
+                {data.potelImages.edges.map((edge) => (
                   <Slide key={edge.node.id}>
                     <Ratio ratio={3 / 2}>
                       <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -145,7 +145,7 @@ const CompetitionPage = ({ data }) => {
                 </Stack>
               </Stack>
               <Slider>
-                {data.championnat45Images.edges.map(edge => (
+                {data.championnat45Images.edges.map((edge) => (
                   <Slide key={edge.node.id}>
                     <Ratio ratio={1280 / 960}>
                       <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -168,7 +168,7 @@ const CompetitionPage = ({ data }) => {
                 </Stack>
               </Stack>
               <Slider>
-                {data.championnat55Images.edges.map(edge => (
+                {data.championnat55Images.edges.map((edge) => (
                   <Slide key={edge.node.id}>
                     <Ratio ratio={2560 / 1920}>
                       <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -211,7 +211,7 @@ const CompetitionPage = ({ data }) => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {data.openImages.edges.map(edge => (
+                  {data.openImages.edges.map((edge) => (
                     <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
                         <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -240,7 +240,7 @@ const CompetitionPage = ({ data }) => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {data.openJourneeImages.edges.map(edge => (
+                  {data.openJourneeImages.edges.map((edge) => (
                     <Slide key={edge.node.id}>
                       <Ratio ratio={956 / 717}>
                         <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -262,7 +262,7 @@ const CompetitionPage = ({ data }) => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {data.openSeniorPlusImages.edges.map(edge => (
+                  {data.openSeniorPlusImages.edges.map((edge) => (
                     <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
                         <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -295,7 +295,7 @@ const CompetitionPage = ({ data }) => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {data.interneImages.edges.map(edge => (
+                  {data.interneImages.edges.map((edge) => (
                     <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
                         <FluidBgImg image={edge.node.childImageSharp.fluid} />
@@ -318,7 +318,7 @@ const CompetitionPage = ({ data }) => {
                   </Stack>
                 </Stack>
                 <Slider>
-                  {data.interneCouleurImages.edges.map(edge => (
+                  {data.interneCouleurImages.edges.map((edge) => (
                     <Slide key={edge.node.id}>
                       <Ratio ratio={3 / 2}>
                         <FluidBgImg image={edge.node.childImageSharp.fluid} />

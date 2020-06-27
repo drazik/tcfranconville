@@ -8,7 +8,7 @@ import { Text } from "./Text"
 import { StickyBanner } from "./StickyBanner"
 import { Link } from "gatsby"
 
-const Layout = props => {
+const Layout = (props) => {
   return (
     <ThemeProvider theme={theme}>
       <>

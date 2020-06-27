@@ -5,12 +5,12 @@ import { ReactComponent as FBIcon } from "../images/icons/facebook.svg"
 import { mq as mqNew } from "../helpers/media-queries"
 import { ExternalLink } from "../components/ExternalLink"
 
-const BurgerButton = props => {
+const BurgerButton = (props) => {
   const { active, ...rest } = props
 
   return (
     <button
-      css={theme => ({
+      css={(theme) => ({
         position: "fixed",
         top: "calc(0.5rem + 50px)",
         left: "5%",
@@ -67,14 +67,14 @@ const BurgerButton = props => {
   )
 }
 
-const Menu = props => {
+const Menu = (props) => {
   const { isOpen, ...rest } = props
 
   const transform = props.isOpen ? "translateX(0)" : "translateX(-100%)"
 
   return (
     <nav
-      css={theme => ({
+      css={(theme) => ({
         position: "fixed",
         top: 0,
         bottom: 0,
@@ -110,7 +110,7 @@ const Menu = props => {
   )
 }
 
-const MenuLink = props => {
+const MenuLink = (props) => {
   const { isCurrent, ...rest } = props
 
   const Component = props.href ? "a" : Link
@@ -145,7 +145,7 @@ const MenuLink = props => {
       }}
     >
       <Component
-        css={theme => ({
+        css={(theme) => ({
           color: "white",
           fontSize: "1.5rem",
           textTransform: "uppercase",
@@ -178,11 +178,11 @@ const MenuLink = props => {
   )
 }
 
-const MenuLinkExternal = props => {
+const MenuLinkExternal = (props) => {
   return <MenuLink {...props} />
 }
 
-const MenuLinkInternal = props => {
+const MenuLinkInternal = (props) => {
   return (
     <Match path={props.to}>
       {({ match }) => <MenuLink isCurrent={match} {...props} />}
@@ -190,7 +190,7 @@ const MenuLinkInternal = props => {
   )
 }
 
-const MenuItem = props => {
+const MenuItem = (props) => {
   if (props.href) {
     return <MenuLinkExternal {...props} />
   }
@@ -198,7 +198,7 @@ const MenuItem = props => {
   return <MenuLinkInternal {...props} />
 }
 
-const Overlay = props => {
+const Overlay = (props) => {
   const { isOpen, ...rest } = props
 
   return (

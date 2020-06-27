@@ -1,24 +1,24 @@
-import React from 'react'
-import Wrapper from '../components/Wrapper'
-import { Section, SectionTitle } from '../components/Section'
-import { mq } from '../helpers/media-queries'
-import Card from '../components/Card'
-import { Link, graphql } from 'gatsby'
-import { Text } from '../components/Text'
-import { Button } from '../components/Button'
-import SEO from '../components/seo'
-import { Stack } from '../components/Stack'
-import { Post } from '../components/Post'
+import React from "react"
+import Wrapper from "../components/Wrapper"
+import { Section, SectionTitle } from "../components/Section"
+import { mq } from "../helpers/media-queries"
+import Card from "../components/Card"
+import { Link, graphql } from "gatsby"
+import { Text } from "../components/Text"
+import { Button } from "../components/Button"
+import SEO from "../components/seo"
+import { Stack } from "../components/Stack"
+import { Post } from "../components/Post"
 
 const IndexPage = ({ data }) => {
   const [post] = data.allFacebookPosts.edges
-    .map(edge => edge.node)
-    .filter(post => post.message)
+    .map((edge) => edge.node)
+    .filter((post) => post.message)
 
   return (
     <>
       <SEO title="Accueil" />
-      <Section skewed variant="primary" css={{ paddingTop: '3rem' }}>
+      <Section skewed variant="primary" css={{ paddingTop: "3rem" }}>
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle variant="primary">Bienvenue !</SectionTitle>
@@ -54,24 +54,24 @@ const IndexPage = ({ data }) => {
         <Wrapper
           css={{
             marginTop: -130,
-            [mq('s')]: {
+            [mq("s")]: {
               marginTop: -150,
             },
           }}
         >
           <div
             css={{
-              display: 'grid',
-              gridTemplateColumns: '1fr',
-              gridColumnGap: '1rem',
-              gridRowGap: '2rem',
+              display: "grid",
+              gridTemplateColumns: "1fr",
+              gridColumnGap: "1rem",
+              gridRowGap: "2rem",
 
-              [mq('m')]: {
-                gridTemplateColumns: 'repeat(3, 1fr)',
+              [mq("m")]: {
+                gridTemplateColumns: "repeat(3, 1fr)",
               },
 
-              [mq('l')]: {
-                gridColumnGap: '2rem',
+              [mq("l")]: {
+                gridColumnGap: "2rem",
               },
             }}
           >
@@ -121,8 +121,8 @@ const IndexPage = ({ data }) => {
                 as={Link}
                 to="/reservation"
                 css={{
-                  marginLeft: 'auto',
-                  marginRight: 'auto',
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   maxWidth: 300,
                 }}
                 block
@@ -139,8 +139,8 @@ const IndexPage = ({ data }) => {
                 as={Link}
                 to="/tarifs"
                 css={{
-                  marginLeft: 'auto',
-                  marginRight: 'auto',
+                  marginLeft: "auto",
+                  marginRight: "auto",
                   maxWidth: 300,
                 }}
                 block
@@ -157,7 +157,7 @@ const IndexPage = ({ data }) => {
           <Stack spacing="l">
             <SectionTitle>L'actualité du club</SectionTitle>
             <Post post={post} />
-            <div css={{ textAlign: 'center' }}>
+            <div css={{ textAlign: "center" }}>
               <Button as={Link} to="/actualite" variant="primary">
                 Voir plus d'actualités
               </Button>

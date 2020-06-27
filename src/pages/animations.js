@@ -1,14 +1,14 @@
-import React from 'react'
-import { Section, SectionTitle } from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text } from '../components/Text'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/PageTitle'
-import { PageDescription } from '../components/PageDescription'
-import { Stack } from '../components/Stack'
-import { TwoCol } from '../components/TwoCol'
-import { IllustrationCard } from '../components/IllustrationCard'
-import { graphql } from 'gatsby'
+import React from "react"
+import { Section, SectionTitle } from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text } from "../components/Text"
+import SEO from "../components/seo"
+import { PageTitle } from "../components/PageTitle"
+import { PageDescription } from "../components/PageDescription"
+import { Stack } from "../components/Stack"
+import { TwoCol } from "../components/TwoCol"
+import { IllustrationCard } from "../components/IllustrationCard"
+import { graphql } from "gatsby"
 
 const AnimationPage = ({ data }) => {
   return (

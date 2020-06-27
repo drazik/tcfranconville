@@ -1,8 +1,8 @@
-import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
-import { FluidBgImg } from '../components/FluidBgImg'
+import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { FluidBgImg } from "../components/FluidBgImg"
 
-const SplashImage = props => {
+const SplashImage = (props) => {
   const { component: Component, children, ...rest } = props
   const data = useStaticQuery(graphql`
     query {
@@ -17,7 +17,7 @@ const SplashImage = props => {
   `)
 
   return (
-    <Component css={{ position: 'relative' }} {...rest}>
+    <Component css={{ position: "relative" }} {...rest}>
       <FluidBgImg image={data.backgroundImage.childImageSharp.fluid} />
       {children}
     </Component>

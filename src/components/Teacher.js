@@ -1,14 +1,14 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from "react"
+import PropTypes from "prop-types"
 
-const Teacher = props => {
+const Teacher = (props) => {
   const { name, description, photo, ...rest } = props
 
   return (
     <div
       css={{
-        display: 'flex',
-        alignItems: 'center'
+        display: "flex",
+        alignItems: "center",
       }}
       {...rest}
     >
@@ -19,31 +19,31 @@ const Teacher = props => {
           flexShrink: 0,
           flexGrow: 0,
           backgroundImage: `url(${photo})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          borderRadius: '50%',
-          boxShadow: '0 40px 30px -30px rgba(0, 0, 0, 0.5)'
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+          borderRadius: "50%",
+          boxShadow: "0 40px 30px -30px rgba(0, 0, 0, 0.5)",
         }}
       />
       <div
         css={{
-          marginLeft: '1rem',
-          display: 'flex',
-          flexDirection: 'column'
+          marginLeft: "1rem",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <div
-          css={theme => ({
-            fontWeight: 'bold',
-            fontSize: '1.15rem',
-            color: theme.main
+          css={(theme) => ({
+            fontWeight: "bold",
+            fontSize: "1.15rem",
+            color: theme.main,
           })}
         >
           {name}
         </div>
         <div
           css={{
-            marginTop: '0.5rem'
+            marginTop: "0.5rem",
           }}
         >
           {description}
@@ -56,7 +56,7 @@ const Teacher = props => {
 Teacher.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  photo: PropTypes.string.isRequired
+  photo: PropTypes.string.isRequired,
 }
 
 export default Teacher

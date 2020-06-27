@@ -1,17 +1,17 @@
-import React from 'react'
-import { Section } from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import { Text } from '../components/Text'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/PageTitle'
-import { TwoCol } from '../components/TwoCol'
-import { Stack } from '../components/Stack'
-import { mq } from '../helpers/media-queries'
-import { SectionTitle } from '../components/Section'
-import { List, ListItem } from '../components/List'
-import { IllustrationCard } from '../components/IllustrationCard'
-import { ExternalLink } from '../components/ExternalLink'
-import { Partner } from '../components/Partner'
+import React from "react"
+import { Section } from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import { Text } from "../components/Text"
+import SEO from "../components/seo"
+import { PageTitle } from "../components/PageTitle"
+import { TwoCol } from "../components/TwoCol"
+import { Stack } from "../components/Stack"
+import { mq } from "../helpers/media-queries"
+import { SectionTitle } from "../components/Section"
+import { List, ListItem } from "../components/List"
+import { IllustrationCard } from "../components/IllustrationCard"
+import { ExternalLink } from "../components/ExternalLink"
+import { Partner } from "../components/Partner"
 
 const LeClubPage = () => {
   return (
@@ -30,7 +30,7 @@ const LeClubPage = () => {
               <SectionTitle>Les infrastructures</SectionTitle>
               <Stack spacing="m">
                 <Text>
-                  Le club met à disposition de ses adhérents{' '}
+                  Le club met à disposition de ses adhérents{" "}
                   <strong>9 courts dont 3 couverts</strong>
                 </Text>
                 <List>
@@ -48,7 +48,7 @@ const LeClubPage = () => {
               </Stack>
             </Stack>
             <IllustrationCard
-              image={require('../images/installations.jpg')}
+              image={require("../images/installations.jpg")}
               ratio={550 / 406}
             />
           </TwoCol>
@@ -68,7 +68,7 @@ const LeClubPage = () => {
                 </Text>
                 <Text>
                   Vous pouvez nous contacter par téléphone au
-                  01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{' '}
+                  01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{" "}
                   <a href="mailto:tennis.club.franconville@cegetel.net">
                     tennis.club.franconville@cegetel.net
                   </a>
@@ -79,11 +79,11 @@ const LeClubPage = () => {
             <div>
               <iframe
                 css={{
-                  width: '100%',
+                  width: "100%",
                   height: 400,
                   border: 0,
 
-                  [mq('s')]: {
+                  [mq("s")]: {
                     height: 500,
                   },
                 }}
@@ -100,7 +100,7 @@ const LeClubPage = () => {
             <SectionTitle>Partenaires</SectionTitle>
             <Stack spacing="m">
               <Partner
-                logo={require('../images/partners/ecosport.png')}
+                logo={require("../images/partners/ecosport.png")}
                 name="Ecosport"
                 description={
                   <>
@@ -124,7 +124,7 @@ const LeClubPage = () => {
                 }
               />
               <Partner
-                logo={require('../images/partners/capifrance.png')}
+                logo={require("../images/partners/capifrance.png")}
                 name="Ludovic KORA"
                 description={
                   <>

@@ -4,7 +4,7 @@ import { mq } from "../../helpers/media-queries"
 export const StickyBanner = ({ children, ...props }) => {
   return (
     <div
-      css={theme => ({
+      css={(theme) => ({
         backgroundColor: theme.main,
         padding: `${theme.spacing * 2}px ${theme.spacing * 3}px`,
         color: "white",

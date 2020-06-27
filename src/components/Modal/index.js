@@ -1,8 +1,6 @@
-import React from 'react'
-import BaseModal from 'react-modal'
+import React from "react"
+import BaseModal from "react-modal"
 
-export const Modal = props => {
-  return (
-    <BaseModal {...props} />
-  )
+export const Modal = (props) => {
+  return <BaseModal {...props} />
 }

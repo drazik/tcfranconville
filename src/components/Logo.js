@@ -1,6 +1,6 @@
 // import styled from '@emotion/styled'
-import React from 'react'
-import logo from '../images/logo-tcf.png'
+import React from "react"
+import logo from "../images/logo-tcf.png"
 
 // const Logo = styled.span`
 //   display: inline-block;
@@ -25,12 +25,12 @@ import logo from '../images/logo-tcf.png'
 //   }
 // `
 
-export const Logo = props => {
+export const Logo = (props) => {
   return (
     <div
-      css={theme => ({
-        backgroundColor: 'white',
-        borderRadius: '50%',
+      css={(theme) => ({
+        backgroundColor: "white",
+        borderRadius: "50%",
         padding: 5,
         border: `2px solid ${theme.main}`,
       })}
@@ -41,7 +41,7 @@ export const Logo = props => {
         css={{
           width: props.size,
           height: props.size,
-          verticalAlign: 'middle',
+          verticalAlign: "middle",
         }}
       />
     </div>

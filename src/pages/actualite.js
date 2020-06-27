@@ -1,19 +1,19 @@
-import React from 'react'
-import { Section } from '../components/Section'
-import Wrapper from '../components/Wrapper'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/PageTitle'
-import { graphql } from 'gatsby'
-import { Stack } from '../components/Stack'
-import { ExternalLink } from '../components/ExternalLink'
-import { PageDescription } from '../components/PageDescription'
-import { Button } from '../components/Button'
-import { Post } from '../components/Post'
+import React from "react"
+import { Section } from "../components/Section"
+import Wrapper from "../components/Wrapper"
+import SEO from "../components/seo"
+import { PageTitle } from "../components/PageTitle"
+import { graphql } from "gatsby"
+import { Stack } from "../components/Stack"
+import { ExternalLink } from "../components/ExternalLink"
+import { PageDescription } from "../components/PageDescription"
+import { Button } from "../components/Button"
+import { Post } from "../components/Post"
 
 const ActualitePage = ({ data }) => {
   const posts = data.allFacebookPosts.edges
-    .map(edge => edge.node)
-    .filter(post => post.message)
+    .map((edge) => edge.node)
+    .filter((post) => post.message)
     .slice(0, 10)
 
   return (
@@ -31,10 +31,10 @@ const ActualitePage = ({ data }) => {
       <Section skewed>
         <Wrapper>
           <Stack spacing="xl">
-            {posts.map(post => (
+            {posts.map((post) => (
               <Post post={post} key={post.id} />
             ))}
-            <div css={{ textAlign: 'center' }}>
+            <div css={{ textAlign: "center" }}>
               <Button
                 as={ExternalLink}
                 href="https://www.facebook.com/TCFranconvilleOfficiel"

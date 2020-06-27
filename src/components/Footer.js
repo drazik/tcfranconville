@@ -1,38 +1,38 @@
-import React from 'react'
-import { formatDate } from '../helpers/date'
-import { Logo } from './Logo'
-import franconvilleLogo from '../images/logo-franconville.png'
-import { ExternalLink } from '../components/ExternalLink'
-import { mq } from '../helpers/media-queries'
-import { useStaticQuery, graphql } from 'gatsby'
-import { FluidBgImg } from './FluidBgImg'
+import React from "react"
+import { formatDate } from "../helpers/date"
+import { Logo } from "./Logo"
+import franconvilleLogo from "../images/logo-franconville.png"
+import { ExternalLink } from "../components/ExternalLink"
+import { mq } from "../helpers/media-queries"
+import { useStaticQuery, graphql } from "gatsby"
+import { FluidBgImg } from "./FluidBgImg"
 
 const footer = {
-  position: 'relative',
+  position: "relative",
   zIndex: 0,
-  paddingTop: '3rem',
-  paddingBottom: '3rem',
-  color: 'white',
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
+  paddingTop: "3rem",
+  paddingBottom: "3rem",
+  color: "white",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
 
-  '&::before': {
+  "&::before": {
     content: "''",
-    position: 'absolute',
+    position: "absolute",
     top: 0,
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.15)',
+    backgroundColor: "rgba(0, 0, 0, 0.15)",
     zIndex: -1,
   },
 }
 
 const paragraph = {
-  marginTop: '3rem',
-  fontSize: '1.25rem',
-  textAlign: 'center',
+  marginTop: "3rem",
+  fontSize: "1.25rem",
+  textAlign: "center",
 }
 
 function Footer() {
@@ -52,19 +52,19 @@ function Footer() {
     <footer css={footer}>
       <FluidBgImg image={data.backgroundImage.childImageSharp.fluid} />
       <div
-        css={theme => ({
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
+        css={(theme) => ({
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
 
-          '& > * + *': {
+          "& > * + *": {
             marginTop: theme.spacing * 4,
           },
 
-          [mq('m')]: {
-            flexDirection: 'row',
+          [mq("m")]: {
+            flexDirection: "row",
 
-            '& > *': {
+            "& > *": {
               margin: `0 ${theme.spacing * 4}px`,
             },
           },
@@ -82,19 +82,19 @@ function Footer() {
         </ExternalLink>
       </div>
       <p css={paragraph}>
-        &copy; Tennis Club Franconville {formatDate(new Date(), 'yyyy')}
+        &copy; Tennis Club Franconville {formatDate(new Date(), "yyyy")}
       </p>
       <ul
         css={{
-          display: 'flex',
-          listStyle: 'none',
+          display: "flex",
+          listStyle: "none",
           paddingLeft: 0,
-          whiteSpace: 'nowrap',
-          flexWrap: 'wrap',
-          alignItems: 'center',
+          whiteSpace: "nowrap",
+          flexWrap: "wrap",
+          alignItems: "center",
 
-          '& > li': {
-            margin: '0.5rem 1rem',
+          "& > li": {
+            margin: "0.5rem 1rem",
           },
         }}
       >

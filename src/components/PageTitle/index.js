@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react"
 
-export const PageTitle = props => {
-  const { children, ...rest } = props
+export const PageTitle = (props) => {
+  const { children, ...rest } = props
 
   return (
     <h1
       css={{
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        textAlign: 'center'
+        fontSize: "2rem",
+        fontWeight: "bold",
+        textAlign: "center",
       }}
       {...rest}
     >

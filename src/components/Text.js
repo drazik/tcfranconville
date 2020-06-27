@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 
-export const Text = props => {
+export const Text = (props) => {
   const { component: Component = "p", ...rest } = props
 
   return (
@@ -22,7 +22,7 @@ export const Caption = styled(Text)({
   color: "#393939",
 })
 
-export const Subtitle = props => {
+export const Subtitle = (props) => {
   return (
     <Text
       css={{
@@ -34,10 +34,10 @@ export const Subtitle = props => {
   )
 }
 
-export const List = props => {
+export const List = (props) => {
   return <Text {...props} component="ul" />
 }
 
-export const ListItem = props => {
+export const ListItem = (props) => {
   return <Text {...props} component="li" />
 }

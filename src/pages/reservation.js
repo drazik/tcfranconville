@@ -1,16 +1,16 @@
-import React from 'react'
-import { Section, SectionTitle } from '../components/Section'
-import { Text } from '../components/Text'
-import Wrapper from '../components/Wrapper'
-import SEO from '../components/seo'
-import { PageTitle } from '../components/PageTitle'
-import { Stack } from '../components/Stack'
-import { Button } from '../components/Button'
-import { ExternalLink } from '../components/ExternalLink'
-import { Link } from 'gatsby'
-import { mq } from '../helpers/media-queries'
+import React from "react"
+import { Section, SectionTitle } from "../components/Section"
+import { Text } from "../components/Text"
+import Wrapper from "../components/Wrapper"
+import SEO from "../components/seo"
+import { PageTitle } from "../components/PageTitle"
+import { Stack } from "../components/Stack"
+import { Button } from "../components/Button"
+import { ExternalLink } from "../components/ExternalLink"
+import { Link } from "gatsby"
+import { mq } from "../helpers/media-queries"
 
-const ReservationPage = props => {
+const ReservationPage = (props) => {
   return (
     <>
       <SEO
@@ -23,17 +23,17 @@ const ReservationPage = props => {
       <Section>
         <Wrapper>
           <div
-            css={theme => ({
-              display: 'grid',
-              gridTemplateColumns: '1fr',
+            css={(theme) => ({
+              display: "grid",
+              gridTemplateColumns: "1fr",
               gridGap: theme.spacing * 4,
 
-              [mq('m')]: {
+              [mq("m")]: {
                 gridGap: theme.spacing * 8,
               },
 
-              [mq('l')]: {
-                gridTemplateColumns: 'repeat(2, 1fr)',
+              [mq("l")]: {
+                gridTemplateColumns: "repeat(2, 1fr)",
               },
             })}
           >
@@ -41,10 +41,10 @@ const ReservationPage = props => {
               <Stack>
                 <SectionTitle>Adhérent</SectionTitle>
                 <Text>
-                  Les adhérents du club peuvent passer par leur espace{' '}
+                  Les adhérents du club peuvent passer par leur espace{" "}
                   <ExternalLink href="https://tenup.fft.fr/">
                     TenUp
-                  </ExternalLink>{' '}
+                  </ExternalLink>{" "}
                   pour réserver un court afin de jouer avec un autre adhérent,
                   ou faire découvrir le club à un invité moyennant 6€ par
                   invitation.
@@ -52,7 +52,7 @@ const ReservationPage = props => {
                 <Text>
                   Si vous n'avez pas encore de compte, vous pouvez en créer un.
                   Vous aurez besoin de votre numéro de licence, qui vous a été
-                  envoyé par e-mail. En cas de difficultés, pensez à consulter{' '}
+                  envoyé par e-mail. En cas de difficultés, pensez à consulter{" "}
                   <ExternalLink href="https://tenup.fft.fr/FAQ">
                     la FAQ de TenUp
                   </ExternalLink>
@@ -72,12 +72,12 @@ const ReservationPage = props => {
               <Stack>
                 <SectionTitle>Non adhérent</SectionTitle>
                 <Text>
-                  Pour les non adhérents, l'application{' '}
+                  Pour les non adhérents, l'application{" "}
                   <ExternalLink href="">Anybuddy</ExternalLink> vous permet de
                   réserver, payer et accéder au club en toute autonomie.
                 </Text>
                 <Text>
-                  Si vous jouez régulièrement, pensez à jeter un oeil à{' '}
+                  Si vous jouez régulièrement, pensez à jeter un oeil à{" "}
                   <Link to="/tarifs#cotisation">la cotisation</Link>. Elle
                   pourrait être plus avantageuse que des réservations à l'unité.
                   N'hésitez pas à nous contacter si vous avez des questions à ce

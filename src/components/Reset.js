@@ -1,6 +1,6 @@
-import React from 'react'
-import { Global, css } from '@emotion/core'
-import { withTheme } from 'emotion-theming'
+import React from "react"
+import { Global, css } from "@emotion/core"
+import { withTheme } from "emotion-theming"
 
 function Reset(props) {
   return (
