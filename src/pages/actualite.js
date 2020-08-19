@@ -11,10 +11,11 @@ import { Button } from "../components/Button"
 import { Post } from "../components/Post"
 
 const ActualitePage = ({ data }) => {
-  const posts = data.allFacebookPosts.edges
-    .map((edge) => edge.node)
-    .filter((post) => post.message)
-    .slice(0, 10)
+  // const posts = data.allFacebookPosts.edges
+  //   .map((edge) => edge.node)
+  //   .filter((post) => post.message)
+  //   .slice(0, 10)
+  const posts = []
 
   return (
     <>
@@ -49,34 +50,5 @@ const ActualitePage = ({ data }) => {
     </>
   )
 }
-
-export const query = graphql`
-  query ActualitePageQuery {
-    allFacebookPosts {
-      edges {
-        node {
-          id
-          message
-          created_time
-          permalink_url
-          attachments {
-            data {
-              url
-              type
-              title
-              media {
-                image {
-                  height
-                  src
-                  width
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-`
 
 export default ActualitePage

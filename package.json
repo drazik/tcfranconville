@@ -7,6 +7,7 @@
   "dependencies": {
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
+    "@react-hook/size": "^2.1.0",
     "@svgr/webpack": "^5.4.0",
     "date-fns": "^2.6.0",
     "emotion-theming": "^10.0.9",
@@ -28,6 +29,7 @@
     "react": "^16.8.4",
     "react-day-picker": "^7.3.0",
     "react-dom": "^16.8.4",
+    "react-facebook": "^8.1.4",
     "react-helmet": "^6.1.0",
     "react-modal": "^3.9.1",
     "react-ratio": "^0.1.5",

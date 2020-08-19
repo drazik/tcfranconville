@@ -1,4 +1,4 @@
-require('dotenv').config({ path: `.env.${process.env.NODE_ENV}` })
+require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
 
 const fbQuery = `posts {
   message,
@@ -18,8 +18,8 @@ module.exports = {
   siteMetadata: {
     title: `Tennis Club Franconville`,
     description: `Club de tennis convivial à Franconville (Val d'Oise). 9 courts de tennis dont 3 couverts  et 2 extérieurs éclairés.`,
-    author: 'TC Franconville',
-    siteUrl: 'https://tcfranconville.fr',
+    author: "TC Franconville",
+    siteUrl: "https://tcfranconville.fr",
   },
   plugins: [
     `gatsby-plugin-sitemap`,
@@ -45,23 +45,13 @@ module.exports = {
         icon: `src/images/favicon.png`,
       },
     },
-    'gatsby-plugin-svgr',
-    'gatsby-plugin-emotion',
+    "gatsby-plugin-svgr",
+    "gatsby-plugin-emotion",
+    "gatsby-plugin-offline",
     {
-      resolve: `gatsby-source-facebook`,
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        places: [`TCFranconvilleOfficiel`],
-        params: {
-          fields: fbQuery,
-        },
-        key: process.env.FB_TOKEN,
-      },
-    },
-    'gatsby-plugin-offline',
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: 'UA-156539845-1',
+        trackingId: "UA-156539845-1",
         head: false,
         respectDNT: true,
       },

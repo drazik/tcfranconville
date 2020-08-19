@@ -2029,6 +2029,33 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@react-hook/latest@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@react-hook/latest/-/latest-1.0.2.tgz#767eb6974f91eef353981b8b60a87147dadecb18"
+  integrity sha512-zLtOIToct1EBTbwldkMJsXC2eCsmWOOP7z6UG0M/sCgnPExtIjvVMCpPESvPnMbQzDZytXVy0nvMbUuK2gZs2A==
+
+"@react-hook/passive-layout-effect@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@react-hook/passive-layout-effect/-/passive-layout-effect-1.2.0.tgz#1232f0b08f9bfd9f87a2898a3ae50d5f7731d806"
+  integrity sha512-obGcMHoeiG/qp9djzlxwvlsAzL4a+JFaxTLvJv8GykipmS/TEkfvdcpu6orE1ZL4dAT7OpoGwHDc/LGJbkZzXQ==
+
+"@react-hook/resize-observer@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@react-hook/resize-observer/-/resize-observer-1.1.0.tgz#cb433810894c75f4ced87254507dd84808a7f13b"
+  integrity sha512-ERM7omDqG/ZzNQz061XHCfYXxGiX68Y46sVi8/ZHjjz7NbZQSxt+dnGkhfEbfsK+JxIzSqSfiXh2pNUl6aYQWA==
+  dependencies:
+    "@react-hook/latest" "^1.0.2"
+    "@react-hook/passive-layout-effect" "^1.2.0"
+    resize-observer-polyfill "^1.5.1"
+
+"@react-hook/size@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@react-hook/size/-/size-2.1.0.tgz#21ddd4a8b733f2931aeed8428c70b610476ec0a0"
+  integrity sha512-WP9NIFNZ0h31he+XsdAZsk0Zwr/eECmYvb1CaYiMaWXpWtEmudthQLpl3IG50LhTuAxO5fBP1XZ2CQPA136/Yg==
+  dependencies:
+    "@react-hook/passive-layout-effect" "^1.2.0"
+    "@react-hook/resize-observer" "^1.1.0"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -4022,6 +4049,11 @@ camelcase@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-6.0.0.tgz#5259f7c30e35e278f1bdc2a4d91230b37cad981e"
   integrity sha512-8KMDF1Vz2gzOq54ONPJS65IvTUaB1cHJ2DMM7MbPmLZljDH1qpzzLsWdiN9pHh6qvkRVDTi/07+eNGch/oLU4w==
+
+can-use-dom@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/can-use-dom/-/can-use-dom-0.1.0.tgz#22cc4a34a0abc43950f42c6411024a3f6366b45a"
+  integrity sha1-IsxKNKCrxDlQ9CxkEQJKP2NmtFo=
 
 caniuse-api@^3.0.0:
   version "3.0.0"
@@ -12612,6 +12644,15 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
 
+react-facebook@^8.1.4:
+  version "8.1.4"
+  resolved "https://registry.yarnpkg.com/react-facebook/-/react-facebook-8.1.4.tgz#77703557594be4ef188e33c42a4b2aa9aa9d048c"
+  integrity sha512-OVV9+h8jR4Us94ymHyrKpf33WqPX4+3vJvCFEV6ynaW80TC6rucYouQtRSv7G3oW+Tb+qAx8z8DZPYJfIVRW+A==
+  dependencies:
+    "@babel/runtime" "^7.7.2"
+    can-use-dom "^0.1.0"
+    react-spinner-children "^1.0.8"
+
 react-fast-compare@^3.1.1:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
@@ -12697,6 +12738,14 @@ react-side-effect@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-side-effect/-/react-side-effect-2.1.0.tgz#1ce4a8b4445168c487ed24dab886421f74d380d3"
   integrity sha512-IgmcegOSi5SNX+2Snh1vqmF0Vg/CbkycU9XZbOHJlZ6kMzTmi3yc254oB1WCkgA7OQtIAoLmcSFuHTc/tlcqXg==
+
+react-spinner-children@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/react-spinner-children/-/react-spinner-children-1.0.8.tgz#6fdd6a89593c5f233bb56f4deccb812382e6ca74"
+  integrity sha1-b91qiVk8XyM7tW9N7MuBI4LmynQ=
+  dependencies:
+    prop-types "^15.6.0"
+    spin.js "^2.3.2"
 
 react-swipeable@^5.5.0:
   version "5.5.1"
@@ -13170,6 +13219,11 @@ requires-port@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/requires-port/-/requires-port-1.0.0.tgz#925d2601d39ac485e091cf0da5c6e694dc3dcaff"
   integrity sha1-kl0mAdOaxIXgkc8NpcbmlNw9yv8=
+
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-cwd@^2.0.0:
   version "2.0.0"
@@ -14003,6 +14057,11 @@ spdy@^4.0.2:
     http-deceiver "^1.2.7"
     select-hose "^2.0.0"
     spdy-transport "^3.0.0"
+
+spin.js@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/spin.js/-/spin.js-2.3.2.tgz#6caa56d520673450fd5cfbc6971e6d0772c37a1a"
+  integrity sha1-bKpW1SBnNFD9XPvGlx5tB3LDeho=
 
 split-on-first@^1.0.0:
   version "1.1.0"

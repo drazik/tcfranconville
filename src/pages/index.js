@@ -8,12 +8,13 @@ import { Text } from "../components/Text"
 import { Button } from "../components/Button"
 import SEO from "../components/seo"
 import { Stack } from "../components/Stack"
-import { Post } from "../components/Post"
+import { FacebookProvider, Page } from "react-facebook"
+import useSize from "@react-hook/size"
+import { ExternalLink } from "../components/ExternalLink"
 
 const IndexPage = ({ data }) => {
-  const [post] = data.allFacebookPosts.edges
-    .map((edge) => edge.node)
-    .filter((post) => post.message)
+  const fbFeedRef = React.useRef(null)
+  const [width] = useSize(fbFeedRef)
 
   return (
     <>
@@ -156,11 +157,20 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>L'actualité du club</SectionTitle>
-            <Post post={post} />
-            <div css={{ textAlign: "center" }}>
-              <Button as={Link} to="/actualite" variant="primary">
-                Voir plus d'actualités
-              </Button>
+            <Text>
+              Vous pouvez suivre l'actualité du club sur la page Facebook{" "}
+              <ExternalLink href="https://www.facebook.com/TCFranconvilleOfficiel">
+                TC Franconville Officiel
+              </ExternalLink>
+            </Text>
+            <div ref={fbFeedRef}>
+              <FacebookProvider appId="2196169050680329" key={width}>
+                <Page
+                  href="https://www.facebook.com/TCFranconvilleOfficiel/"
+                  tabs="timeline"
+                  width={width}
+                />
+              </FacebookProvider>
             </div>
           </Stack>
         </Wrapper>
@@ -171,31 +181,6 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allFacebookPosts {
-      edges {
-        node {
-          id
-          message
-          created_time
-          permalink_url
-          attachments {
-            data {
-              url
-              type
-              title
-              media {
-                image {
-                  height
-                  src
-                  width
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
     teachingImage: file(relativePath: { eq: "teaching-card.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 690) {
