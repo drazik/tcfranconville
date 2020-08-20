@@ -11,7 +11,7 @@ export const FacebookFeed = (props) => {
 
   return (
     <Stack>
-      <Text>
+      <Text css={{ textAlign: "center" }}>
         Vous pouvez suivre l'actualité du club sur la page Facebook{" "}
         <ExternalLink href="https://www.facebook.com/TCFranconvilleOfficiel">
           TC Franconville Officiel
