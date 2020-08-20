@@ -17,7 +17,7 @@ export const FacebookFeed = (props) => {
           TC Franconville Officiel
         </ExternalLink>
       </Text>
-      <div ref={ref}>
+      <div ref={ref} css={{ textAlign: "center" }}>
         <FacebookProvider appId="2196169050680329" key={width}>
           <Page
             href="https://www.facebook.com/TCFranconvilleOfficiel/"
