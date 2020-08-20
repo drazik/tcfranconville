@@ -8,13 +8,9 @@ import { Text } from "../components/Text"
 import { Button } from "../components/Button"
 import SEO from "../components/seo"
 import { Stack } from "../components/Stack"
-import { Post } from "../components/Post"
+import { FacebookFeed } from "../components/FacebookFeed"
 
 const IndexPage = ({ data }) => {
-  const [post] = data.allFacebookPosts.edges
-    .map((edge) => edge.node)
-    .filter((post) => post.message)
-
   return (
     <>
       <SEO title="Accueil" />
@@ -156,12 +152,7 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>L'actualité du club</SectionTitle>
-            <Post post={post} />
-            <div css={{ textAlign: "center" }}>
-              <Button as={Link} to="/actualite" variant="primary">
-                Voir plus d'actualités
-              </Button>
-            </div>
+            <FacebookFeed />
           </Stack>
         </Wrapper>
       </Section>
@@ -171,31 +162,6 @@ const IndexPage = ({ data }) => {
 
 export const query = graphql`
   query HomePageQuery {
-    allFacebookPosts {
-      edges {
-        node {
-          id
-          message
-          created_time
-          permalink_url
-          attachments {
-            data {
-              url
-              type
-              title
-              media {
-                image {
-                  height
-                  src
-                  width
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-
     teachingImage: file(relativePath: { eq: "teaching-card.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 690) {

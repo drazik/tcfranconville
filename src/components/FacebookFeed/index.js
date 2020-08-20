@@ -1,25 +1,31 @@
 import React from "react"
+import { FacebookProvider, Page } from "react-facebook"
+import useSize from "@react-hook/size"
+import { Stack } from "../Stack"
+import { ExternalLink } from "../ExternalLink"
+import { Text } from "../Text"
 
 export const FacebookFeed = (props) => {
+  const ref = React.useRef(null)
+  const [width] = useSize(ref)
+
   return (
-    <iframe
-      src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FTCFranconvilleOfficiel%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-      css={{
-        border: "none",
-        overflow: "hidden",
-        width: "100%",
-        maxWidth: 340,
-        height: 500,
-        display: "block",
-        marginLeft: "auto",
-        marginRight: "auto",
-      }}
-      scrolling="no"
-      frameBorder="0"
-      allowtransparency="true"
-      allow="encrypted-media"
-      title="Faceboook feed"
-      {...props}
-    />
+    <Stack>
+      <Text css={{ textAlign: "center" }}>
+        Vous pouvez suivre l'actualité du club sur la page Facebook{" "}
+        <ExternalLink href="https://www.facebook.com/TCFranconvilleOfficiel">
+          TC Franconville Officiel
+        </ExternalLink>
+      </Text>
+      <div ref={ref} css={{ textAlign: "center" }}>
+        <FacebookProvider appId="2196169050680329" key={width}>
+          <Page
+            href="https://www.facebook.com/TCFranconvilleOfficiel/"
+            tabs="timeline"
+            width={width}
+          />
+        </FacebookProvider>
+      </div>
+    </Stack>
   )
 }
