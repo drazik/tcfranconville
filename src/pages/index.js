@@ -8,14 +8,9 @@ import { Text } from "../components/Text"
 import { Button } from "../components/Button"
 import SEO from "../components/seo"
 import { Stack } from "../components/Stack"
-import { FacebookProvider, Page } from "react-facebook"
-import useSize from "@react-hook/size"
-import { ExternalLink } from "../components/ExternalLink"
+import { FacebookFeed } from "../components/FacebookFeed"
 
 const IndexPage = ({ data }) => {
-  const fbFeedRef = React.useRef(null)
-  const [width] = useSize(fbFeedRef)
-
   return (
     <>
       <SEO title="Accueil" />
@@ -157,21 +152,7 @@ const IndexPage = ({ data }) => {
         <Wrapper>
           <Stack spacing="l">
             <SectionTitle>L'actualité du club</SectionTitle>
-            <Text>
-              Vous pouvez suivre l'actualité du club sur la page Facebook{" "}
-              <ExternalLink href="https://www.facebook.com/TCFranconvilleOfficiel">
-                TC Franconville Officiel
-              </ExternalLink>
-            </Text>
-            <div ref={fbFeedRef}>
-              <FacebookProvider appId="2196169050680329" key={width}>
-                <Page
-                  href="https://www.facebook.com/TCFranconvilleOfficiel/"
-                  tabs="timeline"
-                  width={width}
-                />
-              </FacebookProvider>
-            </div>
+            <FacebookFeed />
           </Stack>
         </Wrapper>
       </Section>
