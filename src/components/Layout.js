@@ -15,8 +15,11 @@ const Layout = (props) => {
         <Reset />
         <StickyBanner>
           <Text component="strong">Information : </Text>
-          <Text component="span">Le club réouvre à partir du 15 mai.</Text>{" "}
-          <Link to="/coronavirus-reouverture">En savoir plus.</Link>
+          <Text component="span">
+            Les journées portes ouvertes du club auront lieu les 5 et 6
+            septembre 2020 de 10h à 17h.
+          </Text>{" "}
+          <Link to="/portes-ouvertes-2020">En savoir plus.</Link>
         </StickyBanner>
         <Header />
         {props.children}
