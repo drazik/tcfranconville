@@ -4,6 +4,7 @@ import useSize from "@react-hook/size"
 import { Stack } from "../Stack"
 import { ExternalLink } from "../ExternalLink"
 import { Text } from "../Text"
+import { Builder } from "@builder.io/react"
 
 export const FacebookFeed = (props) => {
   const ref = React.useRef(null)
@@ -29,3 +30,7 @@ export const FacebookFeed = (props) => {
     </Stack>
   )
 }
+
+Builder.registerComponent(FacebookFeed, {
+  name: "Facebook feed",
+})

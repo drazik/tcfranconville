@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { BuilderComponent } from "@builder.io/react"
 import "@builder.io/widgets"
 import { init } from "../helpers/builderio"
+import "../components/FacebookFeed"
 
 init()
 
