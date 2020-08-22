@@ -1,18 +1,5 @@
-require("dotenv").config({ path: `.env.${process.env.NODE_ENV}` })
-
-const fbQuery = `posts {
-  message,
-  created_time,
-  id,
-  permalink_url,
-  attachments {
-    url,
-    type,
-    title,
-    media,
-    target
-  }
-}`
+const path = require("path")
+require("dotenv").config({ path: `.env` })
 
 module.exports = {
   siteMetadata: {
@@ -54,6 +41,16 @@ module.exports = {
         trackingId: "UA-156539845-1",
         head: false,
         respectDNT: true,
+      },
+    },
+    {
+      resolve: "@builder.io/gatsby",
+      options: {
+        publicAPIKey: process.env.GATSBY_BUILDERIO_API_KEY,
+        custom404Dev: path.resolve("src/pages/404.js"),
+        templates: {
+          page: path.resolve("src/templates/page.js"),
+        },
       },
     },
   ],

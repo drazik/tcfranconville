@@ -5,6 +5,9 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@builder.io/gatsby": "^1.0.9",
+    "@builder.io/react": "^1.1.25",
+    "@builder.io/widgets": "^1.2.12",
     "@emotion/core": "^10.0.9",
     "@emotion/styled": "^10.0.9",
     "@react-hook/size": "^2.1.0",
