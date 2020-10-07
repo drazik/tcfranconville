@@ -99,8 +99,8 @@ const CompetitionPage = ({ data }) => {
                 </SectionTitle>
                 <Stack spacing="m">
                   <Text>
-                    Le TCF est un des rares clubs du Val d'Oise à présenter 3
-                    équipes dames et 2 équipes messieurs en Potel. Les équipes 1
+                    Le TCF est un des rares clubs du Val d'Oise à présenter 2
+                    équipes dames et 1 équipes messieurs en Potel. Les équipes 1
                     sont en série 1 et remportent régulièrement le championnat
                     du Val d'Oise
                   </Text>
@@ -203,13 +203,20 @@ const CompetitionPage = ({ data }) => {
                     </Text>
                     <Text>
                       Catégories : simples dames (senior, 35, 45, 55) ; simples
-                      messieurs (senior, 35, 45, 55, 65) ; filles/garçons (U12,
-                      U14, U16, U18)
+                      messieurs (senior, 35, 45, 55, 60, 65, 70, 75) ;
+                      filles/garçons (U12, U14, U16, U18)
                     </Text>
                     <Text>
-                      La 38ème édition du tournoi open du TCF aura lieu du 7 au
-                      23 août 2020
+                      La 39ème édition du tournoi open du TCF aura lieu du 7
+                      août au 22 août 2021
                     </Text>
+                    <Button
+                      as={ExternalLink}
+                      href="https://tenup.fft.fr/tournoi/82240888"
+                      variant="primary"
+                    >
+                      Voir sur Tenup
+                    </Button>
                   </Stack>
                 </Stack>
                 <Slider>
@@ -224,7 +231,7 @@ const CompetitionPage = ({ data }) => {
               </TwoCol>
               <TwoCol reversed align="center">
                 <Stack spacing="l">
-                  <SectionTitle>Tournoi Open hiver</SectionTitle>
+                  <SectionTitle>Tournoi Open Seniors hiver</SectionTitle>
                   <Stack spacing="m">
                     <Text>
                       Organisé entre fin novembre et début décembre en semaine.
@@ -232,13 +239,23 @@ const CompetitionPage = ({ data }) => {
                       dernière rotation à 15h), du lundi au vendredi
                     </Text>
                     <Text>
-                      Deux catégories : simple messieurs senior et simple dames
-                      senior
+                      Prochaine édition du 16 novembre au vendredi 4 décembre
+                      2020
                     </Text>
-                    <Text>
-                      La prochaine édition du tournoi Open journée aura lieu en
-                      novembre 2020
-                    </Text>
+                    <Stack spacing="s">
+                      <Text>Catégories&nbsp;:</Text>
+                      <List>
+                        <ListItem>Seniors dames</ListItem>
+                        <ListItem>Seniors messieurs</ListItem>
+                      </List>
+                    </Stack>
+                    <Button
+                      as={ExternalLink}
+                      href="https://tenup.fft.fr/tournoi/82240880"
+                      variant="primary"
+                    >
+                      Voir sur Tenup
+                    </Button>
                   </Stack>
                 </Stack>
                 <Slider>
@@ -260,9 +277,15 @@ const CompetitionPage = ({ data }) => {
                       journée en semaine à des joueurs d'Île de France au club
                       de Franconville au mois de mars et sur terre battue
                     </Text>
-                    <Text>
-                      Prochaine édition du 28 septebmre au 16 octobre 2020.
-                    </Text>
+                    <Stack spacing="s">
+                      <Text>Prochaines éditions&nbsp;:</Text>
+                      <List>
+                        <ListItem>du 28 septembre au 16 octobre 2020</ListItem>
+                        <ListItem>
+                          du 29 mars au vendredi 16 avril 2021
+                        </ListItem>
+                      </List>
+                    </Stack>
                     <Stack spacing="s">
                       <Text>Catégories&nbsp;:</Text>
                       <List>
