@@ -13,14 +13,6 @@ const Layout = (props) => {
     <ThemeProvider theme={theme}>
       <>
         <Reset />
-        <StickyBanner>
-          <Text component="strong">Information : </Text>
-          <Text component="span">
-            Les journées portes ouvertes du club auront lieu les 5 et 6
-            septembre 2020 de 10h à 17h.
-          </Text>{" "}
-          <Link to="/portes-ouvertes-2020">En savoir plus.</Link>
-        </StickyBanner>
         <Header />
         {props.children}
         <Footer />
