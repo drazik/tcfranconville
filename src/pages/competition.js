@@ -5,7 +5,7 @@ import {
   SectionTitleDetails,
 } from "../components/Section"
 import Wrapper from "../components/Wrapper"
-import { Text } from "../components/Text"
+import { Text, List, ListItem } from "../components/Text"
 import SEO from "../components/seo"
 import { PageTitle } from "../components/PageTitle"
 import { PageDescription } from "../components/PageDescription"
@@ -15,6 +15,8 @@ import { Slider as BaseSlider, Slide } from "../components/Slider"
 import Ratio from "react-ratio"
 import { graphql } from "gatsby"
 import { FluidBgImg } from "../components/FluidBgImg"
+import { Button } from "../components/Button"
+import { ExternalLink } from "../components/ExternalLink"
 
 const Slider = (props) => {
   return (
@@ -258,7 +260,26 @@ const CompetitionPage = ({ data }) => {
                       journée en semaine à des joueurs d'Île de France au club
                       de Franconville au mois de mars et sur terre battue
                     </Text>
-                    <Text>Prochaine édition du 16 mars au 3 avril 2020</Text>
+                    <Text>
+                      Prochaine édition du 28 septebmre au 16 octobre 2020.
+                    </Text>
+                    <Stack spacing="s">
+                      <Text>Catégories&nbsp;:</Text>
+                      <List>
+                        <ListItem>Dames 55 ans et 65 ans</ListItem>
+                        <ListItem>
+                          Messieurs 60 ans, 65 ans, 70 ans et 75 ans
+                        </ListItem>
+                      </List>
+                    </Stack>
+
+                    <Button
+                      as={ExternalLink}
+                      href="https://tenup.fft.fr/tournoi/82240865"
+                      variant="primary"
+                    >
+                      Voir sur Tenup
+                    </Button>
                   </Stack>
                 </Stack>
                 <Slider>
