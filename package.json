@@ -1,74 +1,21 @@
 {
-  "name": "gatsby-starter-default",
-  "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "name": "tcfranconville",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
   "dependencies": {
-    "@emotion/core": "^10.0.9",
-    "@emotion/styled": "^10.0.9",
-    "@react-hook/size": "^2.1.0",
-    "@svgr/webpack": "^5.4.0",
-    "date-fns": "^2.6.0",
-    "emotion-theming": "^10.0.9",
-    "gatsby": "^2.1.27",
-    "gatsby-image": "^2.0.31",
-    "gatsby-plugin-google-analytics": "^2.1.33",
-    "gatsby-plugin-manifest": "^2.2.37",
-    "gatsby-plugin-offline": "^3.0.31",
-    "gatsby-plugin-react-helmet": "^3.0.8",
-    "gatsby-plugin-sharp": "^2.0.25",
-    "gatsby-plugin-sitemap": "^2.2.25",
-    "gatsby-plugin-svgr": "^2.0.2",
-    "gatsby-source-facebook": "^2.0.1",
-    "gatsby-source-filesystem": "^2.0.23",
-    "gatsby-transformer-sharp": "^2.1.15",
-    "lodash": "^4.17.19",
-    "polished": "^3.0.4",
+    "classnames": "^2.2.6",
+    "next": "9.5.5",
+    "next-images": "^1.6.0",
     "prop-types": "^15.7.2",
-    "react": "^16.8.4",
-    "react-day-picker": "^7.3.0",
-    "react-dom": "^16.8.4",
-    "react-facebook": "^8.1.4",
-    "react-helmet": "^6.1.0",
-    "react-modal": "^3.9.1",
-    "react-ratio": "^0.1.5",
-    "react-swipeable": "^5.5.0",
-    "snarkdown": "^1.2.2"
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
-    "babel-jest": "^26.1.0",
-    "babel-preset-gatsby": "^0.4.12",
-    "clipboardy": "^2.3.0",
-    "dotenv": "^8.2.0",
-    "gatsby-plugin-emotion": "^4.0.6",
-    "identity-obj-proxy": "^3.0.0",
-    "inquirer": "^7.2.0",
-    "jest": "^26.1.0",
-    "node-fetch": "^2.6.0",
-    "prettier": "^2.0.5"
-  },
-  "keywords": [
-    "gatsby"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write src/**/*.{js,jsx}",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "test": "jest",
-    "now-build": "npm run build"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  },
-  "engines": {
-    "node": ">=10.x"
+    "tailwindcss": "^1.9.4"
   }
 }
