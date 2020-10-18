@@ -46,14 +46,14 @@ function MenuButton({ className, open, ...props }) {
       {...props}
     >
       <MenuButtonLine
-        className={cn("transition-opacity duration-150", {
+        className={cn("transition-opacity duration-300", {
           "opacity-0": open,
           "opacity-100": !open,
         })}
         style={{ transform: "translateY(-50%) translateX(-50%)" }}
       />
       <MenuButtonLine
-        className="transition-transform duration-150 origin-center"
+        className="transition-transform duration-300 origin-center"
         style={{
           transform: `translateY(-50%) translateX(-50%) ${
             open ? "rotate(45deg)" : "translateY(-6px)"
@@ -61,7 +61,7 @@ function MenuButton({ className, open, ...props }) {
         }}
       />
       <MenuButtonLine
-        className="transition-transform duration-150 origin-center"
+        className="transition-transform duration-300 origin-center"
         style={{
           transform: ` translateY(-50%) translateX(-50%) ${
             open ? "rotate(-45deg)" : "translateY(6px)"
@@ -98,7 +98,14 @@ MenuButtonLine.propTypes = {
 function Menu({ open, onClose, className, ...props }) {
   return (
     <div
-      className={cn("fixed top-0 left-0 z-10 w-full h-screen", className)}
+      className={cn(
+        "fixed top-0 left-0 z-10 w-full h-screen transition-all duration-500",
+        className,
+        {
+          visible: open,
+          invisible: !open,
+        }
+      )}
       {...props}
     >
       <div
