@@ -116,13 +116,55 @@ function Menu({ open, onClose, className, ...props }) {
       >
         <div className="h-full overflow-y-auto space-y-8">
           <div className="pt-32 pb-8 space-y-8">
-            <MenuLink href="/">Accueil</MenuLink>
-            <MenuLink href="/">Enseignement</MenuLink>
-            <MenuLink href="/">Animations</MenuLink>
-            <MenuLink href="/">Le club</MenuLink>
-            <MenuLink href="/">Tarifs</MenuLink>
-            <MenuLink href="/">Réservation</MenuLink>
-            <MenuLink href="/">Actualité</MenuLink>
+            <MenuLink
+              href="/"
+              visible={open}
+              style={{ transitionDelay: "200ms" }}
+            >
+              Accueil
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "300ms" }}
+              visible={open}
+            >
+              Enseignement
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "400ms" }}
+              visible={open}
+            >
+              Animations
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "500ms" }}
+              visible={open}
+            >
+              Le club
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "600ms" }}
+              visible={open}
+            >
+              Tarifs
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "700ms" }}
+              visible={open}
+            >
+              Réservation
+            </MenuLink>
+            <MenuLink
+              href="/"
+              style={{ transitionDelay: "800ms" }}
+              visible={open}
+            >
+              Actualité
+            </MenuLink>
           </div>
         </div>
       </div>
@@ -136,14 +178,19 @@ Menu.propTypes = {
   className: PropTypes.string,
 }
 
-function MenuLink({ children, className, ...props }) {
+function MenuLink({ children, className, visible, href, ...props }) {
   return (
-    <Link {...props}>
+    <Link href={href}>
       <a
         className={cn(
-          "block text-white uppercase tracking-wide font-semibold text-2xl px-8",
-          className
+          "block text-white uppercase tracking-wide font-semibold text-2xl px-8 transition-all duration-300 transform",
+          className,
+          {
+            "opacity-100 translate-x-0": visible,
+            "opacity-0 -translate-x-full": !visible,
+          }
         )}
+        {...props}
       >
         {children}
       </a>
