@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import { Wrapper } from "../Wrapper"
 import { Logo } from "../Logo"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import cn from "classnames"
 
 export function Header({ className, style = {}, ...props }) {
@@ -131,42 +132,42 @@ function Menu({ open, onClose, className, ...props }) {
               Accueil
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/enseignement"
               style={{ transitionDelay: "300ms" }}
               visible={open}
             >
               Enseignement
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/animations"
               style={{ transitionDelay: "400ms" }}
               visible={open}
             >
               Animations
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/le-club"
               style={{ transitionDelay: "500ms" }}
               visible={open}
             >
               Le club
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/tarifs"
               style={{ transitionDelay: "600ms" }}
               visible={open}
             >
               Tarifs
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/reservation"
               style={{ transitionDelay: "700ms" }}
               visible={open}
             >
               Réservation
             </MenuLink>
             <MenuLink
-              href="/"
+              href="/actualite"
               style={{ transitionDelay: "800ms" }}
               visible={open}
             >
@@ -186,6 +187,8 @@ Menu.propTypes = {
 }
 
 function MenuLink({ children, className, visible, href, ...props }) {
+  const router = useRouter()
+
   return (
     <Link href={href}>
       <a
@@ -195,6 +198,7 @@ function MenuLink({ children, className, visible, href, ...props }) {
           {
             "opacity-100 translate-x-0": visible,
             "opacity-0 -translate-x-full": !visible,
+            underline: router.pathname === href,
           }
         )}
         {...props}
