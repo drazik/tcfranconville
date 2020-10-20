@@ -13,7 +13,19 @@ module.exports = {
         "1/2": "50%",
       },
     },
+    typography: {
+      default: {
+        css: {
+          color: "inherit",
+        },
+      },
+    },
   },
-  variants: {},
-  plugins: [require("tailwindcss-textshadow")],
+  variants: {
+    backgroundColor: ["responsive", "hover", "focus", "active"],
+  },
+  plugins: [
+    require("tailwindcss-textshadow"),
+    require("@tailwindcss/typography"),
+  ],
 }
