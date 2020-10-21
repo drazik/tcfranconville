@@ -8,10 +8,12 @@ import competitionBackground from "./competition.jpg"
 import animationBackground from "./animation.jpg"
 import { FacebookFeed } from "../components/FacebookFeed"
 import { Button } from "../components/Button"
+import { SEO } from "../components/SEO"
 
 export default function Home() {
   return (
     <>
+      <SEO title="Accueil" />
       <Section variant="brand" skewed>
         <Wrapper>
           <div className="space-y-8">
