@@ -10,7 +10,7 @@ export function Footer({ className, style, ...props }) {
 
   return (
     <footer
-      className={cn("bg-cover bg-center py-4", className)}
+      className={cn("bg-cover bg-center py-4 bg-fixed", className)}
       style={{ backgroundImage: `url(${background})`, ...style }}
       {...props}
     >

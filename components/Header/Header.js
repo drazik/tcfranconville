@@ -12,7 +12,7 @@ export function Header({ className, style = {}, ...props }) {
 
   return (
     <header
-      className={`h-40 bg-center bg-cover flex items-center ${className}`}
+      className={`h-40 bg-center bg-cover flex items-center bg-fixed ${className}`}
       style={{ backgroundImage: `url(${background})`, ...style }}
       {...props}
     >
