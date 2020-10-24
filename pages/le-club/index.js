@@ -5,6 +5,7 @@ import { TwoCol } from "../../components/TwoCol"
 import { Illustration } from "../../components/Illustration"
 import installationsIllustration from "./installations.jpg"
 import cn from "classnames"
+import { Button } from "../../components/Button"
 
 export default function LeClubPage() {
   return (
@@ -146,7 +147,7 @@ export default function LeClubPage() {
   )
 }
 
-function Partner({ logo, name, description, className, ...props }) {
+function Partner({ logo, name, description, className, url, ...props }) {
   return (
     <div
       className={cn(
@@ -155,10 +156,20 @@ function Partner({ logo, name, description, className, ...props }) {
       )}
       {...props}
     >
-      <img src={logo} alt="" className="max-w-full lg:max-w-16" />
-      <div className="flex flex-col items-center space-y-4">
+      <img
+        src={logo}
+        alt=""
+        className="flex-grow-0 flex-shrink-0"
+        style={{ maxWidth: "200px" }}
+      />
+      <div className="flex flex-col items-center space-y-4 lg:items-start">
         <div className="text-2xl font-semibold">{name}</div>
         <div className="prose max-w-none">{description}</div>
+        {url ? (
+          <Button component="a" href={url} target="_blank" color="brand">
+            En savoir plus
+          </Button>
+        ) : null}
       </div>
     </div>
   )
