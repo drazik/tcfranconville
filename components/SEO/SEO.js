@@ -6,6 +6,7 @@ export function SEO({ title, description, keywords }) {
 
   return (
     <Head>
+      <meta name="viewport" content="width=device-width,initial-scale=1" />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       <meta property="og:title" content={fullTitle} />

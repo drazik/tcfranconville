@@ -33,7 +33,7 @@ export function Header({ className, style = {}, ...props }) {
             <Logo />
           </a>
         </Link>
-        <div className="hiden xl:block">
+        <div className="hidden xl:block">
           <LargeMenu items={items} />
         </div>
       </Wrapper>
