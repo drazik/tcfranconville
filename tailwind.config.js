@@ -15,6 +15,9 @@ module.exports = {
       spacing: {
         96: "24rem",
       },
+      maxWidth: {
+        16: "4rem",
+      },
     },
     typography: {
       default: {
