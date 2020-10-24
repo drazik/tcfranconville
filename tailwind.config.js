@@ -12,6 +12,9 @@ module.exports = {
       inset: {
         "1/2": "50%",
       },
+      spacing: {
+        96: "24rem",
+      },
     },
     typography: {
       default: {

@@ -10,26 +10,45 @@ import cn from "classnames"
 export function Header({ className, style = {}, ...props }) {
   const [open, setOpen] = useState(false)
 
+  const items = [
+    { href: "/", label: "Accueil" },
+    { href: "/enseignement", label: "Enseignement" },
+    { href: "/competition", label: "Compétition" },
+    { href: "/animations", label: "Animations" },
+    { href: "/le-club", label: "Le club" },
+    { href: "/tarifs", label: "Tarifs" },
+    { href: "/reservation", label: "Réservation" },
+    { href: "/actualite", label: "Actualité" },
+  ]
+
   return (
     <header
-      className={`h-40 bg-center bg-cover flex items-center bg-fixed ${className}`}
+      className={`h-40 bg-center bg-cover flex flex-col justify-center bg-fixed lg:h-64 xl:h-auto py-12 ${className}`}
       style={{ backgroundImage: `url(${background})`, ...style }}
       {...props}
     >
-      <Wrapper className="flex justify-center">
+      <Wrapper className="flex flex-col items-center space-y-8">
         <Link href="/">
           <a>
             <Logo />
           </a>
         </Link>
-        <MenuButton
-          open={open}
-          onClick={() => setOpen(!open)}
-          className="fixed z-20 transform -translate-y-1/2"
-          style={{ top: "5rem", left: `${(1 / 2 / 12) * 100}%` }}
-        />
-        <Menu open={open} onClose={() => setOpen(false)} />
+        <div className="hiden xl:block">
+          <LargeMenu items={items} />
+        </div>
       </Wrapper>
+      <MenuButton
+        open={open}
+        onClick={() => setOpen(!open)}
+        className="fixed z-20 transform -translate-y-1/2 xl:hidden"
+        style={{ top: "5rem", left: `${(1 / 2 / 12) * 100}%` }}
+      />
+      <SmallMenu
+        open={open}
+        onClose={() => setOpen(false)}
+        className="xl:hidden"
+        items={items}
+      />
     </header>
   )
 }
@@ -42,11 +61,19 @@ Header.propTypes = {
 function MenuButton({ className, open, ...props }) {
   return (
     <button
-      className={cn("w-12 h-12 rounded-full bg-brand", className)}
+      className={cn(
+        "w-12 h-12 rounded-full shadow-xl transition-all duration-200",
+        className,
+        {
+          "bg-white": open,
+          "bg-brand": !open,
+        }
+      )}
       type="button"
       {...props}
     >
       <MenuButtonLine
+        open={open}
         className={cn("transition-opacity duration-300", {
           "opacity-0": open,
           "opacity-100": !open,
@@ -54,6 +81,7 @@ function MenuButton({ className, open, ...props }) {
         style={{ transform: "translateY(-50%) translateX(-50%)" }}
       />
       <MenuButtonLine
+        open={open}
         className="transition-transform duration-300 origin-center"
         style={{
           transform: `translateY(-50%) translateX(-50%) ${
@@ -62,6 +90,7 @@ function MenuButton({ className, open, ...props }) {
         }}
       />
       <MenuButtonLine
+        open={open}
         className="transition-transform duration-300 origin-center"
         style={{
           transform: ` translateY(-50%) translateX(-50%) ${
@@ -78,13 +107,13 @@ MenuButton.propTypes = {
   open: PropTypes.bool.isRequired,
 }
 
-function MenuButtonLine({ className, style = {}, ...props }) {
+function MenuButtonLine({ className, style = {}, open, ...props }) {
   return (
     <span
-      className={cn(
-        "absolute w-1/2 bg-white top-1/2 left-1/2 rounded-s",
-        className
-      )}
+      className={cn("absolute w-1/2 top-1/2 left-1/2 rounded-s", className, {
+        "bg-brand": open,
+        "bg-white": !open,
+      })}
       style={{ height: "2px", ...style }}
       {...props}
     />
@@ -94,9 +123,10 @@ function MenuButtonLine({ className, style = {}, ...props }) {
 MenuButtonLine.propTypes = {
   className: PropTypes.string,
   style: PropTypes.object,
+  open: PropTypes.bool.isRequired,
 }
 
-function Menu({ open, onClose, className, ...props }) {
+function SmallMenu({ open, onClose, className, items, ...props }) {
   return (
     <div
       className={cn(
@@ -124,55 +154,16 @@ function Menu({ open, onClose, className, ...props }) {
       >
         <div className="h-full overflow-y-auto space-y-8">
           <div className="pt-32 pb-8 space-y-8">
-            <MenuLink
-              href="/"
-              visible={open}
-              style={{ transitionDelay: "200ms" }}
-            >
-              Accueil
-            </MenuLink>
-            <MenuLink
-              href="/enseignement"
-              style={{ transitionDelay: "300ms" }}
-              visible={open}
-            >
-              Enseignement
-            </MenuLink>
-            <MenuLink
-              href="/animations"
-              style={{ transitionDelay: "400ms" }}
-              visible={open}
-            >
-              Animations
-            </MenuLink>
-            <MenuLink
-              href="/le-club"
-              style={{ transitionDelay: "500ms" }}
-              visible={open}
-            >
-              Le club
-            </MenuLink>
-            <MenuLink
-              href="/tarifs"
-              style={{ transitionDelay: "600ms" }}
-              visible={open}
-            >
-              Tarifs
-            </MenuLink>
-            <MenuLink
-              href="/reservation"
-              style={{ transitionDelay: "700ms" }}
-              visible={open}
-            >
-              Réservation
-            </MenuLink>
-            <MenuLink
-              href="/actualite"
-              style={{ transitionDelay: "800ms" }}
-              visible={open}
-            >
-              Actualité
-            </MenuLink>
+            {items.map((item, index) => (
+              <SmallMenuLink
+                key={item.href}
+                href={item.href}
+                visible={open}
+                style={{ transitionDelay: `${100 + index * 100}ms` }}
+              >
+                {item.label}
+              </SmallMenuLink>
+            ))}
           </div>
         </div>
       </div>
@@ -180,13 +171,19 @@ function Menu({ open, onClose, className, ...props }) {
   )
 }
 
-Menu.propTypes = {
+const itemPropType = PropTypes.shape({
+  href: PropTypes.string,
+  label: PropTypes.string,
+})
+
+SmallMenu.propTypes = {
   open: PropTypes.bool.isRequired,
   onClose: PropTypes.func.isRequired,
   className: PropTypes.string,
+  items: PropTypes.arrayOf(itemPropType).isRequired,
 }
 
-function MenuLink({ children, className, visible, href, ...props }) {
+function SmallMenuLink({ children, className, visible, href, ...props }) {
   const router = useRouter()
 
   return (
@@ -209,7 +206,55 @@ function MenuLink({ children, className, visible, href, ...props }) {
   )
 }
 
-MenuLink.propTypes = {
+SmallMenuLink.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
+}
+
+function LargeMenu({ className, items, ...props }) {
+  return (
+    <nav className={cn("flex space-x-8 w-full justify-center", className)}>
+      {items.map((item) => (
+        <LargeMenuLink key={item.href} href={item.href}>
+          {item.label}
+        </LargeMenuLink>
+      ))}
+    </nav>
+  )
+}
+
+LargeMenu.propTypes = {
+  className: PropTypes.string,
+  items: PropTypes.arrayOf(itemPropType).isRequired,
+}
+
+function LargeMenuLink({ href, className, children, ...props }) {
+  const router = useRouter()
+  const isCurrent = router.pathname === href
+
+  return (
+    <Link href={href}>
+      <a
+        className={cn(
+          "text-white font-bold text-shadow-lg text-xl flex flex-col items-stretch",
+          className
+        )}
+        {...props}
+      >
+        <span>{children}</span>
+        <span
+          className={cn("h-1 bg-brand transition-opacity duration-200", {
+            "opacity-100": isCurrent,
+            "opacity-0": !isCurrent,
+          })}
+        />
+      </a>
+    </Link>
+  )
+}
+
+LargeMenuLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  className: PropTypes.string,
+  children: PropTypes.node,
 }
