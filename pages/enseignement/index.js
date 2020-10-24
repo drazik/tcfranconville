@@ -11,6 +11,7 @@ import PropTypes from "prop-types"
 import cn from "classnames"
 import Link from "next/link"
 import { Button } from "../../components/Button"
+import { TwoCol } from "../../components/TwoCol"
 
 export default function EnseignementPage() {
   return (
@@ -84,142 +85,148 @@ export default function EnseignementPage() {
         <Wrapper>
           <div className="space-y-32">
             <SectionTitle>Notre école de tennis</SectionTitle>
-            <div className="space-y-6 lg:space-y-0 lg:items-center lg:grid lg:grid-cols-2 lg:gap-10">
-              <div className="space-y-6">
-                <SectionTitle subtitle="Pour les enfants 4-6 ans">
-                  Mini-tennis
-                </SectionTitle>
-                <div className="prose max-w-none">
-                  <p>1 heure par semaine.</p>
-                  <p>
-                    4 créneaux de 2019-2020&nbsp;: mercredi matin, vendredi en
-                    début de soirée et samedi matin.
-                  </p>
-                  <p>
-                    Un encadrement adapté au nombre d'enfants&nbsp;: 1 adulte
-                    pour 5 enfants environ.
-                  </p>
-                  <p>Un matériel pédagogique spécifique.</p>
-                  <p>
-                    Compétences travaillées&nbsp;: déveloper la motricité, la
-                    notion d'envoi-renvoi, arriver en fin d'année à effectuer
-                    des petits échanges (notion de partenaire) et des
-                    mini-matchs (notion de compétition).
-                  </p>
-                  <p>
-                    41 enfants inscrits en mini-tennis en 2019-2020, soit une
-                    explosion des effectifs de 70%&nbsp;!
-                  </p>
-                </div>
-                <Info>
-                  <div className="prose">
+            <TwoCol
+              firstCol={
+                <div className="space-y-6">
+                  <SectionTitle subtitle="Pour les enfants 4-6 ans">
+                    Mini-tennis
+                  </SectionTitle>
+                  <div className="prose max-w-none">
+                    <p>1 heure par semaine.</p>
                     <p>
-                      Le club dispose d'un terrain de mini-tennis (dans le mur
-                      du club-house) sur lequel les enfants peuvent librement
-                      venir s'entrainer&nbsp;!
+                      4 créneaux de 2019-2020&nbsp;: mercredi matin, vendredi en
+                      début de soirée et samedi matin.
+                    </p>
+                    <p>
+                      Un encadrement adapté au nombre d'enfants&nbsp;: 1 adulte
+                      pour 5 enfants environ.
+                    </p>
+                    <p>Un matériel pédagogique spécifique.</p>
+                    <p>
+                      Compétences travaillées&nbsp;: déveloper la motricité, la
+                      notion d'envoi-renvoi, arriver en fin d'année à effectuer
+                      des petits échanges (notion de partenaire) et des
+                      mini-matchs (notion de compétition).
+                    </p>
+                    <p>
+                      41 enfants inscrits en mini-tennis en 2019-2020, soit une
+                      explosion des effectifs de 70%&nbsp;!
                     </p>
                   </div>
-                </Info>
-              </div>
-              <div>
-                <Illustration src={minitennisIllustration} />
-              </div>
-            </div>
-            <div className="space-y-6 lg:space-y-0 lg:items-center lg:grid lg:grid-cols-2 lg:gap-10">
-              <div className="order-2 space-y-6">
-                <SectionTitle subtitle="pour les enfants 7-8 ans">
-                  Club junior 1
-                </SectionTitle>
-                <div className="prose max-w-none">
-                  <p>1 heure par semaine</p>
-                  <p>
-                    En 2019-2020, une trentaine d'enfants répartis sur 5
-                    créneaux&nbsp;: mercredi matin et après-midi, samedi matin
-                  </p>
-                  <p>Deux niveaux&nbsp;: initiation et perfectionnement</p>
-                  <p>Une fidélisation d'environ 60% des enfants&nbsp;!</p>
-                </div>
-              </div>
-              <div className="order-1">
-                <Illustration src={junior1Illustration} />
-              </div>
-            </div>
-            <div className="space-y-6 lg:space-y-0 lg:items-center lg:grid lg:grid-cols-2 lg:gap-10">
-              <div className="space-y-6">
-                <SectionTitle subtitle="pour les enfants 9-11 ans">
-                  Club junior 2
-                </SectionTitle>
-                <div className="prose max-w-none">
-                  <p>1h15 par semaine</p>
-                  <p>
-                    9 créneaux en 2019-2020 pour 60 enfants&nbsp;: lundi en fin
-                    d'après-midi, mercredi matin et après-midi, vendredi en fin
-                    d'après-midi, samedi matin et après-midi
-                  </p>
-                  <p>
-                    Trois niveaux&nbsp;: initiation, perfectionnement,
-                    compétition
-                  </p>
-                  <p>
-                    50% des enfants poursuivent le tennis l'année
-                    suivante&nbsp;!
-                  </p>
-                </div>
-                <Info>
-                  <div className="space-y-4">
+                  <Info>
                     <div className="prose">
                       <p>
-                        Pour 95€ seulement, vous pouvez jouer autant que vous le
-                        voulez avec votre enfant inscrit à l'école de tennis et
-                        même réserver un court avec lui&nbsp;! Optez pour la
-                        cotisation parent&nbsp;!
+                        Le club dispose d'un terrain de mini-tennis (dans le mur
+                        du club-house) sur lequel les enfants peuvent librement
+                        venir s'entrainer&nbsp;!
                       </p>
                     </div>
-                    <Link href="/tarifs" passHref>
-                      <Button component="a" className="w-full">
-                        En savoir plus
-                      </Button>
-                    </Link>
-                  </div>
-                </Info>
-              </div>
-              <div>
-                <Illustration src={junior2Illustration} />
-              </div>
-            </div>
-            <div className="space-y-6 lg:space-y-0 lg:items-center lg:grid lg:grid-cols-2 lg:gap-10">
-              <div className="space-y-6 lg:order-2">
-                <SectionTitle subtitle="de 12 à 18 ans">Club ados</SectionTitle>
-                <div className="prose max-w-none">
-                  <p>1h15 par semaine</p>
-                  <p>
-                    Trois niveaux&nbsp;: initiation, perfectionnement,
-                    compétition
-                  </p>
-                  <p>
-                    60 jeunes répartis sur 13 niveaux&nbsp;: lundi et mardi en
-                    fin d'après-midi, mercredi après-midi, samedi après-midi
-                  </p>
-                  <p>
-                    Plus de 70% des ados poursuivent le tennis l'année
-                    suivante&nbsp;!
-                  </p>
-                  <p>Un effectif en hausse de 25% entre 2019 et 2020&nbsp;!</p>
+                  </Info>
                 </div>
-              </div>
-              <div className="lg:order-1">
-                <Illustration src={adosIllustration} />
-              </div>
-            </div>
+              }
+              secondCol={<Illustration src={minitennisIllustration} />}
+            />
+            <TwoCol
+              firstCol={
+                <div className="space-y-6">
+                  <SectionTitle subtitle="pour les enfants 7-8 ans">
+                    Club junior 1
+                  </SectionTitle>
+                  <div className="prose max-w-none">
+                    <p>1 heure par semaine</p>
+                    <p>
+                      En 2019-2020, une trentaine d'enfants répartis sur 5
+                      créneaux&nbsp;: mercredi matin et après-midi, samedi matin
+                    </p>
+                    <p>Deux niveaux&nbsp;: initiation et perfectionnement</p>
+                    <p>Une fidélisation d'environ 60% des enfants&nbsp;!</p>
+                  </div>
+                </div>
+              }
+              secondCol={<Illustration src={junior1Illustration} />}
+              inversed
+            />
+            <TwoCol
+              firstCol={
+                <div className="space-y-6">
+                  <SectionTitle subtitle="pour les enfants 9-11 ans">
+                    Club junior 2
+                  </SectionTitle>
+                  <div className="prose max-w-none">
+                    <p>1h15 par semaine</p>
+                    <p>
+                      9 créneaux en 2019-2020 pour 60 enfants&nbsp;: lundi en
+                      fin d'après-midi, mercredi matin et après-midi, vendredi
+                      en fin d'après-midi, samedi matin et après-midi
+                    </p>
+                    <p>
+                      Trois niveaux&nbsp;: initiation, perfectionnement,
+                      compétition
+                    </p>
+                    <p>
+                      50% des enfants poursuivent le tennis l'année
+                      suivante&nbsp;!
+                    </p>
+                  </div>
+                  <Info>
+                    <div className="space-y-4">
+                      <div className="prose">
+                        <p>
+                          Pour 95€ seulement, vous pouvez jouer autant que vous
+                          le voulez avec votre enfant inscrit à l'école de
+                          tennis et même réserver un court avec lui&nbsp;! Optez
+                          pour la cotisation parent&nbsp;!
+                        </p>
+                      </div>
+                      <Link href="/tarifs" passHref>
+                        <Button component="a" className="w-full">
+                          En savoir plus
+                        </Button>
+                      </Link>
+                    </div>
+                  </Info>
+                </div>
+              }
+              secondCol={<Illustration src={junior2Illustration} />}
+            />
+            <TwoCol
+              firstCol={
+                <div className="space-y-6">
+                  <SectionTitle subtitle="de 12 à 18 ans">
+                    Club ados
+                  </SectionTitle>
+                  <div className="prose max-w-none">
+                    <p>1h15 par semaine</p>
+                    <p>
+                      Trois niveaux&nbsp;: initiation, perfectionnement,
+                      compétition
+                    </p>
+                    <p>
+                      60 jeunes répartis sur 13 niveaux&nbsp;: lundi et mardi en
+                      fin d'après-midi, mercredi après-midi, samedi après-midi
+                    </p>
+                    <p>
+                      Plus de 70% des ados poursuivent le tennis l'année
+                      suivante&nbsp;!
+                    </p>
+                    <p>
+                      Un effectif en hausse de 25% entre 2019 et 2020&nbsp;!
+                    </p>
+                  </div>
+                </div>
+              }
+              secondCol={<Illustration src={adosIllustration} />}
+              inversed
+            />
           </div>
         </Wrapper>
       </Section>
       <Section skewed>
         <Wrapper>
-          <div className="space-y-8">
-            <SectionTitle>Cours adultes</SectionTitle>
-            <div className="space-y-6 lg:space-y-0 lg:items-center lg:grid lg:grid-cols-2 lg:gap-10">
-              <div className="space-y-6">
+          <TwoCol
+            firstCol={
+              <div className="space-y-8">
+                <SectionTitle>Cours adultes</SectionTitle>
                 <div className="prose max-w-none">
                   <p>
                     70% de nos adultes (hors retraite sportive) prennent des
@@ -256,11 +263,9 @@ export default function EnseignementPage() {
                   </ul>
                 </div>
               </div>
-              <div>
-                <Illustration src={adultIllustration} />
-              </div>
-            </div>
-          </div>
+            }
+            secondCol={<Illustration src={adultIllustration} />}
+          />
         </Wrapper>
       </Section>
       <Section variant="brand">
