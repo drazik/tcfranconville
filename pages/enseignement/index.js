@@ -12,6 +12,7 @@ import cn from "classnames"
 import Link from "next/link"
 import { Button } from "../../components/Button"
 import { TwoCol } from "../../components/TwoCol"
+import { Illustration } from "../../components/Illustration"
 
 export default function EnseignementPage() {
   return (
@@ -342,20 +343,5 @@ function Info({ children, className, ...props }) {
 
 Info.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-}
-
-function Illustration({ alt = "", className, ...props }) {
-  return (
-    <img
-      alt={alt}
-      className={cn("max-w-full rounded-xl shadow-xl mx-auto", className)}
-      {...props}
-    />
-  )
-}
-
-Illustration.propTypes = {
-  alt: PropTypes.string,
   className: PropTypes.string,
 }
