@@ -43,17 +43,23 @@ export function ImagesCarousel({ images, className, ...props }) {
               {...handlers}
               style={{ ...style, touchAction: "pan-x" }}
             >
-              <div className="w-full">{slides[length - 1]}</div>
+              {length > 1 ? (
+                <div className="w-full">{slides[length - 1]}</div>
+              ) : null}
               {slides.map((slide, index) => (
                 <div className="w-full" key={index}>
                   {slide}
                 </div>
               ))}
-              <div className="w-full">{slides[0]}</div>
+              {length > 1 ? <div className="w-full">{slides[0]}</div> : null}
             </div>
           </div>
-          <Control direction="left" onClick={previous} className="left-0" />
-          <Control direction="right" onClick={next} className="right-0" />
+          {length > 1 ? (
+            <>
+              <Control direction="left" onClick={previous} className="left-0" />
+              <Control direction="right" onClick={next} className="right-0" />
+            </>
+          ) : null}
         </div>
         <div
           className="absolute left-0 flex justify-center w-full space-x-4"

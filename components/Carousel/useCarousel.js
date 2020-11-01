@@ -115,8 +115,8 @@ export function useCarousel({ length, interval }) {
 
   const style = {
     transform: `translateX(0)`,
-    width: `${100 * (length + 2)}%`,
-    left: `-${(state.active + 1) * 100}%`,
+    width: length > 1 ? `${100 * (length + 2)}%` : "100%",
+    left: length > 1 ? `-${(state.active + 1) * 100}%` : "0",
   }
 
   if (state.desired !== state.active) {
@@ -140,7 +140,7 @@ export function useCarousel({ length, interval }) {
     (n) => dispatch({ type: "jump", desired: n }),
     () => dispatch({ type: "prev", length }),
     () => dispatch({ type: "next", length }),
-    handlers,
+    length > 1 ? handlers : {},
     style,
   ]
 }
