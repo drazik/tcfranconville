@@ -14,6 +14,7 @@ module.exports = {
       },
       spacing: {
         96: "24rem",
+        "1/2": "50%",
       },
     },
     typography: {
@@ -26,6 +27,7 @@ module.exports = {
   },
   variants: {
     backgroundColor: ["responsive", "hover", "focus", "active"],
+    opacity: ["responsive", "hover", "focus", "active", "group-hover"],
   },
   plugins: [
     require("tailwindcss-textshadow"),
