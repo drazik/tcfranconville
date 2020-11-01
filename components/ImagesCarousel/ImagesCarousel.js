@@ -67,6 +67,7 @@ export function ImagesCarousel({ images, className, ...props }) {
         >
           {slides.map((slide, index) => (
             <button
+              key={index}
               type="button"
               className={cn(
                 "w-4 h-4 border-2 border-brand rounded-full transform origin-center transition-transform duration-150",
