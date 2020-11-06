@@ -21,6 +21,9 @@ module.exports = {
       default: {
         css: {
           color: "inherit",
+          strong: {
+            color: "inherit",
+          },
         },
       },
     },
