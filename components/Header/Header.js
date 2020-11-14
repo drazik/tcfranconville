@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import background from "./background.jpg"
 import PropTypes from "prop-types"
 import { Wrapper } from "../Wrapper"
@@ -20,6 +20,20 @@ export function Header({ className, style = {}, ...props }) {
     { href: "/reservation", label: "Réservation" },
     { href: "/actualite", label: "Actualité" },
   ]
+
+  const router = useRouter()
+
+  useEffect(() => {
+    function handleRouteChangeComplete() {
+      setOpen(false)
+    }
+
+    router.events.on("routeChangeComplete", handleRouteChangeComplete)
+
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChangeComplete)
+    }
+  }, [router.events])
 
   return (
     <header
