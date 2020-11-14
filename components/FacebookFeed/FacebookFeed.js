@@ -1,12 +1,21 @@
 import { FacebookProvider, Page } from "react-facebook"
 import useSize from "@react-hook/size"
-import { useRef } from "react"
+import { useRef, useState, useEffect } from "react"
 import cn from "classnames"
 import PropTypes from "prop-types"
 
 export function FacebookFeed({ className, ...props }) {
   const ref = useRef(null)
   const [width] = useSize(ref)
+  const [clientRender, setClientRender] = useState(false)
+
+  useEffect(() => {
+    setClientRender(true)
+  }, [])
+
+  if (!process.browser || !clientRender) {
+    return null
+  }
 
   return (
     <div className={cn("space-y-4", className)} {...props}>
