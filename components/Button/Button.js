@@ -1,14 +1,14 @@
 import cn from "classnames"
 import PropTypes from "prop-types"
+import { forwardRef } from "react"
 
-export function Button({
-  component: Component = "button",
-  color = "normal",
-  className,
-  ...props
-}) {
+export const Button = forwardRef(function Button(
+  { component: Component = "button", color = "normal", className, ...props },
+  ref
+) {
   return (
     <Component
+      ref={ref}
       className={cn(
         "no-underline px-8 py-3 inline-flex justify-center items-center rounded-full text-lg font-semibold shadow-md",
         {
@@ -22,7 +22,7 @@ export function Button({
       {...props}
     />
   )
-}
+})
 
 Button.propTypes = {
   component: PropTypes.elementType,
