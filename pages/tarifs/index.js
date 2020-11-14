@@ -75,113 +75,115 @@ export default function PricesPage() {
                 .
               </p>
             </div>
-            <Table>
-              <thead>
-                <tr>
-                  <TableCell heading></TableCell>
-                  <TableCell heading align="center">
-                    Habitant Franconville
-                  </TableCell>
-                  <TableCell heading align="center">
-                    Hors Franconville
-                  </TableCell>
-                </tr>
-              </thead>
-              <tbody>
-                <TableRow variant="odd">
-                  <TableCell>Adulte</TableCell>
-                  <TableCell align="center">275&nbsp;€ + licence</TableCell>
-                  <TableCell align="center">285&nbsp;€ + licence</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>Adultes &lt;&nbsp;25 ans</TableCell>
-                  <TableCell align="center" colspan="2">
-                    120&nbsp;€ + licence
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Semaine</div>
-                      <div className="text-xs">
-                        du lundi au vendredi de 8h à 18h
+            <div className="overflow-x-auto">
+              <Table>
+                <thead>
+                  <tr>
+                    <TableCell heading></TableCell>
+                    <TableCell heading align="center">
+                      Habitant Franconville
+                    </TableCell>
+                    <TableCell heading align="center">
+                      Hors Franconville
+                    </TableCell>
+                  </tr>
+                </thead>
+                <tbody>
+                  <TableRow variant="odd">
+                    <TableCell>Adulte</TableCell>
+                    <TableCell align="center">275&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">285&nbsp;€ + licence</TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>Adultes &lt;&nbsp;25 ans</TableCell>
+                    <TableCell align="center" colspan="2">
+                      120&nbsp;€ + licence
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="odd">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Semaine</div>
+                        <div className="text-xs">
+                          du lundi au vendredi de 8h à 18h
+                        </div>
                       </div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">220&nbsp;€ + licence</TableCell>
-                  <TableCell align="center">230&nbsp;€ + licence</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>Retraite sportive</TableCell>
-                  <TableCell align="center" colspan="2">
-                    155&nbsp;€ + licence
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="brand">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Cotisation parentale</div>
-                      <div className="text-xs">
-                        Venez jouez avec votre enfant autant de fois que vous le
-                        souhaitez&nbsp;!
+                    </TableCell>
+                    <TableCell align="center">220&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">230&nbsp;€ + licence</TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>Retraite sportive</TableCell>
+                    <TableCell align="center" colspan="2">
+                      155&nbsp;€ + licence
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="brand">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Cotisation parentale</div>
+                        <div className="text-xs">
+                          Venez jouez avec votre enfant autant de fois que vous
+                          le souhaitez&nbsp;!
+                        </div>
                       </div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center" colspan="2">
-                    66&nbsp;€ + licence
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>Semi-annuelle</TableCell>
-                  <TableCell align="center">160&nbsp;€ + licence</TableCell>
-                  <TableCell align="center">170&nbsp;€ + licence</TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Mini-tennis</div>
-                      <div className="text-xs">2015-2016-2017</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center" colspan="2">
-                    50&nbsp;€
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club junior 1</div>
-                      <div className="text-xs">2013-2014</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center" colspan="2">
-                    80&nbsp;€
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club junior 2</div>
-                      <div className="text-xs">2011-2012</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center" colspan="2">
-                    100&nbsp;€
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club ados</div>
-                      <div className="text-xs">2003-2010</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center" colspan="2">
-                    100&nbsp;€
-                  </TableCell>
-                </TableRow>
-              </tbody>
-            </Table>
+                    </TableCell>
+                    <TableCell align="center" colspan="2">
+                      66&nbsp;€ + licence
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>Semi-annuelle</TableCell>
+                    <TableCell align="center">160&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">170&nbsp;€ + licence</TableCell>
+                  </TableRow>
+                  <TableRow variant="odd">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Mini-tennis</div>
+                        <div className="text-xs">2015-2016-2017</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center" colspan="2">
+                      50&nbsp;€
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Club junior 1</div>
+                        <div className="text-xs">2013-2014</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center" colspan="2">
+                      80&nbsp;€
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="odd">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Club junior 2</div>
+                        <div className="text-xs">2011-2012</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center" colspan="2">
+                      100&nbsp;€
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Club ados</div>
+                        <div className="text-xs">2003-2010</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center" colspan="2">
+                      100&nbsp;€
+                    </TableCell>
+                  </TableRow>
+                </tbody>
+              </Table>
+            </div>
           </div>
         </Wrapper>
       </Section>
