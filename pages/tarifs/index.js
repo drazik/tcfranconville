@@ -96,7 +96,7 @@ export default function PricesPage() {
                   </TableRow>
                   <TableRow variant="even">
                     <TableCell>Adultes &lt;&nbsp;25 ans</TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       120&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
@@ -114,7 +114,7 @@ export default function PricesPage() {
                   </TableRow>
                   <TableRow variant="even">
                     <TableCell>Retraite sportive</TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       155&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
@@ -128,7 +128,7 @@ export default function PricesPage() {
                         </div>
                       </div>
                     </TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       66&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
@@ -144,7 +144,7 @@ export default function PricesPage() {
                         <div className="text-xs">2015-2016-2017</div>
                       </div>
                     </TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       50&nbsp;€
                     </TableCell>
                   </TableRow>
@@ -155,7 +155,7 @@ export default function PricesPage() {
                         <div className="text-xs">2013-2014</div>
                       </div>
                     </TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       80&nbsp;€
                     </TableCell>
                   </TableRow>
@@ -166,7 +166,7 @@ export default function PricesPage() {
                         <div className="text-xs">2011-2012</div>
                       </div>
                     </TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       100&nbsp;€
                     </TableCell>
                   </TableRow>
@@ -177,7 +177,7 @@ export default function PricesPage() {
                         <div className="text-xs">2003-2010</div>
                       </div>
                     </TableCell>
-                    <TableCell align="center" colspan="2">
+                    <TableCell align="center" colSpan="2">
                       100&nbsp;€
                     </TableCell>
                   </TableRow>
