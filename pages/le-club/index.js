@@ -3,7 +3,7 @@ import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
 import { Illustration } from "../../components/Illustration"
-import installationsIllustration from "./installations.jpg"
+import installationsIllustration from "../../img/le-club/installations.jpg"
 import cn from "classnames"
 import { Button } from "../../components/Button"
 

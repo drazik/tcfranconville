@@ -3,9 +3,9 @@ import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
 import { Illustration } from "../../components/Illustration"
-import kidsIllustration from "./kids.jpg"
-import familyIllustration from "./family.jpg"
-import adultIllustration from "./adults.jpg"
+import kidsIllustration from "../../img/animations/kids.jpg"
+import familyIllustration from "../../img/animations/family.jpg"
+import adultIllustration from "../../img/animations/adults.jpg"
 
 export default function AnimationsPage() {
   return (

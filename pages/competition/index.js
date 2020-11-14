@@ -7,25 +7,27 @@ import importAll from "import-all.macro"
 import { Button } from "../../components/Button"
 
 const printempsIllustrations = importAll.sync(
-  "./images/championnat-printemps/*.jpg"
+  "../../img/competition/championnat-printemps/*.jpg"
 )
-const potelIllustrations = importAll.sync("./images/potel/*.jpg")
+const potelIllustrations = importAll.sync("../../img/competition/potel/*.jpg")
 const championnat45Illustrations = importAll.sync(
-  "./images/championnat-45/*.jpg"
+  "../../img/competition/championnat-45/*.jpg"
 )
 const championnat55Illustrations = importAll.sync(
-  "./images/championnat-55/*.jpg"
+  "../../img/competition/championnat-55/*.jpg"
 )
-const openIllustrations = importAll.sync("./images/open/*.jpg")
+const openIllustrations = importAll.sync("../../img/competition/open/*.jpg")
 const openSeniorHiverIllustrations = importAll.sync(
-  "./images/open-senior-hiver/*.jpg"
+  "../../img/competition/open-senior-hiver/*.jpg"
 )
 const openSeniorPlusIllustrations = importAll.sync(
-  "./images/open-senior-plus/*.jpg"
+  "../../img/competition/open-senior-plus/*.jpg"
 )
-const interneIllustrations = importAll.sync("./images/interne/*.jpg")
+const interneIllustrations = importAll.sync(
+  "../../img/competition/interne/*.jpg"
+)
 const interneCouleurIllustrations = importAll.sync(
-  "./images/interne-couleur/*.jpg"
+  "../../img/competition/interne-couleur/*.jpg"
 )
 
 export default function CompetitionPage() {
