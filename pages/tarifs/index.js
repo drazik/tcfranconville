@@ -348,7 +348,7 @@ export default function PricesPage() {
                   <TableCell>
                     Invitation par un adhérent d'un non-adhérent du TCF
                   </TableCell>
-                  <TableCell align="center">6€&nbsp;€</TableCell>
+                  <TableCell align="center">6&nbsp;€/h</TableCell>
                 </TableRow>
               </tbody>
             </Table>
