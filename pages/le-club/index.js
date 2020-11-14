@@ -65,13 +65,10 @@ export default function LeClubPage() {
                 <SectionTitle>Contacter le club</SectionTitle>
                 <div className="prose max-w-none">
                   <p>
-                    Le TC Franconville est situé au{" "}
-                    <address>
-                      78 Avenue des Marais, à côté du stade municipal Jean
-                      Rolland
-                    </address>
-                    . Un parking est disponible à cette adresse, ainsi qu'un
-                    autre au 110 rue des Pommiers Saulniers.
+                    Le TC Franconville est situé au 78 Avenue des Marais, à côté
+                    du stade municipal Jean Rolland. Un parking est disponible à
+                    cette adresse, ainsi qu'un autre au 110 rue des Pommiers
+                    Saulniers.
                   </p>
                   <p>
                     Vous pouvez nous contacter par téléphone au
