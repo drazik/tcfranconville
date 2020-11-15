@@ -9,10 +9,5 @@
         "distDir": "public"
       }
     }
-  ],
-  "build": {
-    "env": {
-      "FB_TOKEN": "@fb_token"
-    }
-  }
+  ]
 }
