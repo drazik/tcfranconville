@@ -1,13 +1,12 @@
 import { FacebookProvider, Page } from "react-facebook"
-import useSize from "@react-hook/size"
-import { useRef, useState, useEffect } from "react"
+import { useState, useEffect } from "react"
 import cn from "classnames"
 import PropTypes from "prop-types"
+import { useBreakpoints } from "../../hooks/useBreakpoints"
 
 export function FacebookFeed({ className, ...props }) {
-  const ref = useRef(null)
-  const [width] = useSize(ref)
   const [clientRender, setClientRender] = useState(false)
+  const { sm } = useBreakpoints()
 
   useEffect(() => {
     setClientRender(true)
@@ -27,12 +26,12 @@ export function FacebookFeed({ className, ...props }) {
           </a>
         </p>
       </div>
-      <div ref={ref} className="text-center">
-        <FacebookProvider appId="2196169050680329" key={width}>
+      <div className="text-center">
+        <FacebookProvider appId="2196169050680329">
           <Page
             href="https://www.facebook.com/TCFranconvilleOfficiel/"
             tabs="timeline"
-            width={width}
+            width={sm ? 500 : 300}
           />
         </FacebookProvider>
       </div>
