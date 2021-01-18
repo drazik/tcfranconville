@@ -1,6 +1,7 @@
 import cn from "classnames"
 import PropTypes from "prop-types"
 import { forwardRef } from "react"
+import Link from "next/link"
 
 export const Button = forwardRef(function Button(
   { component: Component = "button", color = "normal", className, ...props },
@@ -10,7 +11,7 @@ export const Button = forwardRef(function Button(
     <Component
       ref={ref}
       className={cn(
-        "no-underline px-8 py-3 inline-flex justify-center items-center rounded-full text-lg font-semibold shadow-md",
+        "no-underline px-8 py-3 inline-flex justify-center items-center rounded-full text-lg font-semibold shadow-md cursor-pointer",
         {
           "bg-brand text-white hover:bg-blue-800 active:bg-blue-900 focus:shadow-outline":
             color === "brand",
@@ -28,4 +29,12 @@ Button.propTypes = {
   component: PropTypes.elementType,
   className: PropTypes.string,
   color: PropTypes.oneOf(["normal", "brand"]),
+}
+
+export const ButtonLink = ({ href, ...props }) => {
+  return (
+    <Link href={href}>
+      <Button component="a" {...props} />
+    </Link>
+  )
 }
