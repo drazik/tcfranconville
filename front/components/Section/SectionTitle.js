@@ -10,7 +10,7 @@ export function SectionTitle({
   subtitle,
   ...props
 }) {
-  const { variant } = useContext(SectionContext)
+  const { color } = useContext(SectionContext)
 
   return (
     <Component
@@ -23,8 +23,8 @@ export function SectionTitle({
       </div>
       <div
         className={cn("h-1 w-12", {
-          "bg-brand": ["normal", "light"].includes(variant),
-          "bg-white": variant === "brand",
+          "bg-brand": ["normal", "light"].includes(color),
+          "bg-white": color === "brand",
         })}
       />
     </Component>
