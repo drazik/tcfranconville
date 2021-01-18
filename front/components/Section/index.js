@@ -1,2 +1,4 @@
 export * from "./Section"
 export * from "./SectionTitle"
+export * from "./SectionContent"
+export * from "./BOSection"

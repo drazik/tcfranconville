@@ -10,6 +10,7 @@
   "dependencies": {
     "@react-hook/media-query": "^1.1.1",
     "classnames": "^2.2.6",
+    "markdown-to-jsx": "^7.1.0",
     "next": "^10.0.1",
     "next-images": "^1.6.0",
     "next-svgr": "^0.0.2",
