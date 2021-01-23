@@ -4,6 +4,7 @@ import cn from "classnames"
 import omitBy from "lodash/omitBy"
 import * as React from "react"
 import { SectionContext } from "./Section"
+import { InfoBubble } from "../Icon"
 
 export const SectionContent = ({ content }) => {
   return (
@@ -22,7 +23,7 @@ export const SectionContent = ({ content }) => {
   )
 }
 
-const SectionColumn = ({ parts }) => {
+export const SectionColumn = ({ parts }) => {
   return (
     <div className="space-y-4">
       {parts.map((part) => (
@@ -38,7 +39,7 @@ const SectionPart = ({ part: partProps }) => {
 
   if (part.wysiwyg) {
     return (
-      <div className="prose lg:prose-lg">
+      <div className="prose lg:prose-lg max-w-none">
         <Markdown>{part.wysiwyg.content}</Markdown>
       </div>
     )
@@ -59,7 +60,9 @@ const SectionPart = ({ part: partProps }) => {
   }
 
   if (part.didYouKnow) {
-    return <div>didYouKnow TO IMPLEMENT</div>
+    return (
+      <DidYouKnow label={part.didYouKnow.label} cta={part.didYouKnow.cta} />
+    )
   }
 
   console.warn(
@@ -68,4 +71,37 @@ const SectionPart = ({ part: partProps }) => {
   )
 
   return null
+}
+
+const DidYouKnow = ({ label, cta, className, ...props }) => {
+  const r = 50
+  const d = 2 * r
+
+  return (
+    <div className={cn("relative", className)} {...props}>
+      <InfoBubble
+        className="absolute w-12 h-12 fill-current text-brand"
+        style={{ top: "-10px", left: "-10px" }}
+      />
+      <div className="relative px-6 pt-16 pb-8 overflow-hidden text-white rounded-xl">
+        <div
+          className="absolute"
+          style={{
+            width: d,
+            height: d,
+            boxShadow: "0 0 0 1000px #1a38b1",
+            top: -r,
+            left: -r,
+            borderRadius: "50%",
+          }}
+        />
+        <div className="relative space-y-4">
+          <p className="font-bold text-xl">Le saviez-vous ?</p>
+          <div className="prose">
+            <p>{label}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
