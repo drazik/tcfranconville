@@ -1,5 +1,5 @@
 import Markdown from "markdown-to-jsx"
-import { ButtonLink } from "../Button"
+import { Button, ButtonLink } from "../Button"
 import cn from "classnames"
 import omitBy from "lodash/omitBy"
 import * as React from "react"
@@ -35,7 +35,6 @@ export const SectionColumn = ({ parts }) => {
 
 const SectionPart = ({ part: partProps }) => {
   const part = omitBy(partProps, (value) => value === null)
-  const { color: sectionColor } = React.useContext(SectionContext)
 
   if (part.wysiwyg) {
     return (
@@ -46,17 +45,7 @@ const SectionPart = ({ part: partProps }) => {
   }
 
   if (part.cta) {
-    return (
-      <div className="text-center">
-        <ButtonLink
-          href={part.cta.url}
-          color={sectionColor === "brand" ? "normal" : "brand"}
-          className="w-full max-w-md"
-        >
-          {part.cta.label}
-        </ButtonLink>
-      </div>
-    )
+    return <CTA url={part.cta.url} label={part.cta.label} />
   }
 
   if (part.didYouKnow) {
@@ -102,6 +91,33 @@ const DidYouKnow = ({ label, cta, className, ...props }) => {
           </div>
         </div>
       </div>
+    </div>
+  )
+}
+
+const CTA = ({ url, label }) => {
+  const { color: sectionColor } = React.useContext(SectionContext)
+  const color = sectionColor === "brand" ? "normal" : "brand"
+
+  if (url.match(/^https?:\/\//)) {
+    return (
+      <Button
+        color={color}
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        component="a"
+      >
+        {label}
+      </Button>
+    )
+  }
+
+  return (
+    <div className="text-center">
+      <ButtonLink href={url} color={color} className="w-full max-w-md">
+        {label}
+      </ButtonLink>
     </div>
   )
 }
