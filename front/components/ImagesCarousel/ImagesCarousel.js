@@ -61,25 +61,27 @@ export function ImagesCarousel({ images, className, ...props }) {
             </>
           ) : null}
         </div>
-        <div
-          className="absolute left-0 flex justify-center w-full space-x-4"
-          style={{ bottom: "-40px" }}
-        >
-          {slides.map((slide, index) => (
-            <button
-              key={index}
-              type="button"
-              className={cn(
-                "w-4 h-4 border-2 border-brand rounded-full transform origin-center transition-transform duration-150",
-                {
-                  "bg-brand scale-100": index === active,
-                  "bg-transparent scale-75": index !== active,
-                }
-              )}
-              onClick={() => setActive(index)}
-            />
-          ))}
-        </div>
+        {length > 1 ? (
+          <div
+            className="absolute left-0 flex justify-center w-full space-x-4"
+            style={{ bottom: "-40px" }}
+          >
+            {slides.map((_slide, index) => (
+              <button
+                key={index}
+                type="button"
+                className={cn(
+                  "w-4 h-4 border-2 border-brand rounded-full transform origin-center transition-transform duration-150",
+                  {
+                    "bg-brand scale-100": index === active,
+                    "bg-transparent scale-75": index !== active,
+                  }
+                )}
+                onClick={() => setActive(index)}
+              />
+            ))}
+          </div>
+        ) : null}
       </div>
     </ImagesCarouselContext.Provider>
   )
