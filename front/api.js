@@ -5,8 +5,8 @@ export const fetchData = async (url) => {
   return data
 }
 
-export const useApiMedia = (media) => {
-  const fullMediaUrl = process.env.NEXT_PUBLIC_API_URL + media.url
+export const useApiMedia = () => {
+  const makeMediaUrl = (media) => process.env.NEXT_PUBLIC_API_URL + media.url
 
-  return fullMediaUrl
+  return makeMediaUrl
 }

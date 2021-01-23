@@ -17,9 +17,10 @@ export default function Home({
   newsSection,
   ...props
 }) {
-  const activityBackgroundUrl = useApiMedia(activityCardBackground)
-  const competitionBackgroundUrl = useApiMedia(competitionCardBackground)
-  const teachingBackgroundUrl = useApiMedia(teachingCardBackground)
+  const makeMediaUrl = useApiMedia()
+  const activityBackgroundUrl = makeMediaUrl(activityCardBackground)
+  const competitionBackgroundUrl = makeMediaUrl(competitionCardBackground)
+  const teachingBackgroundUrl = makeMediaUrl(teachingCardBackground)
 
   return (
     <>
