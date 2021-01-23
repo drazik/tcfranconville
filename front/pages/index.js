@@ -1,4 +1,3 @@
-import { Wrapper } from "../components/Wrapper"
 import { BOSection, Section, SectionTitle } from "../components/Section"
 import cn from "classnames"
 import PropTypes from "prop-types"
@@ -30,34 +29,30 @@ export default function Home({
       />
       <BOSection {...greetingsSection} />
       <Section>
-        <Wrapper>
-          <div className="md:h-64 space-y-8 md:grid md:grid-cols-3 md:gap-8 md:space-y-0 lg:h-96">
-            <ThemeCard
-              title="Enseignement"
-              href="/enseignement"
-              style={{ backgroundImage: `url(${teachingBackgroundUrl})` }}
-            />
-            <ThemeCard
-              title="Compétition"
-              href="/competition"
-              style={{ backgroundImage: `url(${competitionBackgroundUrl})` }}
-            />
-            <ThemeCard
-              title="Animations"
-              href="/animations"
-              style={{ backgroundImage: `url(${activityBackgroundUrl})` }}
-            />
-          </div>
-        </Wrapper>
+        <div className="md:h-64 space-y-8 md:grid md:grid-cols-3 md:gap-8 md:space-y-0 lg:h-96">
+          <ThemeCard
+            title="Enseignement"
+            href="/enseignement"
+            style={{ backgroundImage: `url(${teachingBackgroundUrl})` }}
+          />
+          <ThemeCard
+            title="Compétition"
+            href="/competition"
+            style={{ backgroundImage: `url(${competitionBackgroundUrl})` }}
+          />
+          <ThemeCard
+            title="Animations"
+            href="/animations"
+            style={{ backgroundImage: `url(${activityBackgroundUrl})` }}
+          />
+        </div>
       </Section>
       <BOSection {...section3} />
       <Section skewed={newsSection.skewed} color={newsSection.color}>
-        <Wrapper>
-          <div className="space-y-8">
-            <SectionTitle>{newsSection.title}</SectionTitle>
-            <FacebookFeed />
-          </div>
-        </Wrapper>
+        <div className="space-y-8">
+          <SectionTitle>{newsSection.title}</SectionTitle>
+          <FacebookFeed />
+        </div>
       </Section>
     </>
   )

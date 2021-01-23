@@ -1,6 +1,7 @@
 import cn from "classnames"
 import PropTypes from "prop-types"
 import { createContext } from "react"
+import { Wrapper } from "../Wrapper"
 
 const DEFAULT_COLOR = "normal"
 
@@ -32,10 +33,10 @@ export function Section({
       >
         {skewed ? (
           <div className={cn("transform", { "-skew-y-1": skewed })}>
-            {children}
+            <Wrapper>{children}</Wrapper>
           </div>
         ) : (
-          children
+          <Wrapper>{children}</Wrapper>
         )}
       </section>
     </SectionContext.Provider>
