@@ -16,10 +16,7 @@ export default function EnseignementPage({
 }) {
   return (
     <>
-      <SEO
-        title="Enseignement"
-        description="Grâce à ses enseignants très qualifiés, le TC Franconville propose des cours pour tout âge et tout niveau"
-      />
+      <SEO title={metadata.title} description={metadata.description} />
       <Section skewed variant="brand">
         <div className="flex flex-col items-center space-y-6">
           <h1 className="text-3xl font-bold text-white text-shadow-sm">
