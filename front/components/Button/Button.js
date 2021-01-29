@@ -33,7 +33,7 @@ Button.propTypes = {
 
 export const ButtonLink = ({ href, ...props }) => {
   return (
-    <Link href={href}>
+    <Link href={href} passHref>
       <Button component="a" {...props} />
     </Link>
   )
