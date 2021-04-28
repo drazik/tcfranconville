@@ -4,6 +4,9 @@ import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
 import { Illustration } from "../../components/Illustration"
 import installationsIllustration from "../../img/le-club/installations.jpg"
+import presidentPicture from "../../img/le-club/president.jpg"
+import tresorierePicture from "../../img/le-club/tresoriere.jpg"
+import secretairePicture from "../../img/le-club/secretaire.jpg"
 import cn from "classnames"
 import { Button } from "../../components/Button"
 
@@ -59,6 +62,30 @@ export default function LeClubPage() {
       </Section>
       <Section skewed>
         <Wrapper>
+    <div className="space-y-16">
+      <SectionTitle>Le bureau directeur</SectionTitle>
+    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+        <Person
+          picture={presidentPicture}
+          name="Laurent Operiol"
+          role="Président"
+        />
+        <Person
+          picture={tresorierePicture}
+          name="Josiane Decker"
+          role="Trésorière"
+        />
+        <Person
+          picture={secretairePicture}
+          name="Annabelle Gibralta"
+          role="Secrétaire"
+        />
+      </div>
+    </div>
+        </Wrapper>
+      </Section>
+      <Section skewed variant="light">
+        <Wrapper>
           <TwoCol
             firstCol={
               <div className="space-y-8">
@@ -92,7 +119,7 @@ export default function LeClubPage() {
           />
         </Wrapper>
       </Section>
-      <Section skewed variant="light">
+      <Section skewed>
         <Wrapper>
           <div className="space-y-16">
             <SectionTitle>Partenaires</SectionTitle>
@@ -167,6 +194,22 @@ function Partner({ logo, name, description, className, url, ...props }) {
             En savoir plus
           </Button>
         ) : null}
+      </div>
+    </div>
+  )
+}
+
+const Person = ({ picture, name, role }) => {
+  return (
+    <div className="flex items-center space-x-6 md:flex-col md:space-y-6 md:space-x-0">
+      <img
+        src={picture}
+        alt=""
+    className="w-16 h-16 rounded-full object-cover object-center shadow md:w-32 md:h-32"
+      />
+      <div className="md:flex-col md:items-center md:text-center">
+        <div className="font-semibold text-lg">{name}</div>
+        <div className="text-gray-600">{role}</div>
       </div>
     </div>
   )
