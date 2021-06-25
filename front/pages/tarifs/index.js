@@ -95,7 +95,7 @@ export default function PricesPage() {
                     <TableCell align="center">285&nbsp;€ + licence</TableCell>
                   </TableRow>
                   <TableRow variant="even">
-                    <TableCell>Adultes &lt;&nbsp;25 ans</TableCell>
+                    <TableCell>Etudiants ou demandeurs d'emploi -25 ans</TableCell>
                     <TableCell align="center" colSpan="2">
                       120&nbsp;€ + licence
                     </TableCell>
@@ -113,7 +113,7 @@ export default function PricesPage() {
                     <TableCell align="center">230&nbsp;€ + licence</TableCell>
                   </TableRow>
                   <TableRow variant="even">
-                    <TableCell>Retraite sportive</TableCell>
+                    <TableCell>Retraite sportive (ARSF)</TableCell>
                     <TableCell align="center" colSpan="2">
                       155&nbsp;€ + licence
                     </TableCell>
@@ -133,48 +133,32 @@ export default function PricesPage() {
                     </TableCell>
                   </TableRow>
                   <TableRow variant="even">
-                    <TableCell>Semi-annuelle</TableCell>
-                    <TableCell align="center">160&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">170&nbsp;€ + licence</TableCell>
-                  </TableRow>
-                  <TableRow variant="odd">
                     <TableCell>
                       <div className="space-y-1">
                         <div>Mini-tennis</div>
-                        <div className="text-xs">2015-2016-2017</div>
+                        <div className="text-xs">2016-2018</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
                       50&nbsp;€
                     </TableCell>
                   </TableRow>
-                  <TableRow variant="even">
+                  <TableRow variant="odd">
                     <TableCell>
                       <div className="space-y-1">
                         <div>Club junior 1</div>
-                        <div className="text-xs">2013-2014</div>
+                        <div className="text-xs">2014-2015</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
                       80&nbsp;€
                     </TableCell>
                   </TableRow>
-                  <TableRow variant="odd">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Club junior 2</div>
-                        <div className="text-xs">2011-2012</div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center" colSpan="2">
-                      100&nbsp;€
-                    </TableCell>
-                  </TableRow>
                   <TableRow variant="even">
                     <TableCell>
                       <div className="space-y-1">
-                        <div>Club ados</div>
-                        <div className="text-xs">2003-2010</div>
+                        <div>Ados et Club junior 2</div>
+                        <div className="text-xs">2004-2013</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
@@ -211,32 +195,28 @@ export default function PricesPage() {
                 <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Annuelle "Classique"</div>
+                      <div>Adultes 1h</div>
                       <div className="text-xs">
                         1h hebdomadaire encadrée par un DE
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">280&nbsp;€</TableCell>
+                  <TableCell align="center">285&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Annuelle "Intensif"</div>
+                      <div>Adultes 1h30</div>
                       <div className="text-xs">
                         1h30 hebdomadaire encadrée par un DE
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">420&nbsp;€</TableCell>
+                  <TableCell align="center">425&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
-                  <TableCell>Séance de 1h</TableCell>
-                  <TableCell align="center">15&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>Séance de 1h30</TableCell>
-                  <TableCell align="center">23&nbsp;€</TableCell>
+                  <TableCell>Cours supplémentaire adulte</TableCell>
+                  <TableCell align="center">285h&nbsp;€ (1h) / 425&nbsp;€ (1h30)</TableCell>
                 </TableRow>
               </tbody>
             </Table>
@@ -268,55 +248,54 @@ export default function PricesPage() {
                   <TableCell>
                     <div className="space-y-1">
                       <div>Mini-tennis</div>
-                      <div className="text-xs">1h, 2015-2016-2017</div>
+                      <div className="text-xs">1h, 2016-2018</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">110&nbsp;€</TableCell>
+                  <TableCell align="center">115&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Junior 1</div>
-                      <div className="text-xs">1h, 2013-2014</div>
+                      <div>Club Junior Rouge</div>
+                      <div className="text-xs">1h15, 2014-2015</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">130&nbsp;€</TableCell>
+                  <TableCell align="center">170&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Junior 2</div>
-                      <div className="text-xs">1h15, 2010-2012</div>
+                      <div>Club Junior Orange et Vert</div>
+                      <div className="text-xs">1h30, 2011-2013</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">160&nbsp;€</TableCell>
+                  <TableCell align="center">200&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
+                  <TableCell>
+                    <div className="space-y-1">
+                      <div>Club Ados débutants</div>
+                      <div className="text-xs">1h15, 2004-2010</div>
+                    </div>
+                  </TableCell>
+                  <TableCell align="center">170&nbsp;€</TableCell>
+                </TableRow>
+                <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
                       <div>Club Ados</div>
-                      <div className="text-xs">1h15, 2003-2009</div>
+                      <div className="text-xs">1h30, 2004-2010</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">190&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>1h de cours supplémentaire à l'année</div>
-                      <div className="text-xs">Sur accord du club</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">110&nbsp;€</TableCell>
+                  <TableCell align="center">240&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>1h15 de cours supplémentaire à l'année</div>
-                      <div className="text-xs">Sur accord du club</div>
+                      <div>Cours supplémentaire</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">140&nbsp;€</TableCell>
+                  <TableCell align="center">80&nbsp;€ (1h mini tennis) / 140&nbsp;€ (1h15) / 160&nbsp;€ (1h30)</TableCell>
                 </TableRow>
               </tbody>
             </Table>

@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
       <StickyBanner>
         <p className="text-center">
           <strong>Information :</strong>{" "}
-          Le club est ouvert.{" "}
-          <Link href="/information"><a className="underline">En savoir plus</a></Link>
+          Les inscriptions pour la saison 2021-2022 sont ouvertes !{" "}
+          <Link href="/reinscription-2021-2022"><a className="underline">En savoir plus</a></Link>
         </p>
       </StickyBanner>
       <Component {...pageProps} />
