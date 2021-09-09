@@ -13,9 +13,11 @@ function MyApp({ Component, pageProps }) {
       <Header />
       <StickyBanner>
         <p className="text-center">
-          <strong>Information :</strong>{" "}
-          Les inscriptions pour la saison 2021-2022 sont ouvertes !{" "}
-          <Link href="/reinscription-2021-2022"><a className="underline">En savoir plus</a></Link>
+          <strong>Information :</strong> forum des associations et portes
+          ouvertes les 11 et 12 septembre{" "}
+          <Link href="/forum-associations-2021">
+            <a className="underline">En savoir plus</a>
+          </Link>
         </p>
       </StickyBanner>
       <Component {...pageProps} />
