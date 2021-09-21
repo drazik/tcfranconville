@@ -5479,7 +5479,7 @@ fsevents@~2.1.2:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.19, lodash@npm:^4.17.20":
+"lodash@npm:^4.17.11, lodash@npm:^4.17.13, lodash@npm:^4.17.19, lodash@npm:^4.17.20, lodash@npm:^4.17.21":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -8340,6 +8340,7 @@ resolve@^1.14.2:
     babel-plugin-macros: ^2.8.0
     classnames: ^2.2.6
     import-all.macro: ^3.1.0
+    lodash: ^4.17.21
     next: ^10.0.1
     next-compose-plugins: ^2.2.0
     next-images: ^1.6.0
