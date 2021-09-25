@@ -64,7 +64,7 @@ function carouselReducer(state, action) {
 
 function swiped(e, dispatch, length, dir) {
   const t = threshold(e.event.target)
-  const d = dir * e.deltaX
+  const d = dir * -e.deltaX
 
   if (d >= t) {
     dispatch({
@@ -85,7 +85,7 @@ export function useCarousel({ length, interval }) {
     onSwiping(e) {
       dispatch({
         type: "drag",
-        offset: -e.deltaX,
+        offset: e.deltaX,
       })
     },
 
