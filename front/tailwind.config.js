@@ -13,13 +13,13 @@ module.exports = {
         96: "24rem",
         "1/2": "50%",
       },
-    },
-    typography: {
-      default: {
-        css: {
-          color: "inherit",
-          strong: {
+      typography: {
+        DEFAULT: {
+          css: {
             color: "inherit",
+            strong: {
+              color: "inherit",
+            },
           },
         },
       },
