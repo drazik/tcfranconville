@@ -1,8 +1,5 @@
 module.exports = {
-  future: {
-    removeDeprecatedGapUtilities: true,
-    purgeLayersByDefault: true,
-  },
+  mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
   theme: {
     extend: {
@@ -27,10 +24,6 @@ module.exports = {
         },
       },
     },
-  },
-  variants: {
-    backgroundColor: ["responsive", "hover", "focus", "active"],
-    opacity: ["responsive", "hover", "focus", "active", "group-hover"],
   },
   plugins: [
     require("tailwindcss-textshadow"),
