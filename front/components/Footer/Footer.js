@@ -3,6 +3,7 @@ import background from "./background.jpg"
 import { Logo } from "../Logo"
 import logoFranconville from "./logo-franconville.png"
 import { Wrapper } from "../Wrapper"
+import Image from "next/image"
 
 export function Footer({ className, style, ...props }) {
   const date = new Date()
@@ -11,18 +12,14 @@ export function Footer({ className, style, ...props }) {
   return (
     <footer
       className={cn("bg-cover bg-center py-4 bg-fixed", className)}
-      style={{ backgroundImage: `url(${background})`, ...style }}
+      style={{ backgroundImage: `url(${background.src})`, ...style }}
       {...props}
     >
       <Wrapper className="flex flex-col items-center space-y-6">
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-10">
           <Logo />
-          <a href="https://www.ville-franconville.fr/">
-            <img
-              src={logoFranconville}
-              alt="Ville de Franconville"
-              className="h-40"
-            />
+          <a href="https://www.ville-franconville.fr/" className="w-40">
+            <Image src={logoFranconville} alt="Ville de Franconville" />
           </a>
         </div>
         <p className="text-lg font-semibold text-center text-white text-shadow-lg">

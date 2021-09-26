@@ -49,21 +49,21 @@ export default function Home() {
       </Section>
       <Section>
         <Wrapper>
-          <div className="md:h-64 space-y-8 md:grid md:grid-cols-3 md:gap-8 md:space-y-0 lg:h-96">
+          <div className="space-y-8 md:grid md:grid-cols-3 md:gap-8 md:space-y-0">
             <ThemeCard
               title="Enseignement"
               href="/enseignement"
-              style={{ backgroundImage: `url(${teachingBackground})` }}
+              style={{ backgroundImage: `url(${teachingBackground.src})` }}
             />
             <ThemeCard
               title="Compétition"
               href="/competition"
-              style={{ backgroundImage: `url(${competitionBackground})` }}
+              style={{ backgroundImage: `url(${competitionBackground.src})` }}
             />
             <ThemeCard
               title="Animations"
               href="/animations"
-              style={{ backgroundImage: `url(${animationBackground})` }}
+              style={{ backgroundImage: `url(${animationBackground.src})` }}
             />
           </div>
         </Wrapper>

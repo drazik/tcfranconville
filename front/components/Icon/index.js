@@ -1,3 +1,1 @@
-import { ReactComponent as InfoBubble } from "./info-bubble.svg"
-
-export { InfoBubble }
+export { default as InfoBubble } from "./info-bubble.svg"

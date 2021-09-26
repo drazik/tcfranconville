@@ -85,7 +85,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(printempsIllustrations)}
+                  images={Object.values(printempsIllustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -108,7 +110,11 @@ export default function CompetitionPage() {
                 </div>
               }
               secondCol={
-                <ImagesCarousel images={Object.values(potelIllustrations)} />
+                <ImagesCarousel
+                  images={Object.values(potelIllustrations).map(
+                    getNextImageSrc
+                  )}
+                />
               }
             />
 
@@ -149,7 +155,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(championnat45Illustrations)}
+                  images={Object.values(championnat45Illustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -170,7 +178,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(championnat55Illustrations)}
+                  images={Object.values(championnat55Illustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -221,7 +231,9 @@ export default function CompetitionPage() {
                 </div>
               }
               secondCol={
-                <ImagesCarousel images={Object.values(openIllustrations)} />
+                <ImagesCarousel
+                  images={Object.values(openIllustrations).map(getNextImageSrc)}
+                />
               }
             />
 
@@ -259,7 +271,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(openSeniorHiverIllustrations)}
+                  images={Object.values(openSeniorHiverIllustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -294,7 +308,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(openSeniorPlusIllustrations)}
+                  images={Object.values(openSeniorPlusIllustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -322,7 +338,11 @@ export default function CompetitionPage() {
                 </div>
               }
               secondCol={
-                <ImagesCarousel images={Object.values(interneIllustrations)} />
+                <ImagesCarousel
+                  images={Object.values(interneIllustrations).map(
+                    getNextImageSrc
+                  )}
+                />
               }
             />
 
@@ -343,7 +363,9 @@ export default function CompetitionPage() {
               }
               secondCol={
                 <ImagesCarousel
-                  images={Object.values(interneCouleurIllustrations)}
+                  images={Object.values(interneCouleurIllustrations).map(
+                    getNextImageSrc
+                  )}
                 />
               }
             />
@@ -353,3 +375,5 @@ export default function CompetitionPage() {
     </>
   )
 }
+
+const getNextImageSrc = (nextImageModule) => nextImageModule.default.src

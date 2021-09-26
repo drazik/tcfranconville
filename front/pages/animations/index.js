@@ -45,7 +45,7 @@ export default function AnimationsPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={kidsIllustration} />}
+            secondCol={<Illustration src={kidsIllustration.src} />}
           />
         </Wrapper>
       </Section>
@@ -64,7 +64,7 @@ export default function AnimationsPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={familyIllustration} />}
+            secondCol={<Illustration src={familyIllustration.src} />}
             inversed
           />
         </Wrapper>
@@ -83,7 +83,7 @@ export default function AnimationsPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={adultIllustration} />}
+            secondCol={<Illustration src={adultIllustration.src} />}
           />
         </Wrapper>
       </Section>
