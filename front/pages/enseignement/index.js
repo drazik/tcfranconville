@@ -125,7 +125,7 @@ export default function EnseignementPage() {
                   </Info>
                 </div>
               }
-              secondCol={<Illustration src={minitennisIllustration} />}
+              secondCol={<Illustration src={minitennisIllustration.src} />}
             />
             <TwoCol
               firstCol={
@@ -144,7 +144,7 @@ export default function EnseignementPage() {
                   </div>
                 </div>
               }
-              secondCol={<Illustration src={junior1Illustration} />}
+              secondCol={<Illustration src={junior1Illustration.src} />}
               inversed
             />
             <TwoCol
@@ -188,7 +188,7 @@ export default function EnseignementPage() {
                   </Info>
                 </div>
               }
-              secondCol={<Illustration src={junior2Illustration} />}
+              secondCol={<Illustration src={junior2Illustration.src} />}
             />
             <TwoCol
               firstCol={
@@ -216,7 +216,7 @@ export default function EnseignementPage() {
                   </div>
                 </div>
               }
-              secondCol={<Illustration src={adosIllustration} />}
+              secondCol={<Illustration src={adosIllustration.src} />}
               inversed
             />
           </div>
@@ -265,7 +265,7 @@ export default function EnseignementPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={adultIllustration} />}
+            secondCol={<Illustration src={adultIllustration.src} />}
           />
         </Wrapper>
       </Section>

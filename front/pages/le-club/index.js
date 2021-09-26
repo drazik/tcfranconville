@@ -56,32 +56,32 @@ export default function LeClubPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={installationsIllustration} />}
+            secondCol={<Illustration src={installationsIllustration.src} />}
           />
         </Wrapper>
       </Section>
       <Section skewed>
         <Wrapper>
-    <div className="space-y-16">
-      <SectionTitle>Le bureau directeur</SectionTitle>
-    <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-        <Person
-          picture={presidentPicture}
-          name="Laurent Operiol"
-          role="Président"
-        />
-        <Person
-          picture={tresorierePicture}
-          name="Josiane Decker"
-          role="Trésorière"
-        />
-        <Person
-          picture={secretairePicture}
-          name="Annabelle Gibralta"
-          role="Secrétaire"
-        />
-      </div>
-    </div>
+          <div className="space-y-16">
+            <SectionTitle>Le bureau directeur</SectionTitle>
+            <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              <Person
+                picture={presidentPicture.src}
+                name="Laurent Operiol"
+                role="Président"
+              />
+              <Person
+                picture={tresorierePicture.src}
+                name="Josiane Decker"
+                role="Trésorière"
+              />
+              <Person
+                picture={secretairePicture.src}
+                name="Annabelle Gibralta"
+                role="Secrétaire"
+              />
+            </div>
+          </div>
         </Wrapper>
       </Section>
       <Section skewed variant="light">
@@ -205,7 +205,7 @@ const Person = ({ picture, name, role }) => {
       <img
         src={picture}
         alt=""
-    className="w-16 h-16 rounded-full object-cover object-center shadow md:w-32 md:h-32"
+        className="w-16 h-16 rounded-full object-cover object-center shadow md:w-32 md:h-32"
       />
       <div className="md:flex-col md:items-center md:text-center">
         <div className="font-semibold text-lg">{name}</div>

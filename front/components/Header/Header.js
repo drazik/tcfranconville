@@ -38,7 +38,7 @@ export function Header({ className, style = {}, ...props }) {
   return (
     <header
       className={`h-40 bg-center bg-cover flex flex-col justify-center bg-fixed lg:h-64 xl:h-auto py-12 ${className}`}
-      style={{ backgroundImage: `url(${background})`, ...style }}
+      style={{ backgroundImage: `url(${background.src})`, ...style }}
       {...props}
     >
       <Wrapper className="flex flex-col items-center space-y-8">
