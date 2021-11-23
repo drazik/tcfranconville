@@ -76,7 +76,7 @@ export default function ReservationPage() {
                 </div>
                 <Button
                   component="a"
-                  href="https://anybuddyapp.com/"
+                  href="https://www.anybuddyapp.com/club-franconville-tc/reservation/tennis"
                   target="_blank"
                   color="brand"
                   className="w-full"
