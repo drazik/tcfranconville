@@ -4823,15 +4823,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nextjs-progressbar@npm:^0.0.11":
-  version: 0.0.11
-  resolution: "nextjs-progressbar@npm:0.0.11"
+"nextjs-progressbar@npm:^0.0.13":
+  version: 0.0.13
+  resolution: "nextjs-progressbar@npm:0.0.13"
   dependencies:
     nprogress: ^0.2.0
+    prop-types: ^15.7.2
   peerDependencies:
-    next: ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0
-    react: ^16.0.0 || ^17.0.0
-  checksum: 00bd1348e51a33d8ee45287b6801e345eaa813a9600981f5bf751bdaa3b164b1bb65ee336f6bcf680eb138923ca6d17e0319eb1e5e1b665e62059209c2afeffc
+    next: ">= 6.0.0 <=12.x.x"
+    react: ">= 16.0.0 <= 17.x.x"
+  checksum: 0e055b8e1000c8b8bbf8d0c278a268837ece478f87d193024a9510a7471ea149b2da69edafaeca59111f6f9c8a34dd2e41d203b9b802a2f7d5c4ca3dae1db4a0
   languageName: node
   linkType: hard
 
@@ -6610,7 +6611,7 @@ resolve@^1.3.2:
     next: ^12.0.4
     next-compose-plugins: ^2.2.1
     next-svgr: ^0.0.2
-    nextjs-progressbar: ^0.0.11
+    nextjs-progressbar: ^0.0.13
     prop-types: ^15.7.2
     react: 17.0.2
     react-dom: 17.0.2
