@@ -2,10 +2,11 @@ import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { Table, TableRow, TableCell } from "../../components/Table"
+import { Fragment } from "react"
 
 export default function PricesPage() {
   return (
-    <>
+    <Fragment>
       <SEO title="Tarifs" description="Tarifs pour la saison 2020/2021" />
       <Section variant="brand" skewed>
         <Wrapper>
@@ -27,9 +28,9 @@ export default function PricesPage() {
                 pratique.
               </p>
               <p>
-                La licence Club 2021 est valable du 1er septembre 2020 au 31
-                août 2021. Son tarif est mis en place par la FFT&nbsp;:
-                30&nbsp;€ pour les adultes, 20&nbsp;€ pour les jeunes/ados de 6
+                La licence Club 2022 est valable du 1er septembre 2022 au 31
+                août 2023. Son tarif est mis en place par la FFT&nbsp;:
+                32&nbsp;€ pour les adultes, 22&nbsp;€ pour les jeunes/ados de 6
                 à 18 ans, 12 &nbsp;€ pour les enfants de moins de 6 ans.
               </p>
               <p>
@@ -91,11 +92,13 @@ export default function PricesPage() {
                 <tbody>
                   <TableRow variant="odd">
                     <TableCell>Adulte</TableCell>
-                    <TableCell align="center">275&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">285&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">278&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">288&nbsp;€ + licence</TableCell>
                   </TableRow>
                   <TableRow variant="even">
-                    <TableCell>Etudiants ou demandeurs d'emploi -25 ans</TableCell>
+                    <TableCell>
+                      Etudiant ou cheurcheur d'emploi (-25 ans)
+                    </TableCell>
                     <TableCell align="center" colSpan="2">
                       120&nbsp;€ + licence
                     </TableCell>
@@ -115,7 +118,7 @@ export default function PricesPage() {
                   <TableRow variant="even">
                     <TableCell>Retraite sportive (ARSF)</TableCell>
                     <TableCell align="center" colSpan="2">
-                      155&nbsp;€ + licence
+                      158&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
                   <TableRow variant="brand">
@@ -129,40 +132,50 @@ export default function PricesPage() {
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
-                      66&nbsp;€ + licence
+                      68&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
                   <TableRow variant="even">
                     <TableCell>
                       <div className="space-y-1">
+                        <div>Cotisation Printemps-Été </div>
+                        <div className="text-xs">du 1er mars au 31 août</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center">170&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">180&nbsp;€ + licence</TableCell>
+                  </TableRow>
+                  <TableRow variant="odd">
+                    <TableCell>
+                      <div className="space-y-1">
                         <div>Mini-tennis</div>
-                        <div className="text-xs">2016-2018</div>
+                        <div className="text-xs">2017-2019</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
-                      50&nbsp;€
+                      50&nbsp;€ + licence
+                    </TableCell>
+                  </TableRow>
+                  <TableRow variant="even">
+                    <TableCell>
+                      <div className="space-y-1">
+                        <div>Club junior 1</div>
+                        <div className="text-xs">2015-2016</div>
+                      </div>
+                    </TableCell>
+                    <TableCell align="center" colSpan="2">
+                      80&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
                   <TableRow variant="odd">
                     <TableCell>
                       <div className="space-y-1">
-                        <div>Club junior 1</div>
-                        <div className="text-xs">2014-2015</div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center" colSpan="2">
-                      80&nbsp;€
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="even">
-                    <TableCell>
-                      <div className="space-y-1">
                         <div>Ados et Club junior 2</div>
-                        <div className="text-xs">2004-2013</div>
+                        <div className="text-xs">2005-2014</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
-                      100&nbsp;€
+                      100&nbsp;€ + licence
                     </TableCell>
                   </TableRow>
                 </tbody>
@@ -201,7 +214,7 @@ export default function PricesPage() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">285&nbsp;€</TableCell>
+                  <TableCell align="center">290&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
@@ -212,11 +225,7 @@ export default function PricesPage() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">425&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>Cours supplémentaire adulte</TableCell>
-                  <TableCell align="center">285h&nbsp;€ (1h) / 425&nbsp;€ (1h30)</TableCell>
+                  <TableCell align="center">430&nbsp;€</TableCell>
                 </TableRow>
               </tbody>
             </Table>
@@ -251,51 +260,55 @@ export default function PricesPage() {
                       <div className="text-xs">1h, 2016-2018</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">115&nbsp;€</TableCell>
+                  <TableCell align="center">123&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Junior Rouge</div>
-                      <div className="text-xs">1h15, 2014-2015</div>
+                      <div>Club Junior Niveau Rouge</div>
+                      <div className="text-xs">1h15</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">170&nbsp;€</TableCell>
+                  <TableCell align="center">178&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Junior Orange et Vert</div>
-                      <div className="text-xs">1h30, 2011-2013</div>
+                      <div>Club Junior Niveau Orange ou Vert</div>
+                      <div className="text-xs">1h30</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">200&nbsp;€</TableCell>
+                  <TableCell align="center">208&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Ados débutants</div>
-                      <div className="text-xs">1h15, 2004-2010</div>
+                      <div>Club Ados</div>
+                      <div className="text-xs">1h15</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">170&nbsp;€</TableCell>
+                  <TableCell align="center">178&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
                       <div>Club Ados</div>
-                      <div className="text-xs">1h30, 2004-2010</div>
+                      <div className="text-xs">1h30</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">240&nbsp;€</TableCell>
+                  <TableCell align="center">248&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
                       <div>Cours supplémentaire</div>
+                      <div>Sur accord du club</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">80&nbsp;€ (1h mini tennis) / 140&nbsp;€ (1h15) / 160&nbsp;€ (1h30)</TableCell>
+                  <TableCell align="center">
+                    90&nbsp;€ (1h mini tennis) / 150&nbsp;€ (1h15) / 170&nbsp;€
+                    (1h30)
+                  </TableCell>
                 </TableRow>
               </tbody>
             </Table>
@@ -341,35 +354,16 @@ export default function PricesPage() {
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Réductions</SectionTitle>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Réduction conjoint</h3>
-              <div className="prose max-w-none">
-                <p>
-                  Si votre conjoint prend aussi une cotisation annuelle, vous
-                  bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste
-                  plus qu'à le/la convaincre.
-                </p>
+            {discounts.map((discount) => (
+              <div key={discount.title} className="space-y-4">
+                <h3 className="text-xl font-bold">{discount.title}</h3>
+                <div className="prose max-w-none">
+                  {discount.content.map((part) => (
+                    <p key={part}>{part}</p>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Réduction famille</h3>
-              <div className="prose max-w-none">
-                <p>
-                  Lors de l'inscription de plusieurs membres d'une même famille,
-                  vous bénéficiez d'une réduction de 30€ par enfant (10€ pour le
-                  mini-tennis).
-                </p>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <h3 className="text-xl font-bold">Parrainage</h3>
-              <div className="prose max-w-none">
-                <p>
-                  Le parrain et le parrainé bénéficient chacun de 15€ de
-                  réduction.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </Wrapper>
       </Section>
@@ -381,16 +375,12 @@ export default function PricesPage() {
             <div className="prose max-w-none">
               <p>
                 Vous avez la possibilité de donner un coup de pouce financier à
-                votre club. Pour cela, vous pouvez faire un don. Pour chaque
-                tranche de 15€, près de{" "}
+                votre club. Pour cela, vous pouvez faire un don (plafonné à
+                200€). Pour chaque tranche de 15€,{" "}
                 <strong>
                   10€ sont déductibles de vos impôts sur le revenu
                 </strong>{" "}
-                et vous bénéficiez d'
-                <strong>
-                  une remise immédiate de 25% du don sur votre cotisation
-                </strong>
-                .
+                et <strong>5€ sont déduits sur votre cotisation.</strong>.
               </p>
               <p>
                 En faisant un don, vous permettez au club de contenir la hausse
@@ -402,6 +392,25 @@ export default function PricesPage() {
           </div>
         </Wrapper>
       </Section>
-    </>
+    </Fragment>
   )
 }
+
+const discounts = [
+  {
+    title: "Réduction conjoint",
+    content: [
+      "Si votre conjoint prend aussi une cotisation annuelle, vous bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste plus qu'à le/la convaincre.",
+    ],
+  },
+  {
+    title: "Réduction enfant",
+    content: [
+      "Lors de l'inscription de plusieurs enfants d'une même famille, vous bénéficiez d'une réduction de 30€ sur la cotisation de chaque enfant.",
+    ],
+  },
+  {
+    title: "Forfait famillial",
+    content: ["À partir de 1200€."],
+  },
+]
