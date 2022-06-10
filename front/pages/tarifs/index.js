@@ -21,7 +21,7 @@ export default function PricesPage() {
       <Section variant="brand" skewed>
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
-            Tarifs 2021&nbsp;/&nbsp;2022
+            Tarifs 2022&nbsp;/&nbsp;2023
           </h1>
         </Wrapper>
       </Section>
