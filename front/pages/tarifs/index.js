@@ -17,7 +17,7 @@ export default function PricesPage() {
 
   return (
     <Fragment>
-      <SEO title="Tarifs" description="Tarifs pour la saison 2020/2021" />
+      <SEO title="Tarifs" description="Tarifs pour la saison 2022/2023" />
       <Section variant="brand" skewed>
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
