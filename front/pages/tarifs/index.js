@@ -538,6 +538,21 @@ const HelpDialog = ({ open, onClose }) => {
                         :
                       </p>
                       <Image src={help02} alt="" />
+                      <p>
+                        En cas de doute sur la formule qui vous convient,
+                        n'hésitez pas à nous envoyer un message via notre{" "}
+                        <a
+                          href="https://www.facebook.com/TCFranconvilleOfficiel"
+                          rel="noreferrer"
+                        >
+                          page Facebook
+                        </a>{" "}
+                        ou{" "}
+                        <a href="mailto:tennis.club.franconville@cegetel.net">
+                          un e-mail
+                        </a>
+                        .
+                      </p>
                     </div>
                     <Info title="Attention">
                       Ne prenez pas de licence "web". Une licence vous sera
@@ -554,8 +569,8 @@ const HelpDialog = ({ open, onClose }) => {
                       <Image src={help03} alt="" />
                       <p>
                         Suivez les instructions afin de procéder au paiement. Si
-                        vous souhaitez payer en 4 fois, sélectionnez "Je paye en
-                        plusieurs fois"&nbsp;:
+                        vous souhaitez payer en plusieurs fois, n'oubliez pas de
+                        sélectionner "Je paye en plusieurs fois"&nbsp;:
                       </p>
                       <Image src={help04} alt="" />
                     </div>
