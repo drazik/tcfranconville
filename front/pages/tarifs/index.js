@@ -2,9 +2,19 @@ import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { Table, TableRow, TableCell } from "../../components/Table"
-import { Fragment } from "react"
+import { Fragment, useState } from "react"
+import { Button } from "../../components/Button"
+import { Dialog, Transition } from "@headlessui/react"
+import Image from "next/image"
+import help01 from "../../img/tarifs/help-01.png"
+import help02 from "../../img/tarifs/help-02.png"
+import help03 from "../../img/tarifs/help-03.png"
+import help04 from "../../img/tarifs/help-04.png"
+import { Info } from "../../components/Info"
 
 export default function PricesPage() {
+  const [showHelp, setShowHelp] = useState(false)
+
   return (
     <Fragment>
       <SEO title="Tarifs" description="Tarifs pour la saison 2020/2021" />
@@ -17,6 +27,35 @@ export default function PricesPage() {
       </Section>
 
       <Section skewed>
+        <Wrapper>
+          <div className="space-y-8">
+            <SectionTitle>Inscription en ligne</SectionTitle>
+            <div className="prose max-w-none">
+              <p>
+                Vous pouvez vous inscrire directement en ligne sur{" "}
+                <a
+                  href="https://tenup.fft.fr/club/57950106/offres"
+                  rel="noopener"
+                  target="_blank"
+                >
+                  la page TenUp du club
+                </a>
+                . L'inscription en ligne vous permet de ne pas être contraint(e)
+                de venir à une permanence au club ou au forum des associations
+                pour vous inscrire pour la saison 2022/2023, mais aussi de payer
+                votre cotisation et vos cours en ligne.
+              </p>
+            </div>
+            <Button color="brand" onClick={() => setShowHelp(true)}>
+              Comment faire ?
+            </Button>
+          </div>
+        </Wrapper>
+      </Section>
+
+      <HelpDialog open={showHelp} onClose={() => setShowHelp(false)} />
+
+      <Section skewed variant="light">
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Licence</SectionTitle>
@@ -49,7 +88,7 @@ export default function PricesPage() {
         </Wrapper>
       </Section>
 
-      <Section skewed variant="light">
+      <Section skewed>
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Cotisation</SectionTitle>
@@ -185,7 +224,7 @@ export default function PricesPage() {
         </Wrapper>
       </Section>
 
-      <Section>
+      <Section variant="light">
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Cours collectifs adultes</SectionTitle>
@@ -233,7 +272,7 @@ export default function PricesPage() {
         </Wrapper>
       </Section>
 
-      <Section skewed variant="light">
+      <Section skewed>
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Ecole de tennis</SectionTitle>
@@ -316,7 +355,7 @@ export default function PricesPage() {
         </Wrapper>
       </Section>
 
-      <Section>
+      <Section variant="light">
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Divers</SectionTitle>
@@ -350,7 +389,7 @@ export default function PricesPage() {
         </Wrapper>
       </Section>
 
-      <Section variant="light">
+      <Section>
         <Wrapper>
           <div className="space-y-8">
             <SectionTitle>Réductions</SectionTitle>
@@ -414,3 +453,123 @@ const discounts = [
     content: ["À partir de 1200€."],
   },
 ]
+
+const HelpDialog = ({ open, onClose }) => {
+  return (
+    <Transition appear show={open} as={Fragment}>
+      <Dialog as="div" className="relative z-20" onClose={onClose}>
+        <Transition.Child
+          as={Fragment}
+          enter="ease-out duration-300"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="ease-in duration-200"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div className="fixed inset-0 bg-black bg-opacity-25" />
+        </Transition.Child>
+        <div className="fixed inset-0 overflow-y-auto">
+          <div className="flex min-h-full items-center justify-center p-4 text-center">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <Dialog.Title
+                  as="h3"
+                  className="text-xl font-medium leading-6 text-gray-900"
+                >
+                  Inscription en ligne : commment faire ?
+                </Dialog.Title>
+                <div className="mt-8 space-y-6">
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium">
+                      Étape 1 : créer son compte sur Ten'Up
+                    </h4>
+                    <div className="prose max-w-none">
+                      <p>
+                        Rendez vous sur le site{" "}
+                        <a href="https://tenup.fft.fr/" rel="noopener">
+                          Ten'Up
+                        </a>{" "}
+                        puis cliquez sur "Connexion / inscription".
+                      </p>
+                      <Image src={help01} alt="" />
+                      <p>
+                        Créez votre compte en remplissant le formulaire
+                        d'inscription. Si vous avez déjà un compte,
+                        connectez-vous.
+                      </p>
+                    </div>
+                    <Info title="Inscription famille">
+                      Si vous souhaitez inscrire plusieurs membre d'une même
+                      famille, chaque membre de la famille devra avoir un compte
+                      Ten'Up.
+                    </Info>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium">
+                      Étape 2 : Choisir sa formule
+                    </h4>
+                    <div className="prose max-w-none">
+                      <p>
+                        Rendez vous sur{" "}
+                        <a
+                          href="https://tenup.fft.fr/club/57950106/offres"
+                          rel="noopener"
+                          target="_blank"
+                        >
+                          la page des offres du TC Franconville
+                        </a>
+                        .
+                      </p>
+                      <p>
+                        Sélectionnez la formule qui vous intéresse en cliquant
+                        sur le bouton "Ajouter" associé à cette formule.
+                      </p>
+                      <p>
+                        Par exemple, pour sélectionner des cours de mini-tennis
+                        :
+                      </p>
+                      <Image src={help02} alt="" />
+                    </div>
+                    <Info title="Attention">
+                      Ne prenez pas de licence "web". Une licence vous sera
+                      attribuée par le club après votre inscription.
+                    </Info>
+                  </div>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium">Étape 3 : Paiement</h4>
+                    <div className="prose max-w-none">
+                      <p>
+                        Accédez à votre panier en cliquant sur le bouton
+                        "Panier" :
+                      </p>
+                      <Image src={help03} alt="" />
+                      <p>
+                        Suivez les instructions afin de procéder au paiement. Si
+                        vous souhaitez payer en 4 fois, sélectionnez "Je paye en
+                        plusieurs fois"&nbsp;:
+                      </p>
+                      <Image src={help04} alt="" />
+                    </div>
+                    <Info title="Inscription famille">
+                      Pour une famille, il faut consulter le panier du compte du
+                      "Chef de famille".
+                    </Info>
+                  </div>
+                </div>
+              </Dialog.Panel>
+            </Transition.Child>
+          </div>
+        </div>
+      </Dialog>
+    </Transition>
+  )
+}

@@ -1,3 +1,5 @@
+const colors = require("tailwindcss/colors")
+
 module.exports = {
   mode: "jit",
   purge: ["./components/**/*.js", "./pages/**/*.js"],
@@ -5,6 +7,7 @@ module.exports = {
     extend: {
       colors: {
         brand: "#1a38b1",
+        orange: colors.orange,
       },
       inset: {
         "1/2": "50%",
