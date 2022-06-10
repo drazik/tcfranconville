@@ -521,7 +521,7 @@ const HelpDialog = ({ open, onClose }) => {
                       <p>
                         Rendez vous sur{" "}
                         <a
-                          href="https://tenup.fft.fr/club/57950106/offres"
+                          href="https://tenup.fft.fr/club/57950106/offres/5"
                           rel="noopener"
                           target="_blank"
                         >
