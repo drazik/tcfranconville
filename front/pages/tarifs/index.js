@@ -445,7 +445,7 @@ const discounts = [
   {
     title: "Réduction enfant",
     content: [
-      "Lors de l'inscription de plusieurs enfants d'une même famille, vous bénéficiez d'une réduction de 30€ sur la cotisation de chaque enfant.",
+      "Lors de l'inscription d'un enfant, vous bénéficiez d'une réduction de 30€ sur sa cotisation si un autre membre de la famille a déjà souscrit à une cotisation (hors cotisation parentale).",
     ],
   },
   {
