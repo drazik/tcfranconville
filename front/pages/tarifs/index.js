@@ -323,7 +323,7 @@ export default function PricesPage() {
                   <TableCell>
                     <div className="space-y-1">
                       <div>Club Ados</div>
-                      <div className="text-xs">1h15</div>
+                      <div className="text-xs">1h15 (débutants uniquement)</div>
                     </div>
                   </TableCell>
                   <TableCell align="center">178&nbsp;€</TableCell>
