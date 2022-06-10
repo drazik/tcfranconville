@@ -480,13 +480,27 @@ const HelpDialog = ({ open, onClose }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <Dialog.Panel className="w-full max-w-xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
-                <Dialog.Title
-                  as="h3"
-                  className="text-xl font-medium leading-6 text-gray-900"
-                >
-                  Inscription en ligne : commment faire ?
-                </Dialog.Title>
+              <Dialog.Panel className="w-full max-w-2xl transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+                <div className="flex flex-wrap">
+                  <Dialog.Title
+                    as="h3"
+                    className="text-xl font-medium leading-6 text-gray-900 shrink-0 my-2"
+                  >
+                    Inscription en ligne : commment faire ?
+                  </Dialog.Title>
+                  <div className="shrink-0 my-2 md:ml-auto">
+                    <Button
+                      color="brand"
+                      size="small"
+                      component="a"
+                      href="https://www.youtube.com/watch?v=MdzRYW04dOM"
+                      rel="noreferrer"
+                      target="_blank"
+                    >
+                      Voir la vidéo d'aide
+                    </Button>
+                  </div>
+                </div>
                 <div className="mt-8 space-y-6">
                   <div className="space-y-3">
                     <h4 className="text-lg font-medium">
