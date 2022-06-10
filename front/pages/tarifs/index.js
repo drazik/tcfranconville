@@ -579,6 +579,31 @@ const HelpDialog = ({ open, onClose }) => {
                       "Chef de famille".
                     </Info>
                   </div>
+                  <div className="space-y-3">
+                    <h4 className="text-lg font-medium">
+                      Étape 4 : Certificat médical
+                    </h4>
+                    <div className="prose max-w-none">
+                      <p>
+                        La pratique du tennis est conditionnée à la présentation
+                        d'un certificat médical ou au remplissage d'un
+                        questionnaire de santé. Vous trouverez toutes les
+                        indications ainsi que tous les documents nécessaires sur{" "}
+                        <a
+                          href="https://www.fft.fr/jouer/se-licencier/certificat-medical"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
+                          le site de la Fédération Française de Tennis
+                        </a>
+                        .
+                      </p>
+                      <p>
+                        Vous pouvez transmettre ces documents directement via
+                        Ten'Up.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </Dialog.Panel>
             </Transition.Child>
