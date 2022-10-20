@@ -16,7 +16,7 @@ export const Button = forwardRef(function Button(
     <Component
       ref={ref}
       className={cn(
-        "no-underline  inline-flex justify-center items-center rounded-full text-lg font-semibold shadow-md",
+        "no-underline  inline-flex justify-center items-center rounded-full text-lg font-semibold shadow-md text-center",
         {
           "bg-brand text-white hover:bg-blue-800 active:bg-blue-900 focus:shadow-outline":
             color === "brand",

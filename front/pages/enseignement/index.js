@@ -33,6 +33,13 @@ export default function EnseignementPage() {
               Les cours sont très demandés, pensez à vous inscrire dès le moi de
               mai&nbsp;!
             </p>
+            <Button
+              component={"a"}
+              href={"/calendrier-cours-2022-2023.pdf"}
+              target={"_blank"}
+            >
+              Télécharger le calendrier de cours 2022-2023
+            </Button>
           </div>
         </Wrapper>
       </Section>
