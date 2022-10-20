@@ -450,7 +450,7 @@ const discounts = [
   },
   {
     title: "Forfait famillial",
-    content: ["À partir de 1200€."],
+    content: ["À partir de 1270€."],
   },
 ]
 
