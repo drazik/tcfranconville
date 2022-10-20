@@ -5,6 +5,7 @@ import { TwoCol } from "../../components/TwoCol"
 import { ImagesCarousel } from "../../components/ImagesCarousel"
 import importAll from "import-all.macro"
 import { Button } from "../../components/Button"
+import isAfter from "date-fns/isAfter"
 
 const printempsIllustrations = importAll.sync(
   "../../img/competition/championnat-printemps/*.jpg"
@@ -29,6 +30,70 @@ const interneIllustrations = importAll.sync(
 const interneCouleurIllustrations = importAll.sync(
   "../../img/competition/interne-couleur/*.jpg"
 )
+
+const competitions = [
+  {
+    title: "Tournoi Open",
+    description: [
+      "Chaque été le club organise son tournoi Open, au mois d'août. De nombreux(ses) joueurs(euses) du club, du département ainsi que de la France entière voire de l'étranger (450 en 2019) y prennent part.",
+    ],
+    dates: { start: new Date(2021, 7, 7), end: new Date(2021, 7, 22) },
+    categories: [
+      "simple dames (senior, 35, 45, 55)",
+      "simple messieurs (senioor, 35, 45, 55, 60, 65, 70, 75)",
+      "filles/garçons (U12, U14, U16, U18)",
+    ],
+    tenupURL: "https://tenup.fft.fr/tournoi/82240888",
+    images: Object.values(openIllustrations),
+  },
+  {
+    title: "Tournoi Open Seniors Hiver",
+    description: [
+      "Organisé entre fin novembre et début décembre en semaine. Les matchs ont lieu en journée (premiers matchs à 9h, dernière rotation à 15h), du lundi au vendredi;",
+    ],
+    dates: { start: new Date(2022, 10, 14), end: new Date(2022, 11, 2) },
+    categories: ["Seniors dames", "Seniors messieurs"],
+    tenupURL: "https://tenup.fft.fr/tournoi/82337170",
+    images: Object.values(openSeniorHiverIllustrations),
+  },
+  {
+    title: "Tournoi Open Seniors+",
+    description: [
+      "Vous avez plus de 55 ans&nbsp;? Venez vous confronter en journée en semaine à des joueurs d'Île de France au club de Franconville au mois de mars et sur terre battue.",
+    ],
+    dates: { start: new Date(2022, 8, 29), end: new Date(2022, 9, 18) },
+    categories: [
+      "Dames 55 ans  et 65 ans",
+      "Messieurs 60 ans, 65 ans, 70 ans et 75 ans",
+    ],
+    tenupURL: "https://tenup.fft.fr/tournoi/82337167",
+    images: Object.values(openSeniorPlusIllustrations),
+  },
+  {
+    title: "Tournoi interne",
+    description: [
+      "Au printemps, le tournoi interne permet à tous(tes) les joueurs(eueses) du club de jouer ensemble dans la convivialité et la bonne humeur qui caractérisent le TCF.",
+    ],
+    dates: null,
+    categories: [
+      "filles/garçons (U12, U16)",
+      "dames (senior, +35)",
+      "messieurs (senioor, +35, +55)",
+    ],
+    tenupURL: null,
+    images: Object.values(interneIllustrations),
+  },
+  {
+    title: "Tournois internes couleurs",
+    description: [
+      "Une fois par trimestre nos enseignants organisent des tournois par couleurs pour les enfants du club. Les enfants y sont regroupés par niveaux et jouent avec des balles évolutives.",
+    ],
+    dates: null,
+    categories: ["blanc", "violet", "rouge", "orange", "vert"],
+    tenupURL: null,
+    images: Object.values(interneCouleurIllustrations),
+  },
+]
 
 export default function CompetitionPage() {
   return (
@@ -198,177 +263,13 @@ export default function CompetitionPage() {
                 âges et niveaux.
               </p>
             </div>
-            <TwoCol
-              firstCol={
-                <div className="space-y-8">
-                  <SectionTitle>Tournoi Open</SectionTitle>
-                  <div className="prose max-w-none">
-                    <p>
-                      Chaque été le club organise son tournoi Open, au mois
-                      d'août. De nombreux(ses) joueurs(euses) du club, du
-                      département ainsi que de la France entière voire de
-                      l'étranger (450 en 2019) y prennent part.
-                    </p>
-                    <p>
-                      Catégories&nbsp;: simple dames (senior, 35, 45, 55),
-                      simples messieurs (senior, 35, 45, 55, 60, 65, 70,
-                      75)&nbsp;; filles/garçons (U12, U14, U16, U18)
-                    </p>
-                    <p>
-                      La 39ème édition du tournoi Open du TCF aura lieu du 7
-                      août au 22 août 2021.
-                    </p>
-                  </div>
-                  <Button
-                    component="a"
-                    href="https://tenup.fft.fr/tournoi/82240888"
-                    target="_blank"
-                    rel="noreferrer"
-                    color="brand"
-                  >
-                    Voir sur Tenup
-                  </Button>
-                </div>
-              }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(openIllustrations).map(getNextImageSrc)}
-                />
-              }
-            />
-
-            <TwoCol
-              inversed
-              firstCol={
-                <div className="space-y-8">
-                  <SectionTitle>Tournoi Open Seniors Hiver</SectionTitle>
-                  <div className="prose max-w-none">
-                    <p>
-                      Organisé entre fin novembre et début décembre en semaine.
-                      Les matchs ont lieu en journée (premiers matchs à 9h,
-                      dernière rotation à 15h), du lundi au vendredi;
-                    </p>
-                    <p>
-                      Prochaine édition du 16 novembre au vendredi 4 décembre
-                      2020
-                    </p>
-                    <p>Catégories&nbsp;:</p>
-                    <ul>
-                      <li>Seniors dames</li>
-                      <li>Seniors messieurs</li>
-                    </ul>
-                  </div>
-                  <Button
-                    component="a"
-                    href="https://tenup.fft.fr/tournoi/82240880"
-                    target="_blank"
-                    rel="noreferrer"
-                    color="brand"
-                  >
-                    Voir sur Tenup
-                  </Button>
-                </div>
-              }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(openSeniorHiverIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
-            />
-
-            <TwoCol
-              firstCol={
-                <div className="space-y-8">
-                  <SectionTitle>Tournoi Open Séniors+</SectionTitle>
-                  <div className="prose max-w-none">
-                    <p>
-                      Vous avez plus de 55 ans&nbsp;? Venez vous confronter en
-                      journée en semaine à des joueurs d'Île de France au club
-                      de Franconville au mois de mars et sur terre battue.
-                    </p>
-                    <p>Prochaine édition du 29 mars au 16 avril 2021</p>
-                    <p>Catégories&nbsp;:</p>
-                    <ul>
-                      <li>Dames 55 ans et 65 ans</li>
-                      <li>Messieurs 60 ans, 65 ans, 70 ans et 75 ans</li>
-                    </ul>
-                  </div>
-                  <Button
-                    component="a"
-                    href="https://tenup.fft.fr/tournoi/82240865"
-                    target="_blank"
-                    rel="noreferrer"
-                    color="brand"
-                  >
-                    Voir sur Tenup
-                  </Button>
-                </div>
-              }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(openSeniorPlusIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
-            />
-
-            <TwoCol
-              inversed
-              firstCol={
-                <div className="space-y-8">
-                  <SectionTitle>Tournoi interne</SectionTitle>
-                  <div className="prose max-w-none">
-                    <p>
-                      Au printemps, le tournoi interne permet à tous(tes) les
-                      joueurs(eueses) du club de jouer ensemble dans la
-                      convivialité et la bonne humeur qui caractérisent le TCF.
-                    </p>
-                    <p>
-                      Catégories&nbsp;: filles/garçons (U12, U16), dames
-                      (senior, +35), messieurs (senior, +35, +55)
-                    </p>
-                    <p>
-                      Les adhérents du TCF peuvent également se confronter en
-                      double à cette occasion (mixtes, dames et messieurs).
-                    </p>
-                  </div>
-                </div>
-              }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(interneIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
-            />
-
-            <TwoCol
-              firstCol={
-                <div className="space-y-8">
-                  <SectionTitle>Tournois internes couleur</SectionTitle>
-                  <div className="prose max-w-none">
-                    <p>
-                      Une fois par trimestre nos enseignants organisent des
-                      tournois par couleurs pour les enfants du club. Les
-                      enfants y sont regroupés par niveaux et jouent avec des
-                      balles évolutives.
-                    </p>
-                    <p>Catégories&nbsp;: blanc, violet, rouge, orange, vert</p>
-                  </div>
-                </div>
-              }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(interneCouleurIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
-            />
+            {competitions.map((competition, index) => (
+              <Competition
+                key={competition.name}
+                competition={competition}
+                inversed={index % 2 === 1}
+              />
+            ))}
           </div>
         </Wrapper>
       </Section>
@@ -377,3 +278,53 @@ export default function CompetitionPage() {
 }
 
 const getNextImageSrc = (nextImageModule) => nextImageModule.default.src
+
+const Competition = ({ competition, inversed }) => {
+  return (
+    <TwoCol
+      inversed={inversed}
+      firstCol={
+        <div className="space-y-8">
+          <SectionTitle>{competition.title}</SectionTitle>
+          <div className="prose max-w-none">
+            {competition.description.map((paragraph) => (
+              <p
+                dangerouslySetInnerHTML={{ __html: paragraph }}
+                key={paragraph}
+              />
+            ))}
+            {competition.dates ? (
+              <p>
+                {isAfter(competition.dates.start, new Date())
+                  ? "Prochaine"
+                  : "Dernière"}{" "}
+                édition du {competition.dates.start.toLocaleDateString()} au{" "}
+                {competition.dates.end.toLocaleDateString()}
+              </p>
+            ) : null}
+            <p>Catégories&nbsp;:</p>
+            <ul>
+              {competition.categories.map((category) => (
+                <li key={category}>{category}</li>
+              ))}
+            </ul>
+          </div>
+          {competition.tenupURL ? (
+            <Button
+              component="a"
+              href={competition.tenupURL}
+              target="_blank"
+              rel="noreferrer"
+              color="brand"
+            >
+              Voir sur Tenup
+            </Button>
+          ) : null}
+        </div>
+      }
+      secondCol={
+        <ImagesCarousel images={competition.images.map(getNextImageSrc)} />
+      }
+    />
+  )
+}
