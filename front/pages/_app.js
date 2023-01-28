@@ -3,6 +3,7 @@ import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import NextNprogress from "nextjs-progressbar"
 import { Favicon } from "../components/Favicon"
+import { Analytics } from "@vercel/analytics/react"
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -17,6 +18,7 @@ function MyApp({ Component, pageProps }) {
         stopDelayMs={200}
         height="5"
       />
+      <Analytics />
     </>
   )
 }
