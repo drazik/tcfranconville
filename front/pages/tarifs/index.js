@@ -17,11 +17,11 @@ export default function PricesPage() {
 
   return (
     <Fragment>
-      <SEO title="Tarifs" description="Tarifs pour la saison 2022/2023" />
+      <SEO title="Tarifs" description="Tarifs pour la saison 2023/2024" />
       <Section variant="brand" skewed>
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
-            Tarifs 2022&nbsp;/&nbsp;2023
+            Tarifs 2023&nbsp;/&nbsp;2024
           </h1>
         </Wrapper>
       </Section>
@@ -42,7 +42,7 @@ export default function PricesPage() {
                 </a>
                 . L'inscription en ligne vous permet de ne pas être contraint(e)
                 de venir à une permanence au club ou au forum des associations
-                pour vous inscrire pour la saison 2022/2023, mais aussi de payer
+                pour vous inscrire pour la saison 2023/2024, mais aussi de payer
                 votre cotisation et vos cours en ligne.
               </p>
             </div>
@@ -67,10 +67,10 @@ export default function PricesPage() {
                 pratique.
               </p>
               <p>
-                La licence Club 2022 est valable du 1er septembre 2022 au 31
-                août 2023. Son tarif est mis en place par la FFT&nbsp;:
-                32&nbsp;€ pour les adultes, 22&nbsp;€ pour les jeunes/ados de 6
-                à 18 ans, 12 &nbsp;€ pour les enfants de moins de 6 ans.
+                La licence Club 2023 est valable du 1er septembre 2023 au 31
+                août 2024. Son tarif est mis en place par la FFT&nbsp;:
+                32&nbsp;€ pour les adultes, 22&nbsp;€ pour les jeunes de 6 à 18
+                ans, 12 &nbsp;€ pour les enfants de moins de 6 ans.
               </p>
               <p>
                 Être licencié vous procure de nombreux avantages.{" "}
@@ -181,14 +181,14 @@ export default function PricesPage() {
                         <div className="text-xs">du 1er mars au 31 août</div>
                       </div>
                     </TableCell>
-                    <TableCell align="center">170&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">180&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">178&nbsp;€ + licence</TableCell>
+                    <TableCell align="center">188&nbsp;€ + licence</TableCell>
                   </TableRow>
                   <TableRow variant="odd">
                     <TableCell>
                       <div className="space-y-1">
                         <div>Mini-tennis</div>
-                        <div className="text-xs">2017-2019</div>
+                        <div className="text-xs">2018-2020</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
@@ -199,7 +199,7 @@ export default function PricesPage() {
                     <TableCell>
                       <div className="space-y-1">
                         <div>Club junior 1</div>
-                        <div className="text-xs">2015-2016</div>
+                        <div className="text-xs">2016-2017</div>
                       </div>
                     </TableCell>
                     <TableCell align="center" colSpan="2">
@@ -208,10 +208,7 @@ export default function PricesPage() {
                   </TableRow>
                   <TableRow variant="odd">
                     <TableCell>
-                      <div className="space-y-1">
-                        <div>Ados et Club junior 2</div>
-                        <div className="text-xs">2005-2014</div>
-                      </div>
+                      Club Junior 2 (2013-2015) et Club Ados (2006-2012)
                     </TableCell>
                     <TableCell align="center" colSpan="2">
                       100&nbsp;€ + licence
@@ -253,7 +250,7 @@ export default function PricesPage() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">290&nbsp;€</TableCell>
+                  <TableCell align="center">300&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
@@ -264,7 +261,7 @@ export default function PricesPage() {
                       </div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">430&nbsp;€</TableCell>
+                  <TableCell align="center">445&nbsp;€</TableCell>
                 </TableRow>
               </tbody>
             </Table>
@@ -296,10 +293,10 @@ export default function PricesPage() {
                   <TableCell>
                     <div className="space-y-1">
                       <div>Mini-tennis</div>
-                      <div className="text-xs">1h, 2016-2018</div>
+                      <div className="text-xs">1h</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">123&nbsp;€</TableCell>
+                  <TableCell align="center">128&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
@@ -308,7 +305,7 @@ export default function PricesPage() {
                       <div className="text-xs">1h15</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">178&nbsp;€</TableCell>
+                  <TableCell align="center">186&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
                   <TableCell>
@@ -317,16 +314,16 @@ export default function PricesPage() {
                       <div className="text-xs">1h30</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">208&nbsp;€</TableCell>
+                  <TableCell align="center">218&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
                     <div className="space-y-1">
-                      <div>Club Ados</div>
-                      <div className="text-xs">1h15 (débutants uniquement)</div>
+                      <div>Club Ados débutant</div>
+                      <div className="text-xs">1h15</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">178&nbsp;€</TableCell>
+                  <TableCell align="center">186&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="odd">
                   <TableCell>
@@ -335,7 +332,7 @@ export default function PricesPage() {
                       <div className="text-xs">1h30</div>
                     </div>
                   </TableCell>
-                  <TableCell align="center">248&nbsp;€</TableCell>
+                  <TableCell align="center">258&nbsp;€</TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
@@ -345,7 +342,7 @@ export default function PricesPage() {
                     </div>
                   </TableCell>
                   <TableCell align="center">
-                    90&nbsp;€ (1h mini tennis) / 150&nbsp;€ (1h15) / 170&nbsp;€
+                    100&nbsp;€ (1h mini tennis) / 160&nbsp;€ (1h15) / 185&nbsp;€
                     (1h30)
                   </TableCell>
                 </TableRow>
@@ -375,7 +372,19 @@ export default function PricesPage() {
                       Réservation d'un terrain par deux non-adhérents du TCF
                     </div>
                   </TableCell>
-                  <TableCell align="center">16&nbsp;€/h</TableCell>
+                  <TableCell align="center">
+                    20&nbsp;€/h (via{" "}
+                    <a
+                      href={
+                        "https://www.anybuddyapp.com/club-franconville-tc/reservation/tennis"
+                      }
+                      target={"_blank"}
+                      rel={"noreferrer"}
+                    >
+                      Anybuddy
+                    </a>
+                    )
+                  </TableCell>
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
@@ -450,7 +459,7 @@ const discounts = [
   },
   {
     title: "Forfait famillial",
-    content: ["À partir de 1270€."],
+    content: ["À partir de 1300€."],
   },
 ]
 
