@@ -84,7 +84,7 @@ export default function LeClubPage() {
           </div>
         </Wrapper>
       </Section>
-      <Section skewed variant="light">
+      <Section skewed variant="light" id={"contact"}>
         <Wrapper>
           <TwoCol
             firstCol={
