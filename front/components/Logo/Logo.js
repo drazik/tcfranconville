@@ -9,7 +9,7 @@ export function Logo({ size = 100 }) {
       style={{ width: size, height: size }}
     >
       <div className="h-full w-full relative">
-        <Image src={logo} alt="TC Franconville" layout="fill" />
+        <Image src={logo} alt="TC Franconville" />
       </div>
     </div>
   )

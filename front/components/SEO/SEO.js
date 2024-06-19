@@ -1,7 +1,11 @@
 import Head from "next/head"
 import PropTypes from "prop-types"
 
-export function SEO({ title, description, keywords }) {
+export function SEO({
+  title,
+  description = "Club de tennis convivial à Franconville (Val d'Oise). 9 courts de tennis dont 3 couverts et 2 extérieurs éclairés",
+  keywords = [],
+}) {
   const fullTitle = `${title} - TC Franconville`
 
   return (
@@ -31,10 +35,4 @@ SEO.propTypes = {
   title: PropTypes.string.isRequired,
   description: PropTypes.string,
   keywords: PropTypes.arrayOf(PropTypes.string),
-}
-
-SEO.defaultProps = {
-  description:
-    "Club de tennis convivial à Franconville (Val d'Oise). 9 courts de tennis dont 3 couverts et 2 extérieurs éclairés",
-  keywords: [],
 }

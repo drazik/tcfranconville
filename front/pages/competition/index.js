@@ -3,33 +3,39 @@ import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
 import { ImagesCarousel } from "../../components/ImagesCarousel"
-import importAll from "import-all.macro"
 import { Button } from "../../components/Button"
 import isAfter from "date-fns/isAfter"
 
-const printempsIllustrations = importAll.sync(
-  "../../img/competition/championnat-printemps/*.jpg"
-)
-const potelIllustrations = importAll.sync("../../img/competition/potel/*.jpg")
-const championnat45Illustrations = importAll.sync(
-  "../../img/competition/championnat-45/*.jpg"
-)
-const championnat55Illustrations = importAll.sync(
-  "../../img/competition/championnat-55/*.jpg"
-)
-const openIllustrations = importAll.sync("../../img/competition/open/*.jpg")
-const openSeniorHiverIllustrations = importAll.sync(
-  "../../img/competition/open-senior-hiver/*.jpg"
-)
-const openSeniorPlusIllustrations = importAll.sync(
-  "../../img/competition/open-senior-plus/*.jpg"
-)
-const interneIllustrations = importAll.sync(
-  "../../img/competition/interne/*.jpg"
-)
-const interneCouleurIllustrations = importAll.sync(
-  "../../img/competition/interne-couleur/*.jpg"
-)
+import printemps1 from "../../img/competition/championnat-printemps/01.jpg"
+import printemps2 from "../../img/competition/championnat-printemps/02.jpg"
+import printemps3 from "../../img/competition/championnat-printemps/03.jpg"
+
+import potel1 from "../../img/competition/potel/01.jpg"
+import potel2 from "../../img/competition/potel/02.jpg"
+import potel3 from "../../img/competition/potel/03.jpg"
+import potel4 from "../../img/competition/potel/04.jpg"
+
+import championnat45 from "../../img/competition/championnat-45/01.jpg"
+import championnat55 from "../../img/competition/championnat-55/01.jpg"
+
+import open1 from "../../img/competition/open/01.jpg"
+import open2 from "../../img/competition/open/02.jpg"
+import open3 from "../../img/competition/open/03.jpg"
+import open4 from "../../img/competition/open/04.jpg"
+import open5 from "../../img/competition/open/05.jpg"
+
+import openSeniorHiver from "../../img/competition/open-senior-hiver/01.jpg"
+
+import openSeniorPlus1 from "../../img/competition/open-senior-plus/01.jpg"
+import openSeniorPlus2 from "../../img/competition/open-senior-plus/02.jpg"
+
+import interne1 from "../../img/competition/interne/01.jpg"
+import interne2 from "../../img/competition/interne/02.jpg"
+import interne3 from "../../img/competition/interne/03.jpg"
+import interne4 from "../../img/competition/interne/04.jpg"
+
+import interneCouleur1 from "../../img/competition/interne-couleur/01.jpg"
+import interneCouleur2 from "../../img/competition/interne-couleur/02.jpg"
 
 const competitions = [
   {
@@ -44,7 +50,7 @@ const competitions = [
       "filles/garçons (U12, U14, U16, U18)",
     ],
     tenupURL: "https://tenup.fft.fr/tournoi/82240888",
-    images: Object.values(openIllustrations),
+    images: [open1, open2, open3, open4, open5],
   },
   {
     title: "Tournoi Open Seniors Hiver",
@@ -54,7 +60,7 @@ const competitions = [
     dates: { start: new Date(2022, 10, 14), end: new Date(2022, 11, 2) },
     categories: ["Seniors dames", "Seniors messieurs"],
     tenupURL: "https://tenup.fft.fr/tournoi/82337170",
-    images: Object.values(openSeniorHiverIllustrations),
+    images: [openSeniorHiver],
   },
   {
     title: "Tournoi Open Seniors+",
@@ -67,7 +73,7 @@ const competitions = [
       "Messieurs 60 ans, 65 ans, 70 ans et 75 ans",
     ],
     tenupURL: "https://tenup.fft.fr/tournoi/82337167",
-    images: Object.values(openSeniorPlusIllustrations),
+    images: [openSeniorPlus1, openSeniorPlus2],
   },
   {
     title: "Tournoi interne",
@@ -81,7 +87,7 @@ const competitions = [
       "messieurs (senioor, +35, +55)",
     ],
     tenupURL: null,
-    images: Object.values(interneIllustrations),
+    images: [interne1, interne2, interne3, interne4],
   },
   {
     title: "Tournois internes couleurs",
@@ -91,7 +97,7 @@ const competitions = [
     dates: null,
     categories: ["blanc", "violet", "rouge", "orange", "vert"],
     tenupURL: null,
-    images: Object.values(interneCouleurIllustrations),
+    images: [interneCouleur1, interneCouleur2],
   },
 ]
 
@@ -149,11 +155,7 @@ export default function CompetitionPage() {
                 </div>
               }
               secondCol={
-                <ImagesCarousel
-                  images={Object.values(printempsIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
+                <ImagesCarousel images={[printemps1, printemps2, printemps3]} />
               }
             />
 
@@ -175,11 +177,7 @@ export default function CompetitionPage() {
                 </div>
               }
               secondCol={
-                <ImagesCarousel
-                  images={Object.values(potelIllustrations).map(
-                    getNextImageSrc
-                  )}
-                />
+                <ImagesCarousel images={[potel1, potel2, potel3, potel4]} />
               }
             />
 
@@ -218,13 +216,7 @@ export default function CompetitionPage() {
                   </div>
                 </div>
               }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(championnat45Illustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
+              secondCol={<ImagesCarousel images={[championnat45]} />}
             />
 
             <TwoCol
@@ -241,13 +233,7 @@ export default function CompetitionPage() {
                   </div>
                 </div>
               }
-              secondCol={
-                <ImagesCarousel
-                  images={Object.values(championnat55Illustrations).map(
-                    getNextImageSrc
-                  )}
-                />
-              }
+              secondCol={<ImagesCarousel images={[championnat55]} />}
             />
           </div>
         </Wrapper>
@@ -265,7 +251,7 @@ export default function CompetitionPage() {
             </div>
             {competitions.map((competition, index) => (
               <Competition
-                key={competition.name}
+                key={competition.title}
                 competition={competition}
                 inversed={index % 2 === 1}
               />
@@ -276,8 +262,6 @@ export default function CompetitionPage() {
     </>
   )
 }
-
-const getNextImageSrc = (nextImageModule) => nextImageModule.default.src
 
 const Competition = ({ competition, inversed }) => {
   return (
@@ -322,9 +306,7 @@ const Competition = ({ competition, inversed }) => {
           ) : null}
         </div>
       }
-      secondCol={
-        <ImagesCarousel images={competition.images.map(getNextImageSrc)} />
-      }
+      secondCol={<ImagesCarousel images={competition.images} />}
     />
   )
 }
