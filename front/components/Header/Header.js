@@ -43,9 +43,7 @@ export function Header({ className, style = {}, ...props }) {
     >
       <Wrapper className="flex flex-col items-center space-y-8">
         <Link href="/">
-          <a>
-            <Logo />
-          </a>
+          <Logo />
         </Link>
         <div className="hidden xl:block">
           <LargeMenu items={items} />
@@ -201,21 +199,20 @@ function SmallMenuLink({ children, className, visible, href, ...props }) {
   const router = useRouter()
 
   return (
-    <Link href={href}>
-      <a
-        className={cn(
-          "block text-white uppercase tracking-wide font-semibold text-2xl px-8 transition-all duration-300 transform",
-          className,
-          {
-            "opacity-100 translate-x-0": visible,
-            "opacity-0 -translate-x-full": !visible,
-            underline: router.pathname === href,
-          }
-        )}
-        {...props}
-      >
-        {children}
-      </a>
+    <Link
+      href={href}
+      className={cn(
+        "block text-white uppercase tracking-wide font-semibold text-2xl px-8 transition-all duration-300 transform",
+        className,
+        {
+          "opacity-100 translate-x-0": visible,
+          "opacity-0 -translate-x-full": !visible,
+          underline: router.pathname === href,
+        }
+      )}
+      {...props}
+    >
+      {children}
     </Link>
   )
 }
@@ -247,22 +244,21 @@ function LargeMenuLink({ href, className, children, ...props }) {
   const isCurrent = router.pathname === href
 
   return (
-    <Link href={href}>
-      <a
-        className={cn(
-          "text-white font-bold text-shadow-lg text-xl flex flex-col items-stretch",
-          className
-        )}
-        {...props}
-      >
-        <span>{children}</span>
-        <span
-          className={cn("h-1 bg-brand transition-opacity duration-200", {
-            "opacity-100": isCurrent,
-            "opacity-0": !isCurrent,
-          })}
-        />
-      </a>
+    <Link
+      href={href}
+      className={cn(
+        "text-white font-bold text-shadow-lg text-xl flex flex-col items-stretch",
+        className
+      )}
+      {...props}
+    >
+      <span>{children}</span>
+      <span
+        className={cn("h-1 bg-brand transition-opacity duration-200", {
+          "opacity-100": isCurrent,
+          "opacity-0": !isCurrent,
+        })}
+      />
     </Link>
   )
 }

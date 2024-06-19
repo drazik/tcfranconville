@@ -82,11 +82,9 @@ export default function Home() {
                     réservation, même si vous n'êtes pas (encore) adhérent.
                   </p>
                 </div>
-                <Link href="/reservation" passHref>
-                  <Button component="a" className="w-full">
-                    Réserver un court
-                  </Button>
-                </Link>
+                <Button component={Link} href="/reservation" className="w-full">
+                  Réserver un court
+                </Button>
               </div>
               <div className="space-y-6">
                 <div className="prose">
@@ -98,11 +96,9 @@ export default function Home() {
                     saisonnière...
                   </p>
                 </div>
-                <Link href="/tarifs" passHref>
-                  <Button component="a" className="w-full">
-                    Découvrir la cotisation
-                  </Button>
-                </Link>
+                <Button component={Link} href="/tarifs" className="w-full">
+                  Découvrir la cotisation
+                </Button>
               </div>
             </div>
           </div>
@@ -122,16 +118,15 @@ export default function Home() {
 
 function ThemeCard({ href, className, title, ...props }) {
   return (
-    <Link href={href}>
-      <a
-        className={cn(
-          "flex flex-col p-6 rounded-lg justify-end text-white bg-cover bg-center h-56 text-xl font-bold text-shadow-xl shadow-2xl h-full",
-          className
-        )}
-        {...props}
-      >
-        {title}
-      </a>
+    <Link
+      href={href}
+      className={cn(
+        "flex flex-col p-6 rounded-lg justify-end text-white bg-cover bg-center h-56 text-xl font-bold text-shadow-xl shadow-2xl",
+        className
+      )}
+      {...props}
+    >
+      {title}
     </Link>
   )
 }

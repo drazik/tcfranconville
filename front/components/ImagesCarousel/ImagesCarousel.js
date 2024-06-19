@@ -2,6 +2,7 @@ import { useState, createContext, useContext } from "react"
 import { useCarousel } from "../Carousel"
 import PropTypes from "prop-types"
 import cn from "classnames"
+import Image from "next/image"
 
 const ImagesCarouselContext = createContext({ hasFocus: false })
 
@@ -15,7 +16,7 @@ export function ImagesCarousel({ images, className, ...props }) {
   })
 
   const slides = images.map((image) => (
-    <img
+    <Image
       src={image}
       className="object-cover object-center w-full"
       alt=""
@@ -83,11 +84,6 @@ export function ImagesCarousel({ images, className, ...props }) {
       </div>
     </ImagesCarouselContext.Provider>
   )
-}
-
-ImagesCarousel.propTypes = {
-  images: PropTypes.arrayOf(PropTypes.string).isRequired,
-  className: PropTypes.string,
 }
 
 function Control({ direction, className, ...props }) {

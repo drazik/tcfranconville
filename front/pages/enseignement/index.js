@@ -122,9 +122,8 @@ export default function EnseignementPage() {
                   <Info>
                     <div className="prose">
                       <p>
-                        Le club dispose d'un terrain de mini-tennis (dans le mur
-                        du club-house) sur lequel les enfants peuvent librement
-                        venir s'entrainer&nbsp;!
+                        Le club dispose d'un terrain de mini-tennis sur lequel
+                        les enfants peuvent librement venir s'entrainer&nbsp;!
                       </p>
                     </div>
                   </Info>
@@ -184,11 +183,13 @@ export default function EnseignementPage() {
                           pour la cotisation parent&nbsp;!
                         </p>
                       </div>
-                      <Link href="/tarifs" passHref>
-                        <Button component="a" className="w-full">
-                          En savoir plus
-                        </Button>
-                      </Link>
+                      <Button
+                        component={Link}
+                        href="/tarifs"
+                        className="w-full"
+                      >
+                        En savoir plus
+                      </Button>
                     </div>
                   </Info>
                 </div>

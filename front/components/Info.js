@@ -1,6 +1,6 @@
-import { InfoBubble } from "./Icon"
 import PropTypes from "prop-types"
 import cn from "classnames"
+import { Icon } from "../components/Icon"
 
 export function Info({
   children,
@@ -13,8 +13,9 @@ export function Info({
 
   return (
     <div className={cn("relative", className)} {...props}>
-      <InfoBubble
-        className="absolute w-12 h-12 fill-current text-brand"
+      <Icon
+        name={"info-bubble"}
+        className={"w-12 h-12 absolute fill-current text-brand"}
         style={{ top: "-10px", left: "-10px" }}
       />
       <div className="relative px-6 pt-16 pb-8 overflow-hidden text-white rounded-xl">

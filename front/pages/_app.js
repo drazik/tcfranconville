@@ -32,11 +32,14 @@ function MyApp({ Component, pageProps }) {
           </div>
 
           <div className={"flex-shrink-0"}>
-            <Link href="/le-club#contact" passHref>
-              <Button component="a" className="w-full" size="small">
-                Venir au club
-              </Button>
-            </Link>
+            <Button
+              component={Link}
+              href="/le-club#contact"
+              className="w-full"
+              size="small"
+            >
+              Venir au club
+            </Button>
           </div>
         </div>
       </StickyBanner>
