@@ -21,7 +21,7 @@ export default function PricesPage() {
       <Section variant="brand" skewed>
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
-            Tarifs 2023&nbsp;/&nbsp;2024
+            Tarifs 2024&nbsp;/&nbsp;2025
           </h1>
         </Wrapper>
       </Section>
@@ -42,7 +42,7 @@ export default function PricesPage() {
                 </a>
                 . L'inscription en ligne vous permet de ne pas être contraint(e)
                 de venir à une permanence au club ou au forum des associations
-                pour vous inscrire pour la saison 2023/2024, mais aussi de payer
+                pour vous inscrire pour la saison 2024/2025, mais aussi de payer
                 votre cotisation et vos cours en ligne.
               </p>
             </div>
@@ -61,21 +61,20 @@ export default function PricesPage() {
             <SectionTitle>Licence</SectionTitle>
             <div className="prose max-w-none">
               <p>
-                La licence Club est associée à votre adhésion à un club affilié
-                à la FFT. Intégrer un club affilié, c'est la garantie de trouver
-                une structure qui répond à vos attentes et facilite votre
-                pratique.
+                La licence est associée à votre adhésion à un club affilié à la
+                FFT. Intégrer un club affilié, c'est la garantie de trouver une
+                structure qui répond à vos attentes et facilite votre pratique.
               </p>
               <p>
-                La licence Club 2023 est valable du 1er septembre 2023 au 31
-                août 2024. Son tarif est mis en place par la FFT&nbsp;:
-                32&nbsp;€ pour les adultes, 22&nbsp;€ pour les jeunes de 6 à 18
-                ans, 12 &nbsp;€ pour les enfants de moins de 6 ans.
+                La licence 2024-2025 est valable du 1er septembre 2024 au 31
+                août 2025. Son tarif est mis en place par la FFT&nbsp;:
+                33&nbsp;€ pour les adultes, 23&nbsp;€ pour les jeunes de 6 à 18
+                ans, 13&nbsp;€ pour les enfants de moins de 6 ans.
               </p>
               <p>
                 Être licencié vous procure de nombreux avantages.{" "}
                 <a
-                  href="https://www.fft.fr/se-licencier/toutes-les-licences"
+                  href="https://www.fft.fr/la-federation/licences"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -136,7 +135,7 @@ export default function PricesPage() {
                   </TableRow>
                   <TableRow variant="even">
                     <TableCell>
-                      Etudiant ou cheurcheur d'emploi (-25 ans)
+                      Etudiant ou chercheur d'emploi (-25 ans)
                     </TableCell>
                     <TableCell align="center" colSpan="2">
                       120&nbsp;€ + licence
