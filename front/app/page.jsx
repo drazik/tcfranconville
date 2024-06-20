@@ -29,7 +29,7 @@ export default function HomePage() {
                 Vous voulez progresser dans votre discipline sportive, le
                 tennis&nbsp;?
                 <br />
-                Vous recherchez un lieu de partage d'émotions&nbsp;?
+                Vous recherchez un lieu de partage d&apos;émotions&nbsp;?
               </p>
               <p>
                 Quels que soient votre âge, votre niveau, votre ambition, le TCF
@@ -82,7 +82,7 @@ export default function HomePage() {
                     Le club est ouvert à toutes et à tous. Envie de taper la
                     petite balle jaune en famille ou entre amis&nbsp;? En
                     simple, en double&nbsp;? Nos courts sont disponibles à la
-                    réservation, même si vous n'êtes pas (encore) adhérent.
+                    réservation, même si vous n&apos;êtes pas (encore) adhérent.
                   </p>
                 </div>
                 <Button component={Link} href="/reservation" className="w-full">
@@ -95,8 +95,8 @@ export default function HomePage() {
                     Vous aimeriez jouer régulièrement&nbsp;? En devenant
                     adhérent(e) du TC Franconville, vous pourrez profiter au
                     maximum des infrastructures du club. Différentes
-                    possibilités s'offrent à vous&nbsp;: cotisation à l'année,
-                    saisonnière...
+                    possibilités s&apos;offrent à vous&nbsp;: cotisation à
+                    l&apos;année, saisonnière...
                   </p>
                 </div>
                 <Button component={Link} href="/tarifs" className="w-full">
@@ -110,7 +110,7 @@ export default function HomePage() {
       <Section>
         <Wrapper>
           <div className="space-y-8">
-            <SectionTitle>L'actualité du club</SectionTitle>
+            <SectionTitle>L&apos;actualité du club</SectionTitle>
             <FacebookFeed />
           </div>
         </Wrapper>

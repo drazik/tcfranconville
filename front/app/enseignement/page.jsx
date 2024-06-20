@@ -43,14 +43,14 @@ export default function EnseignementPage() {
               <strong>Nos objectifs pour vos enfants&nbsp;:</strong>
             </p>
             <ul>
-              <li>partager le plaisir du jeu en s'amusant avant tout</li>
+              <li>partager le plaisir du jeu en s&apos;amusant avant tout</li>
               <li>
                 faire progresser chaque enfant à son rythme en tenant compte des
                 singularités de chacun
               </li>
               <li>
-                transmettre les valeurs de l'esprit sportif associant fair-play,
-                dépassement de soi et esprit de compétition
+                transmettre les valeurs de l&apos;esprit sportif associant
+                fair-play, dépassement de soi et esprit de compétition
               </li>
             </ul>
             <p>
@@ -58,14 +58,14 @@ export default function EnseignementPage() {
             </p>
             <ul>
               <li>
-                promouvoir le tennis à l'extérieur du club par des actions comme
-                le «&nbsp;tennis à l'école&nbsp;» en lien avec la mairie de
-                Franconville et l'inspection académique
+                promouvoir le tennis à l&apos;extérieur du club par des actions
+                comme le «&nbsp;tennis à l&apos;école&nbsp;» en lien avec la
+                mairie de Franconville et l&apos;inspection académique
               </li>
               <li>
                 emmener nos compétiteurs à développer leur potentiel en les
-                intégrant à un centre d'entraînement intensif, en leur proposant
-                des cours supplémentaires...
+                intégrant à un centre d&apos;entraînement intensif, en leur
+                proposant des cours supplémentaires...
               </li>
               <li>
                 fidéliser les enfants par le développement du jeu en dehors des
@@ -73,8 +73,8 @@ export default function EnseignementPage() {
                 participation à des compétitions par équipes...)
               </li>
               <li>
-                faciliter la transition vers l'âge adulte en intégrant les ados
-                performants aux cours adultes
+                faciliter la transition vers l&apos;âge adulte en intégrant les
+                ados performants aux cours adultes
               </li>
             </ul>
           </div>
@@ -97,15 +97,15 @@ export default function EnseignementPage() {
                       début de soirée et samedi matin.
                     </p>
                     <p>
-                      Un encadrement adapté au nombre d'enfants&nbsp;: 1 adulte
-                      pour 5 enfants environ.
+                      Un encadrement adapté au nombre d&apos;enfants&nbsp;: 1
+                      adulte pour 5 enfants environ.
                     </p>
                     <p>Un matériel pédagogique spécifique.</p>
                     <p>
                       Compétences travaillées&nbsp;: déveloper la motricité, la
-                      notion d'envoi-renvoi, arriver en fin d'année à effectuer
-                      des petits échanges (notion de partenaire) et des
-                      mini-matchs (notion de compétition).
+                      notion d&apos;envoi-renvoi, arriver en fin d&apos;année à
+                      effectuer des petits échanges (notion de partenaire) et
+                      des mini-matchs (notion de compétition).
                     </p>
                     <p>
                       41 enfants inscrits en mini-tennis en 2019-2020, soit une
@@ -115,14 +115,15 @@ export default function EnseignementPage() {
                   <Info>
                     <div className="prose">
                       <p>
-                        Le club dispose d'un terrain de mini-tennis sur lequel
-                        les enfants peuvent librement venir s'entrainer&nbsp;!
+                        Le club dispose d&apos;un terrain de mini-tennis sur
+                        lequel les enfants peuvent librement venir
+                        s&apos;entrainer&nbsp;!
                       </p>
                     </div>
                   </Info>
                 </div>
               }
-              secondCol={<Illustration src={minitennisIllustration.src} />}
+              secondCol={<Illustration src={minitennisIllustration} />}
             />
             <TwoCol
               firstCol={
@@ -133,15 +134,17 @@ export default function EnseignementPage() {
                   <div className="prose max-w-none">
                     <p>1 heure par semaine</p>
                     <p>
-                      En 2019-2020, une trentaine d'enfants répartis sur 5
+                      En 2019-2020, une trentaine d&apos;enfants répartis sur 5
                       créneaux&nbsp;: mercredi matin et après-midi, samedi matin
                     </p>
                     <p>Deux niveaux&nbsp;: initiation et perfectionnement</p>
-                    <p>Une fidélisation d'environ 60% des enfants&nbsp;!</p>
+                    <p>
+                      Une fidélisation d&apos;environ 60% des enfants&nbsp;!
+                    </p>
                   </div>
                 </div>
               }
-              secondCol={<Illustration src={junior1Illustration.src} />}
+              secondCol={<Illustration src={junior1Illustration} />}
               inversed
             />
             <TwoCol
@@ -154,15 +157,16 @@ export default function EnseignementPage() {
                     <p>1h15 par semaine</p>
                     <p>
                       9 créneaux en 2019-2020 pour 60 enfants&nbsp;: lundi en
-                      fin d'après-midi, mercredi matin et après-midi, vendredi
-                      en fin d'après-midi, samedi matin et après-midi
+                      fin d&apos;après-midi, mercredi matin et après-midi,
+                      vendredi en fin d&apos;après-midi, samedi matin et
+                      après-midi
                     </p>
                     <p>
                       Trois niveaux&nbsp;: initiation, perfectionnement,
                       compétition
                     </p>
                     <p>
-                      50% des enfants poursuivent le tennis l'année
+                      50% des enfants poursuivent le tennis l&apos;année
                       suivante&nbsp;!
                     </p>
                   </div>
@@ -171,7 +175,7 @@ export default function EnseignementPage() {
                       <div className="prose">
                         <p>
                           Pour 95€ seulement, vous pouvez jouer autant que vous
-                          le voulez avec votre enfant inscrit à l'école de
+                          le voulez avec votre enfant inscrit à l&apos;école de
                           tennis et même réserver un court avec lui&nbsp;! Optez
                           pour la cotisation parent&nbsp;!
                         </p>
@@ -187,7 +191,7 @@ export default function EnseignementPage() {
                   </Info>
                 </div>
               }
-              secondCol={<Illustration src={junior2Illustration.src} />}
+              secondCol={<Illustration src={junior2Illustration} />}
             />
             <TwoCol
               firstCol={
@@ -203,10 +207,11 @@ export default function EnseignementPage() {
                     </p>
                     <p>
                       60 jeunes répartis sur 13 niveaux&nbsp;: lundi et mardi en
-                      fin d'après-midi, mercredi après-midi, samedi après-midi
+                      fin d&apos;après-midi, mercredi après-midi, samedi
+                      après-midi
                     </p>
                     <p>
-                      Plus de 70% des ados poursuivent le tennis l'année
+                      Plus de 70% des ados poursuivent le tennis l&apos;année
                       suivante&nbsp;!
                     </p>
                     <p>
@@ -215,7 +220,7 @@ export default function EnseignementPage() {
                   </div>
                 </div>
               }
-              secondCol={<Illustration src={adosIllustration.src} />}
+              secondCol={<Illustration src={adosIllustration} />}
               inversed
             />
           </div>
@@ -264,7 +269,7 @@ export default function EnseignementPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={adultIllustration.src} />}
+            secondCol={<Illustration src={adultIllustration} />}
           />
         </Wrapper>
       </Section>
@@ -274,27 +279,28 @@ export default function EnseignementPage() {
             <SectionTitle>Nos enseignants</SectionTitle>
             <div className="prose max-w-none">
               <p>
-                L'équipe enseignants du TC Franconville est composée de&nbsp;:
+                L&apos;équipe enseignants du TC Franconville est composée
+                de&nbsp;:
               </p>
               <ul>
-                <li>1 Diplomé d'Etat Supérieur (D.E.S)</li>
-                <li>2 Diplomés d'Etat (D.E)</li>
+                <li>1 Diplomé d&apos;Etat Supérieur (D.E.S)</li>
+                <li>2 Diplomés d&apos;Etat (D.E)</li>
                 <li>2 Educateurs (CQPAMT)</li>
                 <li>2 Educateurs en formation</li>
               </ul>
               <p>
                 Notre équipe est à votre écoute pour répondre à vos besoins et
-                ainsi vous accompagner dans l'apprentissage du tennis quels que
-                soient votre niveau et votre âge. Ils seront ravis de vous faire
-                profiter de leurs années d'expérience dans la formation du
-                joueur de tennis.
+                ainsi vous accompagner dans l&apos;apprentissage du tennis quels
+                que soient votre niveau et votre âge. Ils seront ravis de vous
+                faire profiter de leurs années d&apos;expérience dans la
+                formation du joueur de tennis.
               </p>
               <p>
-                Un suivi est réalisé toute l'année selon que vous soyez un
+                Un suivi est réalisé toute l&apos;année selon que vous soyez un
                 pratiquant loisir ou compétiteur.
               </p>
               <p>
-                Alors n'hésitez plus et faites partie de l'aventure au
+                Alors n&apos;hésitez plus et faites partie de l&apos;aventure au
                 TCF&nbsp;!
               </p>
             </div>

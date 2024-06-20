@@ -8,6 +8,9 @@ import tresorierePicture from "../../img/le-club/tresoriere.jpg"
 import secretairePicture from "../../img/le-club/secretaire.jpg"
 import cn from "classnames"
 import { Button } from "../../components/Button"
+import Image from "next/image"
+import capifranceLogo from "../../img/partners/capifrance.png"
+import ecosportLogo from "../../img/partners/ecosport.png"
 
 export default function LeClubPage() {
   return (
@@ -40,7 +43,7 @@ export default function LeClubPage() {
                       3 courts couverts en terre battue (courts n°7, 8 et 9)
                     </li>
                     <li>1 court de mini-tennis</li>
-                    <li>1 mur d'entraînement</li>
+                    <li>1 mur d&apos;entraînement</li>
                   </ul>
                   <p>
                     Vous pourrez par ailleurs profiter du club-house et de la
@@ -49,7 +52,7 @@ export default function LeClubPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={installationsIllustration.src} />}
+            secondCol={<Illustration src={installationsIllustration} />}
           />
         </Wrapper>
       </Section>
@@ -59,17 +62,17 @@ export default function LeClubPage() {
             <SectionTitle>Le bureau directeur</SectionTitle>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
               <Person
-                picture={presidentPicture.src}
+                picture={presidentPicture}
                 name="Laurent Operiol"
                 role="Président"
               />
               <Person
-                picture={tresorierePicture.src}
+                picture={tresorierePicture}
                 name="Josiane Decker"
                 role="Trésorière"
               />
               <Person
-                picture={secretairePicture.src}
+                picture={secretairePicture}
                 name="Annabelle Gibralta"
                 role="Secrétaire"
               />
@@ -87,12 +90,13 @@ export default function LeClubPage() {
                   <p>
                     Le TC Franconville est situé au 78 Avenue des Marais, à côté
                     du stade municipal Jean Rolland. Un parking est disponible à
-                    cette adresse, ainsi qu'un autre au 110 rue des Pommiers
-                    Saulniers.
+                    cette adresse, ainsi qu&apos;un autre au 110 rue des
+                    Pommiers Saulniers.
                   </p>
                   <p>
                     Vous pouvez nous contacter par téléphone au
-                    01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à l'adresse{" "}
+                    01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à
+                    l&apos;adresse{" "}
                     <a href="mailto:tennis.club.franconville@cegetel.net">
                       tennis.club.franconville@cegetel.net
                     </a>
@@ -119,20 +123,22 @@ export default function LeClubPage() {
             <ul className="space-y-16">
               <li>
                 <Partner
-                  logo="/partners/ecosport.png"
+                  logo={ecosportLogo}
                   name="Ecosport"
                   description={
                     <>
                       <p>
                         Ecosport est un magasin spécialisé dans la vente
-                        d'articles de tennis pour les clubs et les particuliers.
+                        d&apos;articles de tennis pour les clubs et les
+                        particuliers.
                       </p>
                       <p>
-                        Ils proposent à leurs clients l'un des plus grands choix
-                        en France d'articles dédiés principalement à la pratique
-                        du tennis, ce choix s'effectuant dans les plus grandes
-                        marques connues (Nike, Asics, Adidas, Wilson, Babolat,
-                        Tecnifibre, Yonex, Dunlop, Fila, Pro Kennex).
+                        Ils proposent à leurs clients l&apos;un des plus grands
+                        choix en France d&apos;articles dédiés principalement à
+                        la pratique du tennis, ce choix s&apos;effectuant dans
+                        les plus grandes marques connues (Nike, Asics, Adidas,
+                        Wilson, Babolat, Tecnifibre, Yonex, Dunlop, Fila, Pro
+                        Kennex).
                       </p>
                     </>
                   }
@@ -141,7 +147,7 @@ export default function LeClubPage() {
               </li>
               <li>
                 <Partner
-                  logo="/partners/capifrance.png"
+                  logo={capifranceLogo}
                   name="Ludovic KORA"
                   description={
                     <>
@@ -173,7 +179,7 @@ function Partner({ logo, name, description, className, url, ...props }) {
       )}
       {...props}
     >
-      <img
+      <Image
         src={logo}
         alt=""
         className="grow-0 shrink-0"
@@ -195,7 +201,7 @@ function Partner({ logo, name, description, className, url, ...props }) {
 const Person = ({ picture, name, role }) => {
   return (
     <div className="flex items-center space-x-6 md:flex-col md:space-y-6 md:space-x-0">
-      <img
+      <Image
         src={picture}
         alt=""
         className="w-16 h-16 rounded-full object-cover object-center shadow md:w-32 md:h-32"

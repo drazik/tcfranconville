@@ -15,10 +15,10 @@ export default function AnimationsPage() {
             <h1 className="text-3xl font-bold text-white">Animations</h1>
             <p className="text-lg font-semibold text-center">
               Le club de tennis de Franconville vous propose de nombreuses
-              animations tout au long de l'année. Se retrouver au sein du club,
-              c'est l'occasion de partager sa passion du tennis autour de
-              moments conviviaux. Les animations à thèmes sont ouvertes à tous :
-              enfants, compétiteurs, parents...
+              animations tout au long de l&apos;année. Se retrouver au sein du
+              club, c&apos;est l&apos;occasion de partager sa passion du tennis
+              autour de moments conviviaux. Les animations à thèmes sont
+              ouvertes à tous : enfants, compétiteurs, parents...
             </p>
           </div>
         </Wrapper>
@@ -32,13 +32,13 @@ export default function AnimationsPage() {
                 <div className="prose max-w-none">
                   <p>
                     Grâce à notre équipe pédagogique, les enfants peuvent
-                    s'adonner régulièrement à des ateliers, tout en fêtant Noël,
-                    la Chandeleur, Pâques, ou autre...
+                    s&apos;adonner régulièrement à des ateliers, tout en fêtant
+                    Noël, la Chandeleur, Pâques, ou autre...
                   </p>
                 </div>
               </div>
             }
-            secondCol={<Illustration src={kidsIllustration.src} />}
+            secondCol={<Illustration src={kidsIllustration} />}
           />
         </Wrapper>
       </Section>
@@ -51,13 +51,14 @@ export default function AnimationsPage() {
                 <div className="prose max-w-none">
                   <p>
                     Chaque année, des animations familiales rassemblent petits
-                    et grands autour d'une raclette, de la galette des rois,
-                    d'un super loto, de la fête du club et bien plus encore...
+                    et grands autour d&apos;une raclette, de la galette des
+                    rois, d&apos;un super loto, de la fête du club et bien plus
+                    encore...
                   </p>
                 </div>
               </div>
             }
-            secondCol={<Illustration src={familyIllustration.src} />}
+            secondCol={<Illustration src={familyIllustration} />}
             inversed
           />
         </Wrapper>
@@ -76,7 +77,7 @@ export default function AnimationsPage() {
                 </div>
               </div>
             }
-            secondCol={<Illustration src={adultIllustration.src} />}
+            secondCol={<Illustration src={adultIllustration} />}
           />
         </Wrapper>
       </Section>

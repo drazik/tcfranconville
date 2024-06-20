@@ -67,34 +67,34 @@ const HelpDialog = ({ open, onClose }) => {
                       rel="noreferrer"
                       target="_blank"
                     >
-                      Voir la vidéo d'aide
+                      Voir la vidéo d&apos;aide
                     </Button>
                   </div>
                 </div>
                 <div className="mt-8 space-y-6">
                   <div className="space-y-3">
                     <h4 className="text-lg font-medium">
-                      Étape 1 : créer son compte sur Ten'Up
+                      Étape 1 : créer son compte sur Ten&apos;Up
                     </h4>
                     <div className="prose max-w-none">
                       <p>
                         Rendez vous sur le site{" "}
                         <a href="https://tenup.fft.fr/" rel="noopener">
-                          Ten'Up
+                          Ten&apos;Up
                         </a>{" "}
-                        puis cliquez sur "Connexion / inscription".
+                        puis cliquez sur &quot;Connexion / inscription&quot;.
                       </p>
                       <Image src={help01} alt="" />
                       <p>
                         Créez votre compte en remplissant le formulaire
-                        d'inscription. Si vous avez déjà un compte,
+                        d&apos;inscription. Si vous avez déjà un compte,
                         connectez-vous.
                       </p>
                     </div>
                     <Info title="Inscription famille">
-                      Si vous souhaitez inscrire plusieurs membre d'une même
-                      famille, chaque membre de la famille devra avoir un compte
-                      Ten'Up.
+                      Si vous souhaitez inscrire plusieurs membre d&apos;une
+                      même famille, chaque membre de la famille devra avoir un
+                      compte Ten&apos;Up.
                     </Info>
                   </div>
                   <div className="space-y-3">
@@ -115,7 +115,8 @@ const HelpDialog = ({ open, onClose }) => {
                       </p>
                       <p>
                         Sélectionnez la formule qui vous intéresse en cliquant
-                        sur le bouton "Ajouter" associé à cette formule.
+                        sur le bouton &quot;Ajouter&quot; associé à cette
+                        formule.
                       </p>
                       <p>
                         Par exemple, pour sélectionner des cours de mini-tennis
@@ -124,7 +125,7 @@ const HelpDialog = ({ open, onClose }) => {
                       <Image src={help02} alt="" />
                       <p>
                         En cas de doute sur la formule qui vous convient,
-                        n'hésitez pas à nous envoyer un message via notre{" "}
+                        n&apos;hésitez pas à nous envoyer un message via notre{" "}
                         <a
                           href="https://www.facebook.com/TCFranconvilleOfficiel"
                           rel="noreferrer"
@@ -139,8 +140,8 @@ const HelpDialog = ({ open, onClose }) => {
                       </p>
                     </div>
                     <Info title="Attention">
-                      Ne prenez pas de licence "web". Une licence vous sera
-                      attribuée par le club après votre inscription.
+                      Ne prenez pas de licence &quot;web&quot;. Une licence vous
+                      sera attribuée par le club après votre inscription.
                     </Info>
                   </div>
                   <div className="space-y-3">
@@ -148,19 +149,20 @@ const HelpDialog = ({ open, onClose }) => {
                     <div className="prose max-w-none">
                       <p>
                         Accédez à votre panier en cliquant sur le bouton
-                        "Panier" :
+                        &quot;Panier&quot; :
                       </p>
                       <Image src={help03} alt="" />
                       <p>
                         Suivez les instructions afin de procéder au paiement. Si
-                        vous souhaitez payer en plusieurs fois, n'oubliez pas de
-                        sélectionner "Je paye en plusieurs fois"&nbsp;:
+                        vous souhaitez payer en plusieurs fois, n&apos;oubliez
+                        pas de sélectionner &quot;Je paye en plusieurs
+                        fois&quot;&nbsp;:
                       </p>
                       <Image src={help04} alt="" />
                     </div>
                     <Info title="Inscription famille">
                       Pour une famille, il faut consulter le panier du compte du
-                      "Chef de famille".
+                      &quot;Chef de famille&quot;.
                     </Info>
                   </div>
                   <div className="space-y-3">
@@ -170,7 +172,7 @@ const HelpDialog = ({ open, onClose }) => {
                     <div className="prose max-w-none">
                       <p>
                         La pratique du tennis est conditionnée à la présentation
-                        d'un certificat médical ou au remplissage d'un
+                        d&apos;un certificat médical ou au remplissage d&apos;un
                         questionnaire de santé. Vous trouverez toutes les
                         indications ainsi que tous les documents nécessaires sur{" "}
                         <a
@@ -184,7 +186,7 @@ const HelpDialog = ({ open, onClose }) => {
                       </p>
                       <p>
                         Vous pouvez transmettre ces documents directement via
-                        Ten'Up.
+                        Ten&apos;Up.
                       </p>
                     </div>
                   </div>

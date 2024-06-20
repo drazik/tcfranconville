@@ -8,7 +8,7 @@ export default function ActualitePage() {
       <Section skewed variant="brand">
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white">
-            L'actu du club
+            L&apos;actu du club
           </h1>
         </Wrapper>
       </Section>
