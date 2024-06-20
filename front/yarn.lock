@@ -4288,7 +4288,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:latest":
+"react-dom@npm:^18.3.1":
   version: 18.3.1
   resolution: "react-dom@npm:18.3.1"
   dependencies:
@@ -4341,7 +4341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:latest":
+"react@npm:^18.3.1":
   version: 18.3.1
   resolution: "react@npm:18.3.1"
   dependencies:
@@ -5171,8 +5171,8 @@ __metadata:
     postcss: ^8.4.38
     prettier: ^3.3.2
     prop-types: ^15.8.1
-    react: latest
-    react-dom: latest
+    react: ^18.3.1
+    react-dom: ^18.3.1
     react-facebook: ^8.1.4
     react-swipeable: ^6.2.0
     svgstore-cli: ^2.0.1
