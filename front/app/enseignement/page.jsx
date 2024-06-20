@@ -1,4 +1,3 @@
-import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import minitennisIllustration from "../../img/enseignement/minitennis.jpg"
@@ -15,10 +14,6 @@ import { Info } from "../../components/Info"
 export default function EnseignementPage() {
   return (
     <>
-      <SEO
-        title="Enseignement"
-        description="Grâce à ses enseignants très qualifiés, le TC Franconville propose des cours pour tout âge et tout niveau"
-      />
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
@@ -310,4 +305,10 @@ export default function EnseignementPage() {
       </Section>
     </>
   )
+}
+
+export const metadata = {
+  title: "Enseignement",
+  description:
+    "Grâce à ses enseignants très qualifiés, le TC Franconville propose des cours pour tout âge et tout niveau",
 }

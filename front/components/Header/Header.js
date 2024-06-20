@@ -1,11 +1,13 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import background from "./background.jpg"
 import PropTypes from "prop-types"
 import { Wrapper } from "../Wrapper"
 import { Logo } from "../Logo"
 import Link from "next/link"
-import { useRouter } from "next/router"
 import cn from "classnames"
+import { usePathname } from "next/navigation"
 
 export function Header({ className, style = {}, ...props }) {
   const [open, setOpen] = useState(false)
@@ -21,19 +23,19 @@ export function Header({ className, style = {}, ...props }) {
     { href: "/actualite", label: "Actualité" },
   ]
 
-  const router = useRouter()
+  // const router = useRouter()
 
-  useEffect(() => {
-    function handleRouteChangeComplete() {
-      setOpen(false)
-    }
-
-    router.events.on("routeChangeComplete", handleRouteChangeComplete)
-
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChangeComplete)
-    }
-  }, [router.events])
+  // useEffect(() => {
+  //   function handleRouteChangeComplete() {
+  //     setOpen(false)
+  //   }
+  //
+  //   router.events.on("routeChangeComplete", handleRouteChangeComplete)
+  //
+  //   return () => {
+  //     router.events.off("routeChangeComplete", handleRouteChangeComplete)
+  //   }
+  // }, [router.events])
 
   return (
     <header
@@ -196,7 +198,7 @@ SmallMenu.propTypes = {
 }
 
 function SmallMenuLink({ children, className, visible, href, ...props }) {
-  const router = useRouter()
+  const pathname = usePathname()
 
   return (
     <Link
@@ -207,7 +209,7 @@ function SmallMenuLink({ children, className, visible, href, ...props }) {
         {
           "opacity-100 translate-x-0": visible,
           "opacity-0 -translate-x-full": !visible,
-          underline: router.pathname === href,
+          underline: pathname === href,
         }
       )}
       {...props}
@@ -222,7 +224,7 @@ SmallMenuLink.propTypes = {
   className: PropTypes.string,
 }
 
-function LargeMenu({ className, items, ...props }) {
+function LargeMenu({ className, items }) {
   return (
     <nav className={cn("flex space-x-8 w-full justify-center", className)}>
       {items.map((item) => (
@@ -240,8 +242,8 @@ LargeMenu.propTypes = {
 }
 
 function LargeMenuLink({ href, className, children, ...props }) {
-  const router = useRouter()
-  const isCurrent = router.pathname === href
+  const pathname = usePathname()
+  const isCurrent = pathname === href
 
   return (
     <Link

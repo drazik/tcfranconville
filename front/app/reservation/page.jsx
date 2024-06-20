@@ -1,4 +1,3 @@
-import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
@@ -7,10 +6,6 @@ import { Button } from "../../components/Button"
 export default function ReservationPage() {
   return (
     <>
-      <SEO
-        title="Réservation"
-        description="Que vous soyez adhérent ou non, vous pouvez réserver un court de tennis à l'heure au TC Franconville"
-      />
       <Section skewed variant="brand">
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
@@ -90,4 +85,10 @@ export default function ReservationPage() {
       </Section>
     </>
   )
+}
+
+export const metadata = {
+  title: "Réservation",
+  description:
+    "Que vous soyez adhérent ou non, vous pouvez réserver un court de tennis à l'heure au TC Franconville",
 }

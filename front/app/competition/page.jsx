@@ -1,4 +1,3 @@
-import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
@@ -104,10 +103,6 @@ const competitions = [
 export default function CompetitionPage() {
   return (
     <>
-      <SEO
-        title="Compétition"
-        description="Venez participer quel que soit votre âge et votre niveau à des compétitions par équipes en championnats ou en tournois individuellement"
-      />
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
@@ -309,4 +304,10 @@ const Competition = ({ competition, inversed }) => {
       secondCol={<ImagesCarousel images={competition.images} />}
     />
   )
+}
+
+export const metadata = {
+  title: "Compétition",
+  description:
+    "Venez participer quel que soit votre âge et votre niveau à des compétitions par équipes en championnats ou en tournois individuellement",
 }
