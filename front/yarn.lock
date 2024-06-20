@@ -5170,7 +5170,7 @@ __metadata:
     nextjs-progressbar: ^0.0.13
     postcss: ^8.4.38
     prettier: ^3.3.2
-    prop-types: ^15.7.2
+    prop-types: ^15.8.1
     react: latest
     react-dom: latest
     react-facebook: ^8.1.4
