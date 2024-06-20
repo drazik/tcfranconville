@@ -8,12 +8,14 @@ import competitionBackground from "../img/index/competition.jpg"
 import animationBackground from "../img/index/animation.jpg"
 import { FacebookFeed } from "../components/FacebookFeed"
 import { Button } from "../components/Button"
-import { SEO } from "../components/SEO"
 
-export default function Home() {
+export const metadata = {
+  title: "Accueil - TC Franconville",
+}
+
+export default function HomePage() {
   return (
     <>
-      <SEO title="Accueil" />
       <Section variant="brand" skewed>
         <Wrapper>
           <div className="space-y-8">

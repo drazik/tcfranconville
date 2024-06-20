@@ -1,4 +1,3 @@
-import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
@@ -13,10 +12,6 @@ import { Button } from "../../components/Button"
 export default function LeClubPage() {
   return (
     <>
-      <SEO
-        title="Le club"
-        description="Situé au 78 avenue des marais, à côté du stade municipal Jean Rolland, le club dispose de 9 courts dont 3 couverts et 2 extérieurs éclairés"
-      />
       <Section skewed variant="brand">
         <Wrapper>
           <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
@@ -213,4 +208,10 @@ const Person = ({ picture, name, role }) => {
       </div>
     </div>
   )
+}
+
+export const metadata = {
+  title: "Le club",
+  description:
+    "Situé au 78 avenue des marais, à côté du stade municipal Jean Rolland, le club dispose de 9 courts dont 3 couverts et 2 extérieurs éclairés",
 }

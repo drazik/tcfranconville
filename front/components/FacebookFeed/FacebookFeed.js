@@ -1,3 +1,5 @@
+"use client"
+
 import { FacebookProvider, Page } from "react-facebook"
 import { useState, useEffect } from "react"
 import cn from "classnames"

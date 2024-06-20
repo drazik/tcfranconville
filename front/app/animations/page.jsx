@@ -1,4 +1,3 @@
-import { SEO } from "../../components/SEO"
 import { Section, SectionTitle } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
@@ -10,10 +9,6 @@ import adultIllustration from "../../img/animations/adults.jpg"
 export default function AnimationsPage() {
   return (
     <>
-      <SEO
-        title="Animations"
-        description="Le club de tennis de Franconville vous propose de nombreuses animations conviviales tout au long de l'année"
-      />
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
@@ -89,4 +84,10 @@ export default function AnimationsPage() {
       </Section>
     </>
   )
+}
+
+export const metadata = {
+  title: "Animations",
+  description:
+    "Le club de tennis de Franconville vous propose de nombreuses animations conviviales tout au long de l'année",
 }

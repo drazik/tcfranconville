@@ -1,3 +1,5 @@
+"use client"
+
 import { SectionContext } from "./Section"
 import { useContext } from "react"
 import cn from "classnames"
