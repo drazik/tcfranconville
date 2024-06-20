@@ -2,7 +2,7 @@ import "../styles/globals.css"
 import { Header } from "../components/Header"
 import { Footer } from "../components/Footer"
 import { Favicon } from "../components/Favicon"
-// import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from "@vercel/analytics/react"
 import { StickyBanner } from "../components/StickyBanner"
 import Link from "next/link"
 import { Button } from "../components/Button"
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </StickyBanner>
-        {/*<Analytics />*/}
+        <Analytics />
       </body>
     </html>
   )
