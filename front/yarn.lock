@@ -32,21 +32,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.23.2":
+"@babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.23.2":
   version: 7.24.7
   resolution: "@babel/runtime@npm:7.24.7"
   dependencies:
     regenerator-runtime: ^0.14.0
   checksum: d17f29eed6f848ac15cdf4202a910b741facfb0419a9d79e5c7fa37df6362fc3227f1cc2e248cc6db5e53ddffb4caa6686c488e6e80ce3d29c36a4e74c8734ea
-  languageName: node
-  linkType: hard
-
-"@babel/runtime@npm:^7.7.2":
-  version: 7.20.13
-  resolution: "@babel/runtime@npm:7.20.13"
-  dependencies:
-    regenerator-runtime: ^0.13.11
-  checksum: 09b7a97a05c80540db6c9e4ddf8c5d2ebb06cae5caf3a87e33c33f27f8c4d49d9c67a2d72f1570e796045288fad569f98a26ceba0c4f5fad2af84b6ad855c4fb
   languageName: node
   linkType: hard
 
@@ -975,13 +966,6 @@ __metadata:
   version: 2.0.1
   resolution: "camelcase-css@npm:2.0.1"
   checksum: 1cec2b3b3dcb5026688a470b00299a8db7d904c4802845c353dbd12d9d248d3346949a814d83bfd988d4d2e5b9904c07efe76fecd195a1d4f05b543e7c0b56b1
-  languageName: node
-  linkType: hard
-
-"can-use-dom@npm:^0.1.0":
-  version: 0.1.0
-  resolution: "can-use-dom@npm:0.1.0"
-  checksum: 488fc94c40f2fcce46ebd41abf17ef0449acf0d6b145116036cd592a8e977e5729918d4b3b7c642ce7b1f5b83d330ade39a172cf6b6ef91093785991a868b308
   languageName: node
   linkType: hard
 
@@ -4228,7 +4212,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.0, prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4300,16 +4284,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-facebook@npm:^8.1.4":
-  version: 8.1.4
-  resolution: "react-facebook@npm:8.1.4"
+"react-facebook@npm:^9.0.12":
+  version: 9.0.12
+  resolution: "react-facebook@npm:9.0.12"
   dependencies:
-    "@babel/runtime": ^7.7.2
-    can-use-dom: ^0.1.0
-    react-spinner-children: ^1.0.8
+    "@babel/runtime": ^7.20.6
   peerDependencies:
-    react: ">= 16.8.0"
-  checksum: 422f0d8db209a15fade2011acba1fcd742445b944a3fb7bc1de1b4b6b6c2c38c1af3a457e4c8b2a1fd7a6cf45d7fa20987d824ceeb2f55d28531aad865b009b7
+    react: ">= 16"
+  checksum: b97c0f8f18d79d1173f944bed707f7b47fe01efaf37aee90bab5c6da8ad0f8015f51e7d7094c03cda38de8819269e825d835a74cef754fb4c22b34344f48a310
   languageName: node
   linkType: hard
 
@@ -4317,18 +4299,6 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
-  languageName: node
-  linkType: hard
-
-"react-spinner-children@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "react-spinner-children@npm:1.0.8"
-  dependencies:
-    prop-types: ^15.6.0
-    spin.js: ^2.3.2
-  peerDependencies:
-    react: 15.x || 16.x
-  checksum: 6697b98566e522866077c5336d34d17ae212a7b7c1ecc02c5e77828c2b582eaff5f3fa1f6866b43521475788e2f6af9965bad32221f59bbee566c9d29449126f
   languageName: node
   linkType: hard
 
@@ -4392,13 +4362,6 @@ __metadata:
     globalthis: ^1.0.3
     which-builtin-type: ^1.1.3
   checksum: 88e9e65a7eaa0bf8e9a8bbf8ac07571363bc333ba8b6769ed5e013e0042ed7c385e97fae9049510b3b5fe4b42472d8f32de9ce8ce84902bc4297d4bbe3777dba
-  languageName: node
-  linkType: hard
-
-"regenerator-runtime@npm:^0.13.11":
-  version: 0.13.11
-  resolution: "regenerator-runtime@npm:0.13.11"
-  checksum: 27481628d22a1c4e3ff551096a683b424242a216fee44685467307f14d58020af1e19660bf2e26064de946bad7eff28950eae9f8209d55723e2d9351e632bbb4
   languageName: node
   linkType: hard
 
@@ -4809,13 +4772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"spin.js@npm:^2.3.2":
-  version: 2.3.2
-  resolution: "spin.js@npm:2.3.2"
-  checksum: e064bec3568190de3c94ec1ecc09a5a03470e86402bfbdc48da4c0e524fba42142f36ed6336bdb3549014237b993316acb182242b5028b5ce3bc74fc095b2260
-  languageName: node
-  linkType: hard
-
 "ssri@npm:^9.0.0":
   version: 9.0.1
   resolution: "ssri@npm:9.0.1"
@@ -5173,7 +5129,7 @@ __metadata:
     prop-types: ^15.8.1
     react: ^18.3.1
     react-dom: ^18.3.1
-    react-facebook: ^8.1.4
+    react-facebook: ^9.0.12
     react-swipeable: ^6.2.0
     svgstore-cli: ^2.0.1
     tailwindcss: ^2.2.19
