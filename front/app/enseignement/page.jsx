@@ -17,9 +17,7 @@ export default function EnseignementPage() {
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white text-shadow-sm">
-              Enseignement
-            </h1>
+            <h1 className="text-3xl font-bold text-white">Enseignement</h1>
             <p className="text-lg font-semibold text-center">
               Un enseignement à haute valeur ajoutée&nbsp;! Grâce à ses
               enseignants très qualifiés, le TCF propose des cours pour tout âge

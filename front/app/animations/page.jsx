@@ -12,9 +12,7 @@ export default function AnimationsPage() {
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white text-shadow-sm">
-              Animations
-            </h1>
+            <h1 className="text-3xl font-bold text-white">Animations</h1>
             <p className="text-lg font-semibold text-center">
               Le club de tennis de Franconville vous propose de nombreuses
               animations tout au long de l'année. Se retrouver au sein du club,

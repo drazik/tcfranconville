@@ -8,6 +8,7 @@ import competitionBackground from "../img/index/competition.jpg"
 import animationBackground from "../img/index/animation.jpg"
 import { FacebookFeed } from "../components/FacebookFeed"
 import { Button } from "../components/Button"
+import Image from "next/image"
 
 export const metadata = {
   title: "Accueil - TC Franconville",
@@ -55,17 +56,17 @@ export default function HomePage() {
             <ThemeCard
               title="Enseignement"
               href="/enseignement"
-              style={{ backgroundImage: `url(${teachingBackground.src})` }}
+              image={teachingBackground}
             />
             <ThemeCard
               title="Compétition"
               href="/competition"
-              style={{ backgroundImage: `url(${competitionBackground.src})` }}
+              image={competitionBackground}
             />
             <ThemeCard
               title="Animations"
               href="/animations"
-              style={{ backgroundImage: `url(${animationBackground.src})` }}
+              image={animationBackground}
             />
           </div>
         </Wrapper>
@@ -118,17 +119,29 @@ export default function HomePage() {
   )
 }
 
-function ThemeCard({ href, className, title, ...props }) {
+function ThemeCard({ href, className, title, image, ...props }) {
   return (
     <Link
       href={href}
       className={cn(
-        "flex flex-col p-6 rounded-lg justify-end text-white bg-cover bg-center h-56 text-xl font-bold text-shadow-xl shadow-2xl",
+        "flex flex-col p-6 rounded-lg justify-end text-white bg-cover bg-center h-56 text-xl font-bold shadow-2xl overflow-clip relative",
         className
       )}
       {...props}
     >
-      {title}
+      <Image
+        src={image}
+        alt={""}
+        style={{
+          width: "100%",
+          height: "100%",
+          objectFit: "cover",
+          objectPosition: "center",
+          position: "absolute",
+          inset: 0,
+        }}
+      />
+      <span className={"relative drop-shadow-lg"}>{title}</span>
     </Link>
   )
 }
@@ -137,4 +150,5 @@ ThemeCard.propTypes = {
   href: PropTypes.string.isRequired,
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
 }

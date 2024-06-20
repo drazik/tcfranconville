@@ -249,12 +249,12 @@ function LargeMenuLink({ href, className, children, ...props }) {
     <Link
       href={href}
       className={cn(
-        "text-white font-bold text-shadow-lg text-xl flex flex-col items-stretch",
+        "text-white font-bold text-xl flex flex-col items-stretch",
         className
       )}
       {...props}
     >
-      <span>{children}</span>
+      <span className={"drop-shadow-sm"}>{children}</span>
       <span
         className={cn("h-1 bg-brand transition-opacity duration-200", {
           "opacity-100": isCurrent,
