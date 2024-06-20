@@ -18,7 +18,7 @@
     "lodash": "^4.17.21",
     "next": "^14.2.4",
     "nextjs-progressbar": "^0.0.13",
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "latest",
     "react-dom": "latest",
     "react-facebook": "^8.1.4",
