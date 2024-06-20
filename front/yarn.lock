@@ -1796,7 +1796,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:latest":
+"eslint-config-next@npm:^14.2.4":
   version: 14.2.4
   resolution: "eslint-config-next@npm:14.2.4"
   dependencies:
@@ -5146,7 +5146,7 @@ __metadata:
     classnames: ^2.5.1
     date-fns: ^2.29.3
     eslint: ^8.57.0
-    eslint-config-next: latest
+    eslint-config-next: ^14.2.4
     lodash: ^4.17.21
     next: latest
     nextjs-progressbar: ^0.0.13
