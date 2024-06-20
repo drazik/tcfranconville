@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react"
 import { StickyBanner } from "../components/StickyBanner"
 import Link from "next/link"
 import { Button } from "../components/Button"
+import { ProgressBar } from "../components/ProgressBar"
 
 export default function RootLayout({ children }) {
   return (
@@ -38,6 +39,8 @@ export default function RootLayout({ children }) {
             </div>
           </div>
         </StickyBanner>
+
+        <ProgressBar />
         <Analytics />
       </body>
     </html>
