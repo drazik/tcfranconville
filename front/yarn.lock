@@ -515,6 +515,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/nprogress@npm:^0.2.0":
+  version: 0.2.3
+  resolution: "@types/nprogress@npm:0.2.3"
+  checksum: 2bd96ba1167f548e8f898ae8a790b6501a5422217621c9b8ea75962f3e8473f0e371058b79d83e04e80a6bfee2d66fc6612cdb28296648007b35d3c2a6d64e5c
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/parser@npm:^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0":
   version: 7.2.0
   resolution: "@typescript-eslint/parser@npm:7.2.0"
@@ -3427,6 +3434,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next13-progressbar@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "next13-progressbar@npm:1.2.1"
+  dependencies:
+    "@types/nprogress": ^0.2.0
+    nprogress: ^0.2.0
+    prop-types: ^15.8.1
+  peerDependencies:
+    next: ">= 13.0.0"
+    react: ">= 18.0.0"
+  checksum: abd54c049d33d7d7a10e86d6693c76fdda7dbfa74cc06e477c0b866e3bc555e00c536fee45e631c90e4c2959e56506778c1fa6a54d3813f9433307f6eb6f070e
+  languageName: node
+  linkType: hard
+
 "next@npm:^14.2.4":
   version: 14.2.4
   resolution: "next@npm:14.2.4"
@@ -3482,19 +3503,6 @@ __metadata:
   bin:
     next: dist/bin/next
   checksum: 3b858cfec2e061d811811921361855659b09424ea4178cf0f4a0bbe5d3978b45da6f04575fe213d76e47f626439db61591b79932f37ff984b7b7de87dd1ccce0
-  languageName: node
-  linkType: hard
-
-"nextjs-progressbar@npm:^0.0.13":
-  version: 0.0.13
-  resolution: "nextjs-progressbar@npm:0.0.13"
-  dependencies:
-    nprogress: ^0.2.0
-    prop-types: ^15.7.2
-  peerDependencies:
-    next: ">= 6.0.0 <=12.x.x"
-    react: ">= 16.0.0 <= 17.x.x"
-  checksum: 0e055b8e1000c8b8bbf8d0c278a268837ece478f87d193024a9510a7471ea149b2da69edafaeca59111f6f9c8a34dd2e41d203b9b802a2f7d5c4ca3dae1db4a0
   languageName: node
   linkType: hard
 
@@ -3997,7 +4005,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.7.2, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -4775,7 +4783,7 @@ __metadata:
     eslint-config-next: ^14.2.4
     lodash: ^4.17.21
     next: ^14.2.4
-    nextjs-progressbar: ^0.0.13
+    next13-progressbar: ^1.2.1
     postcss: ^8.4.38
     prettier: ^3.3.2
     prop-types: ^15.8.1
