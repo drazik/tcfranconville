@@ -4302,12 +4302,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-swipeable@npm:^6.2.0":
-  version: 6.2.2
-  resolution: "react-swipeable@npm:6.2.2"
+"react-swipeable@npm:^7.0.1":
+  version: 7.0.1
+  resolution: "react-swipeable@npm:7.0.1"
   peerDependencies:
     react: ^16.8.3 || ^17 || ^18
-  checksum: a707aa9438cedcafbe1e0b9e133d518c423199fc6465e6ae862951c1cfdac2945088b3c12313e8fcc05906d0be0ecfe7ddd8221f9262a0e28c12d2eb98150434
+  checksum: 1cd19275c5608cb202ca7717afc73e336fb51d6ae4c9353ef409e1779dfb90f36ac4c06aa870d3d862f15fb439f82b96d41395738d04b8d2290aefc670fd6b5b
   languageName: node
   linkType: hard
 
@@ -5130,7 +5130,7 @@ __metadata:
     react: ^18.3.1
     react-dom: ^18.3.1
     react-facebook: ^9.0.12
-    react-swipeable: ^6.2.0
+    react-swipeable: ^7.0.1
     svgstore-cli: ^2.0.1
     tailwindcss: ^2.2.19
     tailwindcss-textshadow: ^2.1.3
