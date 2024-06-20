@@ -9,7 +9,7 @@
     "make-icon-sprite": "svgstore -o public/icon-sprite.svg icons/*.svg"
   },
   "dependencies": {
-    "@headlessui/react": "^1.6.4",
+    "@headlessui/react": "^2.0.4",
     "@react-hook/media-query": "^1.1.1",
     "@vercel/analytics": "^0.1.8",
     "classnames": "^2.5.1",
