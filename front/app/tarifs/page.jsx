@@ -9,7 +9,7 @@ export default function PricesPage() {
     <Fragment>
       <Section variant="brand" skewed>
         <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
+          <h1 className="text-3xl font-bold text-center text-white">
             Tarifs 2024&nbsp;/&nbsp;2025
           </h1>
         </Wrapper>

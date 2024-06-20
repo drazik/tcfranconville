@@ -22,7 +22,7 @@ export function FacebookFeed({ className, ...props }) {
     <div className={cn("space-y-4", className)} {...props}>
       <div className="text-center prose max-w-none">
         <p>
-          Vous pouvez suivre l'actualité du club sur la page Facebook{" "}
+          Vous pouvez suivre l&lsquo;actualité du club sur la page Facebook{" "}
           <a href="https://www.facebook.com/TCFranconvilleOfficiel">
             TC Franconville Officiel
           </a>

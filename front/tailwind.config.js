@@ -1,8 +1,7 @@
 const colors = require("tailwindcss/colors")
 
 module.exports = {
-  mode: "jit",
-  purge: ["./components/**/*.js", "./pages/**/*.js", "./app/**/*.jsx"],
+  content: ["./components/**/*.js", "./pages/**/*.js", "./app/**/*.jsx"],
   theme: {
     extend: {
       colors: {
@@ -28,8 +27,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwindcss-textshadow"),
-    require("@tailwindcss/typography"),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 }

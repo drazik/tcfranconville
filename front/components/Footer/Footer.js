@@ -22,7 +22,7 @@ export function Footer({ className, style, ...props }) {
             <Image src={logoFranconville} alt="Ville de Franconville" />
           </a>
         </div>
-        <p className="text-lg font-semibold text-center text-white text-shadow-lg">
+        <p className="text-lg font-semibold text-center text-white drop-shadow-lg">
           &copy;&nbsp;Tennis Club Franconville {year}
         </p>
         <div className="flex flex-col items-center space-y-2">
@@ -42,7 +42,7 @@ export function Footer({ className, style, ...props }) {
 function Link({ className, ...props }) {
   return (
     <a
-      className={cn("text-white underline text-shadow-lg", className)}
+      className={cn("text-white underline drop-shadow-lg", className)}
       target="_blank"
       {...props}
     />

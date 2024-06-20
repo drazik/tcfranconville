@@ -106,9 +106,7 @@ export default function CompetitionPage() {
       <Section skewed variant="brand">
         <Wrapper>
           <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white text-shadow-sm">
-              Compétition
-            </h1>
+            <h1 className="text-3xl font-bold text-white">Compétition</h1>
             <p className="text-lg font-semibold text-center">
               Venez participer quel que soit votre âge et votre niveau à des
               compétitions par équipes en championnats ou en tournois

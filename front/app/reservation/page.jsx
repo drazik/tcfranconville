@@ -8,7 +8,7 @@ export default function ReservationPage() {
     <>
       <Section skewed variant="brand">
         <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
+          <h1 className="text-3xl font-bold text-center text-white">
             Réservation
           </h1>
         </Wrapper>

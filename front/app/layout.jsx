@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
 
         <StickyBanner>
           <div className={"flex gap-10 justify-between items-center"}>
-            <div className={"flex-grow"}>
+            <div className={"grow"}>
               <p>
                 <strong>Inscriptions 2024-2025&nbsp;:</strong> une permanence
                 dédiée aux inscriptions aura lieu le{" "}
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
               </p>
             </div>
 
-            <div className={"flex-shrink-0"}>
+            <div className={"shrink-0"}>
               <Button
                 component={Link}
                 href="/le-club#contact"

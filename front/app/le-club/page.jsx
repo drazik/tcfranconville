@@ -14,9 +14,7 @@ export default function LeClubPage() {
     <>
       <Section skewed variant="brand">
         <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white text-shadow-sm">
-            Le club
-          </h1>
+          <h1 className="text-3xl font-bold text-center text-white">Le club</h1>
         </Wrapper>
       </Section>
       <Section skewed variant="light">
@@ -178,7 +176,7 @@ function Partner({ logo, name, description, className, url, ...props }) {
       <img
         src={logo}
         alt=""
-        className="flex-grow-0 flex-shrink-0"
+        className="grow-0 shrink-0"
         style={{ maxWidth: "200px" }}
       />
       <div className="flex flex-col items-center space-y-4 lg:items-start">
