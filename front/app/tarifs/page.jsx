@@ -29,10 +29,10 @@ export default function PricesPage() {
                 >
                   la page TenUp du club
                 </a>
-                . L'inscription en ligne vous permet de ne pas être contraint(e)
-                de venir à une permanence au club ou au forum des associations
-                pour vous inscrire pour la saison 2024/2025, mais aussi de payer
-                votre cotisation et vos cours en ligne.
+                . L&apos;inscription en ligne vous permet de ne pas être
+                contraint(e) de venir à une permanence au club ou au forum des
+                associations pour vous inscrire pour la saison 2024/2025, mais
+                aussi de payer votre cotisation et vos cours en ligne.
               </p>
             </div>
 
@@ -48,8 +48,9 @@ export default function PricesPage() {
             <div className="prose max-w-none">
               <p>
                 La licence est associée à votre adhésion à un club affilié à la
-                FFT. Intégrer un club affilié, c'est la garantie de trouver une
-                structure qui répond à vos attentes et facilite votre pratique.
+                FFT. Intégrer un club affilié, c&apos;est la garantie de trouver
+                une structure qui répond à vos attentes et facilite votre
+                pratique.
               </p>
               <p>
                 La licence 2024-2025 est valable du 1er septembre 2024 au 31
@@ -80,13 +81,14 @@ export default function PricesPage() {
             <div className="prose max-w-none">
               <p>
                 La cotisation vous donne accès aux infrastructures du club et
-                vous permet de réserver des courts afin de jouer avec d'autres
-                adhérents ou avec des invités (moyennant 6€ par invitation).
+                vous permet de réserver des courts afin de jouer avec
+                d&apos;autres adhérents ou avec des invités (moyennant 6€ par
+                invitation).
               </p>
               <p>
                 Nous proposons différents tarifs afin que chacun puisse trouver
                 une cotisation qui correspond le mieux à ses besoins. En cas de
-                question, n'hésitez pas à nous contacter.
+                question, n&apos;hésitez pas à nous contacter.
               </p>
               <p>
                 Vous pouvez prendre votre cotisation en ligne sur{" "}
@@ -121,7 +123,7 @@ export default function PricesPage() {
                   </TableRow>
                   <TableRow variant="even">
                     <TableCell>
-                      Etudiant ou chercheur d'emploi (-25 ans)
+                      Etudiant ou chercheur d&apos;emploi (-25 ans)
                     </TableCell>
                     <TableCell align="center" colSpan="2">
                       120&nbsp;€ + licence
@@ -213,7 +215,7 @@ export default function PricesPage() {
             <div className="prose max-w-none">
               <p>
                 Les cours se déroulent sur 28 semaines. Le calendrier vous sera
-                communiqué lors de l'inscription.
+                communiqué lors de l&apos;inscription.
               </p>
             </div>
             <Table>
@@ -261,7 +263,7 @@ export default function PricesPage() {
             <div className="prose max-w-none">
               <p>
                 Les cours se déroulent sur 28 semaines. Le calendrier vous sera
-                communiqué lors de l'inscription.
+                communiqué lors de l&apos;inscription.
               </p>
             </div>
             <Table>
@@ -354,7 +356,8 @@ export default function PricesPage() {
                 <TableRow variant="odd">
                   <TableCell>
                     <div className="space-y-1">
-                      Réservation d'un terrain par deux non-adhérents du TCF
+                      Réservation d&apos;un terrain par deux non-adhérents du
+                      TCF
                     </div>
                   </TableCell>
                   <TableCell align="center">
@@ -373,7 +376,7 @@ export default function PricesPage() {
                 </TableRow>
                 <TableRow variant="even">
                   <TableCell>
-                    Invitation par un adhérent d'un non-adhérent du TCF
+                    Invitation par un adhérent d&apos;un non-adhérent du TCF
                   </TableCell>
                   <TableCell align="center">6&nbsp;€/h</TableCell>
                 </TableRow>
@@ -418,8 +421,8 @@ export default function PricesPage() {
               <p>
                 En faisant un don, vous permettez au club de contenir la hausse
                 des tarifs, mais également de mettre en place des projets
-                permettant d'améliorer les infrastructures et les équipements à
-                disposition des adhérents.
+                permettant d&apos;améliorer les infrastructures et les
+                équipements à disposition des adhérents.
               </p>
             </div>
           </div>

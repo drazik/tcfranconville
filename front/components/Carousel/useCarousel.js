@@ -106,7 +106,7 @@ export function useCarousel({ length, interval }) {
       const id = setTimeout(() => dispatch({ type: "next", length }), interval)
       return () => clearTimeout(id)
     }
-  }, [state.offset, state.active])
+  }, [state.offset, state.active, interval, length])
 
   useEffect(() => {
     const id = setTimeout(() => dispatch({ type: "done" }), transitionTime)

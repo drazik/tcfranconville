@@ -30,7 +30,7 @@ export function Footer({ className, style, ...props }) {
             Gestion Sportive
           </Link>
           <Link href="http://www.comite.fft.fr/val-d-oise/val-d-oise_a/cms/index_public.php?us_action=show_note_site&login_off=1&ui_id_site=1">
-            Comité du Val d'Oise
+            Comité du Val d&apos;Oise
           </Link>
           <Link href="https://tenup.fft.fr/">TenUp</Link>
         </div>

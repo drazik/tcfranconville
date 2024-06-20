@@ -161,10 +161,10 @@ export default function CompetitionPage() {
                   </SectionTitle>
                   <div className="prose max-w-none">
                     <p>
-                      Le TCF est l'un des rares clubs du Val d'Oise à présenter
-                      2 équipes dames et 1 équipe messieurs en Potel. Les
-                      équipes 1 sont en série 1 et remportent régulièrement le
-                      championnat du Val d'Oise.
+                      Le TCF est l&apos;un des rares clubs du Val d&apos;Oise à
+                      présenter 2 équipes dames et 1 équipe messieurs en Potel.
+                      Les équipes 1 sont en série 1 et remportent régulièrement
+                      le championnat du Val d&apos;Oise.
                     </p>
                   </div>
                 </div>
@@ -184,8 +184,8 @@ export default function CompetitionPage() {
                     <p>
                       Le TCF a la chance de pouvoir faire jouer 2 équipes
                       messieurs (dont une en excellence régionale) et 2 équipes
-                      dames (dont une est championne du Val d'Oise 2019 et est
-                      qualifiée pour le championnat Île de France).
+                      dames (dont une est championne du Val d&apos;Oise 2019 et
+                      est qualifiée pour le championnat Île de France).
                     </p>
                   </div>
                 </div>

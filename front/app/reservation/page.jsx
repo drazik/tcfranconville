@@ -27,10 +27,10 @@ export default function ReservationPage() {
                     invitation.
                   </p>
                   <p>
-                    Si vous n'avez pas encore de compte, vous pouvez en créer
-                    un. Vous aurez besoin de votre numéro de licence, qui vous a
-                    été envoyé par e-mail. En cas de difficultés, pensez à
-                    consulter{" "}
+                    Si vous n&apos;avez pas encore de compte, vous pouvez en
+                    créer un. Vous aurez besoin de votre numéro de licence, qui
+                    vous a été envoyé par e-mail. En cas de difficultés, pensez
+                    à consulter{" "}
                     <a href="https://tenup.fft.fr/FAQ" target="_blank">
                       la FAQ de TenUp
                     </a>
@@ -53,8 +53,9 @@ export default function ReservationPage() {
                 <SectionTitle>Non adhérent</SectionTitle>
                 <div className="prose max-w-none">
                   <p>
-                    Pour les non adhérents, l'application Anybuddy vous permet
-                    de réserver, payer et accéder au club en toute autonomie.
+                    Pour les non adhérents, l&apos;application Anybuddy vous
+                    permet de réserver, payer et accéder au club en toute
+                    autonomie.
                   </p>
                   <p>
                     Si vous jouez régulièrement, pensez à jeter un oeil à{" "}
@@ -65,8 +66,8 @@ export default function ReservationPage() {
                       la cotisation
                     </a>
                     . Elle pourrait être plus avantageuse que des réservations à
-                    l'unité. N'hésitez pas à nous contacter si vous avez des
-                    questions à ce propos.
+                    l&apos;unité. N&apos;hésitez pas à nous contacter si vous
+                    avez des questions à ce propos.
                   </p>
                 </div>
                 <Button
