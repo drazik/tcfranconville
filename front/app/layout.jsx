@@ -7,6 +7,8 @@ import { StickyBanner } from "../components/StickyBanner"
 import Link from "next/link"
 import { Button } from "../components/Button"
 import { ProgressBar } from "../components/ProgressBar"
+import { infoBanners } from "./info-banners"
+import { isAfter, isBefore } from "date-fns"
 
 export default function RootLayout({ children }) {
   return (
@@ -17,28 +19,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
 
-        <StickyBanner>
-          <div className={"flex gap-10 justify-between items-center"}>
-            <div className={"grow"}>
-              <p>
-                <strong>Inscriptions 2024-2025&nbsp;:</strong> une permanence
-                dédiée aux inscriptions aura lieu le{" "}
-                <strong>samedi 6 juillet 2024 de 10h à 13h</strong>
-              </p>
-            </div>
-
-            <div className={"shrink-0"}>
-              <Button
-                component={Link}
-                href="/le-club#contact"
-                className="w-full"
-                size="small"
-              >
-                Venir au club
-              </Button>
-            </div>
-          </div>
-        </StickyBanner>
+        <Banners />
 
         <ProgressBar />
         <Analytics />
@@ -57,4 +38,34 @@ export const metadata = {
   verification: {
     google: "sgP1a5KOzca0JDP7SLouQZMzj2LT8Aou5c-ViSnpF8o",
   },
+}
+
+function Banners() {
+  const now = new Date()
+
+  const infoBannersToShow = infoBanners.filter(
+    ({ dateStart, dateEnd }) =>
+      isAfter(now, dateStart) && isBefore(now, dateEnd)
+  )
+
+  return infoBannersToShow.map(({ id, cta, content }) => (
+    <StickyBanner key={id}>
+      <div className={"flex gap-10 justify-between items-center"}>
+        <div className={"grow"}>{content}</div>
+
+        {cta ? (
+          <div className={"shrink-0"}>
+            <Button
+              component={Link}
+              href={cta.href}
+              className="w-full"
+              size="small"
+            >
+              {cta.label}
+            </Button>
+          </div>
+        ) : null}
+      </div>
+    </StickyBanner>
+  ))
 }
