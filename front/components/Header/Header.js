@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useEffect, useState } from "react"
 import background from "./background.jpg"
 import PropTypes from "prop-types"
 import { Wrapper } from "../Wrapper"
@@ -23,19 +23,11 @@ export function Header({ className, style = {}, ...props }) {
     { href: "/actualite", label: "Actualité" },
   ]
 
-  // const router = useRouter()
+  const pathname = usePathname()
 
-  // useEffect(() => {
-  //   function handleRouteChangeComplete() {
-  //     setOpen(false)
-  //   }
-  //
-  //   router.events.on("routeChangeComplete", handleRouteChangeComplete)
-  //
-  //   return () => {
-  //     router.events.off("routeChangeComplete", handleRouteChangeComplete)
-  //   }
-  // }, [router.events])
+  useEffect(() => {
+    setOpen(false)
+  }, [pathname])
 
   return (
     <header
