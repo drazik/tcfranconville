@@ -54,7 +54,7 @@ const HelpDialog = ({ open, onClose }) => {
                 <div className="flex flex-wrap">
                   <Dialog.Title
                     as="h3"
-                    className="text-xl font-medium leading-6 text-gray-900 shrink-0 my-2"
+                    className="text-xl font-medium leading-6 text-gray-900 grow shrink my-2"
                   >
                     Inscription en ligne : commment faire ?
                   </Dialog.Title>
