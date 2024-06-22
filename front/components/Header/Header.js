@@ -46,7 +46,7 @@ export function Header({ className, style = {}, ...props }) {
       <MenuButton
         open={open}
         onClick={() => setOpen(!open)}
-        className="fixed z-20 transform -translate-y-1/2 xl:hidden"
+        className="fixed z-30 transform -translate-y-1/2 xl:hidden"
         style={{ top: "5rem", left: `${(1 / 2 / 12) * 100}%` }}
       />
       <SmallMenu
@@ -136,7 +136,7 @@ function SmallMenu({ open, onClose, className, items, ...props }) {
   return (
     <div
       className={cn(
-        "fixed top-0 left-0 z-10 w-full h-screen transition-all duration-500",
+        "fixed top-0 left-0 z-20 w-full h-screen transition-all duration-500",
         className,
         {
           visible: open,
