@@ -7,7 +7,7 @@ import { StickyBanner } from "../components/StickyBanner"
 import Link from "next/link"
 import { Button } from "../components/Button"
 import { ProgressBar } from "../components/ProgressBar"
-import { infoBanners } from "./info-banners"
+import { infoBanners } from "./data"
 import { isAfter, isBefore } from "date-fns"
 import type { ReactNode } from "react"
 
