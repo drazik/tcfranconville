@@ -3,17 +3,12 @@ import { SectionTitle } from "../../components/SectionTitle"
 import { Wrapper } from "../../components/Wrapper"
 import { TwoCol } from "../../components/TwoCol"
 import { Button } from "../../components/Button"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function ReservationPage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white">
-            Réservation
-          </h1>
-        </Wrapper>
-      </Section>
+      <PageHeader title={"Réservation"} />
       <Section>
         <Wrapper>
           <TwoCol

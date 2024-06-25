@@ -1,17 +1,12 @@
 import { Section } from "../../components/Section"
 import { Wrapper } from "../../components/Wrapper"
 import { FacebookFeed } from "../../components/FacebookFeed"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function ActualitePage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white">
-            L&apos;actu du club
-          </h1>
-        </Wrapper>
-      </Section>
+      <PageHeader title={"L'actu du club"} />
       <Section>
         <Wrapper>
           <div className="space-y-16">

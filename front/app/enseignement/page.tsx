@@ -11,30 +11,24 @@ import { Button } from "../../components/Button"
 import { TwoCol } from "../../components/TwoCol"
 import { Illustration } from "../../components/Illustration"
 import { Info } from "../../components/Info"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function EnseignementPage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white">Enseignement</h1>
-            <p className="text-lg font-semibold text-center">
-              Un enseignement à haute valeur ajoutée&nbsp;! Grâce à ses
-              enseignants très qualifiés, le TCF propose des cours pour tout âge
-              et tout niveau.
-              <br />
-              Les cours sont très demandés, pensez à vous inscrire dès le moi de
-              mai&nbsp;!
-            </p>
-            <Button asChild>
-              <a href={"/calendrier-cours-2022-2023.pdf"} target={"_blank"}>
-                Télécharger le calendrier de cours 2022-2023
-              </a>
-            </Button>
-          </div>
-        </Wrapper>
-      </Section>
+      <PageHeader
+        title={"Enseignement"}
+        description={
+          <p>
+            Un enseignement à haute valeur ajoutée&nbsp;! Grâce à ses
+            enseignants très qualifiés, le TCF propose des cours pour tout âge
+            et tout niveau.
+            <br />
+            Les cours sont très demandés, pensez à vous inscrire dès le moi de
+            mai&nbsp;!
+          </p>
+        }
+      />
       <Section skewed>
         <Wrapper>
           <div className="prose prose-lg max-w-none">
