@@ -6,6 +6,14 @@ import { TableRow } from "../../components/TableRow"
 import { TableCell } from "../../components/TableCell"
 import { Fragment } from "react"
 import { HelpButton } from "./HelpButton"
+import {
+  adultLessons,
+  childLessons,
+  discounts,
+  miscellaneous,
+  Pricing,
+  subscriptionPricings,
+} from "./data"
 
 export default function PricesPage() {
   return (
@@ -119,91 +127,13 @@ export default function PricesPage() {
                   </tr>
                 </thead>
                 <tbody>
-                  <TableRow variant="odd">
-                    <TableCell>Adulte</TableCell>
-                    <TableCell align="center">278&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">288&nbsp;€ + licence</TableCell>
-                  </TableRow>
-                  <TableRow variant="even">
-                    <TableCell>
-                      Etudiant ou chercheur d&apos;emploi (-25 ans)
-                    </TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      120&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="odd">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Semaine</div>
-                        <div className="text-xs">
-                          du lundi au vendredi de 8h à 18h
-                        </div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center">220&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">230&nbsp;€ + licence</TableCell>
-                  </TableRow>
-                  <TableRow variant="even">
-                    <TableCell>Retraite sportive (ARSF)</TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      158&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="brand">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Cotisation parentale</div>
-                        <div className="text-xs">
-                          Venez jouez avec votre enfant autant de fois que vous
-                          le souhaitez&nbsp;!
-                        </div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      68&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="even">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Cotisation Printemps-Été </div>
-                        <div className="text-xs">du 1er mars au 31 août</div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center">178&nbsp;€ + licence</TableCell>
-                    <TableCell align="center">188&nbsp;€ + licence</TableCell>
-                  </TableRow>
-                  <TableRow variant="odd">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Mini-tennis</div>
-                        <div className="text-xs">2018-2020</div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      50&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="even">
-                    <TableCell>
-                      <div className="space-y-1">
-                        <div>Club junior 1</div>
-                        <div className="text-xs">2016-2017</div>
-                      </div>
-                    </TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      80&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
-                  <TableRow variant="odd">
-                    <TableCell>
-                      Club Junior 2 (2013-2015) et Club Ados (2006-2012)
-                    </TableCell>
-                    <TableCell align="center" colSpan={2}>
-                      100&nbsp;€ + licence
-                    </TableCell>
-                  </TableRow>
+                  {subscriptionPricings.map((pricing, index) => (
+                    <PricingRow
+                      key={pricing.title}
+                      {...pricing}
+                      index={index}
+                    />
+                  ))}
                 </tbody>
               </Table>
             </div>
@@ -231,28 +161,9 @@ export default function PricesPage() {
                 </tr>
               </thead>
               <tbody>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Adultes 1h</div>
-                      <div className="text-xs">
-                        1h hebdomadaire encadrée par un DE
-                      </div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">300&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Adultes 1h30</div>
-                      <div className="text-xs">
-                        1h30 hebdomadaire encadrée par un DE
-                      </div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">445&nbsp;€</TableCell>
-                </TableRow>
+                {adultLessons.map((pricing, index) => (
+                  <PricingRow key={pricing.title} {...pricing} index={index} />
+                ))}
               </tbody>
             </Table>
           </div>
@@ -279,63 +190,9 @@ export default function PricesPage() {
                 </tr>
               </thead>
               <tbody>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Mini-tennis</div>
-                      <div className="text-xs">1h</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">128&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club Junior Niveau Rouge</div>
-                      <div className="text-xs">1h15</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">186&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club Junior Niveau Orange ou Vert</div>
-                      <div className="text-xs">1h30</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">218&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club Ados débutant</div>
-                      <div className="text-xs">1h15</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">186&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Club Ados</div>
-                      <div className="text-xs">1h30</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">258&nbsp;€</TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    <div className="space-y-1">
-                      <div>Cours supplémentaire</div>
-                      <div>Sur accord du club</div>
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">
-                    100&nbsp;€ (1h mini tennis) / 160&nbsp;€ (1h15) / 185&nbsp;€
-                    (1h30)
-                  </TableCell>
-                </TableRow>
+                {childLessons.map((pricing, index) => (
+                  <PricingRow key={pricing.title} {...pricing} index={index} />
+                ))}
               </tbody>
             </Table>
           </div>
@@ -356,33 +213,9 @@ export default function PricesPage() {
                 </tr>
               </thead>
               <tbody>
-                <TableRow variant="odd">
-                  <TableCell>
-                    <div className="space-y-1">
-                      Réservation d&apos;un terrain par deux non-adhérents du
-                      TCF
-                    </div>
-                  </TableCell>
-                  <TableCell align="center">
-                    20&nbsp;€/h (via{" "}
-                    <a
-                      href={
-                        "https://www.anybuddyapp.com/club-franconville-tc/reservation/tennis"
-                      }
-                      target={"_blank"}
-                      rel={"noreferrer"}
-                    >
-                      Anybuddy
-                    </a>
-                    )
-                  </TableCell>
-                </TableRow>
-                <TableRow variant="even">
-                  <TableCell>
-                    Invitation par un adhérent d&apos;un non-adhérent du TCF
-                  </TableCell>
-                  <TableCell align="center">6&nbsp;€/h</TableCell>
-                </TableRow>
+                {miscellaneous.map((pricing, index) => (
+                  <PricingRow key={pricing.title} {...pricing} index={index} />
+                ))}
               </tbody>
             </Table>
           </div>
@@ -435,24 +268,40 @@ export default function PricesPage() {
   )
 }
 
-const discounts = [
-  {
-    title: "Réduction conjoint",
-    content: [
-      "Si votre conjoint prend aussi une cotisation annuelle, vous bénéficiez de 80€ de réduction sur la vôtre. Il ne vous reste plus qu'à le/la convaincre.",
-    ],
-  },
-  {
-    title: "Réduction enfant",
-    content: [
-      "Lors de l'inscription d'un enfant, vous bénéficiez d'une réduction de 30€ sur sa cotisation si un autre membre de la famille a déjà souscrit à une cotisation (hors cotisation parentale).",
-    ],
-  },
-  {
-    title: "Forfait famillial",
-    content: ["À partir de 1300€."],
-  },
-]
+function PricingRow({
+  pricing,
+  description,
+  title,
+  isHighlighted,
+  index,
+}: PricingRowProps) {
+  return (
+    <TableRow
+      variant={isHighlighted ? "brand" : index % 2 === 0 ? "even" : "odd"}
+    >
+      <TableCell>
+        <div className="space-y-1">
+          <div>{title}</div>
+          {description ? <div className="text-xs">{description}</div> : null}
+        </div>
+      </TableCell>
+
+      {typeof pricing === "string" ? (
+        <TableCell align={"center"} colSpan={2}>
+          {pricing}
+        </TableCell>
+      ) : (
+        pricing.map((price) => (
+          <TableCell key={price} align={"center"}>
+            {price}
+          </TableCell>
+        ))
+      )}
+    </TableRow>
+  )
+}
+
+type PricingRowProps = Pricing & { index: number }
 
 export const metadata = {
   title: "Tarifs",
