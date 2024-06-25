@@ -6,24 +6,24 @@ import { Illustration } from "../../components/Illustration"
 import kidsIllustration from "../../img/animations/kids.jpg"
 import familyIllustration from "../../img/animations/family.jpg"
 import adultIllustration from "../../img/animations/adults.jpg"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function AnimationsPage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white">Animations</h1>
-            <p className="text-lg font-semibold text-center">
-              Le club de tennis de Franconville vous propose de nombreuses
-              animations tout au long de l&apos;année. Se retrouver au sein du
-              club, c&apos;est l&apos;occasion de partager sa passion du tennis
-              autour de moments conviviaux. Les animations à thèmes sont
-              ouvertes à tous : enfants, compétiteurs, parents...
-            </p>
-          </div>
-        </Wrapper>
-      </Section>
+      <PageHeader
+        title={"Animations"}
+        description={
+          <p>
+            Le club de tennis de Franconville vous propose de nombreuses
+            animations tout au long de l&apos;année. Se retrouver au sein du
+            club, c&apos;est l&apos;occasion de partager sa passion du tennis
+            autour de moments conviviaux. Les animations à thèmes sont ouvertes
+            à tous : enfants, compétiteurs, parents...
+          </p>
+        }
+      />
+
       <Section skewed>
         <Wrapper>
           <TwoCol

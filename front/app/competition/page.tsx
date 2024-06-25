@@ -37,6 +37,7 @@ import interne4 from "../../img/competition/interne/04.jpg"
 import interneCouleur1 from "../../img/competition/interne-couleur/01.jpg"
 import interneCouleur2 from "../../img/competition/interne-couleur/02.jpg"
 import { type StaticImageData } from "next/image"
+import { PageHeader } from "../../components/PageHeader"
 
 type Competition = {
   title: string
@@ -110,18 +111,16 @@ const competitions: Array<Competition> = [
 export default function CompetitionPage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <div className="flex flex-col items-center space-y-6">
-            <h1 className="text-3xl font-bold text-white">Compétition</h1>
-            <p className="text-lg font-semibold text-center">
-              Venez participer quel que soit votre âge et votre niveau à des
-              compétitions par équipes en championnats ou en tournois
-              individuellement
-            </p>
-          </div>
-        </Wrapper>
-      </Section>
+      <PageHeader
+        title={"Compétition"}
+        description={
+          <p>
+            Venez participer quel que soit votre âge et votre niveau à des
+            compétitions par équipes en championnats ou en tournois
+            individuellement
+          </p>
+        }
+      />
 
       <Section skewed variant="light">
         <Wrapper>

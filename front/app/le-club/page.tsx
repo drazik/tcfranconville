@@ -12,15 +12,12 @@ import Image, { StaticImageData } from "next/image"
 import capifranceLogo from "../../img/partners/capifrance.png"
 import ecosportLogo from "../../img/partners/ecosport.png"
 import { type ReactNode } from "react"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function LeClubPage() {
   return (
     <>
-      <Section skewed variant="brand">
-        <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white">Le club</h1>
-        </Wrapper>
-      </Section>
+      <PageHeader title={"Le club"} />
       <Section skewed variant="light">
         <Wrapper>
           <TwoCol

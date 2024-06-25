@@ -14,17 +14,12 @@ import {
   Pricing,
   subscriptionPricings,
 } from "./data"
+import { PageHeader } from "../../components/PageHeader"
 
 export default function PricesPage() {
   return (
     <Fragment>
-      <Section variant="brand" skewed>
-        <Wrapper>
-          <h1 className="text-3xl font-bold text-center text-white">
-            Tarifs 2024&nbsp;/&nbsp;2025
-          </h1>
-        </Wrapper>
-      </Section>
+      <PageHeader title={"Tarifs 2024 / 2025"} />
 
       <Section skewed>
         <Wrapper>
