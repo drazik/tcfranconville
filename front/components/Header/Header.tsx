@@ -7,6 +7,8 @@ import { Logo } from "../Logo"
 import Link from "next/link"
 import cn from "classnames"
 import { usePathname } from "next/navigation"
+import { FaFacebook, FaInstagram } from "react-icons/fa6"
+import { match } from "ts-pattern"
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -28,7 +30,7 @@ export function Header() {
             <Logo />
           </Link>
           <div className="hidden xl:block">
-            <LargeMenu items={items} />
+            <LargeMenu items={items} socials={socials} />
           </div>
         </div>
       </Wrapper>
@@ -38,7 +40,12 @@ export function Header() {
       >
         <MenuButton open={open} onClick={() => setOpen(!open)} />
       </div>
-      <SmallMenu open={open} onClose={() => setOpen(false)} items={items} />
+      <SmallMenu
+        open={open}
+        onClose={() => setOpen(false)}
+        items={items}
+        socials={socials}
+      />
     </header>
   )
 }
@@ -51,7 +58,17 @@ const items = [
   { href: "/le-club", label: "Le club" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/reservation", label: "Réservation" },
-  { href: "/actualite", label: "Actualité" },
+]
+
+const socials = [
+  {
+    href: "https://www.facebook.com/TCFranconvilleOfficiel",
+    network: "facebook",
+  },
+  {
+    href: "https://www.instagram.com/tennisclubdefranconville/",
+    network: "instagram",
+  },
 ]
 
 function MenuButton({ open, onClick }: MenuButtonProps) {
@@ -120,7 +137,7 @@ type MenuButtonLineProps = {
   style?: CSSProperties
 }
 
-function SmallMenu({ open, onClose, items }: SmallMenuProps) {
+function SmallMenu({ open, onClose, items, socials }: SmallMenuProps) {
   return (
     <div
       className={cn(
@@ -148,16 +165,34 @@ function SmallMenu({ open, onClose, items }: SmallMenuProps) {
           <div className="pt-32 pb-8 space-y-8">
             {items.map((item, index) => (
               <div
-                className={cn("transition-all duration-300 transform", {
-                  "opacity-100 translate-x-0": open,
+                className={cn("transition-all transform", {
+                  "opacity-100 translate-x-0 duration-300": open,
                   "opacity-0 -translate-x-full": !open,
                 })}
-                style={{ transitionDelay: `${100 + index * 100}ms` }}
+                style={{
+                  transitionDelay: open ? `${100 + index * 100}ms` : undefined,
+                }}
                 key={item.href}
               >
                 <SmallMenuLink href={item.href}>{item.label}</SmallMenuLink>
               </div>
             ))}
+
+            <div
+              className={cn("px-8 flex gap-7 transition-opacity", {
+                "opacity-100 duration-300": open,
+                "opacity-0": !open,
+              })}
+              style={{
+                transitionDelay: open
+                  ? `${300 + items.length * 100}ms`
+                  : undefined,
+              }}
+            >
+              {socials.map(({ href, network }) => (
+                <SocialLink key={href} href={href} network={network} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -167,6 +202,7 @@ function SmallMenu({ open, onClose, items }: SmallMenuProps) {
 
 type SmallMenuProps = {
   items: typeof items
+  socials: typeof socials
   open: boolean
   onClose: () => void
 }
@@ -195,13 +231,17 @@ type SmallMenuLinkProps = {
   href: string
 }
 
-function LargeMenu({ items }: LargeMenuProps) {
+function LargeMenu({ items, socials }: LargeMenuProps) {
   return (
-    <nav className={"flex space-x-8 w-full justify-center"}>
+    <nav className={"flex space-x-8 w-full justify-center items-center"}>
       {items.map((item) => (
         <LargeMenuLink key={item.href} href={item.href}>
           {item.label}
         </LargeMenuLink>
+      ))}
+
+      {socials.map(({ href, network }) => (
+        <SocialLink key={href} href={href} network={network} />
       ))}
     </nav>
   )
@@ -209,6 +249,7 @@ function LargeMenu({ items }: LargeMenuProps) {
 
 type LargeMenuProps = {
   items: typeof items
+  socials: typeof socials
 }
 
 function LargeMenuLink({ href, children }: LargeMenuLinkProps) {
@@ -234,4 +275,26 @@ function LargeMenuLink({ href, children }: LargeMenuLinkProps) {
 type LargeMenuLinkProps = {
   href: string
   children: ReactNode
+}
+
+function SocialLink({ href, network }: SocialLinkProps) {
+  const IconComponent = match(network)
+    .with("facebook", () => FaFacebook)
+    .with("instagram", () => FaInstagram)
+    .otherwise(() => null)
+
+  if (!IconComponent) {
+    return null
+  }
+
+  return (
+    <a href={href} target={"_blank"}>
+      {<IconComponent className={"w-7 h-7 text-white"} />}
+    </a>
+  )
+}
+
+type SocialLinkProps = {
+  href: string
+  network: string
 }
