@@ -29,3 +29,21 @@ type InfoBanner = {
     href: string
   }
 }
+
+export const socials: Array<Social> = [
+  {
+    href: "https://www.facebook.com/TCFranconvilleOfficiel",
+    network: "facebook",
+  },
+  {
+    href: "https://www.instagram.com/tennisclubdefranconville/",
+    network: "instagram",
+  },
+]
+
+export type Social = {
+  href: string
+  network: SocialNetwork
+}
+
+type SocialNetwork = "facebook" | "instagram"
