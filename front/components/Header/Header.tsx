@@ -21,21 +21,24 @@ export function Header() {
 
   return (
     <header
-      className={`h-40 bg-center bg-cover flex flex-col justify-center bg-fixed lg:h-64 xl:h-auto py-12`}
+      className={`relative h-40 bg-center bg-cover flex flex-col justify-center bg-fixed lg:h-64 xl:h-auto py-12`}
       style={{ backgroundImage: `url(${background.src})` }}
     >
-      <Wrapper>
-        <div className="flex flex-col items-center space-y-8">
-          <Link href="/">
-            <Logo />
-          </Link>
-          <div className="hidden xl:block">
-            <LargeMenu items={items} socials={socials} />
+      <div className={"hidden lg:block absolute inset-0 bg-black/20"} />
+      <div className={"relative"}>
+        <Wrapper>
+          <div className="flex flex-col items-center space-y-8">
+            <Link href="/">
+              <Logo />
+            </Link>
+            <div className="hidden lg:block">
+              <LargeMenu items={items} socials={socials} />
+            </div>
           </div>
-        </div>
-      </Wrapper>
+        </Wrapper>
+      </div>
       <div
-        className="fixed z-30 transform -translate-y-1/2 xl:hidden"
+        className="fixed z-30 transform -translate-y-1/2 lg:hidden"
         style={{ top: "5rem", left: `${(1 / 2 / 12) * 100}%` }}
       >
         <MenuButton open={open} onClick={() => setOpen(!open)} />
@@ -261,7 +264,7 @@ function LargeMenuLink({ href, children }: LargeMenuLinkProps) {
       href={href}
       className={cn("text-white font-bold text-xl flex flex-col items-stretch")}
     >
-      <span className={"drop-shadow-sm"}>{children}</span>
+      <span className={"drop-shadow-sm whitespace-nowrap"}>{children}</span>
       <span
         className={cn("h-1 bg-brand transition-opacity duration-200", {
           "opacity-100": isCurrent,
