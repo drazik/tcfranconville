@@ -11,31 +11,34 @@ export function Footer() {
 
   return (
     <footer
-      className={"bg-cover bg-center py-4 bg-fixed"}
+      className={"relative bg-cover bg-center py-4 bg-fixed"}
       style={{ backgroundImage: `url(${background.src})` }}
     >
-      <Wrapper>
-        <div className="flex flex-col items-center space-y-6">
-          <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-10">
-            <Logo />
-            <a href="https://www.ville-franconville.fr/" className="w-40">
-              <Image src={logoFranconville} alt="Ville de Franconville" />
-            </a>
+      <div className={"absolute inset-0 bg-black/30"} />
+      <div className={"relative"}>
+        <Wrapper>
+          <div className="flex flex-col items-center space-y-6">
+            <div className="flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-10">
+              <Logo />
+              <a href="https://www.ville-franconville.fr/" className="w-40">
+                <Image src={logoFranconville} alt="Ville de Franconville" />
+              </a>
+            </div>
+            <p className="text-lg font-semibold text-center text-white drop-shadow-lg">
+              &copy;&nbsp;Tennis Club Franconville {year}
+            </p>
+            <div className="flex flex-col items-center space-y-2">
+              <Link href="http://www.gs.applipub-fft.fr/fftfr/frameset.do?dispatch=load">
+                Gestion Sportive
+              </Link>
+              <Link href="http://www.comite.fft.fr/val-d-oise/val-d-oise_a/cms/index_public.php?us_action=show_note_site&login_off=1&ui_id_site=1">
+                Comité du Val d&apos;Oise
+              </Link>
+              <Link href="https://tenup.fft.fr/">TenUp</Link>
+            </div>
           </div>
-          <p className="text-lg font-semibold text-center text-white drop-shadow-lg">
-            &copy;&nbsp;Tennis Club Franconville {year}
-          </p>
-          <div className="flex flex-col items-center space-y-2">
-            <Link href="http://www.gs.applipub-fft.fr/fftfr/frameset.do?dispatch=load">
-              Gestion Sportive
-            </Link>
-            <Link href="http://www.comite.fft.fr/val-d-oise/val-d-oise_a/cms/index_public.php?us_action=show_note_site&login_off=1&ui_id_site=1">
-              Comité du Val d&apos;Oise
-            </Link>
-            <Link href="https://tenup.fft.fr/">TenUp</Link>
-          </div>
-        </div>
-      </Wrapper>
+        </Wrapper>
+      </div>
     </footer>
   )
 }
