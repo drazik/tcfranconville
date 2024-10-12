@@ -92,11 +92,25 @@ export default function LeClubPage() {
                     Pommiers Saulniers.
                   </p>
                   <p>
-                    Vous pouvez nous contacter par téléphone au
-                    01&nbsp;75&nbsp;40&nbsp;75&nbsp;20 ou par e-mail à
-                    l&apos;adresse{" "}
+                    Vous pouvez nous contacter par e-mail à l&apos;adresse{" "}
                     <a href="mailto:tennis.club.franconville@cegetel.net">
                       tennis.club.franconville@cegetel.net
+                    </a>
+                    , ainsi que sur nos réseaux sociaux :{" "}
+                    <a
+                      href={"https://www.facebook.com/TCFranconvilleOfficiel"}
+                      target={"_blank"}
+                    >
+                      Facebook
+                    </a>{" "}
+                    et{" "}
+                    <a
+                      href={
+                        "https://www.instagram.com/tennisclubdefranconville/"
+                      }
+                      target={"_blank"}
+                    >
+                      Instagram
                     </a>
                     .
                   </p>
