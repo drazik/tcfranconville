@@ -7,8 +7,8 @@ import { Logo } from "../Logo"
 import Link from "next/link"
 import cn from "classnames"
 import { usePathname } from "next/navigation"
-import { FaFacebook, FaInstagram } from "react-icons/fa6"
-import { match } from "ts-pattern"
+import { Social, socials } from "../../app/data"
+import { SocialIcon } from "../SocialIcon"
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -61,17 +61,6 @@ const items = [
   { href: "/le-club", label: "Le club" },
   { href: "/tarifs", label: "Tarifs" },
   { href: "/reservation", label: "Réservation" },
-]
-
-const socials = [
-  {
-    href: "https://www.facebook.com/TCFranconvilleOfficiel",
-    network: "facebook",
-  },
-  {
-    href: "https://www.instagram.com/tennisclubdefranconville/",
-    network: "instagram",
-  },
 ]
 
 function MenuButton({ open, onClick }: MenuButtonProps) {
@@ -280,24 +269,10 @@ type LargeMenuLinkProps = {
   children: ReactNode
 }
 
-function SocialLink({ href, network }: SocialLinkProps) {
-  const IconComponent = match(network)
-    .with("facebook", () => FaFacebook)
-    .with("instagram", () => FaInstagram)
-    .otherwise(() => null)
-
-  if (!IconComponent) {
-    return null
-  }
-
+function SocialLink({ href, network }: Social) {
   return (
     <a href={href} target={"_blank"}>
-      {<IconComponent className={"w-7 h-7 text-white"} />}
+      <SocialIcon network={network} className={"w-7 h-7 text-white"} />
     </a>
   )
-}
-
-type SocialLinkProps = {
-  href: string
-  network: string
 }
