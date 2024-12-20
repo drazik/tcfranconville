@@ -470,6 +470,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swan-io/boxed@npm:^3.1.2":
+  version: 3.1.2
+  resolution: "@swan-io/boxed@npm:3.1.2"
+  peerDependencies:
+    typescript: ">=5.0.0"
+  peerDependenciesMeta:
+    typescript:
+      optional: true
+  checksum: caba587a55db17e083a38372370b77583206bfaa4fce8e4ca96acffb29691e6f6e21aac84f1bd81aa5149a49ec796fba85e6c5a888ddb3c5fa03e97fc2270d57
+  languageName: node
+  linkType: hard
+
 "@swc/counter@npm:^0.1.3":
   version: 0.1.3
   resolution: "@swc/counter@npm:0.1.3"
@@ -4842,6 +4854,7 @@ __metadata:
     "@headlessui/react": ^2.0.4
     "@radix-ui/react-slot": ^1.1.0
     "@react-hook/media-query": ^1.1.1
+    "@swan-io/boxed": ^3.1.2
     "@tailwindcss/typography": ^0.5.13
     "@types/node": 20.14.8
     "@types/react": 18.3.3
