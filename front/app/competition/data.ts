@@ -31,6 +31,7 @@ import interneCouleur1 from "../../img/competition/interne-couleur/01.jpg"
 import interneCouleur2 from "../../img/competition/interne-couleur/02.jpg"
 
 import { type StaticImageData } from "next/image"
+import { Future, Result } from "@swan-io/boxed"
 
 export type Competition = {
   title: string
@@ -139,3 +140,67 @@ export const teamChampionships: Array<Competition> = [
     images: [championnat55],
   },
 ]
+
+export async function fetchNextTournaments() {
+  const formData = new FormData()
+
+  formData.append("recherche_type", "club")
+  formData.append("ville[autocomplete][country]", "fr")
+  formData.append(
+    "club[autocomplete][value_container][value_field]",
+    "57950197"
+  )
+  formData.append(
+    "club[autocomplete][value_container][label_field]",
+    "PONTOISE+TC"
+  )
+  formData.append("pratique", "TENNIS")
+  formData.append("date[start]", "12/11/24")
+  formData.append("date[end]", "12/02/25")
+  formData.append("tournois_interne", "0")
+  formData.append("page", "0")
+  formData.append("sort", "_DIST_")
+  formData.append(
+    "form_build_id",
+    "form-PsNo-HU9SpQbb1LRBeSPBr0s-F284lG-U9wFAJoIDtk"
+  )
+  formData.append("form_id", "recherche_tournois_form")
+  formData.append("_triggering_element_name", "submit_main")
+  formData.append("ajax_html_ids[]", "tc_script_1731442589583")
+
+  const responseResult = await Future.fromPromise(
+    fetch("https://tenup.fft.fr/system/ajax", {
+      method: "POST",
+      body: formData,
+    })
+  ).mapOkToResult((response) =>
+    response.ok ? Result.Ok(response) : Result.Error(response)
+  )
+
+  if (responseResult.isError()) {
+    return responseResult
+  }
+
+  return Future.fromPromise(responseResult.get().json())
+    .mapOkToResult((data) => {
+      const item = data.find(
+        (item: any) => item.command === "recherche_tournois_update"
+      )
+
+      if (!item) {
+        return Result.Error(new NoItemFoundError(""))
+      }
+
+      return Result.Ok(item)
+    })
+    .mapOk((item) => {
+      return item.results.items
+    })
+}
+
+class NoItemFoundError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = "NoItemFoundError"
+  }
+}

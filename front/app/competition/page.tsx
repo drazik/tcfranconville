@@ -8,11 +8,16 @@ import { isAfter } from "date-fns/isAfter"
 import { PageHeader } from "../../components/PageHeader"
 import {
   type Competition,
+  fetchNextTournaments,
   individualTournaments,
   teamChampionships,
 } from "./data"
 
-export default function CompetitionPage() {
+export default async function CompetitionPage() {
+  const tournaments = await fetchNextTournaments()
+
+  console.log(tournaments)
+
   return (
     <>
       <PageHeader
