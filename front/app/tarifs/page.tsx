@@ -19,7 +19,7 @@ import { PageHeader } from "../../components/PageHeader"
 export default function PricesPage() {
   return (
     <Fragment>
-      <PageHeader title={"Tarifs 2024 / 2025"} />
+      <PageHeader title={"Tarifs 2025 / 2026"} />
 
       <Section skewed>
         <Wrapper>
@@ -37,8 +37,9 @@ export default function PricesPage() {
                 </a>
                 . L&apos;inscription en ligne vous permet de ne pas être
                 contraint(e) de venir à une permanence au club ou au forum des
-                associations pour vous inscrire pour la saison 2024/2025, mais
-                aussi de payer votre cotisation et vos cours en ligne.
+                associations pour vous inscrire pour la saison 2025/2026, mais
+                aussi de payer votre cotisation et vos cours en ligne. Le
+                paiement en plusieurs fois est possible.
               </p>
             </div>
 
@@ -59,8 +60,8 @@ export default function PricesPage() {
                 pratique.
               </p>
               <p>
-                La licence 2024-2025 est valable du 1er septembre 2024 au 31
-                août 2025. Son tarif est mis en place par la FFT&nbsp;:
+                La licence 2025-2026 est valable du 1er septembre 2025 au 31
+                août 2026. Son tarif est mis en place par la FFT&nbsp;:
                 33&nbsp;€ pour les adultes, 23&nbsp;€ pour les jeunes de 6 à 18
                 ans, 13&nbsp;€ pour les enfants de moins de 6 ans.
               </p>
@@ -89,7 +90,8 @@ export default function PricesPage() {
                 La cotisation vous donne accès aux infrastructures du club et
                 vous permet de réserver des courts afin de jouer avec
                 d&apos;autres adhérents ou avec des invités (moyennant 6€ par
-                invitation).
+                invitation). Une invitation est offerte pour toute cotisation
+                annuelle.
               </p>
               <p>
                 Nous proposons différents tarifs afin que chacun puisse trouver
