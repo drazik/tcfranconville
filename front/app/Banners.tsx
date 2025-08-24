@@ -33,7 +33,9 @@ export function Banners() {
         {cta ? (
           <div className={"shrink-0"}>
             <Button asChild size="small">
-              <Link href={cta.href}>{cta.label}</Link>
+              <Link href={cta.href} target={cta.target}>
+                {cta.label}
+              </Link>
             </Button>
           </div>
         ) : null}

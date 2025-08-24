@@ -17,6 +17,23 @@ export const infoBanners: Array<InfoBanner> = [
       href: "/le-club#contact",
     },
   },
+
+  {
+    id: "forum-associations-2025",
+    dateStart: new Date(2025, 7, 24),
+    dateEnd: new Date(2025, 8, 8),
+    content: (
+      <p>
+        Le club sera présent au forum des associations de Franconville le{" "}
+        <strong>7 septembre 2025 au CSL</strong>
+      </p>
+    ),
+    cta: {
+      label: "Comment venir",
+      href: "https://maps.app.goo.gl/hsVcNjt2Qpa6V9MNA",
+      target: "_blank",
+    },
+  },
 ]
 
 type InfoBanner = {
@@ -27,6 +44,7 @@ type InfoBanner = {
   cta?: {
     label: string
     href: string
+    target?: string
   }
 }
 
