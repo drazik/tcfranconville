@@ -1,51 +1,51 @@
 export const subscriptionPricings: Array<Pricing> = [
   {
     title: "Adulte",
-    pricing: ["278€ + licence", "288€ + licence"],
+    pricing: ["283€ + licence", "293€ + licence"],
   },
   {
     title: "Etudiant ou chercheur d'emploi (-25 ans)",
-    pricing: "120€ + licence",
+    pricing: "125€ + licence",
   },
   {
     title: "Semaine",
     description: "du lundi au vendredi de 8h à 18h",
-    pricing: ["220€ + licence", "230€ + licence"],
+    pricing: ["225€ + licence", "235€ + licence"],
   },
   {
     title: "Retraite sportive (ARSF)",
-    pricing: "158€ + licence",
+    pricing: "163€ + licence",
   },
   {
     title: "Cotisation parentale",
     description:
       "Venez jouez avec votre enfant autant de fois que vous le souhaitez !",
-    pricing: "68€ + licence",
+    pricing: "73€ + licence",
     isHighlighted: true,
   },
   {
-    title: "Cotisation Printemps-Été ",
+    title: "Cotisation Printemps-Été",
     description: "du 1er mars au 31 août",
-    pricing: ["178€ + licence", "188€ + licence"],
+    pricing: ["183€ + licence", "193€ + licence"],
   },
   {
     title: "Mini-tennis",
-    description: "2019-2021",
-    pricing: "50€ + licence",
+    description: "Enfant né entre 2020 et 2022",
+    pricing: "55€ + licence",
   },
   {
-    title: "Club junior 1",
-    description: "2017-2018",
-    pricing: "80€ + licence",
+    title: "Club Junior 1",
+    description: "Enfant né entre 2018 et 2019",
+    pricing: "85€ + licence",
   },
   {
-    title: "Club junior 2",
-    description: "2014-2016",
+    title: "Club Junior 2",
+    description: "Enfant né entre 2015 et 2017",
     pricing: "100€ + licence",
   },
   {
-    title: "Club ados",
-    description: "2007-2013",
+    title: "Club Ados",
+    description: "Enfant né entre 2008 et 2014",
     pricing: "100€ + licence",
   },
 ]
@@ -61,45 +61,45 @@ export const adultLessons: Array<Pricing> = [
   {
     title: "Adultes 1h",
     description: "1h hebdomadaire encadrée par un DE",
-    pricing: "300€",
+    pricing: "309€",
   },
   {
     title: "Adultes 1h30",
     description: "1h30 hebdomadaire encadrée par un DE",
-    pricing: "445€",
+    pricing: "459€",
   },
 ]
 
 export const childLessons: Array<Pricing> = [
   {
     title: "Mini-tennis",
-    description: "1h",
-    pricing: "128€",
+    description: "1h hebdomadaire",
+    pricing: "132€",
   },
   {
     title: "Club Junior Niveau Rouge",
-    description: "1h15",
-    pricing: "186€",
+    description: "1h15 hebdomadaire",
+    pricing: "190€",
   },
   {
     title: "Club Junior Niveau Orange ou Vert",
-    description: "1h30",
-    pricing: "218€",
+    description: "1h30 hebdomadaire",
+    pricing: "227€",
   },
   {
     title: "Club Ados débutant",
-    description: "1h15",
+    description: "1h15 hebdomadaire",
     pricing: "186€",
   },
   {
     title: "Club Ados",
-    description: "1h30",
-    pricing: "258€",
+    description: "1h30 hebdomadaire",
+    pricing: "267€",
   },
   {
     title: "Cours supplémentaire",
     description: "Sur accord du club",
-    pricing: "100 € (1h mini tennis) / 160 € (1h15) / 185 € (1h30)",
+    pricing: "105 € (1h mini tennis) / 165 € (1h15) / 190 € (1h30)",
   },
 ]
 
@@ -129,6 +129,6 @@ export const discounts = [
   },
   {
     title: "Forfait famillial",
-    content: ["À partir de 1300€."],
+    content: ["À partir de 1350€."],
   },
 ]
