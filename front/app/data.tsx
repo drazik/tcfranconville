@@ -25,7 +25,7 @@ export const infoBanners: Array<InfoBanner> = [
     content: (
       <p>
         Le club sera présent au forum des associations de Franconville le{" "}
-        <strong>7 septembre 2025 au CSL</strong>
+        <strong>6 septembre 2025 au CSL</strong>
       </p>
     ),
     cta: {
