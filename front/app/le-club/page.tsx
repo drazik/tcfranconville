@@ -13,6 +13,7 @@ import capifranceLogo from "../../img/partners/capifrance.png"
 import ecosportLogo from "../../img/partners/ecosport.png"
 import { type ReactNode } from "react"
 import { PageHeader } from "../../components/PageHeader"
+import ludovicPhoto from "./ludovic-kora.jpg"
 
 export default function LeClubPage() {
   return (
@@ -159,15 +160,26 @@ export default function LeClubPage() {
               </li>
               <li>
                 <Partner
-                  logo={capifranceLogo}
+                  logo={ludovicPhoto}
                   name="Ludovic KORA"
                   description={
                     <>
                       <p>
-                        Agent immobilier dans le réseau Capifrance, Ludovic,
-                        adhérent du TCF, vous accompagne quel que soit votre
-                        projet immobilier en vous apportant des solutions
-                        pertinentes et efficaces.
+                        Mandataire immobilier au sein du réseau Capifrance et
+                        membre du TCF, Ludovic vous accompagne dans la
+                        réalisation de tous vos projets immobiliers :
+                        achat - vente ou location à Franconville, Ermont,
+                        Eaubonne et leurs environs, avec des conseils
+                        personnalisés et un suivi complet à chaque étape.
+                      </p>
+                      <p>
+                        <strong>Offre spéciale licenciés TCF :</strong>{" "}
+                        estimation gratuite + diagnostics immobiliers pris en
+                        charge à la signature.
+                      </p>
+                      <p>
+                        Pour chaque vente avec un licencié, 300 € reversés au
+                        club (matériel/animations).
                       </p>
                     </>
                   }
