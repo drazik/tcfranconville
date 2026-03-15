@@ -183,7 +183,7 @@ export default function LeClubPage() {
                       </p>
                     </>
                   }
-                  url="https://www.capifrance.fr/conseillers/ludovic.kora"
+                  url="https://ludovic-kora.capifrance.fr/fr"
                 />
               </li>
             </ul>
