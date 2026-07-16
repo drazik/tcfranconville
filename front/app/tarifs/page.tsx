@@ -19,34 +19,7 @@ import { PageHeader } from "../../components/PageHeader"
 export default function PricesPage() {
   return (
     <Fragment>
-      <PageHeader title={"Tarifs 2025 / 2026"} />
-
-      <Section skewed>
-        <Wrapper>
-          <div className="space-y-8">
-            <SectionTitle>Inscription en ligne</SectionTitle>
-            <div className="prose max-w-none">
-              <p>
-                Vous pouvez vous inscrire directement en ligne sur{" "}
-                <a
-                  href="https://tenup.fft.fr/club/57950106/offres"
-                  rel="noopener"
-                  target="_blank"
-                >
-                  la page TenUp du club
-                </a>
-                . L&apos;inscription en ligne vous permet de ne pas être
-                contraint(e) de venir à une permanence au club ou au forum des
-                associations pour vous inscrire pour la saison 2025/2026, mais
-                aussi de payer votre cotisation et vos cours en ligne. Le
-                paiement en plusieurs fois est possible.
-              </p>
-            </div>
-
-            <HelpButton />
-          </div>
-        </Wrapper>
-      </Section>
+      <PageHeader title={"Tarifs 2026 / 2027"} />
 
       <Section skewed variant="light">
         <Wrapper>
