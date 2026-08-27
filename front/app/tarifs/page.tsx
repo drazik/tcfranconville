@@ -5,7 +5,6 @@ import { Table } from "../../components/Table"
 import { TableRow } from "../../components/TableRow"
 import { TableCell } from "../../components/TableCell"
 import { Fragment } from "react"
-import { HelpButton } from "./HelpButton"
 import {
   adultLessons,
   childLessons,
@@ -33,8 +32,8 @@ export default function PricesPage() {
                 pratique.
               </p>
               <p>
-                La licence 2025-2026 est valable du 1er septembre 2025 au 31
-                août 2026. Son tarif est mis en place par la FFT&nbsp;:
+                La licence 2026-2027 est valable du 1er septembre 2026 au 31
+                août 2027. Son tarif est mis en place par la FFT&nbsp;:
                 33&nbsp;€ pour les adultes, 23&nbsp;€ pour les jeunes de 6 à 18
                 ans, 13&nbsp;€ pour les enfants de moins de 6 ans.
               </p>

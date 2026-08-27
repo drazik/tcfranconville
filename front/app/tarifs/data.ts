@@ -110,7 +110,7 @@ export const miscellaneous: Array<Pricing> = [
   },
   {
     title: "Invitation par un adhérent d'un non-adhérent du TCF",
-    pricing: "6€/h",
+    pricing: "7€/h",
   },
 ]
 
