@@ -34,6 +34,25 @@ export const infoBanners: Array<InfoBanner> = [
       target: "_blank",
     },
   },
+
+  {
+    id: "places-restantes-inscriptions-2026-2027",
+    dateStart: new Date(2026, 8, 10),
+    dateEnd: new Date(2026, 8, 30),
+    content: (
+      <p>
+        Il reste des places dans des groupes de cours pour adultes et enfants.
+        N&apos;hésitez pas à contacter le club au{" "}
+        <a href="tel:0175407520" className="font-bold">
+          01&nbsp;75&nbsp;40&nbsp;75&nbsp;20
+        </a>
+      </p>
+    ),
+    cta: {
+      label: "Contacter le club",
+      href: "tel:0175407520",
+    },
+  },
 ]
 
 type InfoBanner = {
